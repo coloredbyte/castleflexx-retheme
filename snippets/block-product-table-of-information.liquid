@@ -1,0 +1,207 @@
+{% doc %}
+  Renders the product "Table of information" block: an optional heading (collapsible when shown as a tab)
+  and a specification table parsed from the block's rich-text details, with metafield value lookups.
+
+  @param {object} block - Block object holding the table settings
+  @param {object} [product] - Product object used to resolve metafield references in the details
+  @param {boolean} [show_content_center] - Center the heading and table content
+  @param {string} [loading] - Loading attribute for the custom image
+
+  @example
+  {% render 'block-product-table-of-information',
+    block: block,
+    product: product,
+    show_content_center: show_content_center,
+    loading: loading
+  %}
+{% enddoc %}
+
+{% style %}
+  .table_info_details-{{ block.id }} li,
+  .table_info_label-{{ block.id }} {
+    gap: 3rem;
+  }
+
+  .table_info_table-{{ block.id }},
+  .table_info_details-{{ block.id }} li,
+  .table_info_label-{{ block.id }} {
+    border-color: rgba(var(--colors-line-and-border), 0.2);
+  }
+
+  .table_info_table-{{ block.id }} > span:last-child,
+  .table_info_table-{{ block.id }} > ul:last-child > li:last-child {
+    border-bottom-width: 0;
+  }
+
+  {% if block.settings.use_secondary_background %}
+    .table_info_details-{{ block.id }} li:nth-child(odd) {
+      background: rgba(var(--colors-background-secondary), 0.5);
+    }
+
+    .table_info_details-{{ block.id }} li:nth-child(even) {
+      background: rgba(var(--colors-background-secondary), 0.1);
+    }
+  {% else %}
+    .table_info_details-{{ block.id }} li:last-child {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  {% endif %}
+{% endstyle %}
+
+<div id="x-table-of-information-{{ section.id }}-{{ block.id }}" class="table_of_information w-full{% if block.settings.show_in_tab %} border-y border-solid accordion mb-4 md:mb-6{% else %} mb-2 md:mb-4{% endif %}"{% if block.settings.show_in_tab %}x-data="{open: {% if block.settings.open_by_default %}true{% else %}false{% endif %}}"{% endif %} {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank %}
+    <div class="flex relative items-center gap-x-[10px] w-full pt-3 pb-3 pl-2 pr-2{% if block.settings.show_in_tab %} cursor-pointer{% endif %}{% if show_content_center %} justify-center{% endif %}"{% if block.settings.show_in_tab %} role="button" tabindex="0" :aria-expanded="open" @click="open = !open" @keydown.enter.prevent="$el.click()" @keydown.space.prevent="$el.click()"{% endif %}>
+      {% if block.settings.icon != 'none' %}
+        {% unless block.settings.custom_image == blank and block.settings.custom_icon == blank and block.settings.another_icon == blank and block.settings.icon == 'another_icon' %}
+          <span class="inline-block relative w-[30px] h-[30px] min-w-[30px] text-[rgb(var(--colors-text))]">
+            {% if block.settings.custom_image != blank %}
+              {% # theme-check-disable ImgLazyLoading %}
+              <img
+                src="{{ block.settings.custom_image | image_url: width: 30 }}"
+                alt="{{ block.settings.custom_image.alt | escape }}"
+                loading="{{ loading }}"
+                width="{{ block.settings.custom_image.width }}"
+                height="{{ block.settings.custom_image.height }}"
+                style="object-position: {{ block.settings.custom_image.presentation.focal_point }}"
+                class="object-cover absolute top-0 left-0 w-full h-full"
+              >
+              {% # theme-check-enable ImgLazyLoading %}
+            {% else %}
+              {% if block.settings.custom_icon == blank %}
+                {% if block.settings.another_icon != blank and block.settings.icon == 'another_icon' %}
+                  {% render 'icon-new-alls', icon: block.settings.another_icon %}
+                {% else %}
+                  {% render 'icon-labels-bags', icon: block.settings.icon %}
+                {% endif %}
+              {% else %}
+                {{ block.settings.custom_icon }}
+              {% endif %}
+            {% endif %}
+          </span>
+        {% endunless %}
+      {% endif %}
+      <p class="pr-6 rtl:pr-0 rtl:pl-6 font-medium">{{ block.settings.heading | escape }}</p>
+      {% if block.settings.show_in_tab %}
+        <span class="w-2.5 inline-block absolute right-2 rtl:left-2 rtl:right-auto top-1/2 -translate-y-1/2 duration-500{% if block.settings.open_by_default %} rotate-180{% endif %}" :class="open ? 'rotate-180' : 'rotate-0'">
+          {% render 'icon-alls', icon: 'icon-caret' %}
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+  {%- if block.settings.left_label != blank or block.settings.right_label != blank or block.settings.details != blank or block.settings.extra_details != blank -%}
+    <div class="table_info-content{% if block.settings.heading != blank %} mt-2{% endif %} mb-2{% if block.settings.show_in_tab %} mt-2 mb-5{% endif %}{% if show_content_center %} text-center{% endif %}"
+      {%- if block.settings.show_in_tab -%}
+        x-show="open"{% unless block.settings.open_by_default %} x-cloak {% endunless %} x-collapse
+      {% endif %}
+    >
+      <div{% if block.settings.left_label != blank or block.settings.right_label != blank or block.settings.details != blank %} class="table_info_table-{{ block.id }} border border-solid{% if settings.edges_type == 'rounded_corners' %} rounded-[10px] overflow-hidden{% endif %}"{% endif %}>
+        {% if block.settings.left_label != blank or block.settings.right_label != blank %}
+          <span class="table_info_label table_info_label-{{ block.id }} text-[110%] font-bold flex justify-between border-solid border-b pt-6 pb-6 pl-6 pr-6{% if block.settings.use_secondary_background %} bg-theme-secondary text-[rgb(var(--colors-text))]{% endif %}">
+            <p>{{ block.settings.left_label }}</p>
+            <p class="text-right rtl:text-left">{{ block.settings.right_label }}</p>
+          </span>
+        {% endif %}
+        {% liquid
+          if block.settings.details != blank
+            assign details = block.settings.details | remove: '<div class="metafield-rich_text_field">' | remove: '</div>' | remove: '<span class="metafield-multi_line_text_field">' | remove: '</span>' | remove: '<ul class="metafield-single_line_text_field-array">' | remove: '</ul>' | remove: '<li class="metafield-single_line_text_field">' | replace: '</li>', '<br/>' | remove: '<p>' | split: '</p>' 
+          endif
+        %}
+        {% for table in details %}
+          {% liquid 
+            assign rows = table | newline_to_br | strip_newlines | replace: '<br />', '<br/>' | replace: '<br/ >', '<br/>' | split: '<br/>'
+            assign ul_open = false
+            assign paragraph_first = true
+            if forloop.first
+              assign paragraph_first = false
+            endif
+          %}
+          {% for row in rows %}
+            {% if row != blank %}
+              {% liquid
+                assign row_text = row | strip_html | strip
+                assign bold_text = ''
+                if row contains '<strong>'
+                  assign bold_text = row | split: '<strong>' | last | split: '</strong>' | first | strip_html | strip
+                elsif row contains '<b>'
+                  assign bold_text = row | split: '<b>' | last | split: '</b>' | first | strip_html | strip
+                endif
+
+                assign is_label_row = false
+                if paragraph_first and bold_text != blank and bold_text == row_text
+                  assign is_label_row = true
+                  assign row = row | remove: '<strong>' | remove: '</strong>' | remove: '<b>' | remove: '</b>'
+                endif
+                assign paragraph_first = false
+              %}
+              {%- if is_label_row -%}
+                {%- if ul_open %}
+                  </ul>
+                  {% assign ul_open = false %}
+                {% endif -%}
+                <span class="table_info_label table_info_label-{{ block.id }} text-[110%] font-bold flex justify-between border-solid border-b pt-6 pb-6 pl-6 pr-6{% if block.settings.use_secondary_background %} bg-theme-secondary text-[rgb(var(--colors-text))]{% endif %}">
+              {%- else -%}
+                {%- unless ul_open %}
+                  <ul class="table_info_details table_info_details-{{ section.id }} table_info_details-{{ block.id }}">
+                  {% assign ul_open = true %}
+                {% endunless -%}
+                <li class="flex justify-between border-solid border-b pt-3 pb-3{% if block.settings.use_secondary_background %} pl-6 pr-6{% else %} ml-6 mr-6{% endif %}">
+              {%- endif -%}
+              {% liquid 
+                assign first_charactor = row | strip | slice: 0, 1
+                assign row_length = row | split: ':' | size  
+              %}
+              <p class="rte{% if first_charactor == '-' %} pl-4 rtl:pl-0 rtl:pr-4{% endif %}">{% if first_charactor == '-' %}{{ row | split: ':' | first | remove_first: '-' }}{% else %}{{ row | split: ':' | first }}{% endif %}</p>
+              {% if row_length > 1 %}
+                {% assign detail_value = row | strip | strip_html | split: ':' | last | default: "" %}
+                {% assign option_key_metafields = detail_value | split: "|" %}
+                {% if option_key_metafields.size > 1 %}
+                  <p class="rte{% if option_key_metafields.size > 1 %} custom-metafield{% endif %}">
+                    {% for option in option_key_metafields %}
+                      {% assign option_key_metafield = option | remove: " " | split: "." %}
+                      {% assign option_value_metafield = product.selected_or_first_available_variant.metafields[option_key_metafield.first][option_key_metafield.last].value %}
+                      {% if forloop.index > 1 %}x{% endif %}
+                      {% if option_value_metafield %}  
+                          {{ option_value_metafield }}
+                      {% else %}
+                        {{ block.settings.text_to_use_for_empty_fields }}
+                      {% endif %}
+                    {% endfor %}
+                  </p>
+                {% else %}
+                  {% assign option_key_metafield = detail_value | remove: " " | split: "." %}
+                  {% assign option_value_metafield = product.selected_or_first_available_variant.metafields[option_key_metafield.first][option_key_metafield.last].value %}
+                  {% assign option_value_metafield_product = product.metafields[option_key_metafield.first][option_key_metafield.last].value %}
+                  <p class="rte{% if option_value_metafield %} custom-metafield{% endif %}"> 
+                    {% if option_value_metafield %}
+                      {{ option_value_metafield }}
+                    {% elsif option_value_metafield_product %}
+                      {{ option_value_metafield_product }}
+                    {% elsif detail_value contains "custom." %}
+                      {{ block.settings.text_to_use_for_empty_fields }}
+                    {% else %}
+                      {{ row | split: ':' | last }}
+                    {% endif %}
+                  </p>
+                {% endif %}
+              {% endif %}
+              {%- if is_label_row %}
+                </span>
+              {% else %}
+                </li>
+              {% endif -%}
+            {% endif %}
+          {% endfor %}
+          {%- if ul_open %}</ul>{% endif -%}
+        {% endfor %}
+      </div>
+      {% if block.settings.extra_details != blank %}
+        <span class="extra-details rte">
+          {{ block.settings.extra_details }}
+        </span>
+      {% endif %}
+    </div>
+  {%- endif -%}
+</div>

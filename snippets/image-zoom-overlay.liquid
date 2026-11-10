@@ -1,0 +1,59 @@
+{% doc %}
+  Renders the full-screen click-to-zoom image overlay shared by the B2B product grid,
+  the quick order list and fast order.
+
+  The overlay teleports itself to `body`, so render it once per section from inside the
+  Alpine scope that owns the state below. Thumbnails then open it by setting that state,
+  e.g. `@click="zoomImageUrl = '...'; zoomMedia = true; $store.xPopup.open = true"`.
+
+  @param {string} [state] - Alpine boolean expression that opens the overlay. Defaults to `zoomMedia`.
+  @param {string} [src_expr] - Alpine expression returning the image src. Defaults to `zoomImageUrl`.
+  @param {string} [alt_expr] - Alpine expression returning the image alt. Defaults to `zoomImageAlt`.
+
+  @example
+  {% render 'image-zoom-overlay' %}
+{% enddoc %}
+
+{%- liquid
+  assign zoom_state = state | default: 'zoomMedia'
+  assign zoom_src = src_expr | default: 'zoomImageUrl'
+  assign zoom_alt = alt_expr | default: 'zoomImageAlt'
+  capture zoom_close
+    echo zoom_state
+    echo ' = false; $store.xPopup.open = false'
+  endcapture
+-%}
+
+<template x-teleport="body">
+  <div
+    x-cloak
+    x-show="{{ zoom_state }}"
+    role="dialog"
+    aria-modal="true"
+    aria-label="{{ 'accessibility.image_zoom' | t }}"
+    class="fixed top-0 left-0 bottom-0 right-0 bg-[rgba(var(--background-color),1)] z-[9999] cursor-zoom-out pt-16 pb-16"
+    @click="{{ zoom_close }}"
+    @keydown.escape.window="if ({{ zoom_state }}) { {{ zoom_close }} }"
+    x-transition:enter="transition-all ease-in-out duration-500"
+    x-transition:enter-start="opacity-0 transform translate-y-1/3"
+    x-transition:enter-end="opacity-100 transform translate-y-0"
+    x-transition:leave="transition-all ease-in-out duration-500"
+    x-transition:leave-end="opacity-0 transform translate-y-1/3"
+  >
+    <div class="flex items-center justify-center h-full">
+      {% comment %}
+        The source is bound at runtime, so the intrinsic size is unknown here. The overlay is
+        fixed to the viewport and the image is sized entirely by CSS (w-full h-full object-contain),
+        so width/height attributes would not prevent any layout shift.
+      {% endcomment %}
+      {% # theme-check-disable ImgWidthAndHeight %}
+      <img
+        :src="{{ zoom_src }}"
+        :alt="{{ zoom_alt }}"
+        class="w-full h-full max-w-3xl object-contain"
+        {% if settings.enable_lazy_loading_image %}loading="lazy"{% else %}loading="eager"{% endif %}
+      >
+      {% # theme-check-enable ImgWidthAndHeight %}
+    </div>
+  </div>
+</template>

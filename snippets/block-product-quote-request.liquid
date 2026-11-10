@@ -1,0 +1,111 @@
+{% doc %}
+  Renders the Quote request block of the product information column: an optional heading and
+  description, followed by the button that opens the quote request form.
+
+  It renders only when `settings.quote_request_enabled` is on. Beyond that the block's own
+  `only_show_b2b` keeps it to approved B2B customers, and `settings.quote_request_show_when_price_hidden`
+  narrows everyone else down to the products whose price is hidden from them.
+
+  The button carries the display data of every variant, so the popup lists them all at a quantity
+  of one, except the variant the add to cart form points at, which takes its quantity.
+
+  @param {object} block - The `quote_request` block.
+  @param {object} product - The product the quote is requested for.
+  @param {string} section_id - The id of the section holding the block, sent with the open event.
+  @param {boolean} [show_content_center] - True when the product information column is centered.
+
+  @example
+  {% render 'block-product-quote-request',
+    block: block,
+    product: product,
+    section_id: section.id,
+    show_content_center: show_content_center
+  %}
+{% enddoc %}
+{%- liquid
+  assign show_block = settings.quote_request_enabled
+
+  if block.settings.label == blank
+    assign show_block = false
+  endif
+
+  if show_block
+    if block.settings.only_show_b2b or settings.quote_request_show_when_price_hidden
+      capture b2b_approved
+        render 'b2b-customer-approved'
+      endcapture
+    endif
+
+    if block.settings.only_show_b2b
+      unless b2b_approved contains 'true'
+        assign show_block = false
+      endunless
+    endif
+
+    if show_block and settings.quote_request_show_when_price_hidden
+      unless b2b_approved contains 'true'
+        capture quote_price_hidden
+          render 'b2b-price-hidden', product: product
+        endcapture
+        unless quote_price_hidden contains 'true'
+          assign show_block = false
+        endunless
+      endunless
+    endif
+  endif
+
+  assign is_text_link = false
+  if block.settings.button_style == 'text-link'
+    assign is_text_link = true
+  endif
+-%}
+{%- if show_block -%}
+  {%- capture quote_line_price_hidden -%}
+    {%- render 'b2b-price-hidden', product: product -%}
+  {%- endcapture -%}
+  {%- assign quote_line_price_hidden = quote_line_price_hidden | strip | default: 'false' -%}
+  {%- capture quote_variants_json -%}
+    {
+    {%- for quote_variant in product.variants -%}
+      {%- unless forloop.first -%},{%- endunless -%}
+      "{{ quote_variant.id }}":
+      {%- render 'quote-request-line-data', product: product, variant: quote_variant, price_hidden: quote_line_price_hidden -%}
+    {%- endfor -%}
+    }
+  {%- endcapture -%}
+  <div
+    class="x-block-quote-request quote-request-{{ block.id }} mb-4 md:mb-6 w-full
+      {%- if show_content_center %} text-center{% endif %}"
+    {{ block.shopify_attributes }}
+  >
+    {%- if is_text_link -%}
+      {%- if block.settings.heading != blank -%}
+        <div class="mb-1.5 md:mb-2.5">
+          {% render 'heading-highlight',
+            headingId: block.id,
+            heading: block.settings.heading,
+            highlight_type: 'underline',
+            class: 'h5 block leading-tight p-break-words',
+            heading_tag: 'h2',
+            animation_heading: true
+          %}
+        </div>
+      {%- endif -%}
+      {%- if block.settings.description != blank -%}
+        <div class="rte p-break-words mb-2.5 md:mb-4">{{ block.settings.description }}</div>
+      {%- endif -%}
+    {%- endif -%}
+    <button
+      id="OpenQuoteRequest-{{ block.id }}"
+      type="button"
+      data-quote-variants="{{ quote_variants_json | strip_newlines | escape }}"
+      class="button pt-2.5 pb-2.5 pl-7 pr-7 md:pl-9 md:pr-9 md:pt-3 md:pb-3{% if block.settings.button_style == 'secondary' %} button-outline{% elsif is_text_link %} button-text-link{% else %} button-solid{% endif %} text-center inline-block border empty:hidden leading-normal"
+      x-on:click="$dispatch('eurus:quote-request:open', { subheading: {{ product.title | json | escape }}, lines: $store.xQuoteRequest.linesFromProductSection('{{ section_id }}', $el.dataset.quoteVariants), buttonId: 'OpenQuoteRequest-{{ block.id }}' })"
+    >
+      {% render 'button-label',
+        button_label: block.settings.label,
+        show_button_style: block.settings.button_style
+      %}
+    </button>
+  </div>
+{%- endif -%}

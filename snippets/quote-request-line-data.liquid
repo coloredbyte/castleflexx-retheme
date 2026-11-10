@@ -1,0 +1,98 @@
+{% doc %}
+  Outputs one variant as the JSON object the quote request popup renders a line from, for a caller
+  to capture and hand to the component that owns the quantity. A caller that has the stock badge to
+  hand passes it; the rest fall back to the variant's availability.
+
+  The quantity rules ride along as numbers, not only as the `qtyRule` label, so the popup can hold
+  the quantity to them. They are the product's own rules: unlike the cart, a quote asks for a
+  quantity rather than reserving one, so nothing is subtracted for what is already in the cart.
+
+  @param {object} product - The product the variant belongs to.
+  @param {object} variant - The variant to describe.
+  @param {object} [image] - Media to show, defaulting to the variant's, then the product's.
+  @param {string} [price_hidden] - `'true'` when the price must stay hidden, so a caller that
+    renders the whole variant list resolves it once instead of once per variant.
+  @param {number} [qty] - Quantity to open the line at, for a caller that already owns it, such as
+    the cart. Callers that set the quantity on the client leave it out.
+  @param {string} [status] - Stock badge label.
+  @param {string} [status_color] - Stock badge class, one of the `inventory-*-status` set.
+
+  @example
+  {%- capture quote_line_json -%}
+    {%- render 'quote-request-line-data', product: product, variant: variant -%}
+  {%- endcapture -%}
+{% enddoc %}
+{%- liquid
+  assign quote_price_hidden = price_hidden
+  if quote_price_hidden == blank
+    capture quote_price_hidden
+      render 'b2b-price-hidden', product: product
+    endcapture
+  endif
+  assign quote_hide_price = false
+  if quote_price_hidden contains 'true'
+    assign quote_hide_price = true
+  endif
+
+  assign quote_variant_title = variant.title
+  if product.has_only_default_variant or product.variants_count == 1
+    assign quote_variant_title = ''
+  endif
+
+  assign quote_media = image | default: variant.featured_media | default: product.featured_media
+  assign quote_image = ''
+  if quote_media
+    assign quote_image = quote_media | image_url: width: 120
+  endif
+
+  assign quote_status = status
+  assign quote_status_color = status_color
+  if quote_status == blank
+    if variant.available
+      assign quote_status = 'products.product.inventory_out_of_stock_continue_selling' | t
+      assign quote_status_color = 'inventory-in-stock-status'
+    else
+      assign quote_status = 'products.product.inventory_out_of_stock' | t
+      assign quote_status_color = 'inventory-out-of-stock-status'
+    endif
+  endif
+
+  assign quote_rule = ''
+  if variant.quantity_rule.min > 1
+    assign quote_rule = 'sections.quick-order-list.qty-rule-min' | t: quantity: variant.quantity_rule.min
+  endif
+  if variant.quantity_rule.increment > 1
+    assign quote_rule_part = 'sections.quick-order-list.qty-rule-increase' | t: quantity: variant.quantity_rule.increment
+    if quote_rule != ''
+      assign quote_rule = quote_rule | append: ' · '
+    endif
+    assign quote_rule = quote_rule | append: quote_rule_part
+  endif
+  if variant.quantity_rule.max != null
+    assign quote_rule_part = 'sections.quick-order-list.qty-rule-max' | t: quantity: variant.quantity_rule.max
+    if quote_rule != ''
+      assign quote_rule = quote_rule | append: ' · '
+    endif
+    assign quote_rule = quote_rule | append: quote_rule_part
+  endif
+-%}
+{
+"variantId": {{ variant.id | json }},
+"productId": {{ product.id | json }},
+"productTitle": {{ product.title | json }},
+"variantTitle": {{ quote_variant_title | json }},
+"sku": {{ variant.sku | default: '' | json }},
+"image": {{ quote_image | json }},
+"status": {{ quote_status | json }},
+"statusColor": {{ quote_status_color | json }},
+"qtyRule": {{ quote_rule | json }},
+"min": {{ variant.quantity_rule.min | default: 1 | json }},
+"step": {{ variant.quantity_rule.increment | default: 1 | json }},
+"max": {{ variant.quantity_rule.max | json }},
+"priceHidden": {{ quote_hide_price | json }},
+"price": {% if quote_hide_price %}0{% else %}{{ variant.price | json }}{% endif %},
+"priceBreaks": [{% unless quote_hide_price %}{% for quote_break in variant.quantity_price_breaks %}{% unless forloop.first %},{% endunless %}{"min":{{ quote_break.minimum_quantity | json }},"price":{{ quote_break.price | json }}}{% endfor %}{% endunless %}]
+{%- if qty != blank %},
+"qty": {{ qty | json }}
+{%- endif %}
+}

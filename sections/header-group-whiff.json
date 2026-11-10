@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "custom_icon": "",
+            "text": "Make an announcement",
+            "text_size": 110,
+            "link": "",
+            "open_new_window": false,
+            "button_label_or_code": "Shop Now",
+            "button_link": "",
+            "open_new_window_button": false,
+            "timezone": "-4",
+            "end_year": 2023,
+            "end_month": "1",
+            "end_day": "1",
+            "end_hour": "1",
+            "end_minute": "0"
+          }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "custom_icon": "",
+            "text": "Make an announcement",
+            "text_size": 110,
+            "link": "",
+            "open_new_window": false,
+            "button_label_or_code": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "timezone": "-4",
+            "end_year": 2023,
+            "end_month": "1",
+            "end_day": "1",
+            "end_hour": "1",
+            "end_minute": "0"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement-bar-1"
+      ],
+      "settings": {
+        "enable": true,
+        "show_only_on_homepage": false,
+        "show_social_icons": true,
+        "enable_carousel_on_desktop": true,
+        "auto_switch_bar": true,
+        "change_bar_every": 5,
+        "show_navigation": true,
+        "alignment": "right",
+        "show_language_selector": false,
+        "show_currency_selector": false,
+        "text_size_toolbar": 90,
+        "section_scheme": "scheme3"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "full_width": true,
+        "logo_position": "center-left",
+        "sticky_header_type": "on-scroll-up",
+        "logo_width": 130,
+        "logo_width_mobile": 100,
+        "show_social_icons": false,
+        "enable_on_homepage": true,
+        "enable_on_collection_page": false,
+        "shadow": 50,
+        "header_show_language_selector": false,
+        "header_show_currency_selector": false,
+        "show_section_divider": false,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "mobile-navigation": {
+      "type": "mobile-navigation",
+      "blocks": {
+        "mobile-navigation-2": {
+          "type": "account",
+          "settings": {}
+        },
+        "mobile-navigation-3": {
+          "type": "social",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "mobile-navigation-2",
+        "mobile-navigation-3"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "show_language_selector": true,
+        "show_currency_selector": true
+      }
+    },
+    "menu-drawer": {
+      "type": "menu-drawer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "mobile-navigation",
+    "menu-drawer"
+  ]
+}

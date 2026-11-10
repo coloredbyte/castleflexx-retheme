@@ -1,0 +1,5 @@
+# Claude Code local state and linked worktrees — machine-local tooling
+# artifacts, not project source. Never commit these.
+.claude/
+.worktrees/
+.superpowers/

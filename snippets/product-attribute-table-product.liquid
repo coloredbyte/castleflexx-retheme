@@ -1,0 +1,71 @@
+{% doc %}
+  Renders the product cell (image, title, "View detail" button) of the product attribute table.
+
+  @param {object} block - Product block of the product-attribute-table section
+  @param {string} [layout] - Table layout ('horizontal' | 'vertical'), default 'vertical'
+  @param {string} [loading] - Image loading attribute ('lazy' | 'eager')
+  @param {number} [image_width] - Rendered image width in px
+  @param {boolean} [hide_button] - Do not render the "View detail" button
+  @param {boolean} [button_only] - Render only the "View detail" button
+{% enddoc %}
+{% liquid
+  assign attr_product = block.settings.product
+  assign image_width = image_width | default: 300
+  if layout == 'horizontal'
+    assign wrapper_class = 'flex flex-row items-start gap-2 md:gap-4'
+    assign thumb_class = 'w-8 md:w-[60px] aspect-square shrink-0'
+    assign img_class = 'w-full h-full object-contain'
+  else
+    assign wrapper_class = 'flex flex-col items-center gap-2'
+    assign thumb_class = 'flex justify-center w-full h-[74px] md:h-[140px]'
+    assign img_class = 'w-auto h-full max-w-full object-contain'
+  endif
+%}
+{%- capture view_detail_button -%}
+  {% assign label = 'product_comparison.view_detail' | t %}
+  <a
+    {% if attr_product != blank %}
+      href="{{ attr_product.url }}"
+    {% else %}
+      role="link" aria-disabled="true"
+    {% endif %}
+    class="button button-outline inline-block pl-4 pr-4 pt-1.5 pb-1.5 rounded-full whitespace-nowrap leading-normal cursor-pointer pointer-events-auto{% if attr_product == blank %} hover:cursor-not-allowed disable-btn-animation opacity-70{% endif %}"
+  >
+    {% render 'button-label', button_label: label, show_button_style: 'secondary' %}
+    {% if attr_product != blank %}
+      <span class="sr-only">{{ attr_product.title | escape }}</span>
+    {% endif %}
+  </a>
+{%- endcapture -%}
+
+{%- if button_only -%}
+  {{ view_detail_button }}
+{%- else -%}
+  <div class="{{ wrapper_class }}">
+    <div class="{{ thumb_class }}">
+      {% assign img = block.settings.image | default: attr_product.featured_media %}
+      {% if img != blank %}
+        {% assign image_widths = image_width | append: '' %}
+        {{ img | image_url: width: image_width | image_tag: widths: image_widths, loading: loading, class: img_class }}
+      {% else %}
+        <span class="block w-full h-full bg-[#c9c9c9]">
+          {%- render 'icon-placeholder', icon: 'icon-product', class: 'w-full h-full' -%}
+        </span>
+      {% endif %}
+    </div>
+    <div class="min-w-0">
+      {% if attr_product != blank %}
+        <s-view-event
+          data-view-on-intersect
+          view-event-trigger="manual"
+          view-event-payload='{{ attr_product | standard_event_data: "view", context: "collection" | escape }}'></s-view-event>
+        <span class="line-clamp-3 x-heading text-[110%] font-medium" title="{{ attr_product.title | escape }}">{{ attr_product.title | escape }}</span>
+      {% else %}
+        <span class="block h-3 w-24 max-w-full bg-[#c9c9c9]"></span>
+      {% endif %}
+      {% unless hide_button %}
+        <div class="mt-2">{{ view_detail_button }}</div>
+      {% endunless %}
+    </div>
+  </div>
+{%- endif -%}

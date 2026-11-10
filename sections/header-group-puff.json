@@ -1,0 +1,292 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "text": "SIGN - UP FOR 15% OFF ON YOUR FIRST ORDER",
+            "text_size": 90,
+            "link": "",
+            "open_new_window": false,
+            "button_label_or_code": "SHOP NOW",
+            "button_link": "",
+            "open_new_window_button": false,
+            "button_style": "primary",
+            "timezone": "-4",
+            "end_year": 2023,
+            "end_month": "1",
+            "end_day": "1",
+            "end_hour": "1",
+            "end_minute": "0"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "enable": false,
+        "show_only_on_homepage": false,
+        "enable_sticky_bar": false,
+        "show_social_icons": true,
+        "menu": "main-menu",
+        "menu_position": "right",
+        "enable_carousel_on_desktop": true,
+        "auto_switch_bar": true,
+        "change_bar_every": 5,
+        "show_navigation": true,
+        "alignment": "right",
+        "show_language_selector": false,
+        "show_currency_selector": false,
+        "text_size_toolbar": 80,
+        "section_scheme": "scheme3"
+      }
+    },
+    "scrolling_banner_p9eXUt": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "icon_TNieyd": {
+          "type": "icon",
+          "settings": {
+            "icon": "hot-sale",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 20,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_aTQbcT": {
+          "type": "text",
+          "settings": {
+            "text": "Make an announcement",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_LPkRnB": {
+          "type": "icon",
+          "settings": {
+            "icon": "blink",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 20,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_ykFkKB": {
+          "type": "text",
+          "settings": {
+            "text": "Make an announcement",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_dbA8EN": {
+          "type": "icon",
+          "settings": {
+            "icon": "free-delivery",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 20,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_NxDyrd": {
+          "type": "text",
+          "settings": {
+            "text": "Make an announcement",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_g8xkxx": {
+          "type": "icon",
+          "settings": {
+            "icon": "water",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 20,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_AVLn6y": {
+          "type": "text",
+          "settings": {
+            "text": "Non-allergen",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_tpBgin": {
+          "type": "icon",
+          "settings": {
+            "icon": "leaf",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 20,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_Bw3yFP": {
+          "type": "text",
+          "settings": {
+            "text": "Make an announcement",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "icon_TNieyd",
+        "text_aTQbcT",
+        "icon_LPkRnB",
+        "text_ykFkKB",
+        "icon_dbA8EN",
+        "text_NxDyrd",
+        "icon_g8xkxx",
+        "text_AVLn6y",
+        "icon_tpBgin",
+        "text_Bw3yFP"
+      ],
+      "settings": {
+        "show_border": true,
+        "speed": 30,
+        "direction": "left",
+        "pause_hover": true,
+        "enable_rotating_effect": false,
+        "overlay_opacity": 0,
+        "space_block": 80,
+        "desktop_height": "750px",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "space_block_mobile": 80,
+        "mobile_height": "500px",
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "enable_hamburger_menu": false,
+        "search_on_header": false,
+        "select_motion": "hover",
+        "full_width": false,
+        "logo_position": "left-center",
+        "mobile_header_layout": "center-left",
+        "sticky_header_type": "on-scroll-up",
+        "logo_width": 130,
+        "logo_width_mobile": 100,
+        "show_social_icons": false,
+        "enable_on_homepage": false,
+        "enable_on_collection_page": false,
+        "shadow": 50,
+        "primary_menu_label_animation": false,
+        "enable_highlight": true,
+        "menus": "",
+        "highlight_style": "bling_bling",
+        "header_show_language_selector": false,
+        "header_show_currency_selector": false,
+        "show_section_divider": false,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "mobile-navigation": {
+      "type": "mobile-navigation",
+      "blocks": {
+        "mobile-navigation-2": {
+          "type": "account",
+          "settings": {}
+        },
+        "mobile-navigation-3": {
+          "type": "social",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "mobile-navigation-2",
+        "mobile-navigation-3"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "show_language_selector": true,
+        "show_currency_selector": true,
+        "enable_highlight": false,
+        "menus": "",
+        "highlight_style": "marker"
+      }
+    },
+    "menu-drawer": {
+      "type": "menu-drawer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "scrolling_banner_p9eXUt",
+    "header",
+    "mobile-navigation",
+    "menu-drawer"
+  ]
+}

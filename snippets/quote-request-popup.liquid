@@ -1,0 +1,730 @@
+{% doc %}
+  Renders the quote request popup, once from the layout for the whole storefront. A surface opens
+  it by dispatching `eurus:quote-request:open` with its own lines, and the popup renders whatever
+  it is handed.
+
+  `settings.quote_request_information_collect` picks the fields: `full_details` renders company
+  name, contact person, role, email, phone number, tax number and additional information,
+  `name_email_only` renders the name and email fields only.
+
+  @example
+  {% render 'quote-request-popup' %}
+{% enddoc %}
+{%- liquid
+  if settings.lang_direction contains request.locale.iso_code
+    assign is_rtl = true
+  endif
+
+  assign money_format = 'window.Eurus.money_format'
+  if settings.currency_code_enable
+    assign money_format = 'window.Eurus.money_with_currency_format'
+  endif
+
+  capture quote_rule_messages
+    echo '{"min":'
+    echo 'sections.quick-order-list.error-min' | t: quantity: '[quantity]' | json
+    echo ',"max":'
+    echo 'sections.quick-order-list.error-max' | t: quantity: '[quantity]' | json
+    echo ',"step":'
+    echo 'sections.quick-order-list.error-multiple' | t: quantity: '[quantity]' | json
+    echo '}'
+  endcapture
+
+  comment
+    The unit price line is rendered twice from here: inline from md up, and inside the tooltip the
+    narrow layout hides it behind.
+  endcomment
+  capture quote_unit_price_expr
+    echo 'quote_request.unit_price' | t: price: '[price]', quantity: '[quantity]' | json | escape
+    echo ".replace('[price]', $store.xHelper.formatMoney($store.xQuoteRequest?.unitPrice(quote_line), "
+    echo money_format
+    echo ")).replace('[quantity]', 1)"
+  endcapture
+
+  capture quote_status_labels
+    echo '{"inventory-in-stock-status":'
+    echo 'products.product.inventory_out_of_stock_continue_selling' | t | json
+    echo ',"inventory-low-stock-status":'
+    echo 'products.product.inventory_low_stock' | t | json
+    echo ',"inventory-out-of-stock-status":'
+    echo 'products.product.inventory_out_of_stock' | t | json
+    echo '}'
+  endcapture
+
+  if settings.quote_request_information_collect == 'name_email_only'
+    assign fields = 'name,email' | split: ','
+  else
+    assign fields = 'company_name,contact_person,role,tax_number,email,phone,additional_information' | split: ','
+  endif
+
+  assign account_company = customer.current_company.name | default: customer.default_address.company
+
+  assign show_b2b_signup = settings.quote_request_offer_b2b_signup
+  if customer and show_b2b_signup
+    capture b2b_approved
+      render 'b2b-customer-approved'
+    endcapture
+    if b2b_approved contains 'true'
+      assign show_b2b_signup = false
+    endif
+  endif
+-%}
+{%- if settings.quote_request_enabled -%}
+  {%- capture quote_unit_price_icon -%}
+    {%- comment -%} Same mark the Quick order list uses for its volume pricing tooltip. {%- endcomment -%}
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20" fill="none" style="fill: none" aria-hidden="true" focusable="false">
+      <path d="M9.65039 18.65C14.6209 18.65 18.6504 14.6205 18.6504 9.65002C18.6504 4.67946 14.6209 0.650024 9.65039 0.650024C4.67983 0.650024 0.650391 4.67946 0.650391 9.65002C0.650391 14.6205 4.67983 18.65 9.65039 18.65Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.65039 5.05005H9.65939" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.65039 14.45V7.45001" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </svg>
+  {%- endcapture -%}
+{%- style -%}
+    .quote-request-popup__row-product { background-color: rgba(var(--colors-text), 0.02); }
+    .quote-request-popup .inventory-status {
+      background-color: rgba(var(--stock-color), 0.25);
+      color: rgb(var(--stock-color));
+    }
+    .quote-request-list-product > div:last-child { border-bottom-width: 0; }
+    .quote-request-popup__line { position: relative; }
+    .quote-request-popup__line::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      inset-inline-start: 16px;
+      inset-inline-end: 20px;
+      border-top: 1px solid rgba(var(--colors-line-and-border), 1);
+    }
+    .quote-request-popup__line-indent { margin-inline-start: 16px; }
+    @media (max-width: 767px) {
+      .quote-request-popup .quote-request-popup__sent {
+        margin: auto;
+        width: calc(100% - 40px);
+        {%- if settings.edges_type == 'rounded_corners' %}
+        border-radius: 10px;
+        {%- endif %}
+      }
+      .quote-request-popup__dialog {
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .quote-request-popup__body {
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: none;
+      }
+      .quote-request-popup__line-body {
+        flex: 1 1 0%;
+        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 8px;
+      }
+      .quote-request-popup__line-body::before {
+        content: '';
+        order: 1;
+        flex: 0 0 100%;
+        height: 0;
+        margin-block: -3px;
+      }
+      .quote-request-popup__line-body .quote-request-popup__col-info,
+      .quote-request-popup__line-body .quote-request-popup__col-qty,
+      .quote-request-popup__line-body .quote-request-popup__qty-row { display: contents; }
+      .quote-request-popup__line-title {
+        flex: 1 1 0%;
+        min-width: 0;
+      }
+      .quote-request-popup__line-body .quote-request-popup__clear {
+        order: 0;
+        align-self: flex-start;
+        margin-inline-start: auto;
+      }
+      .quote-request-popup__line-sku,
+      .quote-request-popup__line-body .quote-request-popup__col-stock { order: 2; }
+      .quote-request-popup__line-body .quote-request-popup__col-total {
+        order: 3;
+        flex: 0 0 100%;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+      }
+      .quote-request-popup__line-body .quote-request-popup__qty-row > div { order: 4; }
+      .quote-request-popup__line-body .quote-request-popup__col-qty > p {
+        order: 5;
+        flex: 0 0 100%;
+      }
+    }
+    @media (min-width: 768px) {
+      .quote-request-popup__line-body { display: contents; }
+      .quote-request-popup__col-info {
+        flex: 1 1 0%;
+        min-width: 0;
+      }
+      .quote-request-popup__col-total { text-align: end; }
+      .quote-request-popup__col-stock { width: 15%; }
+      .quote-request-popup__col-qty { width: 24%; }
+      .quote-request-popup__col-total { width: 18%; }
+    }
+    @media (min-width: 1024px) {
+      .quote-request-popup__scroll {
+        max-height: 85vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .quote-request-popup__scroll.quote-request-list-product { max-height: 70vh; }
+      .quote-request-popup__panel {
+        border-width: 1px;
+        {%- if settings.edges_type == 'rounded_corners' %}
+        border-radius: 10px;
+        {%- endif %}
+      }
+      .quote-request-popup__line::before {
+        inset-inline-start: 32px;
+        inset-inline-end: 44px;
+      }
+    }
+    .quote-request-popup__tip-body {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .quote-request-popup__tip:hover .quote-request-popup__tip-body,
+    .quote-request-popup__tip:focus-within .quote-request-popup__tip-body {
+      visibility: visible;
+      opacity: 1;
+    }
+    .quote-request-popup__tip-body::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -8px;
+      height: 8px;
+    }
+    .quote-request-popup__tip-body::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      margin-left: -6px;
+      width: 12px;
+      height: 12px;
+      background-color: rgba(var(--background-color), 1);
+      border: 1px solid rgb(var(--colors-line-and-border));
+      border-right: 0;
+      border-bottom: 0;
+      transform: rotate(45deg);
+    }
+    .quote-request-popup__line-body .quote-request-popup__tip { align-self: center; }
+    .quote-request-popup__sent { max-width: 431px; }
+    .quote-request-popup__sent .quote-request-popup__panel {
+      width: 100%;
+      border-width: 0;
+      padding: 0;
+    }
+{%- endstyle -%}
+<template x-if="!$store.xInit.runDispatch">
+  <div
+    x-init="$store.xQuoteRequest?.setMessages({{ quote_rule_messages | strip_newlines | escape }})"
+    x-show="$store.xQuoteRequest?.show"
+    x-cloak
+    class="quote-request-popup flex items-end md:items-center md:pl-5 md:pr-5 md:pt-5 md:pb-5 fixed top-0 left-0 right-0 bottom-0 z-[60] bg-[#acacac] bg-opacity-30"
+  >
+    <div
+      id="QuoteRequestPopup"
+      role="dialog"
+      aria-modal="true"
+      :aria-labelledby="$store.xQuoteRequest?.posted ? 'QuoteRequestTitle-sent' : 'QuoteRequestTitle'"
+      x-show="$store.xQuoteRequest?.show"
+      :class="$store.xQuoteRequest?.posted && 'quote-request-popup__sent'"
+      class="quote-request-popup__dialog w-full x-pgw page-width pl-3 pr-1 md:pr-4 md:pl-4 pt-4 pb-4 relative lg:ml-auto lg:mr-auto bg-[rgba(var(--background-color),1)]{% if settings.edges_type == 'rounded_corners' %} rounded-t-[10px] md:rounded-[10px]{% endif %}"
+      x-transition:enter="transition-all ease-in-out duration-500"
+      x-transition:enter-start="opacity-0 transform translate-y-1/3"
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      x-transition:leave="transition-all ease-in-out duration-500"
+      x-transition:leave-end="opacity-0 transform translate-y-1/3"
+      x-intersect.full="$store.xModal.focus('QuoteRequestPopup', 'CloseQuoteRequest')"
+      @keydown.escape="$store.xQuoteRequest?.close()"
+      @click.away="$store.xQuoteRequest?.close()"
+    >
+      <button
+        id="CloseQuoteRequest"
+        class="absolute cursor-pointer group-close-btn rounded-full icon-close-container w-fit top-3{% if is_rtl %} left-4 lg:left-6{% else %} right-4 lg:right-6{% endif %}"
+        aria-label="{{ 'accessibility.close' | t }}"
+        @click="$store.xQuoteRequest?.close()"
+      >
+        {% render 'icon-alls', icon: 'icon-close', animation_class: 'icon-close-animation' %}
+      </button>
+      <p id="QuoteRequestTitle" class="h3" x-show="!$store.xQuoteRequest?.posted">{{ 'quote_request.title' | t }}</p>
+      <p
+        class="leading-tight p-break-words opacity-70"
+        x-show="$store.xQuoteRequest?.subheading && !$store.xQuoteRequest?.posted"
+        x-text="$store.xQuoteRequest?.subheading"
+      ></p>
+      <div class="quote-request-popup__body flex max-h-[80vh] lg:max-h-fit overflow-auto pr-2 scrollbar-body flex-col lg:flex-row lg:gap-5 mt-4">
+        <div class="quote-request-popup__panel lg:w-3/5 border-t border-solid h-fit" x-show="!$store.xQuoteRequest?.posted">
+          <div class="hidden md:flex items-center gap-3 pt-3 pb-3 pl-4 pr-5 rtl:pl-5 rtl:pr-4 border-b uppercase x-heading text-[90%]">
+            <span class="flex-1 min-w-0"></span>
+            <span class="quote-request-popup__col-stock shrink-0">{{ 'sections.quick-order-list.inventory-status' | t }}</span>
+            <span class="quote-request-popup__col-qty shrink-0">{{ 'products.product.quantity.label' | t }}</span>
+            <span class="quote-request-popup__col-total shrink-0">{{ 'sections.cart.headings.total' | t }}</span>
+            <span class="w-3 shrink-0" aria-hidden="true"></span>
+          </div>
+          <div class="quote-request-popup__scroll quote-request-list-product scrollbar-body">
+            <template x-for="quote_group in ($store.xQuoteRequest?.groups || [])" :key="quote_group.productId">
+              <div class="border-b">
+                <div
+                  x-show="!quote_group.singleVariant"
+                  class="quote-request-popup__row-product flex items-center gap-3 pt-3 pb-3 pl-0 pr-0 md:pl-4 md:pr-5 md:rtl:pl-5 md:rtl:pr-4 cursor-pointer"
+                  role="button"
+                  tabindex="0"
+                  :aria-expanded="!$store.xQuoteRequest?.isCollapsed(quote_group.productId)"
+                  :aria-label="quote_group.title"
+                  @click="$store.xQuoteRequest?.toggleGroup(quote_group.productId)"
+                  @keydown.enter="$store.xQuoteRequest?.toggleGroup(quote_group.productId)"
+                  @keydown.space.prevent="$store.xQuoteRequest?.toggleGroup(quote_group.productId)"
+                >
+                  <div class="flex-1 min-w-0 flex items-center gap-3">
+                    <div class="w-14 h-14 shrink-0 overflow-hidden bg-[rgba(var(--colors-line-and-border),0.3)]{% if settings.edges_type == 'rounded_corners' %} rounded-md{% endif %}">
+                      {% # theme-check-disable ImgLazyLoading %}
+                      <img
+                        x-show="quote_group.image"
+                        :src="quote_group.image"
+                        :alt="quote_group.title"
+                        class="w-full h-full object-cover"
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                      >
+                      {% # theme-check-enable ImgLazyLoading %}
+                    </div>
+                    <div class="min-w-0">
+                      <p class="leading-tight p-break-words font-semibold line-clamp-2" x-text="quote_group.title"></p>
+                      <p
+                        class="text-[90%] leading-tight opacity-70"
+                        x-text="{{ 'quote_request.variants_count' | t: count: '[count]' | json | escape }}.replace('[count]', quote_group.lines.length)"
+                      ></p>
+                    </div>
+                  </div>
+                  <span class="quote-request-popup__col-stock shrink-0 hidden md:block" aria-hidden="true"></span>
+                  <span class="quote-request-popup__col-qty shrink-0 hidden md:block" aria-hidden="true"></span>
+                  <span
+                    class="quote-request-popup__col-total shrink-0 font-semibold"
+                    x-show="!$store.xQuoteRequest?.groupHasPrice(quote_group)"
+                  >—</span>
+                  <span
+                    class="quote-request-popup__col-total shrink-0 font-semibold price-sale"
+                    x-show="$store.xQuoteRequest?.groupHasPrice(quote_group)"
+                    x-html="$store.xHelper.formatMoney($store.xQuoteRequest?.groupTotal(quote_group), {{ money_format }})"
+                  ></span>
+                  <span
+                    class="w-3 shrink-0 duration-200"
+                    :class="$store.xQuoteRequest?.isCollapsed(quote_group.productId) ? '' : 'rotate-180'"
+                    aria-hidden="true"
+                  >
+                    {% render 'icon-alls', icon: 'icon-caret' %}
+                  </span>
+                </div>
+                <div x-show="quote_group.singleVariant || !$store.xQuoteRequest?.isCollapsed(quote_group.productId)" x-collapse>
+                  <template x-for="quote_line in quote_group.lines" :key="quote_line.variantId">
+                    <div
+                      class="flex items-start md:items-center gap-3 pt-3 pb-3 pl-0 pr-0 md:pl-4 md:pr-5 md:rtl:pl-5 md:rtl:pr-4"
+                      :class="quote_group.singleVariant ? 'quote-request-popup__row-product' : 'quote-request-popup__line'"
+                    >
+                      <div
+                        class="shrink-0 overflow-hidden bg-[rgba(var(--colors-line-and-border),0.3)]{% if settings.edges_type == 'rounded_corners' %} rounded-md{% endif %}"
+                        :class="quote_group.singleVariant ? 'w-14 h-14' : 'quote-request-popup__line-indent w-10 h-10'"
+                      >
+                        {% # theme-check-disable ImgLazyLoading %}
+                        <img
+                          x-show="quote_line.image"
+                          :src="quote_line.image"
+                          :alt="quote_line.title"
+                          class="w-full h-full object-cover"
+                          width="40"
+                          height="40"
+                          :width="quote_group.singleVariant ? 56 : 40"
+                          :height="quote_group.singleVariant ? 56 : 40"
+                          loading="lazy"
+                        >
+                        {% # theme-check-enable ImgLazyLoading %}
+                      </div>
+                      <div class="quote-request-popup__line-body">
+                        <div class="quote-request-popup__col-info">
+                          <p class="quote-request-popup__line-title leading-tight p-break-words line-clamp-2" x-text="quote_line.variant || quote_line.title"></p>
+                          <p class="quote-request-popup__line-sku text-[90%] leading-tight opacity-70" x-show="quote_line.sku" x-text="quote_line.sku"></p>
+                        </div>
+                        <div class="quote-request-popup__col-stock shrink-0" :class="quote_line.statusColor">
+                          <p
+                            class="inventory-status w-fit text-[85%] text-[rgb(var(--background-color))] pt-1 pb-1 pl-2 pr-2 rounded-full"
+                            x-show="quote_line.status"
+                            x-text="{{ quote_status_labels | strip_newlines | escape }}[quote_line.statusColor] || quote_line.status"
+                          ></p>
+                        </div>
+                        <div class="quote-request-popup__col-qty shrink-0">
+                          <div class="quote-request-popup__qty-row flex items-center justify-start gap-2">
+                            <div class="inline-flex w-fit border border-solid items-center bg-[rgba(var(--background-color),1)]{% if settings.buttons_type == 'rounded_corners' or settings.buttons_type == 'mixed' %} !rounded-md{% elsif settings.buttons_type == 'rounded' %} !rounded-full{% endif %}">
+                              <button
+                                class="w-8 shrink-0 cursor-pointer pt-2 pb-2 bg-transparent select-none opacity-70 pl-2 pr-2"
+                                aria-label="{{ 'accessibility.decrease_quantity' | t | escape }}"
+                                @click="$store.xQuoteRequest?.stepQty(quote_line, -1)"
+                              >
+                                {% render 'icon-alls', icon: 'icon-minus', class: 'w-3' %}
+                              </button>
+                              <input
+                                type="number"
+                                min="0"
+                                class="outer-spin-button hide-spin-input w-10 bg-transparent text-center pt-2 pb-2 focus:outline-none"
+                                aria-label="{{ 'products.product.quantity.label' | t }}"
+                                :value="$store.xQuoteRequest.lines[quote_line.variantId]"
+                                :aria-invalid="$store.xQuoteRequest?.errorOf(quote_line) ? 'true' : 'false'"
+                                @input="$store.xQuoteRequest.onInputQty(quote_line, $el)"
+                                @change="$store.xQuoteRequest.onChangeQty(quote_line, $el)"
+                                @keydown.enter.prevent="$el.blur()"
+                              >
+                              <button
+                                class="w-8 shrink-0 cursor-pointer pt-2 pb-2 bg-transparent select-none opacity-70 pl-2 pr-2"
+                                aria-label="{{ 'accessibility.increase_quantity' | t | escape }}"
+                                @click="$store.xQuoteRequest?.stepQty(quote_line, 1)"
+                              >
+                                {% render 'icon-alls', icon: 'icon-plus', class: 'w-3' %}
+                              </button>
+                            </div>
+                            <span
+                              class="quote-request-popup__clear shrink-0 cursor-pointer underline underline-offset-2 hover-text-link leading-normal"
+                              x-cloak
+                              x-show="$store.xQuoteRequest?.rawQty(quote_line) > 0"
+                              @click="$store.xQuoteRequest.resetQty(quote_line)"
+                            >
+                              {{- 'products.product.clear_qty' | t -}}
+                            </span>
+                          </div>
+                          <p class="text-[90%] leading-tight opacity-70 mt-1" x-show="quote_line.qtyRule" x-text="quote_line.qtyRule"></p>
+                          <p
+                            class="text-[90%] leading-tight mt-1 text-[rgba(var(--color-error))]"
+                            x-cloak
+                            x-show="$store.xQuoteRequest?.errorOf(quote_line)"
+                            x-text="$store.xQuoteRequest?.errorOf(quote_line)"
+                          ></p>
+                        </div>
+                        <div class="quote-request-popup__col-total shrink-0">
+                          <p class="font-semibold" x-show="quote_line.priceHidden">—</p>
+                          <p
+                            class="font-semibold price-sale"
+                            x-show="!quote_line.priceHidden"
+                            x-html="$store.xHelper.formatMoney($store.xQuoteRequest?.lineTotal(quote_line), {{ money_format }})"
+                          ></p>
+                          <p
+                            class="hidden md:block text-small leading-tight"
+                            x-show="!quote_line.priceHidden"
+                            x-html="{{ quote_unit_price_expr | strip_newlines }}"
+                          ></p>
+                          <div class="quote-request-popup__tip md:hidden relative shrink-0" x-show="!quote_line.priceHidden">
+                            <div
+                              role="button"
+                              tabindex="0"
+                              class="w-3.5 h-3.5 block"
+                              aria-label="{{ 'products.product.price.unit_price' | t }}"
+                              :aria-describedby="'QuoteUnitPrice-' + quote_line.variantId"
+                            >
+                              {{ quote_unit_price_icon }}
+                            </div>
+                            <div
+                              role="tooltip"
+                              :id="'QuoteUnitPrice-' + quote_line.variantId"
+                              class="quote-request-popup__tip-body absolute top-full mt-2 z-20 w-max whitespace-nowrap border border-[rgba(var(--colors-line-and-border))] bg-[rgba(var(--background-color),1)] shadow-md pl-3 pr-3 pt-2 pb-2 text-small leading-tight{% if settings.edges_type == 'rounded_corners' %} rounded-[10px]{% endif %}"
+                              x-html="{{ quote_unit_price_expr | strip_newlines }}"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="w-3 shrink-0" aria-hidden="true"></span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </div>
+            <div class="flex items-center justify-between gap-4 pl-0 pr-0 pt-4 pb-4 md:pl-4 md:pr-5 md:rtl:pl-5 md:rtl:pr-4 border-t">
+              <p
+                x-text="{{ 'quote_request.summary' | t: products: '[products]', items: '[items]' | json | escape }}.replace('[products]', $store.xQuoteRequest?.selectedProductCount + '/' + $store.xQuoteRequest?.totalProductCount).replace('[items]', $store.xQuoteRequest?.totalUnits)"
+              ></p>
+              <p class="font-semibold flex items-center gap-2">
+                <span>{{ 'sections.cart.headings.total' | t }}</span>
+                <span x-show="!$store.xQuoteRequest?.hasPrice">—</span>
+                <span class="price-sale" x-show="$store.xQuoteRequest?.hasPrice" x-html="$store.xHelper.formatMoney($store.xQuoteRequest?.totalPrice, {{ money_format }})"></span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="quote-request-popup__panel quote-request-popup__scroll scrollbar-body lg:w-2/5 border-t border-solid pt-5 lg:pb-5 lg:pl-5 lg:pr-5"
+            @resize.window.debounce="if (window.xViewport.innerWidth >= 1024) { $store.xQuoteRequest.infoOpen = true }"
+          >
+            <p
+              class="h6 text-medium pb-4 hidden lg:block"
+              x-show="!$store.xQuoteRequest?.posted"
+            >{{ 'quote_request.contact_information' | t }}</p>
+            <button
+              type="button"
+              class="lg:hidden w-full flex items-center justify-between gap-3 pb-4 cursor-pointer"
+              x-show="!$store.xQuoteRequest?.posted"
+              :aria-expanded="$store.xQuoteRequest?.infoOpen"
+              @click="$store.xQuoteRequest?.toggleInfo()"
+            >
+              <span class="h6 text-medium">{{ 'quote_request.contact_information' | t }}</span>
+              <span
+                class="w-3 shrink-0 duration-200 x-heading"
+                :class="$store.xQuoteRequest?.infoOpen && 'rotate-180'"
+                aria-hidden="true"
+              >
+                {% render 'icon-alls', icon: 'icon-caret' %}
+              </span>
+            </button>
+            <div
+              x-data="{}"
+              x-show="$store.xQuoteRequest?.infoOpen"
+              x-collapse
+              @submit="$store.xQuoteRequest?.submit($event.target, $refs.quoteLines)"
+            >
+              {%- form 'contact', id: 'QuoteRequestForm', class: 'eurus' -%}
+                {%- if form.posted_successfully? or form.errors -%}
+                  <div
+                    x-init="$store.xQuoteRequest?.openAfterSubmit({% if form.posted_successfully? %}true{% else %}false{% endif %})"
+                  ></div>
+                {%- endif -%}
+                {%- if form.errors -%}
+                  <div
+                    class="flex items-start pl-4 pr-4 pt-3 pb-3 mb-3 bg-[rgba(var(--color-error),0.2)] selection:bg-[rgba(var(--color-error),0.4)]"
+                    tabindex="-1"
+                    role="alert"
+                    aria-live="polite"
+                  >
+                    <span class="text-[rgba(var(--color-error))] inline-block w-5 mr-2 rtl:ml-2 rtl:mr-0 shrink-0">
+                      {%- render 'icon-alls', icon: 'icon-error' %}
+                    </span>
+                    <span class="flex-1 leading-tight p-break-words">
+                      {%- for error_field in form.errors -%}
+                        {%- if error_field == 'form' -%}
+                          {{ form.errors.messages[error_field] }}
+                        {%- else -%}
+                          {{ form.errors.translated_fields[error_field] | capitalize }} {{ form.errors.messages[error_field] }}
+                        {%- endif -%}
+                        {%- unless forloop.last %}<br>{% endunless -%}
+                      {%- endfor -%}
+                    </span>
+                  </div>
+                {%- endif -%}
+                <div
+                  x-cloak
+                  x-show="$store.xQuoteRequest?.posted"
+                  class="text-center pt-4 pb-2"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <span class="w-14 h-14 mr-auto ml-auto mb-4 flex items-center justify-center rounded-full bg-[rgba(var(--color-success),0.2)]">
+                    <span class="w-6 h-6 text-[rgba(var(--color-success))]">{%- render 'icon-alls', icon: 'icon-email' -%}</span>
+                  </span>
+                  <p id="QuoteRequestTitle-sent" class="h6 text-medium">{{ settings.quote_request_result_message }}</p>
+                  {%- assign result_text = settings.quote_request_result_text | strip_html | strip -%}
+                  {%- if result_text != blank -%}
+                    <div
+                      class="rte leading-tight p-break-words mt-4 pt-3 pb-3 pl-5 pr-5 bg-theme-secondary border{% if settings.edges_type == 'rounded_corners' %} rounded-lg{% endif %}"
+                      x-html="$store.xQuoteRequest?.sentText({{ settings.quote_request_result_text | json | escape }})"
+                    ></div>
+                  {%- endif -%}
+                  {%- if settings.quote_request_result_button_label != blank and settings.quote_request_result_button_link != blank -%}
+                    <a
+                      class="underline underline-offset-2 hover-text-link text-link cursor-pointer leading-normal mt-4 inline-block"
+                      href="{{ settings.quote_request_result_button_link }}"
+                    >{{ settings.quote_request_result_button_label }}</a>
+                  {%- endif -%}
+                </div>
+                <div x-show="!$store.xQuoteRequest?.posted">
+                  <input type="hidden" aria-hidden="true" name="contact[Form type]" value="{{ 'quote_request.title' | t | escape }}">
+                  <div x-ref="quoteLines"></div>
+                  {%- if customer -%}
+                    <div class="flex items-start gap-3 mb-2 pt-3 pb-3 pl-3 pr-3 border border-solid bg-theme-secondary{% if settings.edges_type == 'rounded_corners' %} rounded-[10px]{% endif %}">
+                      <div class="flex-1 min-w-0">
+                        <p class="text-medium leading-tight p-break-words">{{ account_company | default: customer.name | default: customer.email }}</p>
+                        <p class="text-[90%] leading-tight opacity-70 p-break-words mt-1">
+                          {%- if account_company != blank and customer.name != blank %}{{ customer.name }} &middot; {% endif -%}
+                          {{ customer.email }}
+                        </p>
+                      </div>
+                      <a class="shrink-0 text-[90%] hover-text-link underline underline-offset-2" href="{{ routes.account_url }}">
+                        {{- 'quote_request.change_account' | t -}}
+                      </a>
+                    </div>
+                  {%- endif -%}
+                  {%- if show_b2b_signup -%}
+                    {%- capture b2b_signup_card -%}
+                      <label
+                        class="flex items-center gap-3 mb-3 lg:mb-4 pt-3 pb-3 pl-3 pr-3 cursor-pointer border border-solid bg-theme-secondary{% if settings.edges_type == 'rounded_corners' %} rounded-[10px]{% endif %}"
+                        for="QuoteRequestForm-b2b-signup"
+                      >
+                        <input
+                          type="checkbox"
+                          id="QuoteRequestForm-b2b-signup"
+                          name="contact[B2B account sign-up]"
+                          value="{{ 'quote_request.offer_b2b_signup' | t | escape }}"
+                          class="w-5 h-5 shrink-0 checkbox checkbox-checked border checked:border-[rgba(var(--colors-text-link))] checked:bg-[rgba(var(--colors-text-link))] relative cursor-pointer{% if settings.edges_type == 'rounded_corners' %} rounded{% else %} rounded-none{% endif %}"
+                        >
+                        <span class="flex-1 leading-tight">
+                          {{- 'quote_request.offer_b2b_signup' | t }}
+                          <span class="block text-[90%] opacity-70 mt-1">{{ 'quote_request.offer_b2b_signup_info' | t }}</span>
+                        </span>
+                      </label>
+                    {%- endcapture -%}
+                  {%- endif -%}
+                  {%- for field in fields -%}
+                    {%- if field == 'company_name' -%}
+                      <div class="flex flex-col md:flex-row gap-0 md:gap-3">
+                    {%- endif -%}
+                    {%- liquid
+                      assign field_id = 'QuoteRequestForm-' | append: field
+                      assign is_required = false
+                      assign input_type = 'text'
+                      assign autocomplete = ''
+                      assign field_value = ''
+
+                      case field
+                        when 'company_name'
+                          assign field_label = 'quote_request.company_name' | t
+                          assign field_name = 'contact[Company name]'
+                          assign autocomplete = 'organization'
+                          assign field_value = account_company
+                          assign is_required = true
+                        when 'contact_person'
+                          assign field_label = 'quote_request.contact_person' | t
+                          assign field_name = 'contact[Contact person]'
+                          assign autocomplete = 'name'
+                          assign field_value = customer.name
+                        when 'name'
+                          assign field_label = 'customer.name' | t
+                          assign field_name = 'contact[name]'
+                          assign autocomplete = 'name'
+                          assign field_value = customer.name
+                          assign is_required = true
+                        when 'role'
+                          assign field_label = 'quote_request.role' | t
+                          assign field_name = 'contact[Role]'
+                        when 'email'
+                          assign field_label = 'customer.email' | t
+                          assign field_name = 'contact[email]'
+                          assign input_type = 'email'
+                          assign autocomplete = 'email'
+                          assign field_value = customer.email
+                          assign is_required = true
+                        when 'phone'
+                          assign field_label = 'templates.contact.form.phone' | t
+                          assign field_name = 'contact[Phone number]'
+                          assign input_type = 'tel'
+                          assign autocomplete = 'tel'
+                          assign field_value = customer.phone
+                        when 'tax_number'
+                          assign field_label = 'quote_request.tax_number' | t
+                          assign field_name = 'contact[Tax number]'
+                          assign is_required = true
+                        when 'additional_information'
+                          assign field_label = 'quote_request.additional_information' | t
+                          assign field_name = 'contact[Additional information]'
+                          assign is_required = true
+                      endcase
+                    -%}
+                    {%- liquid
+                      assign field_wrapper_class = 'mb-2 relative'
+                      if field == 'company_name' or field == 'contact_person'
+                        assign field_wrapper_class = field_wrapper_class | append: ' md:flex-1 min-w-0'
+                      endif
+                    -%}
+                    {%- if field == 'additional_information' -%}
+                      {{ b2b_signup_card }}
+                      {%- if show_b2b_signup -%}
+                        <div class="border-t mb-3 lg:mb-4"></div>
+                      {%- endif -%}
+                      <div class="{{ field_wrapper_class }}">
+                        <textarea
+                          id="{{ field_id }}"
+                          class="w-full pl-5 pr-5 lg:pl-6 lg:pr-6 pt-5 pb-1 md:pt-5 md:pb-2 border focus:outline-none focus:border-current input bg-transparent placeholder:opacity-0{% if settings.edges_type == 'rounded_corners' %} !rounded-md{% endif %}"
+                          rows="4"
+                          name="{{ field_name }}"
+                          placeholder="{{ field_label | escape }}"
+                          {% if is_required %}
+                            required
+                            aria-required="true"
+                          {% endif %}
+                        ></textarea>
+                        <label class="duration-150 leading-tight absolute top-3 md:top-4 input_focus:text-xs input_focus:top-1 input_not_empty:top-1 input_not_empty:text-xs{% if is_rtl %} right-5 lg:right-6{% else %} left-5 lg:left-6{% endif %}" for="{{ field_id }}">
+                          {{- field_label }}
+                          {% if is_required %}
+                            <span aria-hidden="true">*</span>
+                          {%- endif %}
+                        </label>
+                      </div>
+                    {%- else -%}
+                      <div class="{{ field_wrapper_class }}">
+                        <input
+                          type="{{ input_type }}"
+                          id="{{ field_id }}"
+                          class="w-full pl-5 pr-5 lg:pl-6 lg:pr-6 pt-5 pb-1 md:pt-5 md:pb-2 border focus:outline-none focus:border-current input bg-transparent placeholder:opacity-0{% if settings.edges_type == 'rounded_corners' %} !rounded-md{% endif %}"
+                          name="{{ field_name }}"
+                          value="{{ field_value | escape }}"
+                          placeholder="{{ field_label | escape }}"
+                          {% if autocomplete != blank %}
+                            autocomplete="{{ autocomplete }}"
+                          {% endif %}
+                          {% if input_type == 'email' %}
+                            autocapitalize="off"
+                            autocorrect="off"
+                          {% endif %}
+                          {% if is_required %}
+                            required
+                            aria-required="true"
+                          {% endif %}
+                        >
+                        <label class="duration-150 leading-tight absolute top-1/2 -translate-y-1/2 input_focus:text-xs input_focus:top-3 input_not_empty:top-3 input_not_empty:text-xs{% if is_rtl %} right-5 lg:right-6{% else %} left-5 lg:left-6{% endif %}" for="{{ field_id }}">
+                          {{- field_label }}
+                          {% if is_required %}
+                            <span aria-hidden="true">*</span>
+                          {%- endif %}
+                        </label>
+                      </div>
+                    {%- endif -%}
+                    {%- if field == 'contact_person' -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- unless fields contains 'additional_information' -%}
+                    {{ b2b_signup_card }}
+                  {%- endunless -%}
+                  <button
+                    type="submit"
+                    name="btnSubmit"
+                    class="button button-solid w-full pt-2.5 pb-2.5 pl-5 pr-5 lg:pl-7 lg:pr-7 md:pt-3 md:pb-3 leading-normal mt-1 disabled:cursor-not-allowed disabled:opacity-60"
+                    :disabled="!$store.xQuoteRequest?.selectedProductCount || $store.xQuoteRequest?.hasErrors"
+                  >
+                    {%- assign button_label = 'quote_request.submit' | t -%}
+                    {% render 'button-label', button_label: button_label, show_button_style: 'primary' %}
+                  </button>
+                  <p class="text-[90%] leading-tight opacity-70 mt-3">{{ 'quote_request.note' | t }}</p>
+                  {%- if shop.customer_accounts_enabled and customer == nil -%}
+                    <div class="text-center mt-3">
+                      <shopify-account class="inline-flex" menu="{{ settings.customer_account_menu }}">
+                        <span slot="signed-out-avatar" class="hover-text-link underline underline-offset-2 cursor-pointer">
+                          {{- 'quote_request.login_link' | t -}}
+                        </span>
+                      </shopify-account>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+{%- endif -%}

@@ -1,0 +1,49 @@
+{% doc %}
+  Renders the quote request link under the checkout button, on the cart page and in the cart drawer.
+
+  The cart rides along in a data attribute rather than being fetched on the click: every cart change
+  re-renders these sections server side, so the markup is never stale.
+
+  @param {string} button_id - Unique id for the link, used to hand focus back when the popup closes.
+  @param {string} [class] - Extra classes, for the spacing each surface needs.
+  @param {string} [on_click] - Alpine statements to run before the popup opens.
+
+  @example
+  {% render 'quote-request-cart-button', button_id: 'OpenQuoteRequestCart', class: 'mt-2 mb-1.5' %}
+{% enddoc %}
+{%- liquid
+  assign show_cart_quote_link = false
+  if settings.quote_request_enabled and settings.quote_request_show_for_approved_b2b and cart != empty
+    capture cart_quote_b2b_approved
+      render 'b2b-customer-approved'
+    endcapture
+    if cart_quote_b2b_approved contains 'true'
+      assign show_cart_quote_link = true
+    endif
+  endif
+-%}
+{%- if show_cart_quote_link -%}
+  {%- capture cart_quote_lines -%}
+    [
+    {%- for cart_quote_item in cart.items -%}
+      {%- unless forloop.first -%},{%- endunless -%}
+      {%- render 'quote-request-line-data',
+        product: cart_quote_item.product,
+        variant: cart_quote_item.variant,
+        image: cart_quote_item.image,
+        price_hidden: 'false',
+        qty: cart_quote_item.quantity
+      -%}
+    {%- endfor -%}
+    ]
+  {%- endcapture -%}
+  <button
+    id="{{ button_id }}"
+    type="button"
+    class="button-text-link hover-text-link cursor-pointer w-full justify-center leading-normal{% if class != blank %} {{ class }}{% endif %}"
+    data-quote-lines="{{ cart_quote_lines | strip_newlines | escape }}"
+    @click="{% if on_click != blank %}{{ on_click }}; {% endif %}$dispatch('eurus:quote-request:open', { lines: $store.xQuoteRequest.linesFromCart($el.dataset.quoteLines), buttonId: '{{ button_id }}' })"
+  >
+    {{- 'quote_request.title' | t -}}
+  </button>
+{%- endif -%}

@@ -1,0 +1,21 @@
+{%- doc -%}
+  Product card background for the Card background mode, or nothing when cards have no background.
+
+  @param {string} mode - 'light' or 'dark'.
+
+  @example
+  {%- capture card_bg_light -%}{%- render 'card-background', mode: 'light' -%}{%- endcapture -%}
+{%- enddoc -%}
+{%- case settings.card_product_background -%}
+  {%- when 'section' -%}
+    rgb(var(--colors-background-secondary))
+  {%- when 'custom' -%}
+    {%- if mode == 'dark' -%}
+      {%- assign cell = settings.card_product_background_color_dark -%}
+    {%- else -%}
+      {%- assign cell = settings.card_product_background_color_light -%}
+    {%- endif -%}
+    {%- if cell != blank and cell.alpha != 0 -%}
+      var(--card-product-background)
+    {%- endif -%}
+{%- endcase -%}

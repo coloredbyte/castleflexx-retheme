@@ -1,0 +1,18 @@
+{%- doc -%}
+  Colour scheme class for a section or block wrapper; nothing when the wrapper follows its parent.
+
+  @param {string} scheme - section_scheme or block_scheme value: 'store', 'scheme2', 'scheme3', 'scheme4' or 'section'.
+  @param {boolean} [is_block] - block wrapper: 'store' resets to Store colors inside a scheme.
+  @param {boolean} [on_image] - content sits on an image: the scheme's (or Store colors') light values in both modes.
+
+  @example
+  <div class="{% render 'scheme-class', scheme: section.settings.section_scheme %} x-container">
+{%- enddoc -%}
+{%- case scheme -%}
+  {%- when 'scheme2', 'scheme3', 'scheme4' -%}
+    {{- scheme -}}{%- if on_image -%}-light{%- endif -%}
+  {%- when 'store' -%}
+    {%- if is_block -%}
+      scheme-store{%- if on_image -%}-light{%- endif -%}
+    {%- endif -%}
+{%- endcase -%}

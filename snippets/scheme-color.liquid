@@ -1,0 +1,37 @@
+{%- doc -%}
+  Background value of a section scheme as shown on the page, lowercase, for Liquid comparisons: the saved cell, else the Store colors set's value.
+
+  @param {string} scheme - section_scheme value: 'store', 'scheme2', 'scheme3' or 'scheme4'.
+  @param {string} role - 'background' or 'secondary_background'.
+  @param {boolean} [dark] - the dark mode value.
+
+  @example
+  {%- capture page_bg -%}{%- render 'scheme-color', scheme: section.settings.section_scheme, role: 'background' -%}{%- endcapture -%}
+{%- enddoc -%}
+{%- liquid
+  case scheme
+    when 'scheme2', 'scheme3', 'scheme4'
+      assign cid = scheme | append: '_' | append: role
+      if dark
+        assign cid = cid | append: '_dark'
+      endif
+    else
+      if role == 'background'
+        if dark
+          assign cid = 'colors_dark_background'
+        else
+          assign cid = 'colors_background'
+        endif
+      elsif dark
+        assign cid = 'secondary_background_dark'
+      else
+        assign cid = 'secondary_background'
+      endif
+  endcase
+  assign cell = settings[cid]
+  if cell != blank and cell.alpha != 0
+    echo cell | downcase
+  else
+    render 'store-color', id: cid
+  endif
+-%}

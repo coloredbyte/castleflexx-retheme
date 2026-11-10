@@ -1,0 +1,57 @@
+{% doc %}
+  Builds the CDN url for a colour swatch background image.
+
+  Sizes the request to the swatch it is painted into instead of a fixed 100px.
+  width and height are a bounding box - image_url keeps the source aspect ratio
+  unless crop is passed - so for the natural style the height is derived from the
+  swatch ratio to bound the taller axis. Square swatches bound both axes equally.
+
+  @param {object} image - Image or media object to render.
+  @param {string} [swatch_size] - Theme swatch size: small, medium or large. Defaults to small.
+  @param {boolean} [product_info] - True for swatches inside .product-info, which renders medium and large bigger.
+  @param {number} [box_px] - Outer box width in px, for swatches with a hard-coded size. Overrides swatch_size.
+  @param {boolean} [natural] - True when the swatch uses the natural style.
+  @param {number} [ratio_image] - Swatch aspect ratio as a percentage (height / width * 100). Only read when natural.
+
+  @example
+  --bg-image: url('{% render 'swatch-image-url', image: preview_image, swatch_size: settings.swatch_size, natural: swatch_natural, ratio_image: ratio_image %}')
+{% enddoc %}{%- liquid
+  assign swatch_width = box_px | times: 2
+  unless swatch_width > 0
+    if product_info
+      case swatch_size
+        when 'large'
+          assign swatch_width = 128
+        when 'medium'
+          assign swatch_width = 76
+        else
+          assign swatch_width = 56
+      endcase
+    else
+      case swatch_size
+        when 'large'
+          assign swatch_width = 76
+        when 'medium'
+          assign swatch_width = 64
+        else
+          assign swatch_width = 56
+      endcase
+    endif
+  endunless
+
+  # ratio_image is Infinity when the product has no media, so cap it and fall back to a square box.
+  assign swatch_ratio = 0
+  if natural
+    assign swatch_ratio = ratio_image | default: 0
+  endif
+  assign swatch_height = 0
+  if swatch_ratio > 0 and swatch_ratio < 1000
+    assign swatch_height = swatch_width | times: swatch_ratio | divided_by: 100.0 | round
+  endif
+
+  unless swatch_height > 0
+    assign swatch_height = swatch_width
+  endunless
+
+  echo image | image_url: width: swatch_width, height: swatch_height
+-%}
