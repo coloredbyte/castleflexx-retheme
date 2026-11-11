@@ -1,0 +1,267 @@
+{% comment %}
+  CastleFit in-app portal snippet.
+
+  The app lets a customer into the Classes webview when they carry either the
+  `Active Subscriber` (CastleFit) or the `After Dark Subscriber` tag. Both tiers
+  live inside the same portal page, so this snippet gates each tier's sections
+  using the customer tags the app hands over on the bridge
+  (`appbrewSDK.getUserDetails().tags` — the same Shopify tags the block
+  visibility rule reads). There is no Shopify customer session inside the app
+  webview, so liquid `customer.tags` is empty here and cannot be used.
+
+  On the portal page the After Dark sections are the ones carrying
+  `/blogs/afterdark/` links; every other section in #MainContent is CastleFit.
+
+  Both gates are reveal-only: a tier stays hidden unless the bridge answers with
+  its tag, so a timeout, an offline load or an old WebView leaks nothing.
+
+  It must NOT touch the Vimeo iframes: enavi-custom.js owns the data-src -> src
+  swap and calls initPlayer on the iframe's load event. Setting src ourselves
+  (or removing data-src) makes its `iframe[data-src]` lookup return null, so the
+  player is never wired up and the play button does nothing.
+{% endcomment %}
+
+{%- liquid
+  assign in_portal = false
+  if template.suffix contains 'castle-fit' or template.suffix contains 'castlefit'
+    assign in_portal = true
+  endif
+  if page.handle contains 'castle-fit'
+    assign in_portal = true
+  endif
+  if blog.handle == 'castlefit'
+    assign in_portal = true
+  endif
+
+  # After Dark article pages run the snippet too — they must stay dark until the
+  # bridge confirms the tag. The castlefit/afterdark article templates share a
+  # `castle-fit` suffix, so they already reach this snippet; naming the blog
+  # keeps the gate working if that suffix is ever renamed.
+  assign is_after_dark = false
+  if blog.handle == 'afterdark'
+    assign is_after_dark = true
+    assign in_portal = true
+  endif
+
+  # CastleFit article pages are CastleFit content end to end, like After Dark
+  # articles are After Dark content. The portal page itself mixes both tiers and
+  # is gated section by section.
+  assign is_castlefit_article = false
+  if blog.handle == 'castlefit'
+    assign is_castlefit_article = true
+  endif
+
+  if template.name == 'product'
+    assign in_portal = false
+  endif
+-%}
+
+{%- if in_portal and request.design_mode != true -%}
+  <script>
+    // Runs in <head>, before the body paints, so the CSS below never flashes.
+    if (/Appbrew/i.test(navigator.userAgent)) {
+      document.documentElement.className += ' appbrew-in-app'
+      {%- if is_after_dark %}
+      document.documentElement.className += ' appbrew-after-dark-page'
+      {%- endif %}
+      {%- if is_castlefit_article %}
+      document.documentElement.className += ' appbrew-castlefit-page'
+      {%- endif %}
+    }
+  </script>
+
+  <style id="appbrew-portal-css">
+    html.appbrew-in-app body,
+    html.appbrew-in-app body.default-hidden,
+    html.appbrew-in-app body.appbrew-hidden {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    /* Eurus renders header, announcement bar and footer as section groups with
+       generated ids, so match the group class (covers header-group-breath etc.). */
+    html.appbrew-in-app [class*="shopify-section-group-header-group"],
+    html.appbrew-in-app [class*="shopify-section-group-footer-group"],
+    html.appbrew-in-app #redo-storefront-container,
+    html.appbrew-in-app #redo-chat-widget {
+      display: none !important;
+    }
+
+    /* After Dark sections. Matched by the links they carry rather than by
+       section id: the ids are template-scoped (template--<id>__castlefit_slider_*)
+       and change whenever the template is re-saved. The :has() pair covers the
+       pre-paint case; .appbrew-after-dark-section is the JS-tagged fallback for
+       WebViews without :has() (pre iOS 15.4 / Chrome 105). */
+    html.appbrew-in-app:not(.appbrew-after-dark) .shopify-section:has(a[href*="/blogs/afterdark/"]),
+    html.appbrew-in-app:not(.appbrew-after-dark) .appbrew-after-dark-section {
+      display: none !important;
+    }
+
+    html.appbrew-in-app.appbrew-after-dark .shopify-section:has(a[href*="/blogs/afterdark/"]),
+    html.appbrew-in-app.appbrew-after-dark .appbrew-after-dark-section {
+      display: block !important;
+    }
+
+    /* CastleFit sections: everything in the portal's main content that is not an
+       After Dark section (greeting, Getting Started slider, daily flows, category
+       cards, hero). Same :has() plus JS-tagged fallback pair as After Dark. */
+    html.appbrew-in-app:not(.appbrew-castlefit) #MainContent > .shopify-section:not(:has(a[href*="/blogs/afterdark/"])),
+    html.appbrew-in-app:not(.appbrew-castlefit) .appbrew-castlefit-section {
+      display: none !important;
+    }
+
+    html.appbrew-in-app.appbrew-castlefit #MainContent > .shopify-section:not(:has(a[href*="/blogs/afterdark/"])),
+    html.appbrew-in-app.appbrew-castlefit .appbrew-castlefit-section {
+      display: block !important;
+    }
+
+    /* An After Dark article is After Dark content end to end, so the whole body
+       waits; a CastleFit article likewise. Two classes out-specify the unhide
+       above, so ordering here is not load-bearing. */
+    html.appbrew-in-app.appbrew-after-dark-page body,
+    html.appbrew-in-app.appbrew-castlefit-page body {
+      visibility: hidden !important;
+    }
+
+    html.appbrew-in-app.appbrew-after-dark-page.appbrew-after-dark body,
+    html.appbrew-in-app.appbrew-castlefit-page.appbrew-castlefit body {
+      visibility: visible !important;
+    }
+
+    html.appbrew-in-app body.klaviyo-prevent-body-scrolling {
+      overflow: visible !important;
+    }
+
+  </style>
+
+  <script>
+    (function () {
+      if (!/Appbrew/i.test(navigator.userAgent)) return // web is handled by castlefit-redirect.liquid
+
+      var BRIDGE_TIMEOUT_MS = 8000
+      var BRIDGE_POLL_MS = 150
+      var AFTER_DARK_TAG = 'after dark subscriber'
+      var CASTLEFIT_TAG = 'active subscriber'
+      var AFTER_DARK_LINK = 'a[href*="/blogs/afterdark/"]'
+      var IS_AFTER_DARK_PAGE = {% if is_after_dark %}true{% else %}false{% endif %}
+      var IS_CASTLEFIT_PAGE = {% if is_castlefit_article %}true{% else %}false{% endif %}
+
+      function onBody(fn) {
+        if (document.body) fn()
+        else document.addEventListener('DOMContentLoaded', fn)
+      }
+
+      function unhide() {
+        var b = document.body
+        if (!b) return
+        b.classList.remove('default-hidden', 'appbrew-hidden')
+        b.classList.add('default-visible')
+        b.style.opacity = '1'
+        b.style.visibility = 'visible'
+      }
+
+      function bridgeReady() {
+        return !!(
+          window.appbrewSDK &&
+          typeof window.appbrewSDK.isApp === 'function' &&
+          window.appbrewSDK.isApp() &&
+          typeof window.appbrewSDK.getUserDetails === 'function'
+        )
+      }
+
+      // Fallback for WebViews without :has(). Cheap enough to re-run: the
+      // sliders are server-rendered, but the section list is walked again just
+      // before the reveal in case a section mounted late.
+      function markSections() {
+        var sections = document.querySelectorAll('.shopify-section')
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].querySelector(AFTER_DARK_LINK)) {
+            sections[i].classList.add('appbrew-after-dark-section')
+          }
+        }
+        var main = document.getElementById('MainContent')
+        if (!main) return
+        for (var j = 0; j < main.children.length; j++) {
+          var section = main.children[j]
+          if (!section.classList.contains('shopify-section')) continue
+          if (section.querySelector(AFTER_DARK_LINK)) continue
+          section.classList.add('appbrew-castlefit-section')
+        }
+      }
+
+      function greetingHost() {
+        var wrap = document.querySelector('.account-name-text .account-rich-text')
+        if (!wrap) return null
+        return wrap.querySelector('h1, h2') || wrap
+      }
+
+      function injectName(customer) {
+        var first = (customer.firstName || customer.displayName || '').trim()
+        if (!first) return
+        var host = greetingHost()
+        if (!host || host.querySelector('.appbrew-account-name')) return
+        var span = document.createElement('span')
+        span.className = 'appbrew-account-name'
+        span.textContent = ' ' + first.charAt(0).toUpperCase() + first.slice(1) + '!'
+        host.appendChild(span)
+      }
+
+      function hasTag(tags, wanted) {
+        if (!tags || !tags.length) return false
+        for (var i = 0; i < tags.length; i++) {
+          if (String(tags[i]).trim().toLowerCase() === wanted) return true
+        }
+        return false
+      }
+
+      // No entitlement means the page stays as it is — the sections are already
+      // hidden. On an article page there is nothing left to show, so hand the
+      // customer back to the app.
+      function goBack() {
+        if (window.appbrewSDK && typeof window.appbrewSDK.goBackInApp === 'function') {
+          window.appbrewSDK.goBackInApp()
+        }
+      }
+
+      function deny() {
+        if (IS_AFTER_DARK_PAGE || IS_CASTLEFIT_PAGE) goBack()
+      }
+
+      function applyUserDetails(result) {
+        if (!result || result.status !== 'success' || !result.isLoggedIn) {
+          deny()
+          return
+        }
+        if (result.customer) injectName(result.customer)
+        var afterDark = hasTag(result.tags, AFTER_DARK_TAG)
+        var castlefit = hasTag(result.tags, CASTLEFIT_TAG)
+        if ((IS_AFTER_DARK_PAGE && !afterDark) || (IS_CASTLEFIT_PAGE && !castlefit)) {
+          goBack()
+          return
+        }
+        markSections()
+        if (afterDark) document.documentElement.classList.add('appbrew-after-dark')
+        if (castlefit) document.documentElement.classList.add('appbrew-castlefit')
+      }
+
+      onBody(function () {
+        unhide()
+        markSections()
+      })
+
+      var waited = 0
+      onBody(function waitForBridge() {
+        if (bridgeReady()) {
+          window.appbrewSDK.getUserDetails().then(applyUserDetails).catch(deny)
+          return
+        }
+        if (waited >= BRIDGE_TIMEOUT_MS) {
+          deny()
+          return
+        }
+        waited += BRIDGE_POLL_MS
+        setTimeout(waitForBridge, BRIDGE_POLL_MS)
+      })
+    })()
+  </script>
+{%- endif -%}
