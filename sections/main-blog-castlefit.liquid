@@ -1,20 +1,37 @@
-<div class='main-blog-castlefit--wrapper'>
+{%- comment -%}
+  CastleFit class list (blog.castle-fit). Heading, search, tag filters and a
+  grid of class cards; layout, card details and colours are section settings.
+{%- endcomment -%}
+
+{%- liquid
+  assign is_after_dark = false
+  if blog.handle == 'afterdark'
+    assign is_after_dark = true
+  endif
+-%}
+
+{% render 'castlefit-tokens', id: section.id, settings: section.settings %}
+
+<div
+  class="cf-root {% render 'scheme-class', scheme: section.settings.section_scheme %} main-blog-castlefit--wrapper cf-listing{% if is_after_dark %} castlefit--after-dark{% endif %}"
+  style="--cf-page-width: {{ section.settings.page_width }}px; --cf-cols: {{ section.settings.columns_desktop }}; --cf-cols-mobile: {{ section.settings.columns_mobile }}; --cf-pad-top: {{ section.settings.padding_top }}px; --cf-pad-bottom: {{ section.settings.padding_bottom }}px;"
+>
   <div class="main-blog-castlefit--header">
     {% render 'castlefit-breadcrumbs' %}
 
     <h1 class="main-blog-castlefit--title">
-      {% if current_tags %}
+      {%- if current_tags -%}
         {{ current_tags | join: ', ' }}
-      {% else %}
-      {{ 'sections.main_blog_castlefit.title' | t }}
-      {% endif %}
+      {%- else -%}
+        {{ section.settings.heading }}
+      {%- endif -%}
     </h1>
 
-    <!-- Search Section -->
-   {% render 'castlefit-search-form' %}
+    {%- if section.settings.show_search -%}
+      {% render 'castlefit-search-form' %}
+    {%- endif -%}
 
-    <!-- Filters Section -->
-    {% if section.settings.blog_show_filters %}
+    {%- if section.settings.blog_show_filters -%}
       <div class="main-blog-castlefit--filters">
         <div class="main-blog-castlefit--filters-divider">
           <p class="main-blog-castlefit--articles-count">
@@ -26,56 +43,76 @@
               Visible reset on tag pages: the filter panel no longer
               auto-opens there, so its "Clear all" link is hidden.
             {%- endcomment -%}
-            {% if current_tags %}
-              <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">
-                {{- 'sections.main_blog_castlefit.clear_filter' | t -}}
-              </a>
-            {% endif %}
+            {%- if current_tags -%}
+              <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">{{ section.settings.clear_filter_label }}</a>
+            {%- endif -%}
 
-            <button class="main-blog-castlefit--filters-button" type="button">
-              {{ 'sections.main_blog_castlefit.filter_by_label' | t }}
+            <button
+              class="main-blog-castlefit--filters-button"
+              type="button"
+              data-open-label="{{ section.settings.close_filter_label | escape }}"
+            >
+              {{- section.settings.filter_label -}}
             </button>
           </div>
         </div>
 
-        <div class="main-blog-castlefit--tags hidden" aria-hidden="true">          
+        <div class="main-blog-castlefit--tags hidden" aria-hidden="true">
           <ul class="main-blog-castlefit--tags-list">
-            {% for tag in blog.all_tags %}
-              
-              <li class="main-blog-castlefit--tags-item {% if current_tags contains tag %}active{% endif %}">
+            {%- for tag in blog.all_tags -%}
+              <li class="main-blog-castlefit--tags-item{% if current_tags contains tag %} active{% endif %}">
                 {%- if current_tags contains tag -%}
-                  {{ tag  | capitalize | link_to_remove_tag: tag }}
+                  {{ tag | capitalize | link_to_remove_tag: tag }}
                 {%- else -%}
-                  {{ tag  | capitalize | link_to_add_tag: tag }}
+                  {{ tag | capitalize | link_to_add_tag: tag }}
                 {%- endif -%}
               </li>
-            {% endfor %}
+            {%- endfor -%}
           </ul>
-          {% if current_tags %}
-            <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">{{ 'sections.main_blog_castlefit.clear_all' | t }}</a>
-          {% endif %}
+          {%- if current_tags -%}
+            <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">{{ section.settings.clear_all_label }}</a>
+          {%- endif -%}
         </div>
       </div>
-    {% endif %}
+    {%- endif -%}
   </div>
 
-  {%- paginate blog.articles by 12 -%}
-  <div class="main-blog-castlefit--container">
-    {%- assign sorted_articles = blog.articles -%}
-    {% for article in sorted_articles %}
-      {% render 'castlefit-video-card', article: article %}
-    {% endfor %}
-  </div>
-  {% render 'castlefit-pagination', paginate: paginate %}
+  {%- paginate blog.articles by section.settings.per_page -%}
+    <div class="main-blog-castlefit--container cf-grid">
+      {%- for article in blog.articles -%}
+        {% render 'castlefit-video-card',
+          article: article,
+          show_length: section.settings.card_show_length,
+          show_level: section.settings.card_show_level,
+          show_favorite: section.settings.card_show_favorite,
+          content: section.settings.card_show_description,
+          equipment: section.settings.card_show_equipment
+        %}
+      {%- endfor -%}
+    </div>
+    {% render 'castlefit-pagination', paginate: paginate %}
   {%- endpaginate -%}
 </div>
 
 {% schema %}
 {
-  "name": "Castlefit Blog",
+  "name": "CastleFit class list",
   "tag": "section",
   "class": "main-blog-castlefit",
   "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "All videos",
+      "info": "On a filtered page the heading shows the chosen filters instead."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Filters"
@@ -85,6 +122,197 @@
       "id": "blog_show_filters",
       "label": "Show Filters",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "filter_label",
+      "label": "Filter button",
+      "default": "Filters"
+    },
+    {
+      "type": "text",
+      "id": "close_filter_label",
+      "label": "Filter button when open",
+      "default": "Close Filters"
+    },
+    {
+      "type": "text",
+      "id": "clear_filter_label",
+      "label": "Clear filter link",
+      "default": "Clear filter"
+    },
+    {
+      "type": "text",
+      "id": "clear_all_label",
+      "label": "Clear all link",
+      "default": "Clear all"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "per_page",
+      "label": "Classes per page",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "page_width",
+      "label": "Page width",
+      "min": 1000,
+      "max": 1600,
+      "step": 40,
+      "unit": "px",
+      "default": 1280
+    },
+    {
+      "type": "header",
+      "content": "Class cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_length",
+      "label": "Show length",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_level",
+      "label": "Show level",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_favorite",
+      "label": "Show favourite star",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_equipment",
+      "label": "Show equipment",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "section_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "store",
+      "options": [
+        {
+          "value": "store",
+          "label": "t:sections.all.color_scheme.store"
+        },
+        {
+          "value": "scheme2",
+          "label": "t:sections.all.color_scheme.soft"
+        },
+        {
+          "value": "scheme3",
+          "label": "t:sections.all.color_scheme.bold"
+        },
+        {
+          "value": "scheme4",
+          "label": "t:sections.all.color_scheme.accent"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "info": "Progress, completed classes, favourite stars. Clear to use the scheme's button colour.",
+      "default": "#651C32"
+    },
+    {
+      "type": "header",
+      "content": "After Dark classes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Used instead of the colours above on After Dark classes. Clear all three to use the same colours as CastleFit."
+    },
+    {
+      "type": "color",
+      "id": "after_dark_background",
+      "label": "Background",
+      "default": "#1A0C0C"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_text",
+      "label": "Text",
+      "default": "#F2E6DF"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_accent",
+      "label": "Accent",
+      "default": "#D98A5F"
     }
   ]
 }

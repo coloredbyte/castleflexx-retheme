@@ -1,6 +1,8 @@
 <button 
   class="castlefit--favorites" 
-  data-castlefit-favorites="{{ article.id }}">
+  type="button"
+  data-castlefit-favorites="{{ article.id }}"
+  {% if show_text == true %}data-label-off="{{ text | escape }}" data-label-on="{{ done_text | default: 'Favorited' | escape }}"{% endif %}>
   <svg 
     width="25" 
     height="24" 

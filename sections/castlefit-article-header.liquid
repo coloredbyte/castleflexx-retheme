@@ -1,62 +1,203 @@
-<div class="castlefit-article-header--wrapper menu-container--open{% if blog.handle == 'afterdark' %} castlefit--after-dark{% endif %}">
-  <!-- Menu -->
+{%- comment -%}
+  Class header, shown instead of the store header on class pages
+  (layout/theme.liquid). Logo, class list toggle and lesson buttons;
+  labels and colours are section settings.
+{%- endcomment -%}
+
+{%- liquid
+  assign is_after_dark = false
+  if blog.handle == 'afterdark'
+    assign is_after_dark = true
+  endif
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .castlefit-article-header--wrapper {
+    --cf-bar: {{ section.settings.background_color }};
+    --cf-bar-ink: {{ section.settings.text_color }};
+    --cf-next: {{ section.settings.next_color }};
+    --cf-next-ink: {{ section.settings.next_text_color }};
+    --cf-logo-width: {{ section.settings.logo_width }}px;
+  }
+
+  #shopify-section-{{ section.id }} .castlefit-article-header--wrapper.castlefit--after-dark {
+    --cf-bar: {{ section.settings.after_dark_background }};
+    --cf-next: {{ section.settings.after_dark_next_color }};
+    --cf-next-ink: {{ section.settings.after_dark_next_text_color }};
+  }
+{%- endstyle -%}
+
+<div class="castlefit-article-header--wrapper menu-container--open{% if is_after_dark %} castlefit--after-dark{% endif %}">
   <div class="castlefit-article-header--menu">
-    <button class="castlefit-article-header--menu-button" type="button" aria-expanded="true" aria-label="Toggle class list">
-      
-      <span class="castlefit-article-header--menu-icon">
+    <button
+      class="castlefit-article-header--menu-button"
+      type="button"
+      aria-expanded="true"
+      aria-label="Toggle class list"
+      data-open-label="{{ section.settings.hide_menu_label | escape }}"
+      data-closed-label="{{ section.settings.menu_label | escape }}"
+    >
+      <span class="castlefit-article-header--menu-icon" aria-hidden="true">
         {% comment %} Open icon {% endcomment %}
         <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.03906 6.75H23.0391M5.03906 11.25H23.0391M5.03906 15.75H23.0391M5.03906 20.25H23.0391" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>        
+          <path d="M5.03906 6.75H23.0391M5.03906 11.25H23.0391M5.03906 15.75H23.0391M5.03906 20.25H23.0391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         {% comment %} Close icon {% endcomment %}
         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.375 21.375L4.5 13.5L12.375 5.625M21.375 21.375L13.5 13.5L21.375 5.625" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.375 21.375L4.5 13.5L12.375 5.625M21.375 21.375L13.5 13.5L21.375 5.625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
-  
-      <span class="castlefit-article-header--menu-text">
-        {{ 'sections.header.hide_menu' | t }}
-      </span>   
-  
+      <span class="castlefit-article-header--menu-text">{{ section.settings.hide_menu_label }}</span>
     </button>
   </div>
-  <!-- Logo Section -->
+
   <div class="castlefit-article-header--logo">
-    {% if section.settings.logo != blank %}
-      <a href="/pages/castle-fit-portal" class="castlefit-article-header--logo-link">
-        {{ section.settings.logo | image_url: width: 800 | image_tag: class: "castlefit-article-header--logo-img" }}
+    {%- if section.settings.logo != blank -%}
+      <a href="{{ section.settings.logo_link | default: '/pages/castle-fit-portal' }}" class="castlefit-article-header--logo-link">
+        {{ section.settings.logo | image_url: width: 800 | image_tag: class: 'castlefit-article-header--logo-img', alt: shop.name }}
       </a>
-    {% endif %}
+    {%- endif -%}
   </div>
 
-  <!-- Navigation Section -->
   <div class="castlefit-article-header--navigation">
-    {% if blog.previous_article %}
-      <a href="{{ blog.previous_article.url }}" class="castlefit-article-header--nav-link button-outline">
-        {{ 'sections.header.previous_lesson' | t }}
+    {%- if section.settings.show_previous and blog.previous_article -%}
+      <a href="{{ blog.previous_article.url }}" class="castlefit-article-header--nav-link">
+        {{- section.settings.previous_label -}}
       </a>
-    {% endif %}
-    {% if blog.next_article %}
-      <a href="{{ blog.next_article.url }}" 
-      class="castlefit-article-header--nav-link castlefit-article-header--complete-video button-light-blue"
-      data-current-article="{{ article.id }}"
+    {%- endif -%}
+    {%- if section.settings.show_next and blog.next_article -%}
+      <a
+        href="{{ blog.next_article.url }}"
+        class="castlefit-article-header--nav-link castlefit-article-header--complete-video"
+        data-current-article="{{ article.id }}"
       >
-        {{ 'sections.header.next_lesson' | t }}
+        {{- section.settings.next_label -}}
       </a>
-    {% endif %}
+    {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "Castlefit Article Header",
+  "name": "CastleFit class header",
   "class": "castlefit-article-header",
   "settings": [
     {
       "type": "image_picker",
       "id": "logo",
       "label": "Logo",
-      "info": "Upload a logo for the header section."
+      "info": "Shown on a dark bar, so use a light logo."
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 220
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link",
+      "info": "Leave empty to link to the CastleFit portal."
+    },
+    {
+      "type": "header",
+      "content": "Class list button"
+    },
+    {
+      "type": "text",
+      "id": "menu_label",
+      "label": "Label when the list is hidden",
+      "default": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "hide_menu_label",
+      "label": "Label when the list is shown",
+      "default": "Hide Menu"
+    },
+    {
+      "type": "header",
+      "content": "Lesson buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_previous",
+      "label": "Show previous lesson",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "previous_label",
+      "label": "Previous lesson label",
+      "default": "Previous Lesson"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_next",
+      "label": "Show next lesson",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "next_label",
+      "label": "Next lesson label",
+      "default": "Complete and Continue",
+      "info": "Also ticks the current class off."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#2B2E33"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "next_color",
+      "label": "Next lesson button",
+      "default": "#B9CBDD"
+    },
+    {
+      "type": "color",
+      "id": "next_text_color",
+      "label": "Next lesson button text",
+      "default": "#2B2E33"
+    },
+    {
+      "type": "header",
+      "content": "After Dark classes"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_background",
+      "label": "Background",
+      "default": "#120808"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_next_color",
+      "label": "Next lesson button",
+      "default": "#D98A5F"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_next_text_color",
+      "label": "Next lesson button text",
+      "default": "#1A0C0C"
     }
   ]
 }

@@ -1,121 +1,159 @@
-{% assign size = 0 %}
-<div class='main-article-castlefit--wrapper menu-container--open{% if blog.handle == 'afterdark' %} castlefit--after-dark{% endif %}'>
+{%- comment -%}
+  CastleFit / After Dark class page. Editable in the theme editor:
+  - Blocks (the main column, in any order): breadcrumbs, title, video,
+    description, favourite button, text, apps.
+  - Section: colour scheme, accent, After Dark colours, width, padding and
+    the class list (show, side, durations, account links).
 
-  <div class="main-article-castlefit--menu-container">
+  Hooks castlefit.js relies on (keep the class names): the wrapper,
+  rail checkboxes (#checkbox-<id>, data-video-id), progress counters.
+{%- endcomment -%}
 
-    {% render 'castlefit-video-progress', 
-      blogs: blogs, 
-      article: article, 
-      hide_progress: 'hidden', 
-      size: size
-    %}
+{%- liquid
+  assign is_after_dark = false
+  if blog.handle == 'afterdark'
+    assign is_after_dark = true
+  endif
 
-    <div class="main-article-castlefit--related-articles">
-      <ul class="main-article-castlefit--related-articles-list">
-        
-        {% assign current_category = article.metafields.custom.category.value.first %}
-        {% assign size = nil %}
+  assign show_rail = section.settings.show_class_list
+  assign current_category = article.metafields.custom.category.value.first
+-%}
 
-        {%- comment -%} Current blog, so After Dark classes list After Dark. {%- endcomment -%}
-        {%- paginate blog.articles by 1000 -%}
-        {% assign current_article = article.handle %}
-        {%- assign sorted_articles = blog.articles | sort: 'published_at' -%}
-        {%- for article_in_blog in sorted_articles -%}
-          {% if article_in_blog.metafields.custom.category.value contains current_category %}
-            {% assign size = size | plus: 1 %}
-          {% endif %}
-        {%- endfor -%}
+{% render 'castlefit-tokens', id: section.id, settings: section.settings %}
 
-          {% for article_in_blog in sorted_articles %}
-            {% if article_in_blog.metafields.custom.category.value contains current_category %}
-              <li class="main-article-castlefit--related-articles-item {% if article_in_blog.handle == current_article %}main-article-castlefit--related-articles-current{% endif %}">
+<div
+  class="cf-root {% render 'scheme-class', scheme: section.settings.section_scheme %} main-article-castlefit--wrapper main-article-castlefit--rail-{{ section.settings.class_list_position }}{% if show_rail %} menu-container--open{% endif %}{% if is_after_dark %} castlefit--after-dark{% endif %}"
+  style="--cf-content-width: {{ section.settings.content_width }}px; --cf-pad-top: {{ section.settings.padding_top }}px; --cf-pad-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  {%- if show_rail -%}
+    <aside class="main-article-castlefit--menu-container" aria-label="{{ current_category | default: blog.title | escape }}">
+      {% render 'castlefit-video-progress',
+        blogs: blogs,
+        article: article,
+        hide_progress: 'hidden',
+        complete_label: section.settings.progress_label
+      %}
+
+      <div class="main-article-castlefit--related-articles">
+        <ul class="main-article-castlefit--related-articles-list">
+          {%- comment -%} Current blog, so After Dark classes list After Dark. {%- endcomment -%}
+          {%- paginate blog.articles by 1000 -%}
+            {%- assign current_article = article.handle -%}
+            {%- assign sorted_articles = blog.articles | sort: 'published_at' -%}
+            {%- for article_in_blog in sorted_articles -%}
+              {%- unless article_in_blog.metafields.custom.category.value contains current_category -%}
+                {%- continue -%}
+              {%- endunless -%}
+              <li class="main-article-castlefit--related-articles-item{% if article_in_blog.handle == current_article %} main-article-castlefit--related-articles-current{% endif %}">
                 <div class="main-article-castlefit--related-articles-checkbox">
                   <label for="checkbox-{{ article_in_blog.id }}"></label>
                   <input type="checkbox" id="checkbox-{{ article_in_blog.id }}" data-video-id="video-{{ article_in_blog.id }}">
                 </div>
                 <div class="main-article-castlefit--related-articles-content">
-                  <a 
-                    href="{{ article_in_blog.url }}" 
-                    class="main-article-castlefit--related-articles-link castlefit--media"
+                  <a
+                    href="{{ article_in_blog.url }}"
+                    class="main-article-castlefit--related-articles-link"
+                    {% if article_in_blog.handle == current_article %}aria-current="page"{% endif %}
                   >
-                    {{ article_in_blog.title }}
+                    {{- article_in_blog.title -}}
                   </a>
-                  <div class="main-article-castlefit--related-articles-video-length">
-                    <span class="main-article-castlefit--related-articles-icon-video-play">
-                      {% render 'icon-video-play' %} 
-                    </span>
-                    <span class="main-article-castlefit--related-articles-video-length-text">
-                      {% render 'castlefit-video-length', article: article_in_blog, text: "min" %}
-                    </span>
-                  </div>
+                  {%- if section.settings.show_durations -%}
+                    <div class="main-article-castlefit--related-articles-video-length">
+                      <span class="main-article-castlefit--related-articles-icon-video-play">
+                        {% render 'icon-video-play' %}
+                      </span>
+                      <span class="main-article-castlefit--related-articles-video-length-text">
+                        {% render 'castlefit-video-length', article: article_in_blog, text: 'min' %}
+                      </span>
+                    </div>
+                  {%- endif -%}
                 </div>
               </li>
-            {% endif %}
-          {% endfor %}
-        {%- endpaginate -%}
-      </ul>
-    </div>
+            {%- endfor -%}
+          {%- endpaginate -%}
+        </ul>
+      </div>
 
-    <div class="main-article-castlefit--account-settings">
-      <a href="{{ section.settings.header_url }}" class="main-article-castlefit--account-settings-link">
-        <span class="main-article-castlefit--account-settings-text">{{ section.settings.header_text }}</span>
-        <span class="main-article-castlefit--account-settings-icon">
-          {% render 'icon-cart' %}
-        </span>
-      </a>
-      <a href="/account" class="main-article-castlefit--account-settings-link">
-        <span class="main-article-castlefit--account-settings-text">{{ 'customer.account.title' | t }}</span>
-        <span class="main-article-castlefit--account-settings-icon">
-          {% render 'icon-account' %}
-        </span>
-      </a>
-      <a href="{{ routes.account_logout_url }}" class="main-article-castlefit--account-settings-link">
-        <span class="main-article-castlefit--account-settings-text">{{ 'customer.log_out' | t }}</span>
-        <span class="main-article-castlefit--account-settings-icon">
-          {% render 'icon-logout' %}
-        </span>
-        </a> 
-    </div>
-
-  </div>
-
-  <article class="main-article-castlefit--article" itemscope itemtype='http://schema.org/BlogPosting'>
-    <div class="main-article-castlefit--content">
-      
-      <div class="main-article-castlefit--content-top">
-        {% render 'castlefit-breadcrumbs' %}
-
-        <h1 class='main-article-castlefit--title'>{{ article.title }}</h1>
-
-        <div class="main-article-castlefit--details">
-          {% if article.content != blank %}
-            <div class="main-article-castlefit--copy">
-              {{ article.content }}
-              </div>
-          {% endif %}
-            
-          {% render 'castlefit-favorites-button', 
-            article: article
-            show_text: true,
-            text: "Add to favorites"
-          %}
+      {%- if section.settings.show_account_links -%}
+        <div class="main-article-castlefit--account-settings">
+          {%- if section.settings.header_url != blank and section.settings.header_text != blank -%}
+            <a href="{{ section.settings.header_url }}" class="main-article-castlefit--account-settings-link">
+              <span class="main-article-castlefit--account-settings-text">{{ section.settings.header_text }}</span>
+              <span class="main-article-castlefit--account-settings-icon">{% render 'icon-cart' %}</span>
+            </a>
+          {%- endif -%}
+          <a href="{{ routes.account_url }}" class="main-article-castlefit--account-settings-link">
+            <span class="main-article-castlefit--account-settings-text">{{ 'customer.account.title' | t }}</span>
+            <span class="main-article-castlefit--account-settings-icon">{% render 'icon-account' %}</span>
+          </a>
+          <a href="{{ routes.account_logout_url }}" class="main-article-castlefit--account-settings-link">
+            <span class="main-article-castlefit--account-settings-text">{{ 'customer.log_out' | t }}</span>
+            <span class="main-article-castlefit--account-settings-icon">{% render 'icon-logout' %}</span>
+          </a>
         </div>
-      </div>
+      {%- endif -%}
+    </aside>
+  {%- endif -%}
 
-      <div class="main-article-castlefit--video" data-videoId="{{ article.id }}">
-        {% render 'castlefit-video-card',
-          article: article,
-          title: false,
-          info: false,
-          content: false,
-          equipment: false,
-          disable_hover: true,
-          button_position: "center",
-          link_to_article: false
-        %}
-      </div>
+  <article class="main-article-castlefit--article" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="main-article-castlefit--content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
 
+          {%- when 'breadcrumbs' -%}
+            <div class="main-article-castlefit--block" {{ block.shopify_attributes }}>
+              {% render 'castlefit-breadcrumbs' %}
+            </div>
 
+          {%- when 'title' -%}
+            <{{ block.settings.heading_tag }}
+              class="main-article-castlefit--title main-article-castlefit--title-{{ block.settings.title_size }} text-{{ block.settings.alignment }}"
+              {{ block.shopify_attributes }}
+            >
+              {{- article.title -}}
+            </{{ block.settings.heading_tag }}>
+
+          {%- when 'video' -%}
+            <div class="main-article-castlefit--video" data-videoId="{{ article.id }}" {{ block.shopify_attributes }}>
+              {% render 'castlefit-video-card',
+                article: article,
+                title: false,
+                info: false,
+                content: false,
+                equipment: false,
+                disable_hover: true,
+                button_position: 'center',
+                link_to_article: false
+              %}
+            </div>
+
+          {%- when 'description' -%}
+            {%- if article.content != blank -%}
+              <div class="main-article-castlefit--copy main-article-castlefit--copy-{{ block.settings.text_size }}" {{ block.shopify_attributes }}>
+                {{ article.content }}
+              </div>
+            {%- endif -%}
+
+          {%- when 'favorite' -%}
+            <div class="main-article-castlefit--block main-article-castlefit--favorite" {{ block.shopify_attributes }}>
+              {% render 'castlefit-favorites-button',
+                article: article,
+                show_text: true,
+                text: block.settings.label,
+                done_text: block.settings.done_label
+              %}
+            </div>
+
+          {%- when 'text' -%}
+            {%- if block.settings.text != blank -%}
+              <div class="main-article-castlefit--text rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </article>
 
@@ -251,41 +289,311 @@
 
 {% schema %}
 {
-  "name": "Castlefit Article",
+  "name": "CastleFit class",
   "tag": "section",
   "class": "main-article-castlefit",
   "settings": [
     {
-      "type": "video",
-      "id": "video",
-      "label": "Castlefit Video"
+      "type": "header",
+      "content": "Class list"
     },
     {
-      "type": "header",
-      "content": "Navigation Panel"
+      "type": "paragraph",
+      "content": "The other classes in this class's category, with progress. Members tick classes off here."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_class_list",
+      "label": "Show class list",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "class_list_position",
+      "label": "Position on desktop",
+      "default": "right",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "progress_label",
+      "label": "Progress label",
+      "default": "Complete",
+      "info": "Shown after the count, e.g. \"3 / 10 Complete\"."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_durations",
+      "label": "Show class lengths",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_account_links",
+      "label": "Show shop and account links",
+      "default": true
     },
     {
       "type": "url",
       "id": "header_url",
-      "label": "Header URL"
+      "label": "Shop link"
     },
     {
       "type": "text",
       "id": "header_text",
-      "label": "Header Text",
+      "label": "Shop link label",
       "default": "Shop"
     },
     {
       "type": "header",
-      "content": "Comments"
+      "content": "Layout"
     },
     {
-      "type": "checkbox",
-      "id": "comments_enabled",
-      "label": "Enable comments",
-      "default": true
+      "type": "range",
+      "id": "content_width",
+      "label": "Main column width",
+      "min": 640,
+      "max": 1400,
+      "step": 40,
+      "unit": "px",
+      "default": 1040
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "section_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "store",
+      "options": [
+        {
+          "value": "store",
+          "label": "t:sections.all.color_scheme.store"
+        },
+        {
+          "value": "scheme2",
+          "label": "t:sections.all.color_scheme.soft"
+        },
+        {
+          "value": "scheme3",
+          "label": "t:sections.all.color_scheme.bold"
+        },
+        {
+          "value": "scheme4",
+          "label": "t:sections.all.color_scheme.accent"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "info": "Progress, completed classes, favourite stars. Clear to use the scheme's button colour.",
+      "default": "#651C32"
+    },
+    {
+      "type": "header",
+      "content": "After Dark classes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Used instead of the colours above on After Dark classes. Clear all three to use the same colours as CastleFit."
+    },
+    {
+      "type": "color",
+      "id": "after_dark_background",
+      "label": "Background",
+      "default": "#1A0C0C"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_text",
+      "label": "Text",
+      "default": "#F2E6DF"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_accent",
+      "label": "Accent",
+      "default": "#D98A5F"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "default": "h1",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "label": "Size",
+          "default": "large",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Plays the class's Vimeo video. Members tap to play."
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "The class's text from its blog post."
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "label": "Text size",
+          "default": "medium",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "favorite",
+      "name": "Favourite button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Add to favorites"
+        },
+        {
+          "type": "text",
+          "id": "done_label",
+          "label": "Label once favourited",
+          "default": "Favorited"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
-

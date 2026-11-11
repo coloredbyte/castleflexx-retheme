@@ -144,18 +144,24 @@
     });
   }
 
-  /* ---------- favorites ---------- */
+  /* ---------- favorites ----------
+     Labels come from the button (Favourite button block settings).
+  */
   const FAVORITED_TEXT = 'Favorited';
-  const UNFAVORITED_TEXT = 'Add to Favorites';
+  const UNFAVORITED_TEXT = 'Add to favorites';
 
   function paintFavorite(button, isFavorite) {
     button.classList.toggle('active', isFavorite);
     button.setAttribute('aria-pressed', String(isFavorite));
 
     const text = button.querySelector('.castlefit--favorites_text');
-    if (text) {
-      text.textContent = isFavorite ? FAVORITED_TEXT : UNFAVORITED_TEXT;
+    if (!text) {
+      return;
     }
+
+    const on = button.dataset.labelOn || FAVORITED_TEXT;
+    const off = button.dataset.labelOff || UNFAVORITED_TEXT;
+    text.textContent = isFavorite ? on : off;
   }
 
   function initFavorites() {
@@ -313,8 +319,13 @@
     const toggle = header.querySelector('.castlefit-article-header--menu-button');
     const label = header.querySelector('.castlefit-article-header--menu-text');
     const complete = header.querySelector('.castlefit-article-header--complete-video');
-    const hideText = label?.textContent.trim() || 'Hide Menu';
-    const showText = 'Menu';
+    const hideText = toggle?.dataset.openLabel || 'Hide Menu';
+    const showText = toggle?.dataset.closedLabel || 'Menu';
+
+    // Class list switched off in the class section: nothing to toggle.
+    if (toggle && !document.querySelector('.main-article-castlefit--menu-container')) {
+      toggle.hidden = true;
+    }
 
     function setOpen(isOpen) {
       header.classList.toggle(OPEN_CLASS, isOpen);
@@ -352,7 +363,7 @@
     }
 
     const openText = button.textContent.trim();
-    const closeText = 'Close Filters';
+    const closeText = button.dataset.openLabel || 'Close Filters';
 
     button.setAttribute('aria-expanded', 'false');
     button.addEventListener('click', () => {
@@ -374,8 +385,18 @@
     return node.innerHTML;
   }
 
+  // Card settings from the favourites section, e.g. data-show-length="false".
+  function cardFlags(container) {
+    const shown = (name) => container.dataset[name] !== 'false';
+    return {
+      length: shown('showLength'),
+      description: shown('showDescription'),
+      equipment: shown('showEquipment'),
+    };
+  }
+
   // Same markup as snippets/castlefit-video-card.liquid (Vimeo branch).
-  function favoriteCard(item) {
+  function favoriteCard(item, show) {
     const card = document.createElement('div');
     card.className = 'castlefit castlefit--media_card';
     card.dataset.videoid = item.videoId;
@@ -395,13 +416,13 @@
       </div>
       <div class="castlefit--content">
         <div class="castlefit--info-top">
-          <p class="castlefit--media_length">${escapeHtml(item.duration)}</p>
+          ${show.length ? `<p class="castlefit--media_length">${escapeHtml(item.duration)}</p>` : ''}
           <button class="castlefit--favorites active" aria-pressed="true" aria-label="Remove from favorites" data-castlefit-favorites="${escapeHtml(item.id)}">${STAR_SVG}</button>
         </div>
         <div class="castlefit--info-bottom">
           <a href="${escapeHtml(item.url)}" class="castlefit--article_url"><p class="castlefit--title">${title}</p></a>
-          <p class="castlefit--description">${escapeHtml(item.content)}</p>
-          <p class="castlefit--equipment">${escapeHtml(item.equipment_needed)}</p>
+          ${show.description ? `<p class="castlefit--description">${escapeHtml(item.content)}</p>` : ''}
+          ${show.equipment ? `<p class="castlefit--equipment">${escapeHtml(item.equipment_needed)}</p>` : ''}
         </div>
       </div>`;
 
@@ -418,10 +439,11 @@
     }
 
     const articles = window.castlefitArticles || [];
+    const show = cardFlags(container);
     readList(FAVORITES_KEY).forEach((id) => {
       const item = articles.find((article) => article.id === id);
       if (item) {
-        container.appendChild(favoriteCard(item));
+        container.appendChild(favoriteCard(item, show));
       }
     });
   }

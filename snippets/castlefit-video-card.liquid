@@ -17,6 +17,9 @@
 {% assign content = content | default: true, allow_false: true %}
 {% assign equipment = equipment | default: true, allow_false: true %}
 {% assign link_to_article = link_to_article | default: true, allow_false: true %}
+{% assign show_length = show_length | default: true, allow_false: true %}
+{% assign show_level = show_level | default: true, allow_false: true %}
+{% assign show_favorite = show_favorite | default: true, allow_false: true %}
 
 <div class="castlefit castlefit--media_card disable-hover--{{ disable_hover | default: false }}" 
   data-tags="{{ article.tags | join: ',' }}"
@@ -95,12 +98,15 @@
   <div class="castlefit--content">
     {% if info %}
     <div class="castlefit--info-top">
+      {% if show_length %}
       <p class="castlefit--media_length">
         {% unless article.metafields.custom.castlefit_video.value.vimeo.value == blank%}
           {% render 'castlefit-video-length', article: article %}
         {% endunless %}
       </p>
+      {% endif %}
 
+      {% if show_level %}
       {% assign levels = "Beginner,Intermediate,Advanced" | split: ',' %}
       {% for level in levels %}
         {% if article.tags contains level %}
@@ -109,8 +115,11 @@
           </div>
         {% endif %}
       {% endfor %}
-      
-      {% render 'castlefit-favorites-button', article: article %}
+      {% endif %}
+
+      {% if show_favorite %}
+        {% render 'castlefit-favorites-button', article: article %}
+      {% endif %}
     </div>
     {% endif %}
     

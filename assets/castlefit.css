@@ -1,74 +1,59 @@
 /*
-  CastleFit / After Dark class pages: article, class list, search, favourites.
-  Loaded only on `castle-fit*` templates (layout/theme.liquid).
+  CastleFit / After Dark class pages: class page, class list, search,
+  favourites. Loaded only on `castle-fit*` templates (layout/theme.liquid).
 
-  Article layout. The rail is the category's classes in order, drawn as a
-  spine whose nodes fill as classes are completed.
+  Everything Luli can change lives in the theme editor:
+    colours  -> the section's Eurus colour scheme (--colors-*), plus the
+                accent and After Dark pickers (snippets/castlefit-tokens)
+    layout   -> section settings, passed in as --cf-* on the wrapper
+    order    -> blocks on the class page
+
+  Class page. The class list is the category's classes in order, drawn as
+  a line whose circles fill as classes are completed.
 
     desktop                                    mobile
     +--------------------------------+------+  +------------+
-    | crumbs / title                 | rail |  | crumbs     |
-    | [ video 16:9 ]                 | o 1  |  | title      |
-    | description     [favourite]    | * 2  |  | [ video ]  |
-    |                                | o 3  |  | desc / fav |
-    +--------------------------------+------+  | rail (Menu)|
-                                               +------------+
+    | blocks in editor order:        | list |  | blocks     |
+    | crumbs, title, video,          | o 1  |  | ...        |
+    | description, favourite, text   | * 2  |  | list (Menu)|
+    +--------------------------------+------+  +------------+
 
   "Menu" in the class header toggles .menu-container--open; without it the
-  rail is hidden and the video takes the full width.
+  list is hidden and the video takes the full width.
 */
 
 /* ---------- Tokens ---------- */
 
-.castlefit-article-header--wrapper,
-.main-article-castlefit--wrapper,
-.main-blog-castlefit--wrapper,
-.main-search-castlefit--wrapper,
-.main-favorites-castlefit--wrapper {
-  --cf-ink: #23262b;
-  --cf-ink-soft: #5d636b;
-  --cf-accent: #651c32;
-  --cf-accent-ink: #ffffff;
-  --cf-tint: #b9cbdd;
-  --cf-panel: #f3f5f7;
-  --cf-line: #d9dee4;
-  --cf-bg: #ffffff;
-  --cf-bar: #2b2e33;
+/* Defaults follow the section's colour scheme; castlefit-tokens overrides. */
+.cf-root {
+  --cf-ink: rgb(var(--colors-heading));
+  --cf-text: rgb(var(--colors-text));
+  --cf-ink-soft: rgba(var(--colors-text), 0.72);
+  --cf-bg: rgb(var(--colors-background));
+  --cf-panel: rgb(var(--colors-background-secondary));
+  --cf-line: rgb(var(--colors-line-and-border));
+  --cf-accent: rgb(var(--colors-button));
+  --cf-accent-ink: rgb(var(--colors-button-text));
   --cf-radius-media: 10px;
   --cf-gutter: clamp(16px, 4vw, 48px);
 
-  font-family: var(--font-body-family, 'DM Sans', sans-serif);
-  color: var(--cf-ink);
-}
-
-/* After Dark: tokens sampled from its series art (dark left, warm right). */
-.castlefit--after-dark {
-  --cf-ink: #f2e6df;
-  --cf-ink-soft: #b9a397;
-  --cf-accent: #d98a5f;
-  --cf-accent-ink: #1a0c0c;
-  --cf-tint: #6b3a2a;
-  --cf-panel: #2a1612;
-  --cf-line: #4a2b22;
-  --cf-bg: #1a0c0c;
-  --cf-bar: #120808;
-}
-
-.main-article-castlefit--wrapper,
-.main-blog-castlefit--wrapper,
-.main-search-castlefit--wrapper,
-.main-favorites-castlefit--wrapper {
+  font-family: var(--font-body-family, sans-serif);
+  color: var(--cf-text);
   background: var(--cf-bg);
 }
 
+.castlefit-article-header--wrapper {
+  --cf-gutter: clamp(16px, 4vw, 48px);
+
+  font-family: var(--font-body-family, sans-serif);
+}
+
 .castlefit-article-header--wrapper :focus-visible,
-.main-article-castlefit--wrapper :focus-visible,
-.main-blog-castlefit--wrapper :focus-visible,
-.main-search-castlefit--wrapper :focus-visible,
-.main-favorites-castlefit--wrapper :focus-visible {
-  outline: 2px solid var(--cf-accent);
+.cf-root :focus-visible {
+  outline: 2px solid var(--cf-accent, currentColor);
   outline-offset: 3px;
 }
+
 
 /* State toggles must beat component rules and the posters' inline
    display:flex (snippets/castlefit-video-card.liquid). */
@@ -104,7 +89,7 @@
   gap: 12px;
   padding: 12px var(--cf-gutter);
   background: var(--cf-bar);
-  color: #ffffff;
+  color: var(--cf-bar-ink);
 }
 
 .castlefit-article-header--wrapper .castlefit-article-header--menu-button {
@@ -138,7 +123,7 @@
 
 .castlefit-article-header--logo-img {
   display: block;
-  width: clamp(140px, 18vw, 220px);
+  width: min(var(--cf-logo-width, 220px), 40vw);
   height: auto;
 }
 
@@ -153,10 +138,10 @@
   align-items: center;
   min-height: 40px;
   padding: 0 18px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid color-mix(in srgb, var(--cf-bar-ink) 45%, transparent);
   border-radius: 999px;
   background: transparent;
-  color: #ffffff;
+  color: var(--cf-bar-ink);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -164,19 +149,22 @@
 }
 
 .castlefit-article-header--nav-link:hover {
-  border-color: #ffffff;
+  border-color: var(--cf-bar-ink);
 }
 
 .castlefit-article-header--complete-video {
-  border-color: var(--cf-tint);
-  background: var(--cf-tint);
-  color: var(--cf-bar);
+  border-color: var(--cf-next);
+  background: var(--cf-next);
+  color: var(--cf-next-ink);
 }
 
-.castlefit--after-dark .castlefit-article-header--complete-video {
-  border-color: var(--cf-accent);
-  background: var(--cf-accent);
-  color: var(--cf-accent-ink);
+.castlefit-article-header--complete-video:hover {
+  border-color: var(--cf-next);
+  filter: brightness(1.08);
+}
+
+.castlefit-article-header--menu-button[hidden] {
+  visibility: hidden;
 }
 
 @media (max-width: 767px) {
@@ -212,69 +200,81 @@
   grid-template-areas: "article rail";
 }
 
-.main-article-castlefit--article {
-  grid-area: article;
-  padding: 28px var(--cf-gutter) 64px;
+.main-article-castlefit--rail-left.menu-container--open {
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  grid-template-areas: "rail article";
 }
 
+.main-article-castlefit--article {
+  grid-area: article;
+  padding: var(--cf-pad-top, 28px) var(--cf-gutter) var(--cf-pad-bottom, 64px);
+}
+
+/* Blocks stack in the order set in the editor. */
 .main-article-castlefit--content {
-  max-width: 1040px;
+  max-width: var(--cf-content-width, 1040px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-/* Video first under the title on every width: watching is the job. */
-.main-article-castlefit--content-top {
-  display: contents;
-}
-
-.main-article-castlefit--content-top .castlefit-breadcrumb {
-  order: 1;
-}
-
 .main-article-castlefit--title {
-  order: 2;
   margin: 0;
   font-family: var(--font-heading-family, inherit);
-  font-size: clamp(28px, 3.4vw, 44px);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.015em;
   color: var(--cf-ink);
 }
 
-.main-article-castlefit--video {
-  order: 3;
+.main-article-castlefit--title-small {
+  font-size: clamp(22px, 2.2vw, 28px);
 }
 
-.main-article-castlefit--details {
-  order: 4;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px 32px;
+.main-article-castlefit--title-medium {
+  font-size: clamp(26px, 2.8vw, 36px);
 }
 
-.main-article-castlefit--copy {
-  flex: 1 1 420px;
+.main-article-castlefit--title-large {
+  font-size: clamp(28px, 3.4vw, 44px);
+}
+
+.main-article-castlefit--title.text-center {
+  text-align: center;
+}
+
+.main-article-castlefit--copy,
+.main-article-castlefit--text {
   max-width: 65ch;
-  font-size: 16px;
   line-height: 1.6;
   color: var(--cf-ink-soft);
 }
 
+.main-article-castlefit--copy-small {
+  font-size: 14px;
+}
+
+.main-article-castlefit--copy-medium,
+.main-article-castlefit--text {
+  font-size: 16px;
+}
+
+.main-article-castlefit--copy-large {
+  font-size: 18px;
+}
+
+.main-article-castlefit--text > :first-child,
 .main-article-castlefit--copy > :first-child {
   margin-top: 0;
 }
 
+.main-article-castlefit--text > :last-child,
 .main-article-castlefit--copy > :last-child {
   margin-bottom: 0;
 }
 
-.main-article-castlefit--details .castlefit--favorites {
+.main-article-castlefit--favorite .castlefit--favorites {
   border: 1px solid var(--cf-line);
   border-radius: 999px;
   padding: 8px 16px 8px 12px;
@@ -290,6 +290,11 @@
   padding: 28px 24px 40px;
   background: var(--cf-panel);
   border-left: 1px solid var(--cf-line);
+}
+
+.main-article-castlefit--rail-left .main-article-castlefit--menu-container {
+  border-left: 0;
+  border-right: 1px solid var(--cf-line);
 }
 
 .menu-container--open .main-article-castlefit--menu-container {
@@ -424,14 +429,6 @@
   flex-direction: column;
   gap: 3px;
   min-width: 0;
-}
-
-/* Also carries .castlefit--media (old hook); undo the video box. */
-.main-article-castlefit--related-articles-link.castlefit--media {
-  aspect-ratio: auto;
-  overflow: visible;
-  border-radius: 0;
-  background: none;
 }
 
 .main-article-castlefit--related-articles-link {
@@ -670,7 +667,7 @@
 .castlefit--levels span {
   padding: 2px 8px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--cf-tint) 45%, transparent);
+  background: color-mix(in srgb, var(--cf-accent) 14%, transparent);
   color: var(--cf-ink);
 }
 
@@ -678,7 +675,7 @@
   margin-left: auto;
 }
 
-.castlefit--favorites {
+.cf-root .castlefit--favorites {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -696,13 +693,13 @@
   height: 22px;
 }
 
-.castlefit--favorites path {
+.cf-root .castlefit--favorites path {
   fill: none;
   stroke: currentColor;
   transition: fill 0.2s ease;
 }
 
-.castlefit--favorites.active path {
+.cf-root .castlefit--favorites.active path {
   fill: var(--cf-accent);
   stroke: var(--cf-accent);
 }
@@ -751,7 +748,7 @@
 .main-blog-castlefit--wrapper,
 .main-search-castlefit--wrapper,
 .main-favorites-castlefit--wrapper {
-  padding: 32px var(--cf-gutter) 72px;
+  padding: var(--cf-pad-top, 32px) var(--cf-gutter) var(--cf-pad-bottom, 72px);
 }
 
 .main-blog-castlefit--header,
@@ -762,7 +759,7 @@
 .main-favorites-castlefit--container,
 .main-blog-castlefit--wrapper .castlefit-pagination,
 .main-search-castlefit--wrapper .castlefit-pagination {
-  max-width: 1280px;
+  max-width: var(--cf-page-width, 1280px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -792,12 +789,30 @@
 .main-search-castlefit--container,
 .main-favorites-castlefit--container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 36px 24px;
+  grid-template-columns: repeat(var(--cf-cols-mobile, 1), minmax(0, 1fr));
+  gap: 28px 16px;
+}
+
+@media (min-width: 768px) {
+  .main-blog-castlefit--container,
+  .main-search-castlefit--container,
+  .main-favorites-castlefit--container {
+    grid-template-columns: repeat(min(var(--cf-cols, 4), 3), minmax(0, 1fr));
+    gap: 36px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-blog-castlefit--container,
+  .main-search-castlefit--container,
+  .main-favorites-castlefit--container {
+    grid-template-columns: repeat(var(--cf-cols, 4), minmax(0, 1fr));
+  }
 }
 
 .main-favorites-castlefit--container:empty::before {
-  content: "Classes you star show up here.";
+  content: attr(data-empty-text);
+  grid-column: 1 / -1;
   color: var(--cf-ink-soft);
 }
 

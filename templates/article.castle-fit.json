@@ -2,11 +2,47 @@
   "sections": {
     "main": {
       "type": "main-article-castlefit",
+      "blocks": {
+        "breadcrumbs": {
+          "type": "breadcrumbs",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1",
+            "title_size": "large",
+            "alignment": "left"
+          }
+        },
+        "video": {
+          "type": "video",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_size": "medium"
+          }
+        },
+        "favorite": {
+          "type": "favorite",
+          "settings": {
+            "label": "Add to favorites",
+            "done_label": "Favorited"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs",
+        "title",
+        "video",
+        "description",
+        "favorite"
+      ],
       "settings": {
-        "video": "{{ article.metafields.custom.castlefit_video.value.media.value }}",
         "header_url": "shopify://collections/all-products",
-        "header_text": "Shop",
-        "comments_enabled": true
+        "header_text": "Shop"
       }
     }
   },
