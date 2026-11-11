@@ -1,0 +1,19 @@
+{% liquid
+  # Prefer the metaobject's typed duration ("m:ss"). Merged classes play
+  # from Vimeo while `media` still holds the old part 1 file, e.g. "6:06"
+  # typed here vs 3:05 from media.
+  assign typed_duration = article.metafields.custom.castlefit_video.value.duration.value
+  if typed_duration != blank
+    echo typed_duration | append: ' ' | append: text
+  else
+    assign video = article.metafields.custom.castlefit_video.value.media.value
+    assign duration_in_seconds = video.duration | divided_by: 1000
+    assign minutes = duration_in_seconds | divided_by: 60 | floor
+    assign seconds = duration_in_seconds | modulo: 60 | floor
+    echo minutes | append: ':'
+    if seconds < 10
+      echo '0'
+    endif
+    echo seconds | append: ' ' | append: text
+  endif
+%}

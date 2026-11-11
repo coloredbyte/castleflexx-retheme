@@ -1,0 +1,27 @@
+<button 
+  class="castlefit--favorites" 
+  data-castlefit-favorites="{{ article.id }}">
+  <svg 
+    width="25" 
+    height="24" 
+    viewBox="0 0 25 24" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    role="img" 
+    aria-labelledby="favoritesIconTitle favoritesIconDesc">
+    <title id="favoritesIconTitle">Add to favorites</title>
+    <desc id="favoritesIconDesc">A star-shaped icon used to indicate adding an item to the favorites</desc>
+    <g clip-path="url(#clip0_296_10442)">
+      <path d="M11.549 2.92664C11.8483 2.00537 13.1517 2.00538 13.451 2.92664L14.9699 7.60055C15.1038 8.01254 15.4877 8.29148 15.9209 8.29149L20.8354 8.29168C21.8041 8.29172 22.2068 9.53127 21.4232 10.1007L17.4474 12.9895C17.0969 13.2441 16.9503 13.6955 17.0841 14.1075L18.6026 18.7815C18.9019 19.7028 17.8475 20.4689 17.0638 19.8995L13.0878 17.011C12.7373 16.7564 12.2627 16.7564 11.9122 17.011L7.93622 19.8995C7.15252 20.4689 6.0981 19.7028 6.3974 18.7815L7.91589 14.1075C8.04974 13.6955 7.90309 13.2441 7.55263 12.9895L3.57683 10.1007C2.79317 9.53127 3.19592 8.29172 4.16461 8.29168L9.07911 8.29149C9.51231 8.29148 9.89623 8.01254 10.0301 7.60055L11.549 2.92664Z" stroke="#3E4044" stroke-width="2"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_296_10442">
+        <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  {% if show_text == true %}
+    <span class="castlefit--favorites_text">{{ text }}</span>
+  {% endif %}
+</button>

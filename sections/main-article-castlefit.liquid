@@ -1,0 +1,291 @@
+{% assign size = 0 %}
+<div class='main-article-castlefit--wrapper menu-container--open{% if blog.handle == 'afterdark' %} castlefit--after-dark{% endif %}'>
+
+  <div class="main-article-castlefit--menu-container">
+
+    {% render 'castlefit-video-progress', 
+      blogs: blogs, 
+      article: article, 
+      hide_progress: 'hidden', 
+      size: size
+    %}
+
+    <div class="main-article-castlefit--related-articles">
+      <ul class="main-article-castlefit--related-articles-list">
+        
+        {% assign current_category = article.metafields.custom.category.value.first %}
+        {% assign size = nil %}
+
+        {%- comment -%} Current blog, so After Dark classes list After Dark. {%- endcomment -%}
+        {%- paginate blog.articles by 1000 -%}
+        {% assign current_article = article.handle %}
+        {%- assign sorted_articles = blog.articles | sort: 'published_at' -%}
+        {%- for article_in_blog in sorted_articles -%}
+          {% if article_in_blog.metafields.custom.category.value contains current_category %}
+            {% assign size = size | plus: 1 %}
+          {% endif %}
+        {%- endfor -%}
+
+          {% for article_in_blog in sorted_articles %}
+            {% if article_in_blog.metafields.custom.category.value contains current_category %}
+              <li class="main-article-castlefit--related-articles-item {% if article_in_blog.handle == current_article %}main-article-castlefit--related-articles-current{% endif %}">
+                <div class="main-article-castlefit--related-articles-checkbox">
+                  <label for="checkbox-{{ article_in_blog.id }}"></label>
+                  <input type="checkbox" id="checkbox-{{ article_in_blog.id }}" data-video-id="video-{{ article_in_blog.id }}">
+                </div>
+                <div class="main-article-castlefit--related-articles-content">
+                  <a 
+                    href="{{ article_in_blog.url }}" 
+                    class="main-article-castlefit--related-articles-link castlefit--media"
+                  >
+                    {{ article_in_blog.title }}
+                  </a>
+                  <div class="main-article-castlefit--related-articles-video-length">
+                    <span class="main-article-castlefit--related-articles-icon-video-play">
+                      {% render 'icon-video-play' %} 
+                    </span>
+                    <span class="main-article-castlefit--related-articles-video-length-text">
+                      {% render 'castlefit-video-length', article: article_in_blog, text: "min" %}
+                    </span>
+                  </div>
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {%- endpaginate -%}
+      </ul>
+    </div>
+
+    <div class="main-article-castlefit--account-settings">
+      <a href="{{ section.settings.header_url }}" class="main-article-castlefit--account-settings-link">
+        <span class="main-article-castlefit--account-settings-text">{{ section.settings.header_text }}</span>
+        <span class="main-article-castlefit--account-settings-icon">
+          {% render 'icon-cart' %}
+        </span>
+      </a>
+      <a href="/account" class="main-article-castlefit--account-settings-link">
+        <span class="main-article-castlefit--account-settings-text">{{ 'customer.account.title' | t }}</span>
+        <span class="main-article-castlefit--account-settings-icon">
+          {% render 'icon-account' %}
+        </span>
+      </a>
+      <a href="{{ routes.account_logout_url }}" class="main-article-castlefit--account-settings-link">
+        <span class="main-article-castlefit--account-settings-text">{{ 'customer.log_out' | t }}</span>
+        <span class="main-article-castlefit--account-settings-icon">
+          {% render 'icon-logout' %}
+        </span>
+        </a> 
+    </div>
+
+  </div>
+
+  <article class="main-article-castlefit--article" itemscope itemtype='http://schema.org/BlogPosting'>
+    <div class="main-article-castlefit--content">
+      
+      <div class="main-article-castlefit--content-top">
+        {% render 'castlefit-breadcrumbs' %}
+
+        <h1 class='main-article-castlefit--title'>{{ article.title }}</h1>
+
+        <div class="main-article-castlefit--details">
+          {% if article.content != blank %}
+            <div class="main-article-castlefit--copy">
+              {{ article.content }}
+              </div>
+          {% endif %}
+            
+          {% render 'castlefit-favorites-button', 
+            article: article
+            show_text: true,
+            text: "Add to favorites"
+          %}
+        </div>
+      </div>
+
+      <div class="main-article-castlefit--video" data-videoId="{{ article.id }}">
+        {% render 'castlefit-video-card',
+          article: article,
+          title: false,
+          info: false,
+          content: false,
+          equipment: false,
+          disable_hover: true,
+          button_position: "center",
+          link_to_article: false
+        %}
+      </div>
+
+
+    </div>
+  </article>
+
+  {% if false %}
+  {% comment %}
+    Discussion board disabled at Dan's request (2026-09-16 Basecamp comment on
+    "Set Up After Dark Videos on Shopify"): "waste of space and looks
+    off-brand" on every CastleFIT/After Dark video page. Kept in place,
+    disabled, in case it's wanted back later.
+  {% endcomment %}
+  <article-comments class='main-article-castlefit--comments'>
+    {% if blog.comments_enabled? %}
+
+      <div class='main-article-castlefit--comments-title-container'>
+        <h2>{{ 'blogs.article.comment_heading' | t }}</h2>
+        <p>{{ article.comments_count }} {{ article.comments_count | pluralize: 'Comment', 'Comments'}}</p>
+      </div>
+      
+      {% paginate article.comments by 5 %}
+        {% comment %}
+          #comments is required, it is used as an anchor link by Shopify.
+        {% endcomment %}
+        <div class='comment-form main-article-castlefit--comments-form'>
+          {% form 'new_comment', article %}
+            {{ form.errors | default_errors }}
+
+              <div class='main-article-castlefit--comments-author'>
+                <label for='CommentAuthor'>{{ 'blogs.article.name' | t }}</label>
+                <input
+                  class='{% if form.errors contains 'author' %} error{% endif %}'
+                  type='text'
+                  name='comment[author]'
+                  id='CommentAuthor'
+                  value='{{ form.author }}'
+                  autocapitalize='words'
+                  aria-required='true'
+                  aria-invalid='{% if form.errors contains 'author' %}true{% else %}false{% endif %}'
+                >
+              </div>
+              <div class='main-article-castlefit--comments-email'>
+                <label for='CommentEmail'>{{ 'blogs.article.email' | t }}</label>
+                <input
+                  class='{% if form.errors contains 'email' %} error{% endif %}'
+                  type='email'
+                  name='comment[email]'
+                  id='CommentEmail'
+                  value='{{ form.email }}'
+                  autocorrect='off'
+                  autocapitalize='off'
+                  aria-required='true'
+                  aria-invalid='{% if form.errors contains 'email' %}true{% else %}false{% endif %}'
+                >
+              </div>
+
+              <div class='main-article-castlefit--comments-message'>
+                <label class='visually-hidden' for='CommentBody'>{{ 'blogs.article.message' | t }}</label>
+                <textarea
+                  class='{% if form.errors contains 'body' %} error{% endif %}'
+                  name='comment[body]'
+                  id='CommentBody'
+                  placeholder="Leave a comment..."
+                  aria-required='true'
+                  aria-invalid='{% if form.errors contains 'body' %}true{% else %}false{% endif %}'
+                >{{ form.body }}</textarea>
+              </div>
+              <button type='submit' class='button-primary main-article-castlefit--comments-button' aria-label='Submit comment'>{{ 'blogs.article.post' | t }}</button>
+
+          {% endform %}
+        </div>
+        <div class='comments'>
+
+          {% for comment in article.comments %}
+            <li id='{{ comment.id }}' class='comment main-article-castlefit--comments-item'>
+              <p class='main-article-castlefit--comments-name'>{{ comment.author }}</p>
+              <span class='main-article-castlefit--comments-date'>
+                {{ comment.created_at | time_tag: '%0m/%0d/%y' }}
+              </span>
+
+              <div class='main-article-castlefit--comments-content'>
+                {{ comment.content }}
+              </div>
+            </li>
+          {% endfor %}
+        </div>
+
+        {% render 'castlefit-pagination', paginate: paginate %}
+      {% endpaginate %}
+    {% endif %}
+  </article-comments>
+  {% endif %}
+</div>
+
+<script type='application/ld+json'>
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ shop.url | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      {% assign image_size = article.image.width | append: 'x' %}
+      "image": [
+        {{ article | image_url: image_size | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        {% assign image_size = settings.share_image.width | append: 'x' %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | image_url: image_size | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Castlefit Article",
+  "tag": "section",
+  "class": "main-article-castlefit",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Castlefit Video"
+    },
+    {
+      "type": "header",
+      "content": "Navigation Panel"
+    },
+    {
+      "type": "url",
+      "id": "header_url",
+      "label": "Header URL"
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Shop"
+    },
+    {
+      "type": "header",
+      "content": "Comments"
+    },
+    {
+      "type": "checkbox",
+      "id": "comments_enabled",
+      "label": "Enable comments",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+

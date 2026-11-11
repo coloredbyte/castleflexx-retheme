@@ -9,6 +9,14 @@
  */
 {
   "current": {
+    "sections": {
+      "castlefit-article-header": {
+        "type": "castlefit-article-header",
+        "settings": {
+          "logo": "shopify://shop_images/Castleflexx_Fit_Logo_v1_1.png"
+        }
+      }
+    },
     "theme_mode_enabled": false,
     "theme_mode_mode": "switch",
     "store_colors": "eurus_set_1",

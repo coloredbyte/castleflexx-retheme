@@ -115,6 +115,9 @@
     {% if template.name == "article" %}
       {{ 'toc.css' | asset_url | stylesheet_tag }}
     {% endif %}
+    {% if template.suffix contains 'castle-fit' %}
+      {{ 'castlefit.css' | asset_url | stylesheet_tag }}
+    {% endif %}
     {% # theme-check-disable AssetPreload %}
     {%- unless settings.type_body_font?.system -%}
       <link rel="preload" href="{{ settings.type_body_font | font_url }}" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="high" />
@@ -161,6 +164,15 @@
         {{ 'accessibility.skip_to_text' | t }}
       </a>
       
+      {%- comment -%}
+        Class articles swap the store header for the class header (logo,
+        class list toggle, previous / complete and continue).
+      {%- endcomment -%}
+      {% if template.name == 'article' and template.suffix == 'castle-fit' %}
+        <div class="sticky top-0 z-50 w-full">
+          {% section 'castlefit-article-header' %}
+        </div>
+      {% else %}
       {% case settings.selected_preset %}
         {% when "breath" %}
           {% sections 'header-group-breath' %}
@@ -178,6 +190,7 @@
           {% sections 'header-group' %}
           {% sections 'aside-group' %}
       {% endcase %}
+      {% endif %}
 
       {% if settings.enable_save_share_cart and content_for_header contains "share_cart:true" %}
         <div x-init="if ($store.xInit.runDispatch) { $dispatch('init-run'); $store.xInit.runDispatch = false; }" class="z-[100] bg-black opacity-40 fixed top-0 right-0 bottom-0 left-0" :class="$store.xCartShare.shared && 'hidden'">
@@ -321,6 +334,10 @@
         <script src="{{ 'quote-request.js' | asset_url }}" defer></script>
       {% endif %}
       <script src="{{ 'video.js' | asset_url }}" defer></script>
+      {% if template.suffix contains 'castle-fit' %}
+        <script src="https://player.vimeo.com/api/player.js" defer></script>
+        <script src="{{ 'castlefit.js' | asset_url }}" defer></script>
+      {% endif %}
       <script src="{{ 'vendors.js' | asset_url }}" defer></script>
       <script>
         window.addEventListener("load", (event) => {

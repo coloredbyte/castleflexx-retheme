@@ -1,0 +1,37 @@
+{% comment %} 
+  sections/castlefit-video-progress.liquid  
+  Include scripts/sections/castlefit-video-progress.js 
+{% endcomment %}
+
+{% liquid
+  assign current_category = article.metafields.custom.category.value.first
+  assign size = nil
+  paginate blog.articles by 1000 
+    assign sorted_articles = blog.articles | sort: 'published_at'
+    for article_in_blog in sorted_articles
+      if article_in_blog.metafields.custom.category.value contains current_category
+        assign size = size | plus: 1
+      endif
+    endfor
+  endpaginate 
+%}
+
+<div 
+  class="castlefit-video castlefit-video--videos-completed"
+  data-total-videos="{{ size | default: blogs['castlefit'].articles.size }}"
+  >
+  {% if article.metafields.custom.category.value != blank %}
+    <h6 class="castlefit-video--category-title">{{ article.metafields.custom.category.value.first }}</h6>
+  {% endif %}
+  <div class="castlefit-video--videos-completed-number">
+    <span class="castlefit-video--video-size-completed">0</span>
+    /
+    <span class="castlefit-video--video-size">
+      {{ size | default: blogs['castlefit'].articles.size }} {{ 'sections.castlefit_slider.complete' | t }}
+    </span>
+  </div>
+
+  <div class="castlefit-video--videos-completed-progress {{hide_progress}}">
+    <div class="castlefit-video--videos-completed-progress-bar" style="width: 0%;"></div>
+  </div>
+</div>

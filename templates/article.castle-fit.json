@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article-castlefit",
+      "settings": {
+        "video": "{{ article.metafields.custom.castlefit_video.value.media.value }}",
+        "header_url": "shopify://collections/all-products",
+        "header_text": "Shop",
+        "comments_enabled": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

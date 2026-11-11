@@ -1,0 +1,63 @@
+<div class="castlefit-article-header--wrapper menu-container--open{% if blog.handle == 'afterdark' %} castlefit--after-dark{% endif %}">
+  <!-- Menu -->
+  <div class="castlefit-article-header--menu">
+    <button class="castlefit-article-header--menu-button" type="button" aria-expanded="true" aria-label="Toggle class list">
+      
+      <span class="castlefit-article-header--menu-icon">
+        {% comment %} Open icon {% endcomment %}
+        <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.03906 6.75H23.0391M5.03906 11.25H23.0391M5.03906 15.75H23.0391M5.03906 20.25H23.0391" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>        
+        {% comment %} Close icon {% endcomment %}
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.375 21.375L4.5 13.5L12.375 5.625M21.375 21.375L13.5 13.5L21.375 5.625" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+  
+      <span class="castlefit-article-header--menu-text">
+        {{ 'sections.header.hide_menu' | t }}
+      </span>   
+  
+    </button>
+  </div>
+  <!-- Logo Section -->
+  <div class="castlefit-article-header--logo">
+    {% if section.settings.logo != blank %}
+      <a href="/pages/castle-fit-portal" class="castlefit-article-header--logo-link">
+        {{ section.settings.logo | image_url: width: 800 | image_tag: class: "castlefit-article-header--logo-img" }}
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- Navigation Section -->
+  <div class="castlefit-article-header--navigation">
+    {% if blog.previous_article %}
+      <a href="{{ blog.previous_article.url }}" class="castlefit-article-header--nav-link button-outline">
+        {{ 'sections.header.previous_lesson' | t }}
+      </a>
+    {% endif %}
+    {% if blog.next_article %}
+      <a href="{{ blog.next_article.url }}" 
+      class="castlefit-article-header--nav-link castlefit-article-header--complete-video button-light-blue"
+      data-current-article="{{ article.id }}"
+      >
+        {{ 'sections.header.next_lesson' | t }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Castlefit Article Header",
+  "class": "castlefit-article-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Upload a logo for the header section."
+    }
+  ]
+}
+{% endschema %}

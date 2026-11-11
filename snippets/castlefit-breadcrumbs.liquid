@@ -1,0 +1,38 @@
+<div class="castlefit-breadcrumb">
+  <!-- Check if the user is on a filtered blog page -->
+  {% if current_tags and current_tags.size > 0 %}
+    <a href="/pages/castle-fit-listing">{{ blog.title }}</a>
+    <span>{% render 'icon-chevron-right' %}</span>
+
+    <!-- Display the filtered tags -->
+    {% for tag in current_tags %}
+      <a 
+        href="{{ blog.url }}/tagged/{{ tag | handle }}"
+        class="active">
+        {{ tag }}
+      </a>
+      {% unless forloop.last %}
+        <span>{% render 'icon-chevron-right' %}</span>
+      {% endunless %}
+    {% endfor %}
+  {% else %}
+  
+    <!-- If no tags, show blog and article breadcrumbs -->
+    <a href="/pages/castle-fit-listing">{{ blog.title }}</a>
+    
+
+    {% if article.metafields.custom.category.value != blank %}
+      <!-- Display the filtered tags -->
+      <span>{% render 'icon-chevron-right' %}</span>
+      <a href="/pages/castle-fit-listing#{{ article.metafields.custom.category.value.first | handleize }}">
+        {% comment %} {{ tag }} {% endcomment %}
+        {{ article.metafields.custom.category.value.first }}
+      </a>
+    {% endif %}
+    
+    {% if article %}
+      <span>{% render 'icon-chevron-right' %}</span>
+      <a href="{{ article.url }}" class="active">{{ article.title }}</a>
+    {% endif %}
+  {% endif %}
+</div>
