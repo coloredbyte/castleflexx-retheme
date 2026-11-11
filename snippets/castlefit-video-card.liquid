@@ -1,0 +1,138 @@
+{% comment %}
+------------------------------------------------------------------------------
+  Section: Castle Video Card
+  This section creates a video card component that displays 
+  video content along with metadata such as title, description, difficulty 
+  levels, and equipment needed. It includes a custom play button, 
+  a "completed" badge, and a favorites button.
+
+  Related Files:
+  - snippets/castlefit-video-length.liquid  -> Renders video duration.
+  - snippets/castlefit-favorites-button.liquid  -> Handles favorite functionality.
+------------------------------------------------------------------------------
+{% endcomment %}
+
+{% assign title = title | default: true, allow_false: true %}
+{% assign info = info | default: true, allow_false: true %}
+{% assign content = content | default: true, allow_false: true %}
+{% assign equipment = equipment | default: true, allow_false: true %}
+{% assign link_to_article = link_to_article | default: true, allow_false: true %}
+
+<div class="castlefit castlefit--media_card disable-hover--{{ disable_hover | default: false }}" 
+  data-tags="{{ article.tags | join: ',' }}"
+  data-videoId="video-{{ article.id }}"
+  >
+  <div class="castlefit--media disable-hover-play--{{ disable_hover_play | default: false }}">
+    <!-- Completed Badge -->
+    <div class="castlefit--badge hidden">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.25 10.25L7.25 13.25L14.75 5.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>  
+      Completed
+    </div>
+    {% assign article_image = article.image | image_url %}
+    {% if article.metafields.custom.castlefit_video.value.vimeo.value != blank %}
+    {% assign vimeo_id = article.metafields.custom.castlefit_video.value.vimeo.value | split: '/' | last %}
+      <div class="relative vimeo-wrapper">
+        {% unless article.image == blank %}
+        {% if link_to_article %}<a href="{{ article.url }}">{% endif %} <img
+        src="{{ article_image }}"
+        class="vimeo-poster absolute inset-0 w-full h-full object-cover rounded-[8px] aspect-[16/9] z-10"
+        alt="Video poster"
+        loading="lazy"
+      >{% if link_to_article %}</a>{% endif %}
+      {% elsif article.url contains '/blogs/afterdark/' %}
+        {%- comment -%}
+          No thumbnail, After Dark: square series art centred on a gradient
+          sampled from its own edges (dark left, warm right). Masked edges
+          feather the seam.
+        {%- endcomment -%}
+        {% if link_to_article %}<a href="{{ article.url }}">{% endif %}<div
+        class="vimeo-poster absolute inset-0 w-full h-full rounded-[8px] z-10 overflow-hidden"
+        style="background: linear-gradient(90deg, #1a0c0c, #3d2219); display: flex; justify-content: center;"
+      ><img
+        src="{{ 'CFAFTERDARK.png' | file_url }}&width=600"
+        alt="After Dark"
+        loading="lazy"
+        style="height: 100%; width: auto; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);"
+      ></div>{% if link_to_article %}</a>{% endif %}
+      {% else %}
+        {%- comment -%} No thumbnail: CastleFit logo card, so every video loads on tap. {%- endcomment -%}
+        {% if link_to_article %}<a href="{{ article.url }}">{% endif %}<div
+        class="vimeo-poster absolute inset-0 w-full h-full rounded-[8px] z-10"
+        style="background: #f4f4f4; display: flex; align-items: center; justify-content: center;"
+      ><img
+        src="{{ 'castlefit-logo.png' | file_url }}&width=600"
+        alt="CastleFit"
+        loading="lazy"
+        style="width: 50%; height: auto;"
+      ></div>{% if link_to_article %}</a>{% endif %}
+      {% endunless %}
+        <iframe
+          data-src="https://player.vimeo.com/video/{{ vimeo_id }}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0"
+          class="h-full w-full object-cover rounded-[8px] aspect-[16/9]"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen webkitallowfullscreen mozallowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="{{title}}"
+        ></iframe>
+         <!-- Custom Play Button -->
+         <button type="button" class="vimeo-play-btn {{ button_position }}" aria-label="Play video | {{ article.metafields.custom.castlefit_video.value.title.value }}" >
+          <svg role="img" aria-hidden="true" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16.4964" cy="16.0001" r="9.43392" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5031 28.7999C23.5724 28.7999 29.3031 23.0692 29.3031 16C29.3031 8.93071 23.5724 3.19995 16.5031 3.19995C9.43388 3.19995 3.70312 8.93071 3.70312 16C3.70312 23.0692 9.43388 28.7999 16.5031 28.7999ZM15.7906 11.4687C15.2997 11.1414 14.6684 11.1108 14.1482 11.3893C13.6279 11.6677 13.3031 12.2099 13.3031 12.8V19.2C13.3031 19.79 13.6279 20.3322 14.1482 20.6106C14.6684 20.8891 15.2997 20.8585 15.7906 20.5312L20.5906 17.3312C21.0358 17.0345 21.3031 16.5349 21.3031 16C21.3031 15.465 21.0358 14.9654 20.5906 14.6687L15.7906 11.4687Z" fill="#3E4044"/>
+          </svg>
+        </button>
+      </div>
+    {% else %}
+        {{ article.metafields.custom.castlefit_video.value.media.value | video_tag: autoplay: false, loop: false, controls: false, controlsList: 'nodownload', poster: article_image, loading: 'lazy', class: 'castlefit--video', image_size: '2048x', onloadstart: "this.volume=0.5", oncontextmenu: "return false;" }}
+            <!-- Custom Play Button -->
+        <button type="button" class="castlefit--play_button {{ button_position }}" aria-label="Play video | {{ article.metafields.custom.castlefit_video.value.title.value }}" >
+          <svg role="img" aria-hidden="true" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16.4964" cy="16.0001" r="9.43392" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5031 28.7999C23.5724 28.7999 29.3031 23.0692 29.3031 16C29.3031 8.93071 23.5724 3.19995 16.5031 3.19995C9.43388 3.19995 3.70312 8.93071 3.70312 16C3.70312 23.0692 9.43388 28.7999 16.5031 28.7999ZM15.7906 11.4687C15.2997 11.1414 14.6684 11.1108 14.1482 11.3893C13.6279 11.6677 13.3031 12.2099 13.3031 12.8V19.2C13.3031 19.79 13.6279 20.3322 14.1482 20.6106C14.6684 20.8891 15.2997 20.8585 15.7906 20.5312L20.5906 17.3312C21.0358 17.0345 21.3031 16.5349 21.3031 16C21.3031 15.465 21.0358 14.9654 20.5906 14.6687L15.7906 11.4687Z" fill="#3E4044"/>
+          </svg>
+        </button>
+      {% endif %}
+  </div>
+  <div class="castlefit--content">
+    {% if info %}
+    <div class="castlefit--info-top">
+      <p class="castlefit--media_length">
+        {% unless article.metafields.custom.castlefit_video.value.vimeo.value == blank%}
+          {% render 'castlefit-video-length', article: article %}
+        {% endunless %}
+      </p>
+
+      {% assign levels = "Beginner,Intermediate,Advanced" | split: ',' %}
+      {% for level in levels %}
+        {% if article.tags contains level %}
+          <div class="castlefit--levels">
+            <span>{{ level }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+      
+      {% render 'castlefit-favorites-button', article: article %}
+    </div>
+    {% endif %}
+    
+    <div class="castlefit--info-bottom">
+      {% if title == true %}
+        <a href="{{ article.url }}" class="castlefit--article_url">
+          <p class="castlefit--title">{{ article.title }}</p>
+        </a>
+      {% endif %}
+
+      {% if content and article.content != blank %}
+        <p class="castlefit--description">
+          {{ article.content | strip_html | truncate: 36 }} 
+          <a href="{{ article.url }}" class="castlefit--read-more">Read More</a>
+        </p>
+      {% endif %}
+
+      {% if equipment %}
+        <p class="castlefit--equipment">
+          {{ article.metafields.custom.castlefit_video.value.equipment_needed.value }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>

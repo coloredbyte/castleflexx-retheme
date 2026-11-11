@@ -1,0 +1,91 @@
+<div class='main-blog-castlefit--wrapper'>
+  <div class="main-blog-castlefit--header">
+    {% render 'castlefit-breadcrumbs' %}
+
+    <h1 class="main-blog-castlefit--title">
+      {% if current_tags %}
+        {{ current_tags | join: ', ' }}
+      {% else %}
+      {{ 'sections.main_blog_castlefit.title' | t }}
+      {% endif %}
+    </h1>
+
+    <!-- Search Section -->
+   {% render 'castlefit-search-form' %}
+
+    <!-- Filters Section -->
+    {% if section.settings.blog_show_filters %}
+      <div class="main-blog-castlefit--filters">
+        <div class="main-blog-castlefit--filters-divider">
+          <p class="main-blog-castlefit--articles-count">
+            {{ blog.articles_count }}
+            {{ blog.articles_count | pluralize: 'Video', 'Videos' }}
+          </p>
+          <div class="main-blog-castlefit--filters-actions">
+            {%- comment -%}
+              Visible reset on tag pages: the filter panel no longer
+              auto-opens there, so its "Clear all" link is hidden.
+            {%- endcomment -%}
+            {% if current_tags %}
+              <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">
+                {{- 'sections.main_blog_castlefit.clear_filter' | t -}}
+              </a>
+            {% endif %}
+
+            <button class="main-blog-castlefit--filters-button" type="button">
+              {{ 'sections.main_blog_castlefit.filter_by_label' | t }}
+            </button>
+          </div>
+        </div>
+
+        <div class="main-blog-castlefit--tags hidden" aria-hidden="true">          
+          <ul class="main-blog-castlefit--tags-list">
+            {% for tag in blog.all_tags %}
+              
+              <li class="main-blog-castlefit--tags-item {% if current_tags contains tag %}active{% endif %}">
+                {%- if current_tags contains tag -%}
+                  {{ tag  | capitalize | link_to_remove_tag: tag }}
+                {%- else -%}
+                  {{ tag  | capitalize | link_to_add_tag: tag }}
+                {%- endif -%}
+              </li>
+            {% endfor %}
+          </ul>
+          {% if current_tags %}
+            <a href="{{ blog.url }}" class="main-blog-castlefit--tags-clear">{{ 'sections.main_blog_castlefit.clear_all' | t }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {%- paginate blog.articles by 12 -%}
+  <div class="main-blog-castlefit--container">
+    {%- assign sorted_articles = blog.articles -%}
+    {% for article in sorted_articles %}
+      {% render 'castlefit-video-card', article: article %}
+    {% endfor %}
+  </div>
+  {% render 'castlefit-pagination', paginate: paginate %}
+  {%- endpaginate -%}
+</div>
+
+{% schema %}
+{
+  "name": "Castlefit Blog",
+  "tag": "section",
+  "class": "main-blog-castlefit",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_filters",
+      "label": "Show Filters",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

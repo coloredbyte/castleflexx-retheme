@@ -1,0 +1,24 @@
+{% assign search_url = '?q=' | append: terms | append: '&view=castle-fit' %}
+<form 
+  class="castlefit-search-form" 
+  action="{{ routes.search_url }}"
+  method="GET"
+  id="search-form"
+>
+  <input type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ search.terms | escape }}"
+    class="castlefit-search-form--input"
+  >
+  <input type="hidden" name="type" value="article">
+  <input type="hidden" name="view" value="castle-fit">
+  {% comment %} <input type="hidden" name="sort_by" value="{{ sort_by }}"> {% endcomment %}
+  <button
+    type="submit"
+    aria-label="{{ 'general.search.search' | t }}"
+    class="castlefit-search-form--button"
+  >
+    {% render 'icon-search' %}
+  </button>
+</form>

@@ -411,6 +411,21 @@
     }
   },
   "sections": {
+    "header": {
+      "hide_menu": "Hide Menu",
+      "menu": "Menu",
+      "previous_lesson": "Previous Lesson",
+      "next_lesson": "Complete and Continue"
+    },
+    "main_blog_castlefit": {
+      "title": "All videos",
+      "clear_all": "Clear all",
+      "clear_filter": "Clear filter",
+      "filter_by_label": "Filters"
+    },
+    "castlefit_slider": {
+      "complete": "Complete"
+    },
     "mobile-navigation": {
       "my_cart": "My cart"
     },

@@ -1,0 +1,60 @@
+{%- paginate search.results by 50 -%}
+  {%- comment -%}
+    Build the grid first so the count reflects what renders. Search can't
+    be limited to one blog, so SEO posts and After Dark are filtered here.
+  {%- endcomment -%}
+  {%- assign shown_count = 0 -%}
+  {%- capture results_html -%}
+    {% for item in search.results %}
+      {%- if item.object_type != 'article' -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- unless item.url contains '/blogs/castlefit/' -%}
+        {%- continue -%}
+      {%- endunless -%}
+
+      {%- assign shown_count = shown_count | plus: 1 -%}
+      {% render 'castlefit-video-card', article: item %}
+    {% endfor %}
+  {%- endcapture -%}
+
+<div class="main-search-castlefit--wrapper">
+  <div class="main-search-castlefit--header">
+    <!-- Search Section -->
+    <h1 class="main-search-castlefit--title">
+      {% if search.performed %}
+        Results for "{{ search.terms | escape }}"
+      {% else %}
+        Start searching for Castlefit content
+      {% endif %}
+    </h1>
+    {% render 'castlefit-search-form' %}
+    <div class="main-search-castlefit--filters-divider">
+      <p class="main-search-castlefit--articles-count">
+        {{ shown_count }}
+        {{ shown_count | pluralize: 'Result', 'Results' }}
+      </p>   
+    </div>
+  </div>
+    <div class="main-search-castlefit--container">
+      {{ results_html }}
+    </div>
+    {% render 'castlefit-pagination', paginate: paginate %}
+</div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Castlefit Blog",
+  "tag": "section",
+  "class": "main-search-castlefit",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Header",
+      "id": "search_header",
+      "default": "Search"
+    }
+  ]
+}
+{% endschema %}
