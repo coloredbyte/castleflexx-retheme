@@ -1,0 +1,79 @@
+{%- doc -%}
+  Colour overrides for a CastleFit class section. Colours come from the
+  section's Eurus colour scheme (assets/castlefit.css); these optional pickers
+  override the accent, and the After Dark set replaces the palette on After
+  Dark classes. A blank picker keeps the scheme colour.
+
+  @param {string} id - section.id
+  @param {object} settings - section.settings
+  @example {% render 'castlefit-tokens', id: section.id, settings: section.settings %}
+{%- enddoc -%}
+
+{%- liquid
+  assign root = '#shopify-section-' | append: id | append: ' .cf-root'
+
+  assign accent = settings.accent_color
+  if accent.alpha == 0
+    assign accent = blank
+  endif
+
+  assign ad_background = settings.after_dark_background
+  if ad_background.alpha == 0
+    assign ad_background = blank
+  endif
+
+  assign ad_text = settings.after_dark_text
+  if ad_text.alpha == 0
+    assign ad_text = blank
+  endif
+
+  assign ad_accent = settings.after_dark_accent
+  if ad_accent.alpha == 0
+    assign ad_accent = blank
+  endif
+
+  # Text on an accent fill: dark on light accents, white on dark ones.
+  assign accent_ink = '#ffffff'
+  if accent != blank
+    assign accent_brightness = accent | color_brightness
+    if accent_brightness > 150
+      assign accent_ink = '#1a1a1a'
+    endif
+  endif
+
+  assign ad_accent_ink = '#ffffff'
+  if ad_accent != blank
+    assign ad_accent_brightness = ad_accent | color_brightness
+    if ad_accent_brightness > 150
+      assign ad_accent_ink = '#1a1a1a'
+    endif
+  endif
+-%}
+
+{%- style -%}
+  {%- if accent != blank -%}
+    {{ root }} {
+      --cf-accent: {{ accent }};
+      --cf-accent-ink: {{ accent_ink }};
+    }
+  {%- endif -%}
+
+  {%- if ad_background != blank or ad_text != blank or ad_accent != blank -%}
+    {{ root }}.castlefit--after-dark {
+      {%- if ad_background != blank %}
+        --cf-bg: {{ ad_background }};
+      {%- endif -%}
+      {%- if ad_text != blank %}
+        --cf-ink: {{ ad_text }};
+        --cf-text: {{ ad_text }};
+      {%- endif -%}
+      {%- if ad_accent != blank %}
+        --cf-accent: {{ ad_accent }};
+        --cf-accent-ink: {{ ad_accent_ink }};
+      {%- endif %}
+      --cf-ink-soft: color-mix(in srgb, var(--cf-text) 68%, var(--cf-bg));
+      --cf-panel: color-mix(in srgb, var(--cf-bg) 90%, var(--cf-text));
+      --cf-line: color-mix(in srgb, var(--cf-bg) 78%, var(--cf-text));
+    }
+  {%- endif -%}
+{%- endstyle -%}

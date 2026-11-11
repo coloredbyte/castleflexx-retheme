@@ -1,18 +1,32 @@
-{% comment %} Sections/main-favorites-castlefit.liquid {% endcomment %}
-<div class='main-favorites-castlefit--wrapper'>
+{%- comment -%}
+  CastleFit favourites. Favourites live in the member's browser, so
+  castlefit.js builds the cards from window.castlefitArticles; the data-show
+  flags carry the card settings to it.
+{%- endcomment -%}
+
+{% render 'castlefit-tokens', id: section.id, settings: section.settings %}
+
+<div
+  class="cf-root {% render 'scheme-class', scheme: section.settings.section_scheme %} main-favorites-castlefit--wrapper cf-listing"
+  style="--cf-page-width: {{ section.settings.page_width }}px; --cf-cols: {{ section.settings.columns_desktop }}; --cf-cols-mobile: {{ section.settings.columns_mobile }}; --cf-pad-top: {{ section.settings.padding_top }}px; --cf-pad-bottom: {{ section.settings.padding_bottom }}px;"
+>
   <div class="main-favorites-castlefit--header">
     <div class="castlefit-breadcrumb">
       <a href="/blogs/castlefit">CastleFit</a>
       <span>{% render 'icon-chevron-right' %}</span>
-      <a href="/blogs/castlefit" class="active">Favorites</a>
+      <a href="{{ request.path }}" class="active">{{ section.settings.heading }}</a>
     </div>
-    <h1 class="main-favorites-castlefit--title">
-      Favorites
-    </h1>
+    <h1 class="main-favorites-castlefit--title">{{ section.settings.heading }}</h1>
   </div>
 
-  {%- comment -%} Filled by castlefit.js from window.castlefitArticles; empty until then. {%- endcomment -%}
-  <div class="main-favorites-castlefit--container"></div>
+  {%- comment -%} Empty until castlefit.js fills it; the empty text is CSS. {%- endcomment -%}
+  <div
+    class="main-favorites-castlefit--container cf-grid"
+    data-empty-text="{{ section.settings.empty_text | escape }}"
+    data-show-length="{{ section.settings.card_show_length }}"
+    data-show-description="{{ section.settings.card_show_description }}"
+    data-show-equipment="{{ section.settings.card_show_equipment }}"
+  ></div>
 </div>
 
 <script type="text/javascript">
@@ -38,3 +52,171 @@
     {% endpaginate %}
   ];
 </script>
+
+{% schema %}
+{
+  "name": "CastleFit favourites",
+  "tag": "section",
+  "class": "main-favorites-castlefit",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Favorites"
+    },
+    {
+      "type": "text",
+      "id": "empty_text",
+      "label": "Text when empty",
+      "default": "Classes you star show up here."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "page_width",
+      "label": "Page width",
+      "min": 1000,
+      "max": 1600,
+      "step": 40,
+      "unit": "px",
+      "default": 1280
+    },
+    {
+      "type": "header",
+      "content": "Class cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_length",
+      "label": "Show length",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_equipment",
+      "label": "Show equipment",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "section_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "store",
+      "options": [
+        {
+          "value": "store",
+          "label": "t:sections.all.color_scheme.store"
+        },
+        {
+          "value": "scheme2",
+          "label": "t:sections.all.color_scheme.soft"
+        },
+        {
+          "value": "scheme3",
+          "label": "t:sections.all.color_scheme.bold"
+        },
+        {
+          "value": "scheme4",
+          "label": "t:sections.all.color_scheme.accent"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "info": "Progress, completed classes, favourite stars. Clear to use the scheme's button colour.",
+      "default": "#651C32"
+    },
+    {
+      "type": "header",
+      "content": "After Dark classes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Used instead of the colours above on After Dark classes. Clear all three to use the same colours as CastleFit."
+    },
+    {
+      "type": "color",
+      "id": "after_dark_background",
+      "label": "Background",
+      "default": "#1A0C0C"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_text",
+      "label": "Text",
+      "default": "#F2E6DF"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_accent",
+      "label": "Accent",
+      "default": "#D98A5F"
+    }
+  ]
+}
+{% endschema %}

@@ -1,11 +1,15 @@
+{%- comment -%}
+  CastleFit class search (search.castle-fit, ?view=castle-fit). Search can't
+  be limited to one blog, so SEO posts and After Dark are filtered here, and
+  the grid is built first so the count matches what renders.
+{%- endcomment -%}
+
+{% render 'castlefit-tokens', id: section.id, settings: section.settings %}
+
 {%- paginate search.results by 50 -%}
-  {%- comment -%}
-    Build the grid first so the count reflects what renders. Search can't
-    be limited to one blog, so SEO posts and After Dark are filtered here.
-  {%- endcomment -%}
   {%- assign shown_count = 0 -%}
   {%- capture results_html -%}
-    {% for item in search.results %}
+    {%- for item in search.results -%}
       {%- if item.object_type != 'article' -%}
         {%- continue -%}
       {%- endif -%}
@@ -14,46 +18,220 @@
       {%- endunless -%}
 
       {%- assign shown_count = shown_count | plus: 1 -%}
-      {% render 'castlefit-video-card', article: item %}
-    {% endfor %}
+      {% render 'castlefit-video-card',
+        article: item,
+        show_length: section.settings.card_show_length,
+        show_level: section.settings.card_show_level,
+        show_favorite: section.settings.card_show_favorite,
+        content: section.settings.card_show_description,
+        equipment: section.settings.card_show_equipment
+      %}
+    {%- endfor -%}
   {%- endcapture -%}
 
-<div class="main-search-castlefit--wrapper">
-  <div class="main-search-castlefit--header">
-    <!-- Search Section -->
-    <h1 class="main-search-castlefit--title">
-      {% if search.performed %}
-        Results for "{{ search.terms | escape }}"
-      {% else %}
-        Start searching for Castlefit content
-      {% endif %}
-    </h1>
-    {% render 'castlefit-search-form' %}
-    <div class="main-search-castlefit--filters-divider">
-      <p class="main-search-castlefit--articles-count">
-        {{ shown_count }}
-        {{ shown_count | pluralize: 'Result', 'Results' }}
-      </p>   
+  <div
+    class="cf-root {% render 'scheme-class', scheme: section.settings.section_scheme %} main-search-castlefit--wrapper cf-listing"
+    style="--cf-page-width: {{ section.settings.page_width }}px; --cf-cols: {{ section.settings.columns_desktop }}; --cf-cols-mobile: {{ section.settings.columns_mobile }}; --cf-pad-top: {{ section.settings.padding_top }}px; --cf-pad-bottom: {{ section.settings.padding_bottom }}px;"
+  >
+    <div class="main-search-castlefit--header">
+      <h1 class="main-search-castlefit--title">
+        {%- if search.performed -%}
+          {{ section.settings.results_heading }} "{{ search.terms | escape }}"
+        {%- else -%}
+          {{ section.settings.empty_heading }}
+        {%- endif -%}
+      </h1>
+      {% render 'castlefit-search-form' %}
+      <div class="main-search-castlefit--filters-divider">
+        <p class="main-search-castlefit--articles-count">
+          {{ shown_count }}
+          {{ shown_count | pluralize: 'Result', 'Results' }}
+        </p>
+      </div>
     </div>
-  </div>
-    <div class="main-search-castlefit--container">
+    <div class="main-search-castlefit--container cf-grid">
       {{ results_html }}
     </div>
     {% render 'castlefit-pagination', paginate: paginate %}
-</div>
+  </div>
 {%- endpaginate -%}
 
 {% schema %}
 {
-  "name": "Castlefit Blog",
+  "name": "CastleFit class search",
   "tag": "section",
   "class": "main-search-castlefit",
   "settings": [
     {
       "type": "text",
-      "label": "Header",
-      "id": "search_header",
-      "default": "Search"
+      "id": "empty_heading",
+      "label": "Heading before searching",
+      "default": "Start searching for Castlefit content"
+    },
+    {
+      "type": "text",
+      "id": "results_heading",
+      "label": "Results heading",
+      "default": "Results for",
+      "info": "Followed by the search terms in quotes."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "page_width",
+      "label": "Page width",
+      "min": 1000,
+      "max": 1600,
+      "step": 40,
+      "unit": "px",
+      "default": 1280
+    },
+    {
+      "type": "header",
+      "content": "Class cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_length",
+      "label": "Show length",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_level",
+      "label": "Show level",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_favorite",
+      "label": "Show favourite star",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_show_equipment",
+      "label": "Show equipment",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "section_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "store",
+      "options": [
+        {
+          "value": "store",
+          "label": "t:sections.all.color_scheme.store"
+        },
+        {
+          "value": "scheme2",
+          "label": "t:sections.all.color_scheme.soft"
+        },
+        {
+          "value": "scheme3",
+          "label": "t:sections.all.color_scheme.bold"
+        },
+        {
+          "value": "scheme4",
+          "label": "t:sections.all.color_scheme.accent"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "info": "Progress, completed classes, favourite stars. Clear to use the scheme's button colour.",
+      "default": "#651C32"
+    },
+    {
+      "type": "header",
+      "content": "After Dark classes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Used instead of the colours above on After Dark classes. Clear all three to use the same colours as CastleFit."
+    },
+    {
+      "type": "color",
+      "id": "after_dark_background",
+      "label": "Background",
+      "default": "#1A0C0C"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_text",
+      "label": "Text",
+      "default": "#F2E6DF"
+    },
+    {
+      "type": "color",
+      "id": "after_dark_accent",
+      "label": "Accent",
+      "default": "#D98A5F"
     }
   ]
 }
