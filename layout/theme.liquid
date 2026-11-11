@@ -1,6 +1,15 @@
 <!doctype html>
 <html class="no-js {% if settings.theme_mode_default == "dark" and settings.theme_mode_enabled %} dark{% endif %}" lang="{{ request.locale.iso_code }}"{% if settings.lang_direction contains request.locale.iso_code %} dir="rtl"{% endif %}>
   <head>
+    {%- comment -%}
+      CastleFit / After Dark access gates. Must run first in <head> so they
+      redirect or hide before paint. Web: castlefit-redirect (Liquid tags).
+      App: appbrew-portal-gate (tags from the Appbrew SDK; no Shopify session).
+    {%- endcomment -%}
+    <script src="https://solutions.appbrew.tech/web-sdk/appbrew-sdk.js" defer></script>
+    {% render 'castlefit-redirect', redirect_enabled: true %}
+    {% render 'appbrew-portal-gate' %}
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

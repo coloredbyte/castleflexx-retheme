@@ -1,0 +1,340 @@
+{%- comment -%}
+  CastleFit web portal gate — browser only.
+
+  Inside the Appbrew app this no-ops; appbrew-portal-gate.liquid owns
+  access there. Renders in <head> so the redirect fires before the body
+  paints.
+
+  Gated surfaces and what each needs:
+    /blogs/afterdark/*        -> After Dark Subscriber
+    /blogs/castlefit/*        -> Active Subscriber
+    the castle-fit* pages     -> either tag (sections self-gate on-page)
+
+  Three states per surface:
+    entitled                  -> nothing; the page is already visible
+    signed in, no entitlement -> replace with the purchase page
+                                 (CastleFit, or After Dark for its classes)
+    not signed in             -> replace with login (return_to back here);
+                                 if we return still signed out, show an
+                                 inline notice instead of looping
+
+  Login goes through /customer_authentication/login with a relative
+  return_to — that is the only path that returns to a specific
+  storefront page. /account/login always lands on the order index.
+  The one-shot "already tried login" flag lives in sessionStorage.
+{%- endcomment -%}
+
+{%- liquid
+  # Which gated surface is this?
+  #   afterdark-blog  : /blogs/afterdark/*  -> After Dark Subscriber
+  #   castlefit-blog  : /blogs/castlefit/*  -> Active Subscriber
+  #   castlefit-portal: the castle-fit* pages -> either tag (self-gated on-page)
+  assign gate_ctx = ''
+  if blog.handle == 'afterdark'
+    assign gate_ctx = 'afterdark-blog'
+  elsif blog.handle == 'castlefit'
+    assign gate_ctx = 'castlefit-blog'
+  elsif template.suffix contains 'castle-fit'
+    assign gate_ctx = 'castlefit-portal'
+  endif
+
+  assign gate_on = false
+  if redirect_enabled == true and request.design_mode != true and template.name != 'product' and gate_ctx != ''
+    assign gate_on = true
+  endif
+
+  assign gate_is_portal = false
+  if gate_ctx == 'castlefit-portal'
+    assign gate_is_portal = true
+  endif
+
+  # Tag checks. After Dark match is case-insensitive as a safety margin.
+  assign gate_tags_dc = customer.tags | join: ',' | downcase
+  assign gate_has_active = false
+  if customer and customer.tags contains 'Active Subscriber'
+    assign gate_has_active = true
+  endif
+  assign gate_has_ad = false
+  if customer and gate_tags_dc contains 'after dark subscriber'
+    assign gate_has_ad = true
+  endif
+
+  # Where a signed-in visitor without access is sent to buy it.
+  # After Dark classes -> the After Dark page (Standalone + member Add-on).
+  assign gate_purchase_url = '/products/castlefit'
+  if gate_ctx == 'afterdark-blog'
+    assign gate_purchase_url = '/products/after-dark-standalone'
+  endif
+
+  assign gate_entitled = false
+  if gate_ctx == 'afterdark-blog' and gate_has_ad
+    assign gate_entitled = true
+  elsif gate_ctx == 'castlefit-blog' and gate_has_active
+    assign gate_entitled = true
+  elsif gate_ctx == 'castlefit-portal'
+    if gate_has_active or gate_has_ad
+      assign gate_entitled = true
+    endif
+  endif
+-%}
+{%- if gate_on -%}
+  {%- comment -%}
+    TEMPORARY (branch coloredbyte-castlefit-gate-debug): beacon to a Google
+    Apps Script collector. Only fires when a storefront customer is present
+    (the logged-out path is confirmed working; its volume is ~98% bots).
+    Two kinds of row:
+      - the gate branch taken (visible / purchase-redirect / ...).
+      - on the visible branch, a deferred 'render-diag' row ~4s after load
+        (12s hard fallback) snapshotting whether the page actually drew:
+        body visibility, per-section heights, Vimeo iframe data-src->src
+        swap state, JS errors. Diagnoses "logged in but blank / no videos".
+        The snapshot rides in the `diag` column as a JSON string.
+    Blank BEACON_URL or revert this commit once resolved.
+  {%- endcomment -%}
+  <script>
+    (function () {
+      var BEACON_URL = 'https://script.google.com/macros/s/AKfycbzvBBmfYVtLo3Wfx6aJHD_4afVZgSMJ-H6_Lj9Z5fDJxggXbLcNkyUXBEsOTrVqEjmRHQ/exec';
+
+      // Only report sessions with a customer; skip the logged-out/bot noise.
+      var CUSTOMER_PRESENT = {% if customer %}true{% else %}false{% endif %};
+
+      var isAppUA = /Appbrew/i.test(navigator.userAgent);
+
+      // Collect render-time JS errors from as early as possible, for the
+      // deferred render-diag snapshot on the visible branch. Only real
+      // script exceptions (which carry a message); resource-load errors
+      // fire the same event with a blank message and go to RES_ERRS as a
+      // count instead.
+      var DIAG_ERRS = [];
+      var RES_ERRS = 0;
+      window.addEventListener('error', function (e) {
+        var msg = e && e.message ? String(e.message) : '';
+        if (!msg) { RES_ERRS++; return; }
+        if (DIAG_ERRS.length < 8) {
+          DIAG_ERRS.push({
+            m: msg.slice(0, 180),
+            s: String((e && e.filename) || '').slice(0, 180),
+            l: (e && e.lineno) || 0
+          });
+        }
+      }, true);
+      var DIAG_REJ = 0;
+      window.addEventListener('unhandledrejection', function () { DIAG_REJ++; });
+
+      function sid() {
+        try {
+          var k = 'castlefit-gate-sid', v = sessionStorage.getItem(k);
+          if (!v) { v = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem(k, v); }
+          return v;
+        } catch (e) { return 'nostore'; }
+      }
+
+      function bumpNav() {
+        try {
+          var k = 'castlefit-gate-nav', n = (parseInt(sessionStorage.getItem(k), 10) || 0) + 1;
+          sessionStorage.setItem(k, String(n));
+          return n;
+        } catch (e) { return -1; }
+      }
+
+      // Fire-and-forget snapshot of the render inputs and which branch ran.
+      // fetch + keepalive rather than sendBeacon: ad blockers silently drop
+      // sendBeacon to script.google.com (returns true, sends nothing), and
+      // keepalive survives the branches that navigate right after.
+      function beacon(branch, diag) {
+        if (!BEACON_URL || !CUSTOMER_PRESENT) { return; }
+        try {
+          var payload = {
+            ts_client: Date.now(),
+            ts_render: {{ 'now' | date: '%s' }},
+            sessionId: sid(),
+            nav: bumpNav(),
+            customerId: {{ customer.id | default: 'null' }},
+            email: {{ customer.email | json }},
+            customerLoggedIn: {{ customer_logged_in | default: false }},
+            customerPresent: {% if customer %}true{% else %}false{% endif %},
+            tagsJoined: {{ customer.tags | join: ',' | json }},
+            tagsRaw: {{ customer.tags | json }},
+            tagMatch: {% if customer.tags contains 'Active Subscriber' %}true{% else %}false{% endif %},
+            adTagMatch: {% if gate_tags_dc contains 'after dark subscriber' %}true{% else %}false{% endif %},
+            gateIsPortal: {{ gate_is_portal }},
+            gateCtx: {{ gate_ctx | json }},
+            branch: branch,
+            templateName: {{ template.name | json }},
+            templateSuffix: {{ template.suffix | json }},
+            marketHandle: {{ localization.market.handle | json }},
+            isAppUA: isAppUA,
+            hasAppbrewSDK: typeof window.appbrewSDK,
+            hasRNWebView: !!window.ReactNativeWebView,
+            cookieEnabled: navigator.cookieEnabled,
+            href: location.href,
+            referrer: document.referrer
+          };
+          if (diag) { payload.diag = JSON.stringify(diag); }
+          fetch(BEACON_URL, {
+            method: 'POST',
+            keepalive: true,
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+            body: JSON.stringify(payload)
+          }).catch(function () {});
+        } catch (e) {}
+      }
+
+      // Deferred snapshot of whether the portal page actually rendered.
+      // Runs once, ~4s after load (12s fallback if load never fires), on
+      // the visible branch only. Answers "logged in but blank / no videos".
+      function collectDiag(phase) {
+        var b = document.body;
+        var cs = b ? getComputedStyle(b) : {};
+        var out = {
+          phase: phase,
+          ms: Math.round((window.performance && performance.now && performance.now()) || 0),
+          ready: document.readyState,
+          opacity: cs.opacity || null,
+          visibility: cs.visibility || null,
+          display: cs.display || null,
+          bodyClass: b ? String(b.className).slice(0, 160) : null,
+          htmlClass: String(document.documentElement.className).slice(0, 120),
+          docHeight: document.documentElement.scrollHeight,
+          viewportHeight: window.innerHeight,
+          bodyKids: b ? b.childElementCount : -1,
+          err: DIAG_ERRS,
+          resErr: RES_ERRS,
+          rej: DIAG_REJ
+        };
+        try {
+          var secs = document.querySelectorAll('[id^="shopify-section-"]');
+          var sec = {};
+          var hiddenSec = 0;
+          for (var i = 0; i < secs.length; i++) {
+            var el = secs[i];
+            var r = el.getBoundingClientRect();
+            var scs = getComputedStyle(el);
+            if (scs.visibility === 'hidden' || scs.display === 'none' || scs.opacity === '0') { hiddenSec++; }
+            sec[el.id.replace('shopify-section-', '').slice(0, 40)] = {
+              h: Math.round(r.height),
+              k: el.childElementCount,
+              t: (el.textContent || '').trim().length
+            };
+          }
+          out.nSec = secs.length;
+          out.hiddenSec = hiddenSec;
+          out.sec = sec;
+          // Video content: swiper slides + Vimeo iframe swap state. A healthy
+          // portal render is ~29 slides / ~31 iframes, most still data-src
+          // (swapped to src only on view). All-zero => "no videos".
+          out.nSlide = document.querySelectorAll('.swiper-slide').length;
+          out.nIframe = document.querySelectorAll('iframe').length;
+          out.ifDataSrc = document.querySelectorAll('iframe[data-src]').length;
+          out.ifVimeo = document.querySelectorAll('iframe[src*="vimeo"]').length;
+        } catch (e) {
+          out.collectErr = String(e);
+        }
+        return out;
+      }
+
+      var diagSent = false;
+      function fireDiag() {
+        if (diagSent) { return; }
+        diagSent = true;
+        beacon('render-diag', collectDiag('load+4s'));
+      }
+      function scheduleDiag() {
+        if (document.readyState === 'complete') {
+          setTimeout(fireDiag, 4000);
+        } else {
+          window.addEventListener('load', function () { setTimeout(fireDiag, 4000); });
+        }
+        setTimeout(fireDiag, 12000);
+      }
+
+      // The Appbrew app carries its own gate (appbrew-portal-gate.liquid);
+      // still record that this snippet saw the hit.
+      if (isAppUA) { beacon('in-app-skip'); return; }
+
+      var RETRY_KEY = 'castlefit-portal-auth-retry';
+
+      function clearRetry() {
+        try { sessionStorage.removeItem(RETRY_KEY); } catch (e) {}
+      }
+
+      {%- if gate_entitled -%}
+
+        // Entitled (CastleFit tag, or After Dark tag on the portal) — the
+        // page stays visible.
+        beacon('visible');
+        clearRetry();
+        scheduleDiag();
+
+      {%- elsif customer -%}
+
+        // Signed in, but no entitlement.
+        beacon('purchase-redirect');
+        clearRetry();
+        window.location.replace({{ gate_purchase_url | json }});
+
+      {%- else -%}
+
+        // No storefront session. Go to login once; if we come back still
+        // signed out, stop and explain rather than loop.
+        var triedLogin = false;
+        try { triedLogin = sessionStorage.getItem(RETRY_KEY) === '1'; } catch (e) {}
+
+        // Fallback for when sessionStorage is blocked: a login-flow referrer
+        // means the round-trip already happened.
+        if (!triedLogin && /shopify\.com|\/account/i.test(document.referrer)) {
+          triedLogin = true;
+        }
+
+        if (triedLogin) {
+          beacon('auth-notice');
+          onReady(showAuthNotice);
+        } else {
+          beacon('login-redirect');
+          try { sessionStorage.setItem(RETRY_KEY, '1'); } catch (e) {}
+          window.location.replace('/customer_authentication/login?return_to=' + encodeURIComponent(window.location.pathname));
+        }
+
+        function onReady(fn) {
+          if (document.body) { fn(); }
+          else { document.addEventListener('DOMContentLoaded', fn); }
+        }
+
+        function showAuthNotice() {
+          if (document.getElementById('castlefit-auth-notice')) { return; }
+
+          var el = document.createElement('div');
+          el.id = 'castlefit-auth-notice';
+          el.setAttribute('style', [
+            'position:fixed', 'inset:0', 'z-index:2147483647',
+            'display:flex', 'flex-direction:column', 'align-items:center',
+            'justify-content:center', 'gap:14px', 'padding:24px',
+            'text-align:center', 'background:#fff'
+          ].join(';'));
+          el.innerHTML =
+            '<h2 style="margin:0;font-size:20px">We couldn\'t confirm your sign-in</h2>' +
+            '<p style="margin:0;max-width:340px;color:#555;font-size:14px;line-height:1.5">' +
+              'If you just subscribed, give it a minute and refresh. If this keeps ' +
+              'happening, contact support and we\'ll get you in.</p>' +
+            '<div style="display:flex;gap:12px;margin-top:6px">' +
+              '<button type="button" id="castlefit-auth-refresh" ' +
+                'style="padding:12px 24px;border:0;border-radius:6px;background:#111;color:#fff;font-size:15px">' +
+                'Refresh</button>' +
+              '<a href="/products/castlefit" style="padding:12px 8px;color:#555;font-size:15px">' +
+                'CastleFit membership</a>' +
+            '</div>';
+          document.body.appendChild(el);
+
+          var btn = document.getElementById('castlefit-auth-refresh');
+          if (btn) {
+            btn.addEventListener('click', function () {
+              window.location.replace(window.location.pathname);
+            });
+          }
+        }
+
+      {%- endif -%}
+    })();
+  </script>
+{%- endif -%}
