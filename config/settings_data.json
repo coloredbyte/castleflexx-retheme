@@ -156,6 +156,228 @@
           "cards_background": "#FFFFFF",
           "cards_border_color": "rgba(0,0,0,0)"
         }
+      },
+      "17550530943902319648": {
+        "type": "shopify://apps/appikon-back-in-stock/blocks/subscribe_it_helper/eb949c69-b3e6-4216-a322-1cd63915d46d",
+        "disabled": false,
+        "settings": {}
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": false,
+        "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": false,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "15869499916601721046": {
+        "type": "shopify://apps/prettydamnquick-pdq/blocks/theme-test-embed/a668eab0-b569-4206-8f4c-a0f244820a6b",
+        "disabled": false,
+        "settings": {}
+      },
+      "13010441534934553958": {
+        "type": "shopify://apps/prettydamnquick-pdq/blocks/smart-cart-embed/a668eab0-b569-4206-8f4c-a0f244820a6b",
+        "disabled": false,
+        "settings": {
+          "enable_console_logs": false
+        }
+      },
+      "4331986830087341145": {
+        "type": "shopify://apps/prettydamnquick-pdq/blocks/order-protection-embed/a668eab0-b569-4206-8f4c-a0f244820a6b",
+        "disabled": false,
+        "settings": {
+          "enable_console_logs": false
+        }
+      },
+      "6822850691323382344": {
+        "type": "shopify://apps/vyg-ai-unified-commerce/blocks/vyg-onsite/019e2023-73b4-79b7-bd5f-cf74db0ef570",
+        "disabled": false,
+        "settings": {}
+      },
+      "4087582241319980836": {
+        "type": "shopify://apps/ground/blocks/ground_script/33606432-4610-4a99-a33b-7bec990f60ef",
+        "disabled": false,
+        "settings": {}
+      },
+      "4252583770683550135": {
+        "type": "shopify://apps/redo/blocks/redo_app_embed/c613644b-6df4-4d11-b336-43a5c06745a1",
+        "disabled": false,
+        "settings": {}
+      },
+      "2522843651334954667": {
+        "type": "shopify://apps/snowball-affiliate-marketing/blocks/referral-tracker/6e5feda3-ec24-4171-ae41-64028b660bc7",
+        "disabled": false,
+        "settings": {}
+      },
+      "7594718713064568544": {
+        "type": "shopify://apps/octane-ai-advanced-quiz-maker/blocks/octaneai_fullscreen/db2513a5-c9b0-40fd-9058-42c28e6e6502",
+        "disabled": false,
+        "settings": {
+          "octane_id": "",
+          "textarea_input": ""
+        }
+      },
+      "7311681525431944032": {
+        "type": "shopify://apps/octane-ai-advanced-quiz-maker/blocks/octane-ai/db2513a5-c9b0-40fd-9058-42c28e6e6502",
+        "disabled": false,
+        "settings": {}
+      },
+      "16364584301514234833": {
+        "type": "shopify://apps/order-editing/blocks/sidebar/04cce4a7-c7bb-4d13-af81-560a17babbf3",
+        "disabled": false,
+        "settings": {}
+      },
+      "14533701662016131031": {
+        "type": "shopify://apps/order-editing/blocks/sla-contracts/04cce4a7-c7bb-4d13-af81-560a17babbf3",
+        "disabled": false,
+        "settings": {
+          "app_url": "https://app.orderediting.com"
+        }
+      },
+      "15685250022964305326": {
+        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "disabled": false,
+        "settings": {}
+      },
+      "1877152918344802950": {
+        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": false,
+        "settings": {}
+      },
+      "2786716548061469553": {
+        "type": "shopify://apps/applovin/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
+        "disabled": false,
+        "settings": {}
+      },
+      "5460033060862993441": {
+        "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+        "disabled": true,
+        "settings": {}
+      },
+      "12439146293631897289": {
+        "type": "shopify://apps/blockify-fraud-filter/blocks/app_embed/2e3e0ba5-0e70-447a-9ec5-3bf76b5ef12e",
+        "disabled": false,
+        "settings": {}
+      },
+      "5928079635967663252": {
+        "type": "shopify://apps/reactiv-mobile-app-builder/blocks/app_install_banner_embedded/edda60bc-14d1-4954-a126-a5789793edaa",
+        "disabled": true,
+        "settings": {
+          "app_banner_heading": "Download the App",
+          "app_desktop_description": "Shop on the go, access exclusive deals, and track orders on the [App Name] App.",
+          "app_mobile_description": "Open in the [App Name] App",
+          "banner_background_color": "#ffffff",
+          "text_alignment": "left",
+          "cta_link_app_clip": "YOUR_APP_CLIP_LINK",
+          "cta_link_ios_id": "YOUR_APP_ID",
+          "cta_link_android_id": "YOUR_APP_ID",
+          "app_cta_location": "banner",
+          "show_on_home": true,
+          "show_on_collection": true,
+          "collection_list": [],
+          "show_on_product": true,
+          "product_list": [],
+          "app_store_button_label": "Get App",
+          "cta_label": "Open App",
+          "cta_background_color": "#000000",
+          "cta_text_color": "#ffffff",
+          "qr_modal_title": "Get the App",
+          "qr_modal_description": "Shop on the go, access exclusive deals, and track orders on the App",
+          "qr_modal_subtext": "Scan the QR code to download the app",
+          "enable_qr_gradient_color": true,
+          "qr_gradient_color_start": "#000000",
+          "qr_gradient_color_end": "#000000",
+          "app_uuid": "unset",
+          "store_uuid": "unset"
+        }
+      },
+      "14572336568137929694": {
+        "type": "shopify://apps/reactiv-mobile-app-builder/blocks/reactiv_app_webview_relay/edda60bc-14d1-4954-a126-a5789793edaa",
+        "disabled": true,
+        "settings": {
+          "url_slugs": "",
+          "interceptor_paths": "",
+          "retained_element_selectors": "",
+          "element_selectors": "",
+          "third_party_element_selectors": ""
+        }
+      },
+      "9091801311488918091": {
+        "type": "shopify://apps/reactiv-mobile-app-builder/blocks/reactiv_app_apple_smart_banner/edda60bc-14d1-4954-a126-a5789793edaa",
+        "disabled": true,
+        "settings": {
+          "app_id": "",
+          "app_clip_bundle_id": "",
+          "activate_max_clip_display_limit": false,
+          "max_clip_display_limit": 3,
+          "show_on_home": false,
+          "show_on_landing_pages": false,
+          "url_slugs": "",
+          "show_on_all_collections": false,
+          "show_on_collection": false,
+          "collection_list": [],
+          "show_on_all_products": false,
+          "show_on_product": false,
+          "product_list": []
+        }
+      },
+      "7079518687644006178": {
+        "type": "shopify://apps/checkout-blocks/blocks/app-embed/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
+        "disabled": false,
+        "settings": {
+          "utm_id": true,
+          "utm_source": true,
+          "utm_medium": true,
+          "utm_campaign": true,
+          "utm_term": true,
+          "ref": true
+        }
+      },
+      "1053001815351305401": {
+        "type": "shopify://apps/loop-voice-agent/blocks/assistant/01a1af28-2b5a-7e10-992b-d0e9cd4595ff",
+        "disabled": false,
+        "settings": {
+          "hide_in_editor": false,
+          "api_origin": ""
+        }
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
+      "2200952712151285029": {
+        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
+      "9674181886073616913": {
+        "type": "shopify://apps/mida-fraud-ip-blocker/blocks/blocker-script/09aab972-8c77-47b1-a9a0-4712e9f2405d",
+        "disabled": false,
+        "settings": {}
+      },
+      "10840395464443086010": {
+        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "disabled": false,
+        "settings": {}
+      },
+      "15468165557740232751": {
+        "type": "shopify://apps/magefan-login-as-customer/blocks/lac-app-embed/01a12fad-8471-7d2c-bd0a-5170c92c1fee",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
