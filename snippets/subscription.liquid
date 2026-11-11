@@ -17,6 +17,13 @@
   if current_variant.selling_plan_allocations.size > 0
     assign has_selling_plan = true
   endif
+
+  # Subscription-only products (e.g. After Dark) reject plan-less adds, so
+  # preselect the first plan and hide "One-time purchase" for them.
+  assign default_plan_id = ''
+  if product.requires_selling_plan and has_selling_plan
+    assign default_plan_id = current_variant.selling_plan_allocations.first.selling_plan.id
+  endif
 -%}
 <div class="w-full" id="subscription-{{ section_id }}" {{ block.shopify_attributes }}>
   {%- if has_selling_plan -%}
@@ -44,7 +51,7 @@
     {% endstyle %}
     <div
       class="x-block-subscription w-full mb-4 md:mb-6{% if settings.edges_type == 'rounded_corners' %} corners-app{% endif %}"
-      x-data="{ selectedPlanId: '' }"
+      x-data="{ selectedPlanId: '{{ default_plan_id }}' }"
     >
       <div class="border{% if settings.edges_type == 'rounded_corners' %} rounded-xl overflow-hidden{% endif %}">
         {% if block.settings.label != blank %}
@@ -109,6 +116,7 @@
         </div>
         
       </div>
+      {%- unless product.requires_selling_plan -%}
       <div class="subscription-{{ block.id }}__group border pl-5 pr-5 pb-5 pt-5 mb-3 mt-5{% if settings.edges_type == 'rounded_corners' %} rounded-xl{% endif %}">
         <label class="subscription-{{ block.id }}__option flex items-center justify-between gap-3 cursor-pointer">
           <span class="flex items-center gap-2.5">
@@ -128,6 +136,7 @@
           {% endif %}
         </label>
       </div>
+      {%- endunless -%}
       <input
         type="hidden"
         name="selling_plan"
