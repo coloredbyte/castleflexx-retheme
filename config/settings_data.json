@@ -160,6 +160,7 @@
     "colors_speech": "#D42200",
     "advanced_show_breadcrumbs": true,
     "breadcrumbs_separator": "•",
+    "favicon": "shopify://shop_images/castleflexx-favicon.png",
     "cart_page_layout": "side",
     "cart_type": "drawer",
     "cart_icon": "icon-hand-bag",
