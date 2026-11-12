@@ -17,12 +17,12 @@
         "announcement_GewciB": {
           "type": "announcement",
           "settings": {
-            "icon": "none",
+            "icon": "gift",
             "another_icon": "",
             "custom_icon": "",
             "text": "Use Code GIFT80 FOR $80 Off 2 CastleFlexx Luxury",
             "text_size": 90,
-            "link": "",
+            "link": "shopify://products/castle-flexx",
             "open_new_window": false,
             "button_label_or_code": "",
             "button_link": "",
