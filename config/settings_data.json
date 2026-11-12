@@ -424,14 +424,6 @@
           "ref": true
         }
       },
-      "1053001815351305401": {
-        "type": "shopify://apps/loop-voice-agent/blocks/assistant/01a1af28-2b5a-7e10-992b-d0e9cd4595ff",
-        "disabled": false,
-        "settings": {
-          "hide_in_editor": false,
-          "api_origin": ""
-        }
-      },
       "2567389343055140935": {
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
@@ -456,6 +448,14 @@
         "type": "shopify://apps/magefan-login-as-customer/blocks/lac-app-embed/01a12fad-8471-7d2c-bd0a-5170c92c1fee",
         "disabled": true,
         "settings": {}
+      },
+      "1053001815351305401": {
+        "type": "shopify://apps/loop-voice-agent/blocks/assistant/01a1af28-2b5a-7e10-992b-d0e9cd4595ff",
+        "disabled": true,
+        "settings": {
+          "hide_in_editor": false,
+          "api_origin": ""
+        }
       }
     }
   },
