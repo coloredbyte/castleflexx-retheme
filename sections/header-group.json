@@ -46,44 +46,10 @@
             "button_color_dark": "rgba(0,0,0,0)",
             "button_text_color_dark": "rgba(0,0,0,0)"
           }
-        },
-        "announcement_iVTKpX": {
-          "type": "announcement",
-          "settings": {
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "text": "Hurry up! 30% OFF Sale Ends Soon {count_down}",
-            "text_size": 80,
-            "link": "",
-            "open_new_window": false,
-            "button_label_or_code": "",
-            "button_link": "",
-            "open_new_window_button": false,
-            "button_style": "primary",
-            "countdown_type": "standard",
-            "hide_when_countdown_end": false,
-            "countdown_interval": 7,
-            "interval_unit": "day",
-            "timezone": "-4",
-            "end_year": 2023,
-            "end_month": "1",
-            "end_day": "1",
-            "end_hour": "1",
-            "end_minute": "0",
-            "block_scheme": "section",
-            "textlink_color_light": "rgba(0,0,0,0)",
-            "button_color": "rgba(0,0,0,0)",
-            "button_text_color": "rgba(0,0,0,0)",
-            "textlink_color_dark": "rgba(0,0,0,0)",
-            "button_color_dark": "rgba(0,0,0,0)",
-            "button_text_color_dark": "rgba(0,0,0,0)"
-          }
         }
       },
       "block_order": [
-        "announcement_GewciB",
-        "announcement_iVTKpX"
+        "announcement_GewciB"
       ],
       "settings": {
         "enable": true,
