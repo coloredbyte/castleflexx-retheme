@@ -163,7 +163,7 @@
     "favicon": "shopify://shop_images/castleflexx-favicon.png",
     "cart_page_layout": "side",
     "cart_type": "drawer",
-    "cart_icon": "icon-hand-bag",
+    "cart_icon": "icon-cart",
     "cart_show_vendor": false,
     "show_cart_note": true,
     "show_cart_payment_methods": true,
