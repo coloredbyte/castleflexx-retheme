@@ -915,8 +915,8 @@
         "header_show_language_selector": false,
         "header_show_currency_selector": false,
         "show_section_divider": false,
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 20,
+        "padding_bottom": 20,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 8,
         "padding_bottom_mobile": 8
