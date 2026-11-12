@@ -9,17 +9,60 @@
  */
 {
   "current": {
-    "sections": {
-      "castlefit-article-header": {
-        "type": "castlefit-article-header",
-        "settings": {
-          "logo": "shopify://shop_images/Castleflexx_Fit_Logo_v1_1.png"
-        }
-      }
-    },
     "theme_mode_enabled": false,
     "theme_mode_mode": "switch",
     "store_colors": "eurus_set_1",
+    "colors_background": "#FFFFFF",
+    "secondary_background": "#F7F8F6",
+    "colors_heading": "#191A1B",
+    "colors_text": "#666768",
+    "colors_text_link": "#191A1B",
+    "colors_line_and_borders": "#DEDEDE",
+    "secondary_heading": "#191A1B",
+    "secondary_text": "#666768",
+    "colors_button": "#3E4044",
+    "colors_button_text": "#FFFFFF",
+    "colors_button_hover": "#666768",
+    "colors_button_text_hover": "#FFFFFF",
+    "colors_button_secondary": "#191A1B",
+    "colors_price": "#191A1B",
+    "colors_price_sale": "#D42200",
+    "colors_error": "#D42200",
+    "colors_success": "#13A048",
+    "colors_cart_dot": "#191A1B",
+    "colors_cart_dot_text": "#FEC627",
+    "colors_icon_rating": "#FEC627",
+    "background_color_light_estimate_cart": "#F7F8F6",
+    "message_color_light_estimate_cart": "#191A1B",
+    "bg_tooltip_color_light_estimate_cart": "#F7F8F6",
+    "tooltip_color_light_estimate_cart": "#191A1B",
+    "colors_header_background": "#FFFFFF",
+    "header_secondary_background": "#F7F8F6",
+    "header_heading": "#191A1B",
+    "colors_header_text": "#191A1B",
+    "header_textlink": "#666768",
+    "colors_header_line": "#DEDEDE",
+    "header_secondary_heading": "#191A1B",
+    "header_secondary_text": "#191A1B",
+    "header_button": "#3E4044",
+    "header_button_text": "#FFFFFF",
+    "header_button_hover": "#666768",
+    "header_button_text_hover": "#FFFFFF",
+    "header_button_secondary": "#191A1B",
+    "header_button_secondary_background": "#F7F8F6",
+    "colors_footer_background": "#F7F8F6",
+    "footer_secondary_background": "#DEDEDE",
+    "colors_footer_heading": "#191A1B",
+    "colors_footer_text": "#666768",
+    "colors_footer_textlink": "#666768",
+    "footer_secondary_heading": "#191A1B",
+    "footer_secondary_text": "#666768",
+    "footer_button": "#3E4044",
+    "footer_button_text": "#FFFFFF",
+    "footer_button_hover": "#666768",
+    "footer_button_text_hover": "#FFFFFF",
+    "footer_button_secondary": "#191A1B",
+    "footer_button_secondary_background": "#FFFFFF",
     "type_body_font": "dm_sans_n4",
     "text_base_size": 110,
     "type_header_font": "dm_sans_n5",
@@ -125,6 +168,14 @@
     "checkout_button_color": "#ff6600",
     "checkout_error_color": "#E12B28",
     "products_hover_to_reveal_second_image": true,
+    "sections": {
+      "castlefit-article-header": {
+        "type": "castlefit-article-header",
+        "settings": {
+          "logo": "shopify://shop_images/Castleflexx_Fit_Logo_v1_1.png"
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "9645659001414995083": {
