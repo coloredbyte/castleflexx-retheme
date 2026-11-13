@@ -50,7 +50,7 @@
         "mobile_height": "300px",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20,
+        "padding_bottom_mobile": 0,
         "section_scheme": "store",
         "background_color_light": "#3E4044",
         "heading_light": "#FFFFFF",
