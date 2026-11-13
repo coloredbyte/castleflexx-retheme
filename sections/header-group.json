@@ -874,7 +874,7 @@
         "menu_label_custom_icon": "",
         "section_scheme": "store",
         "background_color": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
+        "text_color": "#191A1B",
         "colors_text_link": "rgba(0,0,0,0)",
         "divider_color": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
