@@ -1,0 +1,216 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Lab Results Hero (lab-results-hero)
+  - Edge-to-edge background color. Left: title / description / two CTAs.
+    Right: image. Content constrained to 1040px, vertically centered.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div
+  class="lab-hero"
+  style="background-color: {{ section.settings.background_color }};">
+  <div class="lab-hero__inner">
+    <div class="lab-hero__content">
+      {% if section.settings.title != blank %}
+        <h1 class="lab-hero__title">
+          {{ section.settings.title | escape | newline_to_br }}
+        </h1>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="lab-hero__description">{{ section.settings.description }}</div>
+      {% endif %}
+
+      {% if section.settings.cta1_label != blank or section.settings.cta2_label != blank %}
+        <div class="lab-hero__ctas">
+          {% if section.settings.cta1_label != blank %}
+            <a
+              href="{{ section.settings.cta1_url | default: '#' }}"
+              class="button button-solid border pl-7 pr-7 md:pl-9 md:pr-9 lab-hero__cta">
+              {{ section.settings.cta1_label }}
+            </a>
+          {% endif %}
+          {% if section.settings.cta2_label != blank %}
+            <a
+              href="{{ section.settings.cta2_url | default: '#' }}"
+              class="button button-outline border pl-7 pr-7 md:pl-9 md:pr-9 lab-hero__cta">
+              {{ section.settings.cta2_label }}
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.image != blank %}
+      <div class="lab-hero__media">
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'lazy',
+            widths: '400, 600, 800, 1000, 1200',
+            class: 'lab-hero__image'
+        }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .lab-hero__inner {
+    max-width: 1040px;
+    margin-inline: auto;
+    padding-inline: 16px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .lab-hero__content {
+    max-width: 585px;
+    flex: 1 1 0;
+  }
+
+  .lab-hero__title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .lab-hero__description {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+  }
+
+  .lab-hero__ctas {
+    display: flex;
+    gap: 20px;
+  }
+
+  .lab-hero__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 47px;
+  }
+
+  .lab-hero__media {
+    flex: 1 1 0;
+  }
+
+  .lab-hero__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (min-width: 769px) {
+    .lab-hero {
+      min-height: 450px;
+      display: flex;
+    }
+
+    .lab-hero__inner {
+      width: 100%;
+      padding-block: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lab-hero__inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      padding-block: 40px;
+    }
+
+    /* Mobile: title flows, ignore the desktop line breaks */
+    .lab-hero__title br {
+      display: none;
+    }
+
+    .lab-hero__title {
+      font-size: 2.25rem;
+      margin-bottom: 12px;
+    }
+
+    .lab-hero__description {
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+    }
+
+    .lab-hero__ctas {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .lab-hero__cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Lab Results Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F7F8F6"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "info": "Line breaks are respected on desktop; on mobile the title flows."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "CTA 1 (primary)"
+    },
+    {
+      "type": "text",
+      "id": "cta1_label",
+      "label": "CTA 1 label"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "CTA 1 URL"
+    },
+    {
+      "type": "header",
+      "content": "CTA 2 (secondary)"
+    },
+    {
+      "type": "text",
+      "id": "cta2_label",
+      "label": "CTA 2 label"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "CTA 2 URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lab Results Hero"
+    }
+  ]
+}
+{% endschema %}
