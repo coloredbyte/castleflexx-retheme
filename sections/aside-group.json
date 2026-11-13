@@ -32,19 +32,25 @@
             "position": "custom",
             "horizontal_position": 6,
             "vertical_position": 3,
-            "follow_store_color": true
+            "follow_store_color": true,
+            "background_color": "#ce021e",
+            "text_color": "#ffffff",
+            "border_color": "rgba(0,0,0,0)",
+            "background_color_dark": "#ce021e",
+            "text_color_dark": "#ffffff",
+            "border_color_dark": "rgba(0,0,0,0)"
           }
         },
         "product-labels-and-badges-1": {
           "type": "sold-out-label",
           "settings": {
             "show_on_product_card": true,
-            "show_on_product_page": false,
+            "show_on_product_page": true,
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
             "content": "SOLD OUT",
-            "display_type": "round",
+            "display_type": "rounded-full",
             "opacity": 100,
             "font_size": 60,
             "font_size_mobile": 60,
@@ -53,7 +59,13 @@
             "position": "top-left",
             "horizontal_position": 6,
             "vertical_position": 3,
-            "follow_store_color": true
+            "follow_store_color": true,
+            "background_color": "#525151",
+            "text_color": "#ffffff",
+            "border_color": "rgba(0,0,0,0)",
+            "background_color_dark": "#525151",
+            "text_color_dark": "#ffffff",
+            "border_color_dark": "rgba(0,0,0,0)"
           }
         },
         "preorder_label_8JPgVK": {
@@ -74,7 +86,13 @@
             "position": "top-left",
             "horizontal_position": 6,
             "vertical_position": 3,
-            "follow_store_color": true
+            "follow_store_color": true,
+            "background_color": "#ce021e",
+            "text_color": "#ffffff",
+            "border_color": "rgba(0,0,0,0)",
+            "background_color_dark": "#ce021e",
+            "text_color_dark": "#ffffff",
+            "border_color_dark": "rgba(0,0,0,0)"
           }
         },
         "new_label_4MQzpH": {
@@ -99,107 +117,13 @@
             "position": "top-left",
             "horizontal_position": 6,
             "vertical_position": 3,
-            "follow_store_color": true
-          }
-        },
-        "text_label_FUYFPE": {
-          "type": "text-label",
-          "disabled": true,
-          "settings": {
-            "show_on_product_card": true,
-            "show_on_product_page": true,
-            "applied_products": [],
-            "applied_collections": [],
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "content": "TEXT LABEL",
-            "display_type": "round",
-            "opacity": 100,
-            "font_size": 60,
-            "font_size_mobile": 60,
-            "size": 1,
-            "size_mobile": 1,
-            "position": "custom",
-            "horizontal_position": 6,
-            "vertical_position": 3,
-            "schedule_enabled": false,
-            "timezone": "-4",
-            "start_year": 2023,
-            "start_month": "1",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_year": 2023,
-            "end_month": "1",
-            "end_day": "1",
-            "end_hour": "0",
-            "end_minute": "0",
-            "follow_store_color": true
-          }
-        },
-        "text_label_j4R9dY": {
-          "type": "text-label",
-          "disabled": true,
-          "settings": {
-            "show_on_product_card": true,
-            "show_on_product_page": true,
-            "applied_products": [],
-            "applied_collections": [],
-            "icon": "leaf",
-            "another_icon": "",
-            "custom_icon": "",
-            "content": "TEXT LABEL",
-            "display_type": "round",
-            "opacity": 100,
-            "font_size": 70,
-            "font_size_mobile": 70,
-            "size": 1,
-            "size_mobile": 1,
-            "position": "below-image",
-            "horizontal_position": 4,
-            "vertical_position": 3,
-            "schedule_enabled": false,
-            "timezone": "-4",
-            "start_year": 2023,
-            "start_month": "1",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_year": 2023,
-            "end_month": "1",
-            "end_day": "1",
-            "end_hour": "0",
-            "end_minute": "0",
-            "follow_store_color": true
-          }
-        },
-        "image_label_nf3T3K": {
-          "type": "image-label",
-          "disabled": true,
-          "settings": {
-            "show_on_product_card": true,
-            "show_on_product_page": true,
-            "applied_products": [],
-            "applied_collections": [],
-            "opacity": 100,
-            "size": 6,
-            "size_mobile": 2,
-            "position": "top-right",
-            "horizontal_position": 100,
-            "vertical_position": 5,
-            "schedule_enabled": false,
-            "timezone": "-4",
-            "start_year": 2023,
-            "start_month": "1",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_year": 2023,
-            "end_month": "1",
-            "end_day": "1",
-            "end_hour": "0",
-            "end_minute": "0"
+            "follow_store_color": true,
+            "background_color": "#058942",
+            "text_color": "#ffffff",
+            "border_color": "#000000",
+            "background_color_dark": "#058942",
+            "text_color_dark": "#ffffff",
+            "border_color_dark": "rgba(0,0,0,0)"
           }
         }
       },
@@ -207,10 +131,7 @@
         "product-labels-and-badges-0",
         "product-labels-and-badges-1",
         "preorder_label_8JPgVK",
-        "new_label_4MQzpH",
-        "text_label_FUYFPE",
-        "text_label_j4R9dY",
-        "image_label_nf3T3K"
+        "new_label_4MQzpH"
       ],
       "settings": {
         "enable": true
@@ -226,6 +147,7 @@
         "price": {
           "type": "price",
           "settings": {
+            "adapt_custom_price_format": false,
             "show_tax_and_shipping": false,
             "text_size_price": 70
           }
@@ -246,6 +168,7 @@
             "another_icon": "",
             "custom_icon": "",
             "heading": "Description",
+            "custom_description": "",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
@@ -255,7 +178,9 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
+            "max_swatch": 20,
             "show_variant_option": true,
+            "show_option_in_tab": false,
             "enable_color_swatches": true,
             "swatch_size": "small"
           }
@@ -271,13 +196,33 @@
           "settings": {
             "show_button_style": "secondary",
             "show_dynamic_checkout": true,
+            "dymanic_checkout_style": "primary",
+            "show_atc_quantity": false,
             "show_add_to_cart": true,
             "show_price": true,
+            "hide_sale_price": true,
             "preorder_button_label": "",
             "preorder_message": "<p>This product will be available for sale in 2 weeks, but you can pre-order now to receive 10% discount!</p>",
             "preorder_show_dynamic_button": false,
             "show_background": false,
-            "box_type": "square"
+            "box_type": "square",
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
         "view_detail_XLwXXA": {
@@ -306,7 +251,9 @@
         "image_ratio": "natural",
         "show_arrow_button": true,
         "show_thumbnails": true,
+        "show_thumnail_mobile": false,
         "thumbnail_position": "horizontal",
+        "enable_thumbnail_overlay": true,
         "transition_style": "fade",
         "enable_video_autoplay": true,
         "enable_video_loop": false,
@@ -317,7 +264,17 @@
         "quickadd_position": "image",
         "quickadd_mobile_position": "top",
         "enable_quickview": true,
-        "quickview_label": "Quick view"
+        "quick_view_type": "popup",
+        "quickview_label": "Quick view",
+        "color_button": "rgba(0,0,0,0)",
+        "color_text_button": "rgba(0,0,0,0)",
+        "color_button_hover": "rgba(0,0,0,0)",
+        "color_text_button_hover": "rgba(0,0,0,0)",
+        "color_button_dark": "rgba(0,0,0,0)",
+        "color_text_button_dark": "rgba(0,0,0,0)",
+        "color_button_hover_dark": "rgba(0,0,0,0)",
+        "color_text_button_hover_dark": "rgba(0,0,0,0)",
+        "section_scheme": "store"
       }
     },
     "popup-promotion": {
@@ -328,14 +285,20 @@
           "settings": {
             "subheading": "",
             "heading": "Write your store's popup content",
-            "highlight_type": "underline"
+            "highlight_type": "underline",
+            "block_scheme": "section",
+            "heading_color": "rgba(0,0,0,0)",
+            "heading_color_dark": "rgba(0,0,0,0)"
           }
         },
         "text_Dka9AE": {
           "type": "text",
           "settings": {
             "text": "<p>Write your store's popup detailed content</p>",
-            "coupon_code": "SIMPLY10"
+            "coupon_code": "SIMPLY10",
+            "coupon_color": "rgba(0,0,0,0)",
+            "coupon_color_dark": "rgba(0,0,0,0)",
+            "block_scheme": "section"
           }
         },
         "countdown_timer_tLNd9i": {
@@ -355,27 +318,67 @@
             "end_month": "12",
             "end_day": "2",
             "end_hour": "0",
-            "end_minute": "45"
+            "end_minute": "45",
+            "block_scheme": "section",
+            "background_color": "rgba(0,0,0,0)",
+            "time_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "time_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)"
           }
         },
         "email_form_9nnNXU": {
           "type": "email_form",
           "disabled": true,
-          "settings": {}
+          "settings": {
+            "message": "<p>Thank you! Here's your exclusive discount coupon_code</p>",
+            "coupon_code": "SIMPLY10",
+            "text": "<p>Additional information after submit success</p>",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "block_scheme": "section",
+            "message_color": "rgba(0,0,0,0)",
+            "coupon_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "button_color": "rgba(0,0,0,0)",
+            "button_text_color": "rgba(0,0,0,0)",
+            "button_color_hover": "rgba(0,0,0,0)",
+            "button_text_color_hover": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)",
+            "coupon_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)",
+            "button_color_dark": "rgba(0,0,0,0)",
+            "button_text_color_dark": "rgba(0,0,0,0)",
+            "button_color_hover_dark": "rgba(0,0,0,0)",
+            "button_text_color_hover_dark": "rgba(0,0,0,0)"
+          }
         },
         "sections--18371362324774__2eca4af3-5277-406b-a4de-c52946c34b5f-1680002178ae4a2c07-2": {
           "type": "button",
           "settings": {
             "button_label": "Learn more",
             "button_link": "",
-            "open_new_window": true
+            "open_new_window": true,
+            "block_scheme": "section",
+            "button_color": "rgba(0,0,0,0)",
+            "button_text_color": "rgba(0,0,0,0)",
+            "button_color_hover": "rgba(0,0,0,0)",
+            "button_text_color_hover": "rgba(0,0,0,0)",
+            "button_color_dark": "rgba(0,0,0,0)",
+            "button_text_color_dark": "rgba(0,0,0,0)",
+            "button_color_hover_dark": "rgba(0,0,0,0)",
+            "button_text_color_hover_dark": "rgba(0,0,0,0)"
           }
         },
         "text_VGnQcp": {
           "type": "text",
           "settings": {
             "text": "<p>Write your store's popup detailed content</p>",
-            "coupon_code": ""
+            "coupon_code": "",
+            "coupon_color": "rgba(0,0,0,0)",
+            "coupon_color_dark": "rgba(0,0,0,0)",
+            "block_scheme": "section"
           }
         }
       },
@@ -403,7 +406,12 @@
         "enable_mobile": true,
         "default_style_mobile": "minimal",
         "minimal_title": "Write your store's popup content",
-        "minimal_subtitle": ""
+        "minimal_subtitle": "",
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
       }
     },
     "popup-age-verification": {
@@ -413,7 +421,12 @@
           "type": "content",
           "settings": {
             "heading": "Confirm your age",
-            "text": "<p>Please verify that you are 18 years of age or older to enter this site.</p>"
+            "text": "<p>Please verify that you are 18 years of age or older to enter this site.</p>",
+            "block_scheme": "section",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color_light": "rgba(0,0,0,0)",
+            "heading_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)"
           }
         },
         "buttons-0": {
@@ -422,7 +435,16 @@
             "decline_button_label": "Disagree",
             "decline_button_link": "",
             "open_new_window": false,
-            "accept_button_label": "Agree"
+            "accept_button_label": "Agree",
+            "block_scheme": "section",
+            "accept_button_background": "rgba(0,0,0,0)",
+            "accept_button_text": "rgba(0,0,0,0)",
+            "accept_button_hover": "rgba(0,0,0,0)",
+            "accept_button_text_hover": "rgba(0,0,0,0)",
+            "accept_button_background_dark": "rgba(0,0,0,0)",
+            "accept_button_text_dark": "rgba(0,0,0,0)",
+            "accept_button_hover_dark": "rgba(0,0,0,0)",
+            "accept_button_text_hover_dark": "rgba(0,0,0,0)"
           }
         }
       },
@@ -434,18 +456,31 @@
       "settings": {
         "overlay_opacity": 80,
         "content_alignment": "center",
-        "reappear_after": 1
+        "reappear_after": 1,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "cookie-banner": {
       "type": "cookie-banner",
       "settings": {
         "cookie_enabled": true,
+        "enable_manage_preferences": false,
         "cookie_notice": "<p>We use cookies and similar technologies to provide the best experience on our website. </p>",
         "cookie_delay": 4,
         "content_alignment": "",
         "button_accept": "Got it!",
-        "button_decline": "Decline"
+        "button_decline": "Decline",
+        "section_scheme": "store",
+        "background_color_cookie_light": "rgba(0,0,0,0)",
+        "text_color_cookie_light": "rgba(0,0,0,0)",
+        "accept_button_background": "rgba(0,0,0,0)",
+        "accept_button_text": "rgba(0,0,0,0)",
+        "background_color_cookie_dark": "rgba(0,0,0,0)",
+        "text_color_cookie_dark": "rgba(0,0,0,0)",
+        "accept_button_background_dark": "rgba(0,0,0,0)",
+        "accept_button_text_dark": "rgba(0,0,0,0)"
       }
     }
   },
