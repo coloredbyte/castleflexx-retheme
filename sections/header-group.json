@@ -50,12 +50,12 @@
         "announcement_z3c9Nn": {
           "type": "announcement",
           "settings": {
-            "icon": "gift",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "text": "Use Code GIFT80 for $80 Off 2 CastleFlexx Luxury",
+            "text": "Free Shipping in Continental USA, most of Canada and EU 🇺🇸 🇨🇦 🇪🇺",
             "text_size": 90,
-            "link": "shopify://products/castle-flexx",
+            "link": "",
             "open_new_window": false,
             "button_label_or_code": "",
             "button_link": "",
