@@ -79,7 +79,7 @@
     "text_letter_spacing": 0,
     "type_header_font": "inter_n5",
     "heading_base_size": 110,
-    "heading_letter_spacing": -4,
+    "heading_letter_spacing": -2,
     "heading_text_tranform": "none",
     "heading_highlight_font": "inter_i6",
     "heading_highlight_base_size": 110,
