@@ -843,14 +843,19 @@
             "block_scheme": "section"
           }
         },
-        "carousel_menu_w7gKMf": {
-          "type": "carousel_menu",
+        "accordion_menu_gfgDQq": {
+          "type": "accordion_menu",
           "settings": {
             "heading": "CastleFit",
             "menu": "cb-castlefit-menu",
+            "menu_item_link": "",
+            "open_new_window": false,
             "show_collection_image": true,
             "show_first_image_product": false,
             "show_product_image": false,
+            "sub_show_collection_image": false,
+            "sub_show_first_image_product": true,
+            "sub_show_product_image": false,
             "collection_metafield": "",
             "image_style": "square",
             "label": "",
@@ -910,7 +915,7 @@
             "color_text_button_dark_quick_access": "rgba(0,0,0,0)",
             "quick_access_icon": "truck",
             "quick_access_custom_icon": "",
-            "block_title": "Bestseller",
+            "block_title": "Block title",
             "block_link": "",
             "quick_access_icon_2": "truck",
             "quick_access_custom_icon_2": "",
@@ -934,7 +939,7 @@
       },
       "block_order": [
         "accordion_menu_n8KbLW",
-        "carousel_menu_w7gKMf",
+        "accordion_menu_gfgDQq",
         "mobile-navigation-2"
       ],
       "settings": {
