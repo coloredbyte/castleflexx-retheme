@@ -41,7 +41,8 @@
       "settings": {
         "image": "shopify://shop_images/Group_3_1.webp",
         "image_alignment": "right",
-        "text_alignment": "start"
+        "text_alignment": "start",
+        "desktop_image_width": "medium"
       }
     },
     "lab_results_tabs": {
