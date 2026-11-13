@@ -79,15 +79,16 @@
   #shopify-section-{{ section.id }} .lab-tabs__cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-bottom: 40px;
+    gap: 16px;
+    margin-bottom: 48px;
   }
 
   #shopify-section-{{ section.id }} .lab-card {
     height: 100%;
     background: #f7f8f6;
     border-radius: 16px;
-    padding: var(--pt, 0) 24px var(--pb, 0);
+    /* Minimum breathing room even when the block's padding is 0 */
+    padding: max(var(--pt, 0px), 24px) 24px max(var(--pb, 0px), 24px);
   }
 
   /* Title left, badge-or-logo right — always the same slot, 4px gap. */
@@ -95,12 +96,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 4px;
-    margin-bottom: 4px;
+    gap: 12px;
+    margin-bottom: 8px;
   }
 
   #shopify-section-{{ section.id }} .lab-card__title {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #191a1b;
     margin: 0;
@@ -111,8 +112,8 @@
     background: #7892a4;
     color: #fff;
     border-radius: 100px;
-    padding: 6px 20px;
-    font-size: 1rem;
+    padding: 5px 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1;
   }
@@ -132,7 +133,7 @@
   #shopify-section-{{ section.id }} .lab-card__subtitle {
     font-size: 0.875rem;
     color: #191a1b;
-    margin: 0 0 12px;
+    margin: 0 0 16px;
   }
 
   #shopify-section-{{ section.id }} .lab-card__description {
@@ -435,7 +436,7 @@
 
   @media (max-width: 768px) {
     #shopify-section-{{ section.id }} .lab-card {
-      padding: var(--pt-m, 0) 14px var(--pb-m, 0);
+      padding: max(var(--pt-m, 0px), 16px) 16px max(var(--pb-m, 0px), 16px);
       border-radius: 12px;
     }
 

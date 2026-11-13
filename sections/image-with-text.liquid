@@ -532,7 +532,7 @@
                 {% assign has_block = false %}
                 </div>
               {% endif %}
-              {% if block.settings.button_label != blank or block.settings.button_label_2 != blank %}
+              {% if block.settings.button_label != blank %}
                 {% style %}
                   .button-{{ block.id }} {
                     {% if block.settings.button_light != blank and block.settings.button_light.alpha != 0 %}
@@ -638,13 +638,19 @@
                     }
                   {% endif %}
                 {% endstyle %}
-                <div class="{% render 'scheme-class', scheme: block.settings.block_scheme, is_block: true %} button-{{ block.id }} mb-9 md:mb-4 flex flex-wrap gap-3 justify-{{ section.settings.text_alignment }} rtl:justify-{% if section.settings.text_alignment == 'center' %}center{% elsif section.settings.text_alignment == 'start' %}right{% else %}left{% endif -%}
+                <div class="{% render 'scheme-class', scheme: block.settings.block_scheme, is_block: true %} button-{{ block.id }} mb-9 md:mb-4 flex justify-{{ section.settings.text_alignment }} rtl:justify-{% if section.settings.text_alignment == 'center' %}center{% elsif section.settings.text_alignment == 'start' %}right{% else %}left{% endif -%}
                   {%- if block.settings.show_button_style == 'text-link' %} mt-2 md:mt-5{% else %} mt-4 md:mt-8{% endif -%}"
                   {{ block.shopify_attributes }}
                 >
-                  {% comment %} CastleFlexx patch: optional second button {% endcomment %}
-                  {% render 'image-with-text-button', label: block.settings.button_label, link: block.settings.button_link, new_window: block.settings.open_new_window, style: block.settings.show_button_style %}
-                  {% render 'image-with-text-button', label: block.settings.button_label_2, link: block.settings.button_link_2, new_window: block.settings.open_new_window_2, style: block.settings.show_button_style_2 %}
+                  {% if block.settings.button_link == blank %}
+                    <div class="button{% if block.settings.show_button_style == 'secondary' %} button-outline{% elsif block.settings.show_button_style == 'text-link' %} button-text-link {% else %} button-solid{% endif %} leading-normal empty:hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3 opacity-70 disable-btn-animation hover:cursor-not-allowed">
+                      {% render 'button-label', button_label: block.settings.button_label, show_button_style: block.settings.show_button_style %}
+                    </div>
+                  {% else %}
+                    <a class="button{% if block.settings.show_button_style == 'secondary' %} button-outline{% elsif block.settings.show_button_style == 'text-link' %} button-text-link {% else %} button-solid{% endif %} leading-normal empty:hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3" href="{{ block.settings.button_link }}"{% if block.settings.open_new_window %} target="_blank"{% endif %}>
+                      {% render 'button-label', button_label: block.settings.button_label, show_button_style: block.settings.show_button_style %}
+                    </a>
+                  {% endif %}
                 </div>
               {% endif %}
             {%- when 'columns' -%}
@@ -1598,37 +1604,6 @@
           ],
           "label": "t:sections.all.button.button_style.label",
           "default": "primary"
-        },
-        {
-          "type": "header",
-          "content": "Second button"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "label": "t:sections.all.button.label"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.all.button.link"
-        },
-        {
-          "type": "checkbox",
-          "id": "open_new_window_2",
-          "default": false,
-          "label": "t:sections.all.open_new_window.label"
-        },
-        {
-          "type": "select",
-          "id": "show_button_style_2",
-          "options": [
-            { "value": "primary", "label": "t:sections.all.button.button_style.primary" },
-            { "value": "secondary", "label": "t:sections.all.button.button_style.secondary" },
-            { "value": "text-link", "label": "t:settings_schema.colors.colors_text_link" }
-          ],
-          "label": "t:sections.all.button.button_style.label",
-          "default": "secondary"
         },
         {
           "type": "header",
