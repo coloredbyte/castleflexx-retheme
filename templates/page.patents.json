@@ -336,7 +336,8 @@
       "settings": {
         "heading": "Frequently Asked Questions",
         "heading_alignment": "center",
-        "collapsible": true
+        "collapsible": true,
+        "show_view_all": false
       }
     }
   },

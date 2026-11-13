@@ -165,7 +165,7 @@
                 "result_label": "Result:",
                 "result_value": "PASS",
                 "result_summary": "<p>No PFAS-type organic fluorine detected above 10-ppm.</p>",
-                "report_url": "/",
+                "report_url": "",
                 "report_label": "Download Report",
                 "note": "",
                 "padding_bottom": 40,
@@ -317,7 +317,7 @@
                 "result_label": "Result:",
                 "result_value": "Activity Demonstrated",
                 "result_summary": "<p>Antimicrobial activity demonstrated. Strongest result against Staphylococcus aureus (A*=3.6), activity against Candida albicans (A*=2.2), limited activity against E.coli (A*=0.5)</p>",
-                "report_url": "/",
+                "report_url": "",
                 "report_label": "Download Report",
                 "note": "<p>For press/reference: SGS Antimicrobial activity testing under ISO 20743:2021(E), absorption method.</p>",
                 "padding_bottom": 40,
@@ -490,7 +490,7 @@
                 "result_label": "Result:",
                 "result_value": "PASS",
                 "result_summary": "<p>253 SVHC + 1 potential SVHC screened, all ≤ 0.1% w/w. No tested SVHCs above the reporting threshold of 0.1% by weight, resulting in a PASS.</p>",
-                "report_url": "/",
+                "report_url": "",
                 "report_label": "Download Report",
                 "note": "<p>For press/reference: REACH SVHC screening per ECHA Candidate List under Regulation (EC) No. 1907/2006.</p>",
                 "padding_bottom": 40,
@@ -705,7 +705,7 @@
                 "result_label": "Result:",
                 "result_value": "PASS",
                 "result_summary": "<p>No PFAS chemicals and PFAS-related substances detected above 10-ppm.</p>",
-                "report_url": "/",
+                "report_url": "",
                 "report_label": "Download Report",
                 "note": "",
                 "padding_bottom": 40,
@@ -896,7 +896,8 @@
       "settings": {
         "heading": "Frequently Asked Questions",
         "heading_alignment": "center",
-        "collapsible": true
+        "collapsible": true,
+        "show_view_all": false
       }
     },
     "featured_lab_products": {
