@@ -1,0 +1,978 @@
+{
+  "sections": {
+    "lab_results_hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "CastleFlexx Lab Results and PFAS Testing",
+            "heading_tag": "h1",
+            "text": "<p>CastleFlexx submitted materials for independent PFAS screening. Here are the results, the method, and what the report means.</p>"
+          }
+        },
+        "button_report": {
+          "type": "button",
+          "settings": {
+            "button_label": "Eurofins Lab Report",
+            "button_link": "",
+            "open_new_window": true,
+            "show_button_style": "primary"
+          }
+        },
+        "button_details": {
+          "type": "button",
+          "settings": {
+            "button_label": "Product Testing Details",
+            "button_link": "",
+            "show_button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button_report",
+        "button_details"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Group_3_1.webp",
+        "image_alignment": "right",
+        "text_alignment": "start"
+      }
+    },
+    "lab_results_tabs": {
+      "type": "lab-results-tabs",
+      "blocks": {
+        "tab_castleflexx": {
+          "type": "lab-tab",
+          "settings": {
+            "title": "CastleFlexx"
+          },
+          "blocks": {
+            "card_1": {
+              "type": "lab-card",
+              "settings": {
+                "image": "shopify://shop_images/image_2_e4e84465-ced8-4b4d-bd68-840b9456678c.png",
+                "badge": "",
+                "title": "Lab",
+                "subtitle": "Eurofins",
+                "description": "<p>Independent Laboratory</p>"
+              },
+              "blocks": {}
+            },
+            "card_2": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "",
+                "title": "Report Year",
+                "subtitle": "2025",
+                "description": "<p>November 14, 2025</p>"
+              },
+              "blocks": {}
+            },
+            "card_4": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "ND",
+                "title": "TOF result",
+                "subtitle": "NOT DETECTED",
+                "description": "<p>Total Organic Fluorine screen</p>"
+              },
+              "blocks": {}
+            },
+            "card_3": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "PASS",
+                "title": "PFAS Screen",
+                "subtitle": "",
+                "description": "<p>No PFAS detected</p>"
+              },
+              "blocks": {}
+            },
+            "card_5": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "",
+                "title": "Reporting Limit",
+                "subtitle": "10 mg/kg / 10ppm",
+                "description": "<p>No PFAS detected above 10-ppm</p>"
+              },
+              "blocks": {}
+            },
+            "content_1": {
+              "type": "lab-tab-content",
+              "settings": {
+                "title": "PFAS Tested",
+                "subtitle": "",
+                "image": "shopify://shop_images/image_6_c6fed93a-f7d7-4b88-8041-2e54e908c6d9.png",
+                "padding_top": 65,
+                "padding_bottom": 24,
+                "padding_top_mobile": 40,
+                "padding_bottom_mobile": 40
+              },
+              "blocks": {
+                "property_1": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon.png",
+                    "title": "PFAS Not Detected",
+                    "description": "<p>No detectable Total Organic Fluorine (TOF) was found in the CastleFlexx tested sample.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_3": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_1.png",
+                    "title": "Passed PFAS Screening",
+                    "description": "<p>The sample received an overall PASS, successfully meeting the PFAS testing requirements.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_2": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_2.png",
+                    "title": "Verified by Eurofins",
+                    "description": "<p>Internationally recognized independent testing laboratory, providing third-party verification of the results.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_4": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_3.png",
+                    "title": "Reliable Scientific Testing",
+                    "description": "<p>CastleFlexx sample was analyzed using internationally recognized testing methods.</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "property_1",
+                "property_3",
+                "property_2",
+                "property_4"
+              ]
+            },
+            "details_1": {
+              "type": "lab-details",
+              "settings": {
+                "title": "Lab Details",
+                "logo": "shopify://shop_images/image_2_2.png",
+                "pass": true,
+                "result_label": "Result:",
+                "result_value": "PASS",
+                "result_summary": "<p>No PFAS-type organic fluorine detected above 10-ppm.</p>",
+                "report_url": "/",
+                "report_label": "Download Report",
+                "note": "",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 32
+              },
+              "blocks": {
+                "d1_tof": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "TOF:",
+                    "value": "<p>Not Detected</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_lab": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Lab:",
+                    "value": "<p>Eurofins</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_limit": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Limit:",
+                    "value": "<p>10 mg/kg / 10ppm</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_reportid": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report ID:",
+                    "value": "<p>EFW725116577-H-01</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_reportdate": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report Date:",
+                    "value": "<p>November 14, 2025</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_sample": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Sample:",
+                    "value": "<p>CastleFlexx</p>"
+                  },
+                  "blocks": {}
+                },
+                "d1_method": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Method:",
+                    "value": "<p>TOF screening</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "d1_tof",
+                "d1_lab",
+                "d1_limit",
+                "d1_reportid",
+                "d1_reportdate",
+                "d1_sample",
+                "d1_method"
+              ]
+            },
+            "richtext_1": {
+              "type": "lab-richtext",
+              "settings": {
+                "title": "The reason CastleFlexx tests its products for PFAS",
+                "content": "<p>PFAS are a group of chemicals that have received increased attention from regulators, consumers, and health organizations. CastleFlexx tests because material transparency matters, especially for products people may use regularly against the body. The tested CastleFlexx sample showed <strong>Total Organic Fluorine (TOF): Not Detected</strong> at the reporting limit shown in the Eurofins report.</p>",
+                "disclaimer": "<p>*Testing reflects the submitted sample and the method reported by the laboratory. 'Not detected' means the tested sample did not show detectable Total Organic Fluorine above the reporting limit stated in the report. It does not mean every possible compound is present at absolute zero in every component or future production run.</p>",
+                "padding_bottom": 60,
+                "padding_bottom_mobile": 20
+              },
+              "blocks": {}
+            },
+            "content_2": {
+              "type": "lab-tab-content",
+              "settings": {
+                "title": "Fabric Health & Safety Tested",
+                "subtitle": "Cleaner Fabric, Higher Standards",
+                "image": "shopify://shop_images/image_6_2.png",
+                "padding_top": 60,
+                "padding_bottom": 24,
+                "padding_top_mobile": 40,
+                "padding_bottom_mobile": 40
+              },
+              "blocks": {
+                "property_5": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_3.png",
+                    "title": "SGS Antimicrobial Activity Tested",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "property_6": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_4_1.png",
+                    "title": "It helps resist the growth of certain odor-causing bacteria on the fabric surface",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "property_7": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_4.png",
+                    "title": "Lab tested against Staphylococcus aureus and Candida albicans",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "property_8": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_3_1.png",
+                    "title": "Designed for a cleaner, fresher fabric experience",
+                    "description": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "property_5",
+                "property_6",
+                "property_7",
+                "property_8"
+              ]
+            },
+            "details_2": {
+              "type": "lab-details",
+              "settings": {
+                "title": "Lab Details",
+                "logo": "shopify://shop_images/image_5_2.png",
+                "logo_height": 60,
+                "logo_height_mobile": 36,
+                "pass": true,
+                "result_label": "Result:",
+                "result_value": "Activity Demonstrated",
+                "result_summary": "<p>Antimicrobial activity demonstrated. Strongest result against Staphylococcus aureus (A*=3.6), activity against Candida albicans (A*=2.2), limited activity against E.coli (A*=0.5)</p>",
+                "report_url": "/",
+                "report_label": "Download Report",
+                "note": "<p>For press/reference: SGS Antimicrobial activity testing under ISO 20743:2021(E), absorption method.</p>",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 32
+              },
+              "blocks": {
+                "d2_testdates": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Dates:",
+                    "value": "<p>Apr 24-May 09, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_lab": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Lab:",
+                    "value": "<p>SGS</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_reportdate": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report Date:",
+                    "value": "<p>May 09, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_reportid": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report ID:",
+                    "value": "<p>GZHL260603137301SD</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_method": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Method:",
+                    "value": "<p>ISO 20743:2021(E)</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_sample": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Sample:",
+                    "value": "<p>CastleFlexx</p>"
+                  },
+                  "blocks": {}
+                },
+                "d2_received": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Received:",
+                    "value": "<p>Apr 24, 2026</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "d2_testdates",
+                "d2_lab",
+                "d2_reportdate",
+                "d2_reportid",
+                "d2_method",
+                "d2_sample",
+                "d2_received"
+              ]
+            },
+            "richtext_2": {
+              "type": "lab-richtext",
+              "settings": {
+                "title": "Why to Test Fabric Health & Safety?",
+                "content": "<p>Regular exercise equipment is exposed to sweat, moisture, and frequent handling, creating conditions where microorganisms can grow over time. Antimicrobial testing helps verify that the fabric is designed to resist the growth of certain odor-causing microbes on its surface.</p>",
+                "disclaimer": "<p>*Antimicrobial fabrics are designed to inhibit the growth of certain microorganisms on the material itself. They are not intended to protect users from disease, replace proper cleaning, or provide medical benefits. Regular cleaning according to the product care instructions is still recommended.</p>",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 30
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "card_1",
+            "card_2",
+            "card_4",
+            "card_3",
+            "card_5",
+            "content_1",
+            "details_1",
+            "richtext_1",
+            "content_2",
+            "details_2",
+            "richtext_2"
+          ]
+        },
+        "tab_castlepack": {
+          "type": "lab-tab",
+          "settings": {
+            "title": "CastlePack"
+          },
+          "blocks": {
+            "content_3": {
+              "type": "lab-tab-content",
+              "settings": {
+                "title": "Lab Tested and Proven for Skin Contact",
+                "subtitle": "Cleaner Fabric, Higher Standards",
+                "image": "shopify://shop_images/Group_2.png",
+                "padding_top": 65,
+                "padding_bottom": 24,
+                "padding_top_mobile": 40,
+                "padding_bottom_mobile": 40
+              },
+              "blocks": {
+                "property_pack_1": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_4.png",
+                    "title": "SGS + REACH Screened",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "property_pack_3": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_5.png",
+                    "title": "",
+                    "description": "<p>Screened for 253 substances of very high concern</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_pack_2": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_6.png",
+                    "title": "",
+                    "description": "<p>No tested SVHC substances detected above reporting limits</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_pack_4": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_7.png",
+                    "title": "",
+                    "description": "<p>Includes PFAS-related compounds, phthalates, lead, and BPA-related substances</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "property_pack_1",
+                "property_pack_3",
+                "property_pack_2",
+                "property_pack_4"
+              ]
+            },
+            "details_pack": {
+              "type": "lab-details",
+              "settings": {
+                "title": "Lab Details",
+                "logo": "shopify://shop_images/image_5_1.png",
+                "logo_height": 60,
+                "logo_height_mobile": 36,
+                "pass": true,
+                "result_label": "Result:",
+                "result_value": "PASS",
+                "result_summary": "<p>253 SVHC + 1 potential SVHC screened, all ≤ 0.1% w/w. No tested SVHCs above the reporting threshold of 0.1% by weight, resulting in a PASS.</p>",
+                "report_url": "/",
+                "report_label": "Download Report",
+                "note": "<p>For press/reference: REACH SVHC screening per ECHA Candidate List under Regulation (EC) No. 1907/2006.</p>",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 32
+              },
+              "blocks": {
+                "dp_received": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Received:",
+                    "value": "<p>Apr 24, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_lab": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Lab:",
+                    "value": "<p>SGS</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_testdates": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Dates:",
+                    "value": "<p>Apr 24-May 09, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_reportid": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report ID:",
+                    "value": "<p>GZHL260401861401SP</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_reportdate": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report Date:",
+                    "value": "<p>May 09, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_sample": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Sample:",
+                    "value": "<p>CastlePack</p>"
+                  },
+                  "blocks": {}
+                },
+                "dp_limit": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Limit:",
+                    "value": "<p>0.1% by weight (w/w)</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "dp_received",
+                "dp_lab",
+                "dp_testdates",
+                "dp_reportid",
+                "dp_reportdate",
+                "dp_sample",
+                "dp_limit"
+              ]
+            },
+            "richtext_pack": {
+              "type": "lab-richtext",
+              "settings": {
+                "title": "Why to Test for SVHC?",
+                "content": "<p>The SGS REACH SVHC Screening is an independent laboratory test that analyzes products for the presence of chemicals classified by the European Chemicals Agency (ECHA) as Substances of Very High Concern (SVHCs).</p><p>CastlePack was screened for 253 officially listed SVHCs plus one additional potential SVHC, covering many commonly discussed chemical groups such as PFAS-related compounds, phthalates, lead, and BPA-related substances. The laboratory found <strong>no tested SVHCs above the reporting threshold of 0.1% by weight</strong>, resulting in a PASS.</p>",
+                "disclaimer": "",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 30
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "content_3",
+            "details_pack",
+            "richtext_pack"
+          ]
+        },
+        "tab_castleair": {
+          "type": "lab-tab",
+          "settings": {
+            "title": "CastleAir"
+          },
+          "blocks": {
+            "card_air_1": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "PASS",
+                "title": "PFAS Screen",
+                "subtitle": "",
+                "description": "<p>No PFAS detected</p>"
+              },
+              "blocks": {}
+            },
+            "card_air_2": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "ND",
+                "title": "TPCH result",
+                "subtitle": "NOT DETECTED",
+                "description": "<p>TPCH – Toxics in Packaging Clearing House</p>"
+              },
+              "blocks": {}
+            },
+            "card_air_3": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "",
+                "title": "Reporting Limit",
+                "subtitle": "10 mg/kg / 10ppm",
+                "description": "<p>No PFAS detected above the 10-ppm</p>"
+              },
+              "blocks": {}
+            },
+            "card_air_4": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "",
+                "title": "Lab",
+                "subtitle": "SGS",
+                "description": "<p>Independent Laboratory</p>"
+              },
+              "blocks": {}
+            },
+            "card_air_5": {
+              "type": "lab-card",
+              "settings": {
+                "badge": "",
+                "title": "Report Year",
+                "subtitle": "2026",
+                "description": "<p>Jul 03, 2026</p>"
+              },
+              "blocks": {}
+            },
+            "content_4": {
+              "type": "lab-tab-content",
+              "settings": {
+                "title": "PFAS Tested",
+                "subtitle": "",
+                "image": "shopify://shop_images/Pink_and_Blue_Modern_Skincare_New_Product_Instagram_Reel_1.png",
+                "padding_top": 65,
+                "padding_bottom": 24,
+                "padding_top_mobile": 40,
+                "padding_bottom_mobile": 40
+              },
+              "blocks": {
+                "property_air_1": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_8.png",
+                    "title": "PFAS Not Detected",
+                    "description": "<p>No regulated PFAS substances or PFAS-related compounds were detected above the limits.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_air_3": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_9.png",
+                    "title": "Passed PFAS Screening",
+                    "description": "<p>Screened for hundreds of PFAS chemicals and PFAS-related substances.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_air_2": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_10.png",
+                    "title": "Verified by SGS",
+                    "description": "<p>Internationally recognized independent testing laboratory, providing third-party verification of the results.</p>"
+                  },
+                  "blocks": {}
+                },
+                "property_air_4": {
+                  "type": "lab-result-property",
+                  "settings": {
+                    "icon": "shopify://shop_images/icon_11.png",
+                    "title": "Reliable Scientific Testing",
+                    "description": "<p>CastleAir sample was analyzed using internationally recognized testing methods.</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "property_air_1",
+                "property_air_3",
+                "property_air_2",
+                "property_air_4"
+              ]
+            },
+            "details_air": {
+              "type": "lab-details",
+              "settings": {
+                "title": "Lab Details",
+                "logo": "shopify://shop_images/image_5_2.png",
+                "logo_height": 60,
+                "logo_height_mobile": 36,
+                "pass": true,
+                "result_label": "Result:",
+                "result_value": "PASS",
+                "result_summary": "<p>No PFAS chemicals and PFAS-related substances detected above 10-ppm.</p>",
+                "report_url": "/",
+                "report_label": "Download Report",
+                "note": "",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 32
+              },
+              "blocks": {
+                "da_limit": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Limit:",
+                    "value": "<p>10 mg/kg / 10ppm</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_lab": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Lab:",
+                    "value": "<p>SGS</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_received": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Received:",
+                    "value": "<p>Jun 25, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_reportid": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report ID:",
+                    "value": "<p>GZHL260603137201SD</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_testdates": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Dates:",
+                    "value": "<p>Jun 25 - Jul 03, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_sample": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Sample:",
+                    "value": "<p>CastleAir</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_reportdate": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Report Date:",
+                    "value": "<p>Jul 03, 2026</p>"
+                  },
+                  "blocks": {}
+                },
+                "da_method": {
+                  "type": "lab-property",
+                  "settings": {
+                    "label": "Test Method:",
+                    "value": "<p>PFAS Screening</p>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "da_limit",
+                "da_lab",
+                "da_received",
+                "da_reportid",
+                "da_testdates",
+                "da_sample",
+                "da_reportdate",
+                "da_method"
+              ]
+            },
+            "richtext_air": {
+              "type": "lab-richtext",
+              "settings": {
+                "title": "Why to Test for PFAS?",
+                "content": "<p>Independent PFAS testing helps verify that product materials have been screened for a broad range of regulated PFAS compounds. It also supports compliance with evolving global chemical regulations while giving customers greater confidence in the materials used.</p><p>For this test, SGS analyzed the CastleAir sample using advanced laboratory techniques, including GC-MS, GC-MS/MS, and HPLC-MS/MS, to screen for a comprehensive list of regulated PFAS compounds and PFAS-related substances. The results reported <strong>no detectable levels of the tested PFAS compounds above the applicable limits</strong>, resulting in a <strong>PASS</strong>.</p>",
+                "disclaimer": "",
+                "padding_bottom": 40,
+                "padding_bottom_mobile": 30
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "card_air_1",
+            "card_air_2",
+            "card_air_3",
+            "card_air_4",
+            "card_air_5",
+            "content_4",
+            "details_air",
+            "richtext_air"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_castleflexx",
+        "tab_castlepack",
+        "tab_castleair"
+      ],
+      "settings": {
+        "desktop_padding_top": 80,
+        "desktop_padding_bottom": 80,
+        "mobile_padding_top": 56,
+        "mobile_padding_bottom": 56
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "What PFAS testing did CastleFlexx complete?",
+            "row_content": "<p>CastleFlexx submitted materials for third-party PFAS screening by Eurofins. The report shows Total Organic Fluorine (TOF): Not Detected at 10 mg/kg for the tested sample.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "What does 'not detected' mean?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "What is TOF screening?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Who performed the testing?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Do you test every production batch?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Is CastleFlexx a medical device?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Where can I download the full lab report?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_alignment": "center",
+        "collapsible": true
+      }
+    },
+    "featured_lab_products": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "product_1": {
+          "type": "column",
+          "settings": {
+            "image_link": "/products/castle-flexx",
+            "sub_title": "",
+            "title": "Luxury",
+            "text": "",
+            "button_label": "View Lab Result",
+            "button_link": "/products/castle-flexx",
+            "show_button_style": "text-link",
+            "image": "shopify://shop_images/Frame_1523.png"
+          }
+        },
+        "product_2": {
+          "type": "column",
+          "settings": {
+            "image_link": "/products/castleflexx-sport",
+            "sub_title": "",
+            "title": "Sport",
+            "text": "",
+            "button_label": "View Lab Result",
+            "button_link": "/products/castleflexx-sport",
+            "show_button_style": "text-link",
+            "image": "shopify://shop_images/Frame_1523_1.png"
+          }
+        },
+        "product_3": {
+          "type": "column",
+          "settings": {
+            "image_link": "/products/heat",
+            "sub_title": "",
+            "title": "Heat",
+            "text": "",
+            "button_label": "View Lab Result",
+            "button_link": "/products/heat",
+            "show_button_style": "text-link"
+          }
+        },
+        "product_4": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "sub_title": "",
+            "title": "CastlePack",
+            "text": "",
+            "button_label": "View Lab Result",
+            "button_link": "",
+            "show_button_style": "text-link",
+            "image": "shopify://shop_images/Frame_1523_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3",
+        "product_4"
+      ],
+      "settings": {
+        "title": "Quality You Can Trust",
+        "heading_alignment": "center",
+        "text": "<p>Every CastleFlexx product is lab-tested to meet high standards of reliability, consistency, and lasting durability.</p>",
+        "column_layout_desktop": "lg:w-1/4",
+        "column_content_alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "lab_results_hero",
+    "lab_results_tabs",
+    "faq",
+    "featured_lab_products"
+  ]
+}

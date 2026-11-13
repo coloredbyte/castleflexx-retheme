@@ -1,0 +1,83 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Richtext (lab-richtext)
+  - Heading + body copy, with an optional smaller grey disclaimer/footnote
+    underneath (the asterisked text under the lab explanations).
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div
+  class="lab-richtext"
+  style="
+    --pt: {{ block.settings.padding_top | default: 0 }}px;
+    --pb: {{ block.settings.padding_bottom | default: 0 }}px;
+    --pt-m: {{ block.settings.padding_top_mobile | default: 0 }}px;
+    --pb-m: {{ block.settings.padding_bottom_mobile | default: 0 }}px;
+  "
+  {{ block.shopify_attributes }}>
+  {% if block.settings.title != blank %}
+    <h3 class="lab-richtext__title">{{ block.settings.title }}</h3>
+  {% endif %}
+
+  {% if block.settings.content != blank %}
+    <div class="lab-richtext__content">{{ block.settings.content }}</div>
+  {% endif %}
+
+  {% if block.settings.disclaimer != blank %}
+    <div class="lab-richtext__disclaimer">{{ block.settings.disclaimer }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Richtext",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "info": "Smaller grey footnote shown under the content."
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding top (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding bottom (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "Padding top (mobile, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom (mobile, px)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Richtext"
+    }
+  ]
+}
+{% endschema %}

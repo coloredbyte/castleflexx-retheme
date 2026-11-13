@@ -1,0 +1,57 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Result Property (lab-result-property)
+  - Icon + title + description row inside a Tab Content block.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div class="lab-result-property" {{ block.shopify_attributes }}>
+  {% if block.settings.icon != blank %}
+    <div class="lab-result-property__icon">
+      {{
+        block.settings.icon
+        | image_url: width: 120
+        | image_tag: loading: 'lazy', widths: '40, 80, 120', class: 'lab-result-property__icon-image'
+      }}
+    </div>
+  {% endif %}
+
+  <div class="lab-result-property__body">
+    {% if block.settings.title != blank %}
+      <h4 class="lab-result-property__title">{{ block.settings.title }}</h4>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="lab-result-property__description">{{ block.settings.description }}</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Lab result property",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lab result property"
+    }
+  ]
+}
+{% endschema %}

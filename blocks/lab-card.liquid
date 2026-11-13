@@ -1,0 +1,106 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Card (lab-card)
+  - Product-style card shown inside a tab: image, badge, title, subtitle,
+    description. Structure only for now; styling comes later.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div
+  class="lab-card"
+  style="
+    --pt: {{ block.settings.padding_top | default: 0 }}px;
+    --pb: {{ block.settings.padding_bottom | default: 0 }}px;
+    --pt-m: {{ block.settings.padding_top_mobile | default: 0 }}px;
+    --pb-m: {{ block.settings.padding_bottom_mobile | default: 0 }}px;
+  "
+  {{ block.shopify_attributes }}>
+  <div class="lab-card__heading">
+    {% if block.settings.title != blank %}
+      <h3 class="lab-card__title">{{ block.settings.title }}</h3>
+    {% endif %}
+
+    {% if block.settings.badge != blank %}
+      <span class="lab-card__badge">{{ block.settings.badge }}</span>
+    {% elsif block.settings.image != blank %}
+      <span class="lab-card__media">
+        {{
+          block.settings.image
+          | image_url: width: 400
+          | image_tag: loading: 'lazy', widths: '100, 200, 400', class: 'lab-card__image'
+        }}
+      </span>
+    {% endif %}
+  </div>
+
+  {% if block.settings.subtitle != blank %}
+    <p class="lab-card__subtitle">{{ block.settings.subtitle }}</p>
+  {% endif %}
+
+  {% if block.settings.description != blank %}
+    <div class="lab-card__description">{{ block.settings.description }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding top (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding bottom (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "Padding top (mobile, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom (mobile, px)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card"
+    }
+  ]
+}
+{% endschema %}
