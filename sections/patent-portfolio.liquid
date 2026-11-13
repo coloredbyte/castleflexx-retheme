@@ -1,0 +1,323 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Patent Portfolio (patent-portfolio)
+  - Filing tables by patent family. A "Table" block starts a new table;
+    the "Row" blocks after it fill that table.
+      Table: Utility (ALL VERSIONS)
+        Row: 622-00001 | US | 17082451 | ...
+        Row: 622-00003 | US | ...
+      Table: Design (SPORT EDITION)
+        Row: ...
+  - Desktop: 6-column table. Mobile: each row becomes a labelled card.
+-----------------------------------------------------------------------------
+{% endcomment %}
+{% render 'cf-styles' %}
+
+{%- liquid
+  assign rows_open = false
+-%}
+
+<div
+  class="patent-portfolio"
+  style="--pp-pt: {{ section.settings.desktop_padding_top }}px; --pp-pb: {{ section.settings.desktop_padding_bottom }}px; --pp-pt-m: {{ section.settings.mobile_padding_top }}px; --pp-pb-m: {{ section.settings.mobile_padding_bottom }}px;">
+  <div class="patent-portfolio__container">
+    {% if section.settings.title != blank %}
+      <h2 class="cf-title">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="cf-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'table' %}
+          {% comment %} Close the previous table before starting a new one {% endcomment %}
+          {% if rows_open %}
+            </tbody></table></div>
+          {% endif %}
+
+          {%- liquid
+            assign label_matter = block.settings.label_matter
+            assign label_country = block.settings.label_country
+            assign label_appln = block.settings.label_appln
+            assign label_filed = block.settings.label_filed
+            assign label_number = block.settings.label_number
+            assign label_issued = block.settings.label_issued
+            assign rows_open = true
+          -%}
+
+          <div class="patent-portfolio__group" {{ block.shopify_attributes }}>
+            <h3 class="patent-portfolio__group-title">{{ block.settings.title }}</h3>
+            <table class="patent-portfolio__table">
+              <thead>
+                <tr>
+                  <th scope="col">{{ label_matter }}</th>
+                  <th scope="col">{{ label_country }}</th>
+                  <th scope="col">{{ label_appln }}</th>
+                  <th scope="col">{{ label_filed }}</th>
+                  <th scope="col">{{ label_number }}</th>
+                  <th scope="col">{{ label_issued }}</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        {% when 'row' %}
+          {% comment %} A row before any table has nowhere to go {% endcomment %}
+          {% unless rows_open %}
+            {% continue %}
+          {% endunless %}
+
+          <tr {{ block.shopify_attributes }}>
+            <td data-label="{{ label_matter }}">
+              <span class="patent-portfolio__matter">{{ block.settings.matter }}</span>
+              {% if block.settings.note != blank %}
+                <span class="patent-portfolio__note">{{ block.settings.note }}</span>
+              {% endif %}
+            </td>
+            <td data-label="{{ label_country }}">{{ block.settings.country | default: '—' }}</td>
+            <td data-label="{{ label_appln }}">{{ block.settings.appln | default: '—' }}</td>
+            <td data-label="{{ label_filed }}">{{ block.settings.filed | default: '—' }}</td>
+            <td data-label="{{ label_number }}">{{ block.settings.number | default: '—' }}</td>
+            <td data-label="{{ label_issued }}">{{ block.settings.issued | default: '—' }}</td>
+          </tr>
+      {% endcase %}
+    {% endfor %}
+
+    {% if rows_open %}
+      </tbody></table></div>
+    {% endif %}
+
+    {% if section.settings.disclaimer != blank %}
+      <p class="patent-portfolio__disclaimer">{{ section.settings.disclaimer }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .patent-portfolio {
+    padding-top: var(--pp-pt);
+    padding-bottom: var(--pp-pb);
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__group + .patent-portfolio__group {
+    margin-top: 48px;
+  }
+
+  /* Family title: same gradient pill as the Patent Record header */
+  #shopify-section-{{ section.id }} .patent-portfolio__group-title {
+    margin: 0 0 8px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(90deg, #85899A 0%, #51545C 100%);
+    border-radius: 999px;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__table th {
+    padding: 12px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #666768;
+    border-bottom: 0.75px solid #C6C6C6;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__table td {
+    padding: 14px 10px;
+    font-size: 0.9375rem;
+    vertical-align: top;
+    color: #000000;
+    border-bottom: 0.75px solid #C6C6C6;
+    overflow-wrap: anywhere;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__matter {
+    display: block;
+    font-weight: 500;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__note {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.8125rem;
+    color: #666768;
+  }
+
+  #shopify-section-{{ section.id }} .patent-portfolio__disclaimer {
+    margin-top: 24px;
+    font-size: 0.875rem;
+    color: #666768;
+  }
+
+  /* Mobile: one labelled card per row instead of 6 squeezed columns */
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .patent-portfolio {
+      padding-top: var(--pp-pt-m);
+      padding-bottom: var(--pp-pb-m);
+    }
+
+    #shopify-section-{{ section.id }} .patent-portfolio__group-title {
+      font-size: 0.875rem;
+      padding: 14px 18px;
+    }
+
+    #shopify-section-{{ section.id }} .patent-portfolio__table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    #shopify-section-{{ section.id }} .patent-portfolio__table tr {
+      display: block;
+      padding: 12px 4px;
+      border-bottom: 0.75px solid #C6C6C6;
+    }
+
+    #shopify-section-{{ section.id }} .patent-portfolio__table td {
+      display: grid;
+      grid-template-columns: 42% 1fr;
+      gap: 12px;
+      padding: 4px 0;
+      font-size: 0.8125rem;
+      border-bottom: 0;
+    }
+
+    #shopify-section-{{ section.id }} .patent-portfolio__table td::before {
+      content: attr(data-label);
+      color: #666768;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Patent Portfolio",
+  "tag": "section",
+  "class": "section-patent-portfolio",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Patent Portfolio"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer"
+    },
+    {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "table",
+      "name": "Table",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Starts a new table. Add Row blocks after it."
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Patent family" },
+        { "type": "text", "id": "label_matter", "label": "Column 1 label", "default": "Matter Number" },
+        { "type": "text", "id": "label_country", "label": "Column 2 label", "default": "Country" },
+        { "type": "text", "id": "label_appln", "label": "Column 3 label", "default": "Patent Appln No." },
+        { "type": "text", "id": "label_filed", "label": "Column 4 label", "default": "Filing Date" },
+        { "type": "text", "id": "label_number", "label": "Column 5 label", "default": "Patent No." },
+        { "type": "text", "id": "label_issued", "label": "Column 6 label", "default": "Issue Date" }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "matter", "label": "Matter number" },
+        { "type": "text", "id": "note", "label": "Note", "info": "Small text under the matter number" },
+        { "type": "text", "id": "country", "label": "Country" },
+        { "type": "text", "id": "appln", "label": "Application number" },
+        { "type": "text", "id": "filed", "label": "Filing date" },
+        { "type": "text", "id": "number", "label": "Patent number" },
+        { "type": "text", "id": "issued", "label": "Issue date" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Patent Portfolio",
+      "blocks": [
+        { "type": "table" },
+        { "type": "row" }
+      ]
+    }
+  ]
+}
+{% endschema %}
