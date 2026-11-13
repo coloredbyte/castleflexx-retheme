@@ -1,0 +1,20 @@
+{% comment %}
+  CastleFlexx patch: one image-with-text button, extracted so the button
+  block can render a second button beside the first.
+  Accepts: label, link, new_window, style ('primary' | 'secondary' | 'text-link')
+{% endcomment %}
+{%- if label != blank -%}
+{%- capture style_class -%}
+  {%- if style == 'secondary' %} button-outline{% elsif style == 'text-link' %} button-text-link {% else %} button-solid{% endif -%}
+{%- endcapture -%}
+
+{% if link == blank %}
+  <div class="button{{ style_class }} leading-normal empty:hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3 opacity-70 disable-btn-animation hover:cursor-not-allowed">
+    {% render 'button-label', button_label: label, show_button_style: style %}
+  </div>
+{% else %}
+  <a class="button{{ style_class }} leading-normal empty:hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3" href="{{ link }}"{% if new_window %} target="_blank"{% endif %}>
+    {% render 'button-label', button_label: label, show_button_style: style %}
+  </a>
+{% endif %}
+{%- endif -%}
