@@ -133,6 +133,9 @@
         "preorder_label_8JPgVK",
         "new_label_4MQzpH"
       ],
+      "custom_css": [
+        ".leading-normal {font-size: 14px;}"
+      ],
       "settings": {
         "enable": true
       }
