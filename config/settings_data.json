@@ -146,6 +146,7 @@
     "share_pinterest": true,
     "share_sms": false,
     "search_enabled": true,
+    "mobile_search_position": "header",
     "search_type": "product",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": true,
