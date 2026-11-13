@@ -19,10 +19,10 @@
           "settings": {
             "open_by_default": false,
             "heading_text": "",
-            "subtext": "<p>Enter custom message or instruction.</p>",
+            "subtext": "",
             "show_social_icons": false,
             "icon_layout": "horizontal",
-            "image": "shopify://shop_images/castleflexx-logo.png",
+            "image": "shopify://shop_images/secondary_logo.svg",
             "image_width": 200,
             "link_image_footer": "",
             "open_new_window": false,
@@ -92,11 +92,11 @@
         "show_copyright": true,
         "add_copyright_text": "",
         "additional_layout": "horizontal",
-        "show_powered": true,
+        "show_powered": false,
         "enable_follow_on_shop": false,
         "horizontal_position": "right",
         "top_padding": 0,
-        "bottom_padding": 20,
+        "bottom_padding": 28,
         "top_padding_mobile": 0,
         "bottom_padding_mobile": 28
       }
