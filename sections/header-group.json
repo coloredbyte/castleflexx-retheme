@@ -101,9 +101,9 @@
         "show_currency_selector": false,
         "text_size_toolbar": 80,
         "section_scheme": "store",
-        "backgound_color": "#FEC627",
-        "text_color": "#191A1B",
-        "textlink_color_light": "#191A1B",
+        "backgound_color": "#fec627",
+        "text_color": "#191a1b",
+        "textlink_color_light": "#191a1b",
         "backgound_color_dark": "rgba(0,0,0,0)",
         "text_color_dark": "rgba(0,0,0,0)",
         "textlink_color_dark": "rgba(0,0,0,0)"
@@ -620,7 +620,7 @@
       ],
       "custom_css": [
         ".see-more {margin-top: 40px;}",
-        ".p-break-words {font-size: 18px;}"
+        ".p-break-words {font-size: 16px;}"
       ],
       "settings": {
         "menu": "main-menu",
