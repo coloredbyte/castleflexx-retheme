@@ -10,39 +10,16 @@
 {
   "sections": {
     "lab_results_hero": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "subheading": "",
-            "heading": "CastleFlexx Lab Results and PFAS Testing",
-            "heading_tag": "h1",
-            "text": "<p>CastleFlexx submitted materials for independent PFAS screening. Here are the results, the method, and what the report means.</p>"
-          }
-        },
-        "buttons": {
-          "type": "button",
-          "settings": {
-            "button_label": "Eurofins Lab Report",
-            "button_link": "",
-            "open_new_window": true,
-            "show_button_style": "primary",
-            "button_label_2": "Product Testing Details",
-            "button_link_2": "",
-            "show_button_style_2": "secondary"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "buttons"
-      ],
+      "type": "lab-results-hero",
       "settings": {
+        "background_color": "#f7f8f6",
+        "title": "CastleFlexx \nLab Results \nand PFAS Testing",
+        "description": "<p>CastleFlexx submitted materials for independent PFAS screening. Here are the results, the method, and what the report means.</p>",
         "image": "shopify://shop_images/Group_3_1.webp",
-        "image_alignment": "right",
-        "text_alignment": "start",
-        "desktop_image_width": "medium"
+        "cta1_label": "Eurofins Lab Report",
+        "cta1_url": "",
+        "cta2_label": "Product Testing Details",
+        "cta2_url": ""
       }
     },
     "lab_results_tabs": {
