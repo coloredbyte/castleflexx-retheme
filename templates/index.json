@@ -90,7 +90,7 @@
         "template--20740642505005__4c9e1af5-c4c0-48cf-b771-49029eedd24f-slide-2"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h1 {font-size: 30px; } p {font-size: 14px; }}"
+        "@media screen and (max-width: 1024px) {h1 {font-size: 30px; } p {font-size: 14px; } .x-subheading {padding-bottom: 8px;}}"
       ],
       "settings": {
         "show_hero": true,
