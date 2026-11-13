@@ -434,6 +434,11 @@
     #shopify-section-{{ section.id }} .lab-tabs__cards {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Odd card out (e.g. 5th of 5) spans the row instead of leaving a gap */
+    #shopify-section-{{ section.id }} .lab-tabs__cards > :last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
   }
 
   @media (max-width: 768px) {
@@ -537,8 +542,13 @@
       justify-self: stretch;
     }
 
+    /* Cap tall product shots so the page isn't one long image on phones */
     #shopify-section-{{ section.id }} .lab-tab-content__image {
       margin-inline: auto;
+      max-height: 340px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     #shopify-section-{{ section.id }} .lab-details {
