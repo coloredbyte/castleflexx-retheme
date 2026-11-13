@@ -249,7 +249,8 @@
         "tabbed_menu_cFP8pP"
       ],
       "custom_css": [
-        ".see-more {margin-top: 40px;}"
+        ".see-more {margin-top: 40px;}",
+        ".p-break-words {font-size: 18px;}"
       ],
       "settings": {
         "menu": "main-menu",
