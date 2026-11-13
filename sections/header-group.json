@@ -85,6 +85,9 @@
         "announcement_GewciB",
         "announcement_z3c9Nn"
       ],
+      "custom_css": [
+        "p {font-weight: 600;}"
+      ],
       "settings": {
         "enable": true,
         "show_only_on_homepage": false,
