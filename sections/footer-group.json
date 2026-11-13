@@ -24,7 +24,10 @@
             "icon_layout": "horizontal",
             "image_width": 100,
             "link_image_footer": "",
-            "open_new_window": false
+            "open_new_window": false,
+            "show_email_form": false,
+            "heading_email": "Subscribe to our emails",
+            "subtext_email": ""
           }
         },
         "footer-1": {
@@ -32,7 +35,7 @@
           "settings": {
             "open_by_default": false,
             "heading_menu": "Menu",
-            "menu": "",
+            "menu": "cb-footer-shop",
             "show_social_icons": false
           }
         },
@@ -64,7 +67,10 @@
             "icon_layout": "horizontal",
             "image_width": 100,
             "link_image_footer": "",
-            "open_new_window": false
+            "open_new_window": false,
+            "show_email_form": false,
+            "heading_email": "Subscribe to our emails",
+            "subtext_email": ""
           }
         }
       },
@@ -126,7 +132,29 @@
             "button_label": "",
             "button_link": "",
             "open_new_window_button": false,
-            "show_button_style": "primary"
+            "show_button_style": "primary",
+            "block_scheme": "section",
+            "color_overlay": "rgba(0,0,0,0)",
+            "title_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "background_button": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "background_button_hover": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "title_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)",
+            "background_button_dark": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "background_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
           }
         }
       },
@@ -143,6 +171,9 @@
         "subheading": "",
         "text": "",
         "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_slides_speed": 5,
         "max_columns": 1,
         "spacing": 28,
         "height_desktop": 300,
@@ -150,6 +181,7 @@
         "show_section_divider": false,
         "full_width": true,
         "padding_full_width": false,
+        "edge_style": "adapt",
         "padding_top": 0,
         "padding_bottom": 0,
         "min_columns_mobile": "1",
@@ -157,8 +189,18 @@
         "height_mobile": 250,
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
+        "edge_style_mobile": "adapt",
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "heading_highlight_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "heading_highlight_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
       }
     }
   },
