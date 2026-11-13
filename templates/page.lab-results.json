@@ -802,8 +802,8 @@
       "settings": {
         "desktop_padding_top": 80,
         "desktop_padding_bottom": 80,
-        "mobile_padding_top": 56,
-        "mobile_padding_bottom": 56
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 24
       }
     },
     "faq": {
