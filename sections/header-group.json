@@ -759,7 +759,7 @@
           "settings": {
             "heading": "Shop",
             "menu": "cb-shop-menu",
-            "menu_item_link": "",
+            "menu_item_link": "shopify://collections/shop-all",
             "open_new_window": false,
             "show_collection_image": false,
             "show_first_image_product": true,
