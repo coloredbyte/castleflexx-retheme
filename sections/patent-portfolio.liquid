@@ -70,10 +70,13 @@
 
           <tr {{ block.shopify_attributes }}>
             <td data-label="{{ label_matter }}">
-              <span class="patent-portfolio__matter">{{ block.settings.matter }}</span>
-              {% if block.settings.note != blank %}
-                <span class="patent-portfolio__note">{{ block.settings.note }}</span>
-              {% endif %}
+              {% comment %} One wrapper so the mobile label grid sees a single value {% endcomment %}
+              <div>
+                <span class="patent-portfolio__matter">{{ block.settings.matter }}</span>
+                {% if block.settings.note != blank %}
+                  <span class="patent-portfolio__note">{{ block.settings.note }}</span>
+                {% endif %}
+              </div>
             </td>
             <td data-label="{{ label_country }}">{{ block.settings.country | default: '—' }}</td>
             <td data-label="{{ label_appln }}">{{ block.settings.appln | default: '—' }}</td>
