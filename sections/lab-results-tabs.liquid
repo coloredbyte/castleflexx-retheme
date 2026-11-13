@@ -7,7 +7,9 @@
 -----------------------------------------------------------------------------
 {% endcomment %}
 
+{%- comment -%} Stable anchor so other buttons can link here, e.g. /pages/lab-results#lab-results {%- endcomment -%}
 <div
+  {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handle }}"{% endif %}
   class="lab-tabs"
   style="
     --lab-tabs-pt: {{ section.settings.desktop_padding_top }}px;
@@ -694,6 +696,13 @@
     { "type": "lab-tab" }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "lab-results",
+      "info": "Link here with /pages/lab-results#lab-results"
+    },
     {
       "type": "header",
       "content": "Padding (desktop)"
