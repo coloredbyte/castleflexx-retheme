@@ -44,8 +44,8 @@
           "type": "link_list",
           "settings": {
             "open_by_default": false,
-            "heading_menu": "Menu",
-            "menu": "",
+            "heading_menu": "Learn",
+            "menu": "cb-footer-learn",
             "show_social_icons": false
           }
         },
