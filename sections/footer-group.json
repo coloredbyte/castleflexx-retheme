@@ -11,6 +11,67 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_X4itfH": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_DbQem9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "highlight_type": "font_highlight",
+            "heading_size": 100,
+            "heading_tag": "h2",
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "text_size": 100
+          }
+        },
+        "email_form_xGz7QC": {
+          "type": "email_form",
+          "settings": {
+            "button_label": "Submit",
+            "block_scheme": "section",
+            "background_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DbQem9",
+        "email_form_xGz7QC"
+      ],
+      "settings": {
+        "overlay_opacity": 0,
+        "form_width": "large",
+        "content_layout": "horizontal",
+        "desktop_height": "450px",
+        "show_section_divider": false,
+        "padding_top": 48,
+        "padding_bottom": 20,
+        "mobile_height": "300px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "#3E4044",
+        "heading_light": "#FFFFFF",
+        "color_heading_highlight_light": "#F7F8F6",
+        "text_light": "#F7F8F6",
+        "button_light": "#FFFFFF",
+        "button_text_light": "#3E4044",
+        "button_hover_light": "#F7F8F6",
+        "button_text_hover_light": "#3E4044",
+        "line_border": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "button_dark": "rgba(0,0,0,0)",
+        "button_text_dark": "rgba(0,0,0,0)",
+        "button_hover_dark": "rgba(0,0,0,0)",
+        "button_text_hover_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -206,6 +267,7 @@
     }
   },
   "order": [
+    "newsletter_X4itfH",
     "footer",
     "media_gallery_AGU8KF"
   ]
