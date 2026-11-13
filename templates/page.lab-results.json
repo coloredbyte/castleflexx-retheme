@@ -813,56 +813,77 @@
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "What PFAS testing did CastleFlexx complete?",
-            "row_content": "<p>CastleFlexx submitted materials for third-party PFAS screening by Eurofins. The report shows Total Organic Fluorine (TOF): Not Detected at 10 mg/kg for the tested sample.</p>"
+            "row_content": "<p>CastleFlexx submitted materials for third-party PFAS screening by Eurofins. The report shows Total Organic Fluorine (TOF): Not Detected at 10 mg/kg for the tested sample.</p>",
+            "open_by_default": false
           }
         },
         "faq_2": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "What does 'not detected' mean?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         },
         "faq_3": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "What is TOF screening?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         },
         "faq_4": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "Who performed the testing?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         },
         "faq_5": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "Do you test every production batch?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         },
         "faq_6": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "Is CastleFlexx a medical device?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         },
         "faq_7": {
           "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
             "heading": "Where can I download the full lab report?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "open_by_default": false
           }
         }
       },
@@ -877,9 +898,33 @@
       ],
       "settings": {
         "heading": "Frequently Asked Questions",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
         "heading_alignment": "center",
+        "show_border": false,
+        "row_background": false,
         "collapsible": true,
-        "show_view_all": false
+        "show_view_all": false,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "featured_lab_products": {
@@ -888,52 +933,69 @@
         "product_1": {
           "type": "column",
           "settings": {
-            "image_link": "/products/castle-flexx",
+            "image": "shopify://shop_images/Luxury.png",
+            "image_link": "shopify://products/castle-flexx",
+            "open_new_window_image": false,
             "sub_title": "",
             "title": "Luxury",
+            "highlight_type": "underline",
+            "heading_size": 100,
             "text": "",
-            "button_label": "View Lab Result",
-            "button_link": "/products/castle-flexx",
-            "show_button_style": "text-link",
-            "image": "shopify://shop_images/Frame_1523.png"
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/castle-flexx",
+            "open_new_window": false,
+            "show_button_style": "text-link"
           }
         },
         "product_2": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Sport.png",
             "image_link": "/products/castleflexx-sport",
+            "open_new_window_image": false,
             "sub_title": "",
             "title": "Sport",
+            "highlight_type": "underline",
+            "heading_size": 100,
             "text": "",
-            "button_label": "View Lab Result",
-            "button_link": "/products/castleflexx-sport",
-            "show_button_style": "text-link",
-            "image": "shopify://shop_images/Frame_1523_1.png"
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/castleflexx-sport",
+            "open_new_window": false,
+            "show_button_style": "text-link"
           }
         },
         "product_3": {
           "type": "column",
           "settings": {
-            "image_link": "/products/heat",
+            "image": "shopify://shop_images/CastleFlexx_HEAT_6-20-24_386.jpg",
+            "image_link": "shopify://products/heat",
+            "open_new_window_image": false,
             "sub_title": "",
             "title": "Heat",
+            "highlight_type": "underline",
+            "heading_size": 100,
             "text": "",
-            "button_label": "View Lab Result",
-            "button_link": "/products/heat",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/heat",
+            "open_new_window": false,
             "show_button_style": "text-link"
           }
         },
         "product_4": {
           "type": "column",
           "settings": {
-            "image_link": "",
+            "image": "shopify://shop_images/CastlePack.png",
+            "image_link": "shopify://products/ice-pack",
+            "open_new_window_image": false,
             "sub_title": "",
             "title": "CastlePack",
+            "highlight_type": "underline",
+            "heading_size": 100,
             "text": "",
-            "button_label": "View Lab Result",
-            "button_link": "",
-            "show_button_style": "text-link",
-            "image": "shopify://shop_images/Frame_1523_2.png"
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/ice-pack",
+            "open_new_window": false,
+            "show_button_style": "text-link"
           }
         }
       },
@@ -945,11 +1007,47 @@
       ],
       "settings": {
         "title": "Quality You Can Trust",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
         "heading_alignment": "center",
+        "subheading": "",
         "text": "<p>Every CastleFlexx product is lab-tested to meet high standards of reliability, consistency, and lasting durability.</p>",
-        "column_layout_desktop": "lg:w-1/4",
+        "secondary_background": "column",
+        "image_ratio": "100%",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
         "column_content_alignment": "center",
-        "column_layout_mobile": "w-1/2"
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/4",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 28,
+        "padding_bottom": 60,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-1/2",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
       }
     }
   },
