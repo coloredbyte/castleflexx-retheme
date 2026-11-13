@@ -19,20 +19,11 @@
             "open_new_window": true,
             "show_button_style": "primary"
           }
-        },
-        "button_details": {
-          "type": "button",
-          "settings": {
-            "button_label": "Product Testing Details",
-            "button_link": "",
-            "show_button_style": "secondary"
-          }
         }
       },
       "block_order": [
         "heading",
-        "button_report",
-        "button_details"
+        "button_report"
       ],
       "settings": {
         "image": "shopify://shop_images/Group_3_1.webp",
