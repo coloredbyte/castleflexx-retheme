@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/CastleFlexx_Homepage_Banner_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/CastleFlexx_Homepage_Banner_Mobile.png",
             "image_link": "",
             "open_new_window_image": false,
             "overlay_opacity": 0,
@@ -110,7 +111,7 @@
         "full_width_mobile": true,
         "adapt_corners_mobile": false,
         "rounded_corner_image_mobile": false,
-        "show_content_below_image": false,
+        "show_content_below_image": true,
         "mobile_ratio": "px",
         "mobile_height": "500",
         "padding_top_mobile": 0,
