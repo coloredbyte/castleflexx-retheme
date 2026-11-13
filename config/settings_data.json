@@ -98,6 +98,7 @@
     "buttons_animation": "fill_up",
     "disable_heading_animation": false,
     "disable_carousel_animation": true,
+    "disable_parallax_effect": true,
     "page_transition": true,
     "advanced_sections_spacing": 0,
     "page_width": 1400,
