@@ -339,12 +339,382 @@
         "collapsible": true,
         "show_view_all": false
       }
+    },
+    "patents_image": {
+      "type": "rich-text",
+      "blocks": {
+        "media": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Table-07-updated.webp",
+            "media_size": 80
+          }
+        }
+      },
+      "block_order": [
+        "media"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "content_alignment_mobile": "center"
+      }
+    },
+    "patent_portfolio": {
+      "type": "patent-portfolio",
+      "blocks": {
+        "table_1": {
+          "type": "table",
+          "settings": {
+            "title": "Multimodal Fitness Bar / Utility (ALL VERSIONS)",
+            "label_matter": "Matter Number",
+            "label_country": "Country",
+            "label_appln": "Patent Appln No",
+            "label_filed": "Filing Date",
+            "label_number": "Patent No.",
+            "label_issued": "Issue Date"
+          }
+        },
+        "row_1_1": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00001",
+            "note": "",
+            "country": "US",
+            "appln": "17082451",
+            "filed": "10/28/2020",
+            "number": "11020625",
+            "issued": "6/1/2021"
+          }
+        },
+        "row_1_2": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00003",
+            "note": "",
+            "country": "US",
+            "appln": "17238456",
+            "filed": "4/23/2021",
+            "number": "11383119",
+            "issued": "7/12/2022"
+          }
+        },
+        "table_2": {
+          "type": "table",
+          "settings": {
+            "title": "Multimodal Fitness Bar / Utility (HEAT EDITION)",
+            "label_matter": "Matter Number",
+            "label_country": "Country",
+            "label_appln": "Patent Appln No.",
+            "label_filed": "Filing Date",
+            "label_number": "Patent No.",
+            "label_issued": "Issue Date"
+          }
+        },
+        "row_2_1": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00004",
+            "note": "[CIP of -00001] Parent Appln for Foreign Flg",
+            "country": "US",
+            "appln": "17840519",
+            "filed": "6/14/2022",
+            "number": "11969620",
+            "issued": "4/30/2024"
+          }
+        },
+        "row_2_2": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00022",
+            "note": "",
+            "country": "Australia",
+            "appln": "2023203710",
+            "filed": "6/14/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_3": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00023",
+            "note": "",
+            "country": "Canada",
+            "appln": "3203272",
+            "filed": "6/13/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_4": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00024",
+            "note": "",
+            "country": "China",
+            "appln": "2023107088101",
+            "filed": "6/14/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_5": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00025",
+            "note": "",
+            "country": "India",
+            "appln": "202314040312",
+            "filed": "6/13/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_6": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00026",
+            "note": "",
+            "country": "Japan",
+            "appln": "2023-097283",
+            "filed": "6/13/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_7": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00027",
+            "note": "",
+            "country": "Mexico",
+            "appln": "MX/a/2023/006958",
+            "filed": "6/13/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_8": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00028",
+            "note": "",
+            "country": "S. Korea",
+            "appln": "10-2022-0076107",
+            "filed": "6/14/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_9": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00029",
+            "note": "",
+            "country": "Europe",
+            "appln": "23179302.7",
+            "filed": "6/14/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_2_10": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00043",
+            "note": "[CIP of-00001]",
+            "country": "US",
+            "appln": "18/616045",
+            "filed": "3/25/2024",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "table_3": {
+          "type": "table",
+          "settings": {
+            "title": "Multimodal Fitness Bar / Design (SPORT EDITION)",
+            "label_matter": "Matter Number",
+            "label_country": "Country",
+            "label_appln": "Patent Design Appln No",
+            "label_filed": "Filing Date",
+            "label_number": "Patent Design Registration No",
+            "label_issued": "Issue Date"
+          }
+        },
+        "row_3_1": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00002",
+            "note": "",
+            "country": "US",
+            "appln": "29/759594",
+            "filed": "11/24/2020",
+            "number": "D963076",
+            "issued": "9/6/2022"
+          }
+        },
+        "row_3_2": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00012",
+            "note": "Parent Appln for Foreign Flg",
+            "country": "US",
+            "appln": "29/873727",
+            "filed": "4/6/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_3": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00034",
+            "note": "",
+            "country": "Australia",
+            "appln": "202316696",
+            "filed": "10/5/2023",
+            "number": "202316696",
+            "issued": "11/21/2023"
+          }
+        },
+        "row_3_4": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00035",
+            "note": "",
+            "country": "Canada",
+            "appln": "224778",
+            "filed": "10/4/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_5": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00036",
+            "note": "",
+            "country": "China",
+            "appln": "202330643992.X",
+            "filed": "10/7/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_6": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00037",
+            "note": "",
+            "country": "India",
+            "appln": "396548-001",
+            "filed": "10/4/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_7": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00038",
+            "note": "",
+            "country": "Japan",
+            "appln": "2023-020522",
+            "filed": "10/4/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_8": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00039",
+            "note": "",
+            "country": "Mexico",
+            "appln": "MX/f/2023/002878",
+            "filed": "10/4/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_9": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00040",
+            "note": "",
+            "country": "S. Korea",
+            "appln": "30-2023-0039095",
+            "filed": "10/5/2023",
+            "number": "",
+            "issued": ""
+          }
+        },
+        "row_3_10": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00041",
+            "note": "",
+            "country": "Europe",
+            "appln": "15036096",
+            "filed": "10/4/2023",
+            "number": "15036096",
+            "issued": "10/4/2023"
+          }
+        },
+        "row_3_11": {
+          "type": "row",
+          "settings": {
+            "matter": "622-00042",
+            "note": "",
+            "country": "UK",
+            "appln": "6316801",
+            "filed": "10/4/2023",
+            "number": "6316801",
+            "issued": "10/12/2023"
+          }
+        }
+      },
+      "block_order": [
+        "table_1",
+        "row_1_1",
+        "row_1_2",
+        "table_2",
+        "row_2_1",
+        "row_2_2",
+        "row_2_3",
+        "row_2_4",
+        "row_2_5",
+        "row_2_6",
+        "row_2_7",
+        "row_2_8",
+        "row_2_9",
+        "row_2_10",
+        "table_3",
+        "row_3_1",
+        "row_3_2",
+        "row_3_3",
+        "row_3_4",
+        "row_3_5",
+        "row_3_6",
+        "row_3_7",
+        "row_3_8",
+        "row_3_9",
+        "row_3_10",
+        "row_3_11"
+      ],
+      "settings": {
+        "title": "Patent Portfolio",
+        "subtitle": "Filings by patent family and country"
+      }
     }
   },
   "order": [
     "patents_intro",
     "patents_summary",
     "patent_record",
+    "patents_image",
+    "patent_portfolio",
     "faq"
   ]
 }
