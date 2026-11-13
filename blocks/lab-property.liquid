@@ -1,0 +1,40 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Property (lab-property)
+  - Label / value pair nested inside a Lab Details block.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div class="lab-property" {{ block.shopify_attributes }}>
+  {% if block.settings.label != blank %}
+    <span class="lab-property__label">{{ block.settings.label }}</span>
+  {% endif %}
+
+  {% if block.settings.value != blank %}
+    <div class="lab-property__value">{{ block.settings.value }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Property",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label"
+    },
+    {
+      "type": "richtext",
+      "id": "value",
+      "label": "Value"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Property"
+    }
+  ]
+}
+{% endschema %}

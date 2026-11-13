@@ -1,0 +1,190 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Patent Record (patent-record)
+  - Title + subtitle, table of patents (blocks), disclaimer text.
+-----------------------------------------------------------------------------
+{% endcomment %}
+{% render 'cf-styles' %}
+
+<div
+  id="patents"
+  class="patent-record"
+  style="--pr-pt-desktop: {{ section.settings.desktop_padding_top }}px; --pr-pb-desktop: {{ section.settings.desktop_padding_bottom }}px; --pr-pt-mobile: {{ section.settings.mobile_padding_top }}px; --pr-pb-mobile: {{ section.settings.mobile_padding_bottom }}px;">
+  <div class="patent-record__container">
+    {% if section.settings.title != blank %}
+      <h1 class="cf-title">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="cf-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    <div class="patent-record__table-wrapper">
+      <div class="patent-record__head" aria-hidden="true">
+        <span>NAME</span>
+        <span>ISSUED</span>
+        <span>NUMBER</span>
+      </div>
+      <table class="patent-record__table">
+        <thead class="patent-record__sr-head">
+          <tr>
+            <th>NAME</th>
+            <th>ISSUED</th>
+            <th>NUMBER</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr {{ block.shopify_attributes }}>
+              <td>
+                <p class="patent-record__patent-title">{{ block.settings.title }}</p>
+                {% if block.settings.subtitle != blank %}
+                  <p class="patent-record__patent-subtitle">{{ block.settings.subtitle }}</p>
+                {% endif %}
+              </td>
+              <td>{{ block.settings.issued }}</td>
+              <td>{{ block.settings.number }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% if section.settings.disclaimer != blank %}
+      <p class="patent-record__disclaimer">{{ section.settings.disclaimer }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .patent-record {
+    padding-top: var(--pr-pt-desktop);
+    padding-bottom: var(--pr-pb-desktop);
+    scroll-margin-top: 110px;
+  }
+
+  .patent-record__container {
+    max-width: 920px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .patent-record__disclaimer {
+    margin-top: 28px;
+    color: #666768;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .patent-record {
+      padding-top: var(--pr-pt-mobile);
+      padding-bottom: var(--pr-pb-mobile);
+    }
+
+    .patent-record__disclaimer {
+      font-size: 0.75rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Patent Record",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Patent Record"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "label": "Desktop padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Mobile padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Mobile padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "patent",
+      "name": "Patent",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "issued",
+          "label": "Issued date"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Patent Record"
+    }
+  ]
+}
+{% endschema %}

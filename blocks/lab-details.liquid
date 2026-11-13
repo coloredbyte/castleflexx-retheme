@@ -1,0 +1,177 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Details (lab-details)
+  - Lab report summary panel inside a Tab Content block: title, lab logo,
+    pass/fail state, result summary and a report link.
+  - Children: lab-property (label / value pairs).
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div
+  class="lab-details"
+  data-pass="{% if block.settings.pass %}true{% else %}false{% endif %}"
+  style="
+    --pt: {{ block.settings.padding_top | default: 0 }}px;
+    --pb: {{ block.settings.padding_bottom | default: 0 }}px;
+    --pt-m: {{ block.settings.padding_top_mobile | default: 0 }}px;
+    --pb-m: {{ block.settings.padding_bottom_mobile | default: 0 }}px;
+    {%- if block.settings.logo_height != blank %}--lab-logo-h: {{ block.settings.logo_height }}px;{% endif -%}
+    {%- if block.settings.logo_height_mobile != blank %}--lab-logo-h-m: {{ block.settings.logo_height_mobile }}px;{% endif -%}
+  "
+  {{ block.shopify_attributes }}>
+  <div class="lab-details__header">
+    {% if block.settings.title != blank %}
+      <h4 class="lab-details__title">{{ block.settings.title }}</h4>
+    {% endif %}
+
+    {% if block.settings.logo != blank %}
+      <div class="lab-details__logo">
+        {{
+          block.settings.logo
+          | image_url: width: 400
+          | image_tag: loading: 'lazy', widths: '100, 200, 400', class: 'lab-details__logo-image'
+        }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="lab-details__properties">
+    {% if block.settings.result_value != blank %}
+      <div class="lab-property lab-property--result">
+        <span class="lab-property__label">{{ block.settings.result_label | default: 'Result:' }}</span>
+        <div class="lab-property__value">{{ block.settings.result_value }}</div>
+      </div>
+    {% endif %}
+
+    {% content_for 'blocks' %}
+  </div>
+
+  <div class="lab-details__footer">
+    {% if block.settings.result_summary != blank %}
+      <div class="lab-details__summary-wrap">
+        <div class="lab-details__summary-label">Result Summary:</div>
+        <div class="lab-details__summary">{{ block.settings.result_summary }}</div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.report_url != blank %}
+      <a href="{{ block.settings.report_url }}" target="_blank" rel="noopener" class="button button-solid border lab-details__report-link">
+        {{ block.settings.report_label | default: 'Download Report' }}
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 13.8333V15.4999C3 15.9419 3.17559 16.3659 3.48816 16.6784C3.80072 16.991 4.22464 17.1666 4.66667 17.1666H14.6667C15.1087 17.1666 15.5326 16.991 15.8452 16.6784C16.1577 16.3659 16.3333 15.9419 16.3333 15.4999V13.8333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.5 8.83325L9.66667 12.9999L13.8333 8.83325" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.66666 3V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    {% endif %}
+  </div>
+
+  {% if block.settings.note != blank %}
+    <div class="lab-details__note">{{ block.settings.note }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Lab details",
+  "tag": null,
+  "blocks": [
+    { "type": "lab-property" }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Lab Details"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "number",
+      "id": "logo_height",
+      "label": "Logo height (desktop, px)",
+      "info": "Leave blank to use the default (33px)."
+    },
+    {
+      "type": "number",
+      "id": "logo_height_mobile",
+      "label": "Logo height (mobile, px)",
+      "info": "Leave blank to use the default (23px)."
+    },
+    {
+      "type": "checkbox",
+      "id": "pass",
+      "label": "Pass",
+      "default": true,
+      "info": "Controls the colour of the result value only (green when checked, red when not)."
+    },
+    {
+      "type": "text",
+      "id": "result_label",
+      "label": "Result label",
+      "default": "Result:"
+    },
+    {
+      "type": "text",
+      "id": "result_value",
+      "label": "Result value",
+      "default": "PASS"
+    },
+    {
+      "type": "richtext",
+      "id": "result_summary",
+      "label": "Result summary"
+    },
+    {
+      "type": "url",
+      "id": "report_url",
+      "label": "Report URL"
+    },
+    {
+      "type": "text",
+      "id": "report_label",
+      "label": "Report button label",
+      "default": "Download Report"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Footnote",
+      "info": "Small grey press/reference line under the panel."
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding top (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding bottom (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "Padding top (mobile, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom (mobile, px)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lab details"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,340 @@
+{
+  "sections": {
+    "patents_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Patents One of a Kind. Literally.",
+            "heading_tag": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Multimodal Fitness Bar Patent Documentation and Intellectual Property</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "content_alignment_mobile": "center"
+      }
+    },
+    "patents_summary": {
+      "type": "patents-summary",
+      "blocks": {
+        "sp_1": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent",
+            "issued": "06/01/2021",
+            "number": "11 020 625"
+          }
+        },
+        "sp_2": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent",
+            "issued": "07/12/2022",
+            "number": "11 383 119"
+          }
+        },
+        "sp_3": {
+          "type": "patent",
+          "settings": {
+            "title": "Design Patent",
+            "issued": "06/09/2022",
+            "number": "D 963076"
+          }
+        },
+        "sp_4": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent",
+            "issued": "07/08/2025",
+            "number": "12349828"
+          }
+        }
+      },
+      "block_order": [
+        "sp_1",
+        "sp_2",
+        "sp_3",
+        "sp_4"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/img.webp",
+        "title": "Summary",
+        "trademark": "<p>Trademark™   <strong>SN:</strong> 88829718</p>",
+        "button_label": "View All Patents",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 40
+      }
+    },
+    "patent_record": {
+      "type": "patent-record",
+      "blocks": {
+        "patent_1": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent (US)",
+            "subtitle": "Matter 622-00001",
+            "issued": "06/01/2021",
+            "number": "11 020 625"
+          }
+        },
+        "patent_2": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent (US)",
+            "subtitle": "Matter 622-00003",
+            "issued": "07/12/2022",
+            "number": "11 383 119"
+          }
+        },
+        "patent_3": {
+          "type": "patent",
+          "settings": {
+            "title": "Design Patent (US)",
+            "subtitle": "Matter 622-00002",
+            "issued": "09/06/2022",
+            "number": "D 963076"
+          }
+        },
+        "patent_4": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent (US)",
+            "subtitle": "Matter 622-00004",
+            "issued": "04/30/2024",
+            "number": "11 968 620"
+          }
+        },
+        "patent_5": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent (Australia)",
+            "subtitle": "Matter 622-00034",
+            "issued": "11/21/2023",
+            "number": "202316696"
+          }
+        },
+        "patent_6": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent (US)",
+            "subtitle": "Matter 622-00007",
+            "issued": "07/08/2025",
+            "number": "12 349 828"
+          }
+        },
+        "patent_7": {
+          "type": "patent",
+          "settings": {
+            "title": "Design Patent Application (US)",
+            "subtitle": "Matter 622-00012",
+            "issued": "04/06/2023",
+            "number": "29/873727"
+          }
+        },
+        "patent_8": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (Australia)",
+            "subtitle": "Matter 622-00023",
+            "issued": "06/13/2023",
+            "number": "3203272"
+          }
+        },
+        "patent_9": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (China)",
+            "subtitle": "Matter 622-00024",
+            "issued": "08/14/2023",
+            "number": "2023107088101"
+          }
+        },
+        "patent_10": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (India)",
+            "subtitle": "Matter 622-00025",
+            "issued": "06/13/2023",
+            "number": "202314040312"
+          }
+        },
+        "patent_11": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (Japan)",
+            "subtitle": "Matter 622-00026",
+            "issued": "06/13/2023",
+            "number": "2023-097283"
+          }
+        },
+        "patent_12": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (Mexico)",
+            "subtitle": "Matter 622-00027",
+            "issued": "06/13/2023",
+            "number": "MX/a/2023/006958"
+          }
+        },
+        "patent_13": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (Korea)",
+            "subtitle": "Matter 622-00028",
+            "issued": "08/14/2023",
+            "number": "10-2022-0076107"
+          }
+        },
+        "patent_14": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (Europe)",
+            "subtitle": "Matter 622-00029",
+            "issued": "08/14/2023",
+            "number": "23179302.7"
+          }
+        },
+        "patent_15": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (US)",
+            "subtitle": "Matter 622-00043",
+            "issued": "03/25/2024",
+            "number": "18/616045"
+          }
+        },
+        "patent_16": {
+          "type": "patent",
+          "settings": {
+            "title": "Utility Patent Application (US)",
+            "subtitle": "Matter 622-00047",
+            "issued": "04/07/2025",
+            "number": "19/172488"
+          }
+        }
+      },
+      "block_order": [
+        "patent_1",
+        "patent_2",
+        "patent_3",
+        "patent_4",
+        "patent_5",
+        "patent_6",
+        "patent_7",
+        "patent_8",
+        "patent_9",
+        "patent_10",
+        "patent_11",
+        "patent_12",
+        "patent_13",
+        "patent_14",
+        "patent_15",
+        "patent_16"
+      ],
+      "settings": {
+        "title": "CastleFlexx Patent Record",
+        "subtitle": "Issued patents, registered designs, and pending applications • duplicate entries removed",
+        "disclaimer": "*For pending applications, the middle column shows the filing date.",
+        "desktop_padding_top": 60,
+        "desktop_padding_bottom": 40,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Why does CastleFlexx have patents?",
+            "row_content": "<p>CastleFlexx invests heavily in product innovation. Our patents help protect the unique design, engineering, and functionality of our stretching and mobility devices, ensuring customers receive an authentic, original product developed through years of research and testing.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "What types of patents does CastleFlexx hold?",
+            "row_content": "<p>CastleFlexx holds a combination of utility patents and design patents, along with additional patent applications in multiple countries. Utility patents protect how an invention works, while design patents protect its unique ornamental appearance.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "What is the difference between an issued patent and a patent application?",
+            "row_content": "<p>An issued patent has been reviewed and officially granted by the relevant patent office. A patent application is still under examination and has not yet been granted. Filing an application establishes a priority date while the patent office reviews the invention.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Why does CastleFlexx have patent applications in multiple countries?",
+            "row_content": "<p>Patent rights are territorial, meaning they only apply in the countries where protection is sought. CastleFlexx has filed applications in several international markets to help protect its innovations as the brand continues to grow globally.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Are all CastleFlexx products patented?",
+            "row_content": "<p>Many of CastleFlexx's core technologies are protected by issued patents or pending patent applications. As the company develops new products and improvements, additional patent filings may be submitted to protect future innovations.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Can I verify CastleFlexx's patents?",
+            "row_content": "<p>Yes. Patent information is public record and can be searched through official patent office databases, including the U.S. Patent and Trademark Office (USPTO) and other international patent authorities.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "heading": "Does having a patent mean the product is clinically proven?",
+            "row_content": "<p>No. Patents protect inventions and intellectual property; they do not certify clinical performance or medical effectiveness. Clinical studies, testing, and regulatory requirements are separate from the patent process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_alignment": "center",
+        "collapsible": true
+      }
+    }
+  },
+  "order": [
+    "patents_intro",
+    "patents_summary",
+    "patent_record",
+    "faq"
+  ]
+}

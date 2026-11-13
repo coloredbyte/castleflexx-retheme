@@ -1,0 +1,46 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Tab (lab-tab)
+  - One tab in the Lab Results Tabs section. Holds the tab title (used for the
+    tab button, rendered by the parent section) and the tab's panel content.
+  - Children: lab-card + lab-tab-content blocks.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+{% comment %}
+  The tab title is exposed as a data attribute because a section cannot read a
+  theme block's settings from `section.blocks` (block.type is '@theme' there).
+  The parent section builds the tab bar from these values in JS.
+{% endcomment %}
+<div
+  class="lab-tab"
+  data-lab-tab-title="{{ block.settings.title | default: 'Tab' | escape }}"
+  {{ block.shopify_attributes }}>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Tab",
+  "tag": null,
+  "blocks": [
+    { "type": "lab-card" },
+    { "type": "lab-tab-content" },
+    { "type": "lab-details" },
+    { "type": "lab-richtext" }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Tab title",
+      "default": "Tab"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab"
+    }
+  ]
+}
+{% endschema %}

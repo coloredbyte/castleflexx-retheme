@@ -1,0 +1,289 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Patents Summary (patents-summary)
+  - 50/50 side-by-side: 1:1 image left, title + table + trademark + CTA right.
+  - Stacks on mobile. CTA smooth-scrolls to #patents.
+-----------------------------------------------------------------------------
+{% endcomment %}
+{% render 'cf-styles' %}
+
+<div
+  class="patents-summary"
+  style="--ps-pt-desktop: {{ section.settings.desktop_padding_top }}px; --ps-pb-desktop: {{ section.settings.desktop_padding_bottom }}px; --ps-pt-mobile: {{ section.settings.mobile_padding_top }}px; --ps-pb-mobile: {{ section.settings.mobile_padding_bottom }}px;">
+  <div class="patents-summary__container">
+    <div class="patents-summary__media">
+      {% if section.settings.image != blank %}
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'lazy',
+            widths: '400, 600, 800, 1000, 1200',
+            class: 'patents-summary__image'
+        }}
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'patents-summary__image placeholder' }}
+      {% endif %}
+    </div>
+
+    <div class="patents-summary__content">
+      {% if section.settings.title != blank %}
+        <h2 class="patents-summary__title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      <div class="patent-record__table-wrapper">
+        <div class="patent-record__head" aria-hidden="true">
+          <span>NAME</span>
+          <span>ISSUED</span>
+          <span>NUMBER</span>
+        </div>
+        <table class="patent-record__table">
+          <thead class="patent-record__sr-head">
+            <tr>
+              <th>NAME</th>
+              <th>ISSUED</th>
+              <th>NUMBER</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for block in section.blocks %}
+              <tr {{ block.shopify_attributes }}>
+                <td>
+                  <p class="patent-record__patent-title patents-summary__patent-title">{{ block.settings.title }}</p>
+                </td>
+                <td>{{ block.settings.issued }}</td>
+                <td>{{ block.settings.number }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      {% if section.settings.trademark != blank %}
+        <div class="patents-summary__trademark">{{ section.settings.trademark }}</div>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        <a
+          href="#patents"
+          class="button button-solid border pt-3 pb-3 pl-9 pr-9 patents-summary__cta"
+          data-patents-scroll>
+          {{ section.settings.button_label }}
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 15.8334V4.16671" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 15.8334L5 10.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 15.8334L15 10.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .patents-summary {
+    padding-top: var(--ps-pt-desktop);
+    padding-bottom: var(--ps-pb-desktop);
+  }
+
+  .patents-summary__container {
+    max-width: 1040px;
+    margin-inline: auto;
+    padding-inline: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .patents-summary__media {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .patents-summary__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .patents-summary__title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  /* The reused table fills the right column */
+  .patents-summary .patent-record__table-wrapper {
+    overflow-x: auto;
+  }
+
+  .patents-summary .patent-record__patent-title {
+    font-weight: 400;
+  }
+
+  .patents-summary__trademark {
+    margin-top: 24px;
+    color: #000000;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  .patents-summary__cta {
+    margin-top: 40px;
+    margin-inline: auto;
+    min-width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: max-content;
+  }
+
+  @media (max-width: 768px) {
+    .patents-summary {
+      padding-top: var(--ps-pt-mobile);
+      padding-bottom: var(--ps-pb-mobile);
+    }
+
+    .patents-summary__container {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .patents-summary__title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .patents-summary__trademark {
+      margin-top: 20px;
+    }
+
+    .patents-summary__cta {
+      margin-top: 28px;
+      min-width: 252px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('[data-patents-scroll]');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.getElementById('patents');
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Patents Summary",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (1:1)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Summary"
+    },
+    {
+      "type": "richtext",
+      "id": "trademark",
+      "label": "Table subtitle / trademark"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "View All Patents"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "label": "Desktop padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Mobile padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Mobile padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "patent",
+      "name": "Patent",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "issued",
+          "label": "Issued date"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Patents Summary"
+    }
+  ]
+}
+{% endschema %}

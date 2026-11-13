@@ -1,0 +1,100 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Block: Lab Tab Content (lab-tab-content)
+  - Sibling to the card inside a tab. Title + main image, then nested
+    Lab Result Property / Lab Details blocks.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<div
+  class="lab-tab-content"
+  style="
+    --pt: {{ block.settings.padding_top | default: 0 }}px;
+    --pb: {{ block.settings.padding_bottom | default: 0 }}px;
+    --pt-m: {{ block.settings.padding_top_mobile | default: 0 }}px;
+    --pb-m: {{ block.settings.padding_bottom_mobile | default: 0 }}px;
+  "
+  {{ block.shopify_attributes }}>
+  {% if block.settings.title != blank %}
+    <h3 class="lab-tab-content__title">{{ block.settings.title }}</h3>
+  {% endif %}
+
+  {% if block.settings.subtitle != blank %}
+    <p class="lab-tab-content__subtitle">{{ block.settings.subtitle }}</p>
+  {% endif %}
+
+  <div class="lab-tab-content__blocks{% if block.settings.image != blank %} lab-tab-content__blocks--with-media{% endif %}">
+    {% if block.settings.image != blank %}
+      <div class="lab-tab-content__media">
+        {{
+          block.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'lazy',
+            widths: '400, 600, 800, 1000, 1200',
+            class: 'lab-tab-content__image'
+        }}
+      </div>
+    {% endif %}
+
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tab content",
+  "tag": null,
+  "blocks": [
+    { "type": "lab-result-property" },
+    { "type": "lab-details" },
+    { "type": "lab-richtext" }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main image"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding top (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding bottom (desktop, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "Padding top (mobile, px)"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom (mobile, px)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab content"
+    }
+  ]
+}
+{% endschema %}
