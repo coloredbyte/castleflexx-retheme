@@ -948,7 +948,8 @@
         "heading_alignment": "center",
         "text": "<p>Every CastleFlexx product is lab-tested to meet high standards of reliability, consistency, and lasting durability.</p>",
         "column_layout_desktop": "lg:w-1/4",
-        "column_content_alignment": "center"
+        "column_content_alignment": "center",
+        "column_layout_mobile": "w-1/2"
       }
     }
   },
