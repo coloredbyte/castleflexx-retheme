@@ -16,8 +16,8 @@
         "title": "CastleFlexx \nLab Results \nand PFAS Testing",
         "description": "<p>CastleFlexx submitted materials for independent PFAS screening. Here are the results, the method, and what the report means.</p>",
         "image": "shopify://shop_images/Group_3_1.webp",
-        "cta1_label": "Eurofins Lab Report",
-        "cta1_url": "",
+        "cta1_label": "Eurofins Test Summary",
+        "cta1_url": "https://cdn.shopify.com/s/files/1/0507/8358/4447/files/CastleFlexx_Coated_Fabric_Eurofins_TOF_Test_English_Public_Summary.pdf",
         "cta2_label": "Product Testing Details",
         "cta2_url": "/pages/lab-results#lab-results"
       }
@@ -66,9 +66,9 @@
               "type": "lab-card",
               "settings": {
                 "badge": "PASS",
-                "title": "PFAS Screen",
+                "title": "TOF Requirement",
                 "subtitle": "",
-                "description": "<p>No PFAS detected</p>"
+                "description": "<p>Below 10 mg/kg</p>"
               },
               "blocks": {}
             },
@@ -78,7 +78,7 @@
                 "badge": "",
                 "title": "Reporting Limit",
                 "subtitle": "10 mg/kg / 10ppm",
-                "description": "<p>No PFAS detected above 10-ppm</p>"
+                "description": "<p>Laboratory reporting limit</p>"
               },
               "blocks": {}
             },
@@ -98,8 +98,8 @@
                   "type": "lab-result-property",
                   "settings": {
                     "icon": "shopify://shop_images/icon.png",
-                    "title": "PFAS Not Detected",
-                    "description": "<p>No detectable Total Organic Fluorine (TOF) was found in the CastleFlexx tested sample.</p>"
+                    "title": "TOF Not Detected",
+                    "description": "<p>No Total Organic Fluorine (TOF) was detected in the tested raw fabric sample, at a reporting limit of 10 mg/kg.</p>"
                   },
                   "blocks": {}
                 },
@@ -107,8 +107,8 @@
                   "type": "lab-result-property",
                   "settings": {
                     "icon": "shopify://shop_images/icon_1.png",
-                    "title": "Passed PFAS Screening",
-                    "description": "<p>The sample received an overall PASS, successfully meeting the PFAS testing requirements.</p>"
+                    "title": "Passed TOF Requirement",
+                    "description": "<p>The sample received a PASS against the stated TOF requirement of less than 10 mg/kg.</p>"
                   },
                   "blocks": {}
                 },
@@ -141,14 +141,14 @@
             "details_1": {
               "type": "lab-details",
               "settings": {
-                "title": "Lab Details",
+                "title": "CastleFlexx Coated Fabric — Eurofins TOF Screening",
                 "logo": "shopify://shop_images/image_2_2.png",
                 "pass": true,
                 "result_label": "Result:",
                 "result_value": "PASS",
-                "result_summary": "<p>No PFAS-type organic fluorine detected above 10-ppm.</p>",
-                "report_url": "",
-                "report_label": "Download Report",
+                "result_summary": "<p>Total Organic Fluorine (TOF): Not Detected, at a laboratory reporting limit of 10 mg/kg. PASS against the client's stated TOF requirement of less than 10 mg/kg.</p>",
+                "report_url": "https://cdn.shopify.com/s/files/1/0507/8358/4447/files/CastleFlexx_Coated_Fabric_Eurofins_TOF_Test_English_Public_Summary.pdf",
+                "report_label": "Download Test Summary",
                 "note": "",
                 "padding_bottom": 40,
                 "padding_bottom_mobile": 32
@@ -166,7 +166,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Lab:",
-                    "value": "<p>Eurofins</p>"
+                    "value": "<p>Eurofins MTS Consumer Product Testing</p>"
                   },
                   "blocks": {}
                 },
@@ -198,7 +198,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Sample:",
-                    "value": "<p>CastleFlexx</p>"
+                    "value": "<p>Green fabric with transparent lamination (raw material)</p>"
                   },
                   "blocks": {}
                 },
@@ -206,7 +206,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Test Method:",
-                    "value": "<p>TOF screening</p>"
+                    "value": "<p>TOF = TF − TIF (TF per ASTM D7359-23)</p>"
                   },
                   "blocks": {}
                 }
@@ -266,7 +266,7 @@
                   "type": "lab-result-property",
                   "settings": {
                     "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_4.png",
-                    "title": "Lab tested against Staphylococcus aureus and Candida albicans",
+                    "title": "Tested against S. aureus (A*=3.6), C. albicans (A*=2.2) and E. coli (A*=0.5)",
                     "description": ""
                   },
                   "blocks": {}
@@ -291,16 +291,16 @@
             "details_2": {
               "type": "lab-details",
               "settings": {
-                "title": "Lab Details",
+                "title": "CastleFlexx Fabric — SGS Antimicrobial Activity Test",
                 "logo": "shopify://shop_images/image_5_2.png",
                 "logo_height": 60,
                 "logo_height_mobile": 36,
                 "pass": true,
                 "result_label": "Result:",
-                "result_value": "Activity Demonstrated",
-                "result_summary": "<p>Antimicrobial activity demonstrated. Strongest result against Staphylococcus aureus (A*=3.6), activity against Candida albicans (A*=2.2), limited activity against E.coli (A*=0.5)</p>",
-                "report_url": "",
-                "report_label": "Download Report",
+                "result_value": "Activity Tested",
+                "result_summary": "<p>Antimicrobial activity tested on the submitted fabric sample. Activity values (A*): Staphylococcus aureus 3.6, Candida albicans 2.2, Escherichia coli 0.5.</p>",
+                "report_url": "https://cdn.shopify.com/s/files/1/0507/8358/4447/files/CastleFlexx_Fabric_SGS_Antimicrobial_Test_English_Public_Summary.pdf",
+                "report_label": "Download Test Summary",
                 "note": "<p>For press/reference: SGS Antimicrobial activity testing under ISO 20743:2021(E), absorption method.</p>",
                 "padding_bottom": 40,
                 "padding_bottom_mobile": 32
@@ -334,7 +334,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Report ID:",
-                    "value": "<p>GZHL260603137301SD</p>"
+                    "value": "<p>GZHL260401861601SP</p>"
                   },
                   "blocks": {}
                 },
@@ -342,7 +342,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Test Method:",
-                    "value": "<p>ISO 20743:2021(E)</p>"
+                    "value": "<p>ISO 20743:2021(E), Section 8.1, absorption method</p>"
                   },
                   "blocks": {}
                 },
@@ -350,7 +350,7 @@
                   "type": "lab-property",
                   "settings": {
                     "label": "Sample:",
-                    "value": "<p>CastleFlexx</p>"
+                    "value": "<p>CastleFlexx fabric (block sample)</p>"
                   },
                   "blocks": {}
                 },
@@ -1142,7 +1142,7 @@
             "another_icon": "",
             "custom_icon": "",
             "heading": "What PFAS testing did CastleFlexx complete?",
-            "row_content": "<p>CastleFlexx submitted materials for third-party PFAS screening by Eurofins. The report shows Total Organic Fluorine (TOF): Not Detected at 10 mg/kg for the tested sample.</p>",
+            "row_content": "<p>CastleFlexx submitted a raw coated-fabric sample to Eurofins for Total Organic Fluorine (TOF) screening. The report shows TOF: Not Detected at a reporting limit of 10 mg/kg for the tested sample.</p>",
             "open_by_default": false
           }
         },
