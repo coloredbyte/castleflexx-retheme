@@ -236,7 +236,7 @@
               "type": "lab-tab-content",
               "settings": {
                 "title": "Fabric Health & Safety Tested",
-                "subtitle": "Cleaner Fabric, Higher Standards",
+                "subtitle": "Measured on a Submitted Fabric Sample",
                 "image": "shopify://shop_images/image_6_2.png",
                 "padding_top": 60,
                 "padding_bottom": 24,
@@ -253,15 +253,6 @@
                   },
                   "blocks": {}
                 },
-                "property_6": {
-                  "type": "lab-result-property",
-                  "settings": {
-                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_4_1.png",
-                    "title": "It helps resist the growth of certain odor-causing bacteria on the fabric surface",
-                    "description": ""
-                  },
-                  "blocks": {}
-                },
                 "property_7": {
                   "type": "lab-result-property",
                   "settings": {
@@ -270,22 +261,11 @@
                     "description": ""
                   },
                   "blocks": {}
-                },
-                "property_8": {
-                  "type": "lab-result-property",
-                  "settings": {
-                    "icon": "shopify://shop_images/ChatGPT_Image_May_15_2026_11_37_13_PM_3_1.png",
-                    "title": "Designed for a cleaner, fresher fabric experience",
-                    "description": ""
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "property_5",
-                "property_6",
-                "property_7",
-                "property_8"
+                "property_7"
               ]
             },
             "details_2": {
@@ -377,7 +357,7 @@
               "type": "lab-richtext",
               "settings": {
                 "title": "Why to Test Fabric Health & Safety?",
-                "content": "<p>Regular exercise equipment is exposed to sweat, moisture, and frequent handling, creating conditions where microorganisms can grow over time. Antimicrobial testing helps verify that the fabric is designed to resist the growth of certain odor-causing microbes on its surface.</p>",
+                "content": "<p>Regular exercise equipment is exposed to sweat, moisture, and frequent handling. SGS measured the antimicrobial activity of a submitted CastleFlexx fabric sample using ISO 20743:2021 (absorption method). The values above apply to that sample under those test conditions.</p>",
                 "disclaimer": "<p>*Antimicrobial fabrics are designed to inhibit the growth of certain microorganisms on the material itself. They are not intended to protect users from disease, replace proper cleaning, or provide medical benefits. Regular cleaning according to the product care instructions is still recommended.</p>",
                 "padding_bottom": 40,
                 "padding_bottom_mobile": 30
