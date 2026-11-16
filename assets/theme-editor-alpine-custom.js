@@ -1777,8 +1777,13 @@ document.addEventListener('alpine:init', () => {
 
           // Picked order wins, e.g. [aqua-front, aqua-side]. No picks, or
           // picks not on this product: every image (fail-open).
+          // Lightbox: thumbnails are zoom-<section>-<id>, slides data-variant-media.
           const ids = groups[this.currentVariant?.id] || [];
-          let newMedias = ids.flatMap(id => Array.from(find(`[data-media-id="${sectionId}-${id}"]`)));
+          let newMedias = ids.flatMap(id => [
+            ...find(`[data-media-id="${sectionId}-${id}"]`),
+            ...find(`[data-media-id="zoom-${sectionId}-${id}"]`),
+            ...find(`[data-variant-media="${id}"]`),
+          ]);
           if (!newMedias.length) {
             newMedias = Array.from(productMedias);
           }

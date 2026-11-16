@@ -605,6 +605,7 @@
                   %}
                   <div 
                     id="{{ first_media.position }}-image-zoom-{{ section.id }}" 
+                    data-variant-media="{{ first_media.id }}"
                     class="mb-3{% if product.featured_media.id == first_media.id %} featured-image{% endif %}"
                     {% if show_media_with_tag_alt %}
                       data-media-option="{{ media_with_option | join: "_" | handle }}"
@@ -801,6 +802,7 @@
                   {% if media.id != product.selected_or_first_available_variant.featured_media.id or show_first_image_avaiable == false %}
                     <div 
                       id="{{ media.position }}-image-zoom-{{ section.id }}" 
+                      data-variant-media="{{ media.id }}"
                       class="mb-3{% if product.featured_media.id == media.id %} featured-image{% endif %}"
                       {% if show_media_with_tag_alt %}
                         data-media-option="{{ media_with_option | join: "_" | handle }}"
@@ -1050,6 +1052,7 @@
                           <div 
                             x-slide-index="{{ first_media.position }}" class="image-zoom media-slide h-full relative splide__slide x-splide-slide {% if product.featured_media.id == first_media.id %} featured-image{% endif %}"
                             id="{{ first_media.position }}-image-zoom-{{ section.id }}"
+                            data-variant-media="{{ first_media.id }}"
                             {% if show_media_with_tag_alt %}
                               data-media-option="{{ media_with_option | join: "_" | handle }}"
                               data-media-type="{{ data_media_type }}"
@@ -1247,6 +1250,7 @@
                             <div 
                               x-slide-index="{{ media.position }}" class="image-zoom media-slide h-full relative splide__slide x-splide-slide {% if product.featured_media.id == media.id %} featured-image{% endif %}"
                               id="{{ media.position }}-image-zoom-{{ section.id }}"
+                              data-variant-media="{{ media.id }}"
                               {% if show_media_with_tag_alt %}
                                 data-media-option="{{ media_with_option | join: "_" | handle }}"
                                 data-media-type="{{ data_media_type }}"
