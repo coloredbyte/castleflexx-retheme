@@ -15,6 +15,18 @@
     Usage:
     {% render 'mini-card-product', card_product: product %}
 {% endcomment %}
+{%- liquid
+  # Region stock gating: skip products with no variant in stock for this
+  # market (e.g. Sport in Europe). Blank card = editor placeholder, keep.
+  assign card_region_visible = 'true'
+  if card_product != blank
+    capture card_region_visible
+      render 'market-product-visible', product: card_product
+    endcapture
+    assign card_region_visible = card_region_visible | strip
+  endif
+-%}
+{%- if card_region_visible == 'true' -%}
 
 {%- capture data_for_customer_event -%}
   {
@@ -150,3 +162,4 @@
     </div>
   </div>
 </div>
+{%- endif -%}

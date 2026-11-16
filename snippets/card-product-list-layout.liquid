@@ -26,6 +26,18 @@
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 {%- liquid
+  # Region stock gating: skip products with no variant in stock for this
+  # market (e.g. Sport in Europe). Blank card = editor placeholder, keep.
+  assign card_region_visible = 'true'
+  if card_product != blank
+    capture card_region_visible
+      render 'market-product-visible', product: card_product
+    endcapture
+    assign card_region_visible = card_region_visible | strip
+  endif
+-%}
+{%- if card_region_visible == 'true' -%}
+{%- liquid
   assign first_variant = card_product.selected_or_first_available_variant
   assign card_product_id = card_product.id
   assign is_rtl = false
@@ -2085,4 +2097,5 @@
     <script src="{{ 'product-grid-b2b.js' | asset_url }}" defer></script>
   </div>
 </div>
+{%- endif -%}
 {%- endif -%}

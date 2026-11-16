@@ -175,6 +175,20 @@
     endif
   endunless
 
+  # Region stock gating: sold out everywhere wins; else an explicit false
+  # on this market's metafield disables ATC and dynamic checkout
+  # (e.g. Luxury Large / Aqua in the US).
+  assign region_unavailable = false
+  if product.selected_or_first_available_variant.available
+    capture region_available
+      render 'variant-region-available', variant: product.selected_or_first_available_variant
+    endcapture
+    if region_available contains 'false'
+      assign region_unavailable = true
+      assign disable_atc = true
+    endif
+  endif
+
   assign is_quantity_rule = false
   if product.selected_or_first_available_variant.quantity_rule.min > 1 and product.selected_or_first_available_variant.quantity_rule.max != null and product.selected_or_first_available_variant.quantity_rule.increment > 1
     assign is_quantity_rule = true
@@ -1030,6 +1044,7 @@
                             {% endif %}  
                             x-intersect.once.margin.200px="Alpine.store('xCartHelper').validateCart();"
                             data-available="{{ product.selected_or_first_available_variant.available }}"
+                            data-region-unavailable="{{ region_unavailable }}"
                             {% if disable_atc %}
                               disabled
                             {% endif %}
@@ -1094,6 +1109,8 @@
                               <span class="x-atc-text button-text w-fit pt-0.5 pb-0.5 pl-0.5 pr-0.5 {% if is_rtl %} rtl{% endif %}">
                                 {%- if product.selected_or_first_available_variant == nil -%}
                                   {{ 'products.product.unavailable' | t }}{{ add_to_cart_price }}
+                                {%- elsif region_unavailable -%}
+                                  {{ 'products.product.region_unavailable' | t }}
                                 {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                                   {{ 'products.product.sold_out' | t }}{{ add_to_cart_price }}
                                 {%- else -%}
@@ -1205,7 +1222,7 @@
                                   {% endif %}
                                 {% endif %}
                               {% endstyle %}
-                              <div id="x-payment-button-{{ section.id }}" class="relative payment-button-container {% if can_show_preorder == true %}{% if block.settings.preorder_show_dynamic_button == false and product.selected_or_first_available_variant.inventory_quantity < 1 %} hidden{% endif %}{% endif %}" x-data="{ show: false }" x-intersect.once.margin.200px="show = true">
+                              <div id="x-payment-button-{{ section.id }}" class="relative payment-button-container {% if region_unavailable %}hidden {% endif %}{% if can_show_preorder == true %}{% if block.settings.preorder_show_dynamic_button == false and product.selected_or_first_available_variant.inventory_quantity < 1 %} hidden{% endif %}{% endif %}" x-data="{ show: false }" x-intersect.once.margin.200px="show = true">
                                 <template x-if="show">
                                   <div class="payment-button{% if block.settings.dymanic_checkout_style == 'secondary' %} button-outline{% else %} button-solid{% endif %}{% if settings.buttons_animation != 'underline' and settings.buttons_animation != 'sliced' %} button-animation{% else %} button-default{% endif %}" x-intersect.once.margin.200px="$store.xShopifyPaymentBtn.load($el)">
                                     {{ form | payment_button }}
@@ -1514,6 +1531,12 @@
                     if can_show_preorder
                       assign color_inventory = 'inventory-out-of-stock-status'
                       assign text_inventory = 'products.product.inventory_out_of_stock' | t
+                    endif
+                    # Region stock gating: don't claim "in stock" for this market.
+                    if region_unavailable
+                      assign able_to_show_status_bar = false
+                      assign color_inventory = 'inventory-out-of-stock-status'
+                      assign text_inventory = 'products.product.region_unavailable' | t
                     endif
                   %}
                   <div class="x-block-inventory-status w-full mb-4 md:mb-6" id="block-inventory-{{ section.id }}">
@@ -2018,6 +2041,8 @@
                       if product.selected_or_first_available_variant == nil
                         assign hide_edt_available = true
                       elsif product.selected_or_first_available_variant.available == false
+                        assign hide_edt_available = true
+                      elsif region_unavailable
                         assign hide_edt_available = true
                       endif
                     %}
@@ -3067,6 +3092,7 @@
                       %}
                       <button
                         role="button"
+                        data-region-unavailable="{{ region_unavailable }}"
                         @click.prevent="scrollToAtcBtn('{{ original_atc_btn_id }}')"
                         class="relative min-w-[120px] add_to_cart_button button button-solid transition disabled:opacity-60 disabled:cursor-not-allowed duration-300 leading-none w-full pt-2.5 pb-2.5 pl-4 pr-4 md:pr-5 md:pl-5"
                         x-transition:enter="transition-all w-24 ease-in-out duration-300"
@@ -3086,6 +3112,8 @@
                           {% liquid
                             if product.selected_or_first_available_variant == nil
                               assign button_label = 'products.product.unavailable' | t 
+                            elsif region_unavailable
+                              assign button_label = 'products.product.region_unavailable' | t
                             elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout
                               if link_to_atc_btn and all_sold_out == false
                                 assign button_label = 'products.product.choose_variants' | t
@@ -3153,6 +3181,7 @@
                         <div>
                           <button
                             id="x-atc-button-sticky-{{ section.id }}"
+                            data-region-unavailable="{{ region_unavailable }}"
                             role="button"
                             type="submit"
                             name="add"
@@ -3180,6 +3209,8 @@
                               {% liquid
                                 if product.selected_or_first_available_variant == nil
                                   assign button_label = 'products.product.unavailable' | t 
+                                elsif region_unavailable
+                                  assign button_label = 'products.product.region_unavailable' | t
                                 elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout
                                   assign button_label = 'products.product.sold_out' | t
                                 else

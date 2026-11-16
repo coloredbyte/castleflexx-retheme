@@ -315,6 +315,7 @@
       "share": "Share this product",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
+      "region_unavailable": "Unavailable in Your Region",
       "vendor": "Vendor",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",

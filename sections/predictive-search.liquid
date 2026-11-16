@@ -132,6 +132,13 @@
                   if excluded_products contains product.handle and settings.hide_product_in_exclude_collections
                     assign hide_product = true
                   endif
+                  # Region stock gating, same rule as product cards.
+                  capture region_visible
+                    render 'market-product-visible', product: product
+                  endcapture
+                  if region_visible contains 'false'
+                    assign hide_product = true
+                  endif
                   if hide_product 
                     continue 
                   endif
