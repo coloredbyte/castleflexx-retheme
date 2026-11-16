@@ -104,7 +104,7 @@
         "show_currency_selector": false,
         "text_size_toolbar": 80,
         "section_scheme": "store",
-        "backgound_color": "#191A1B",
+        "backgound_color": "#666768",
         "text_color": "#FFFFFF",
         "textlink_color_light": "#FFFFFF",
         "backgound_color_dark": "rgba(0,0,0,0)",
