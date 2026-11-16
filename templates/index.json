@@ -240,6 +240,123 @@
         "section_scheme": "store"
       }
     },
+    "scrolling_banner_7wCdcp": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "icon_HdrAAr": {
+          "type": "icon",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "sulfate free",
+            "custom_icon": "",
+            "height_icon": 35,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_UxHFF6": {
+          "type": "text",
+          "settings": {
+            "text": "Lab Tested",
+            "highlight_type": "underline",
+            "text_size": 150,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_GyQFen": {
+          "type": "icon",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_icon": "",
+            "height_icon": 35,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_efQKTw": {
+          "type": "text",
+          "settings": {
+            "text": "Patented Innovation",
+            "highlight_type": "underline",
+            "text_size": 150,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "icon_NK6maN": {
+          "type": "icon",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "certificates of authenticity",
+            "custom_icon": "",
+            "height_icon": 35,
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        },
+        "text_6BdP3d": {
+          "type": "text",
+          "settings": {
+            "text": "Award Winning",
+            "highlight_type": "underline",
+            "text_size": 150,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "icon_HdrAAr",
+        "text_UxHFF6",
+        "icon_GyQFen",
+        "text_efQKTw",
+        "icon_NK6maN",
+        "text_6BdP3d"
+      ],
+      "name": "t:sections.scrolling_promotion.name",
+      "settings": {
+        "show_border": false,
+        "speed": 20,
+        "direction": "right",
+        "pause_hover": true,
+        "enable_rotating_effect": false,
+        "overlay_opacity": 0,
+        "space_block": 80,
+        "desktop_height": "750px",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "space_block_mobile": 70,
+        "mobile_height": "500px",
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16,
+        "section_scheme": "store",
+        "bg_light": "#F7F8F6",
+        "color_text_light": "rgba(0,0,0,0)",
+        "color_text_light_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "bg_dark": "rgba(0,0,0,0)",
+        "color_text_dark": "rgba(0,0,0,0)",
+        "color_text_dark_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
     "collage_D4GGTK": {
       "type": "collage",
       "blocks": {
@@ -2376,6 +2493,7 @@
   "order": [
     "4c9e1af5-c4c0-48cf-b771-49029eedd24f",
     "featured_collection_zz4qgi",
+    "scrolling_banner_7wCdcp",
     "collage_D4GGTK",
     "promotion_banner_ijXatP",
     "products_bundle_6P93z8",
