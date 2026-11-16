@@ -191,7 +191,7 @@
       ],
       "name": "t:sections.featured-collection.name",
       "settings": {
-        "title": "Choose Your CastleFlexx",
+        "title": "Best Sellers",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
@@ -201,7 +201,7 @@
         "show_view_all": false,
         "view_all_position": "bottom",
         "view_all_button_style": "primary",
-        "title_size": 120,
+        "title_size": 110,
         "title_style": "none",
         "title_position": "under",
         "tab_button_style": "button",
