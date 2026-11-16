@@ -5693,7 +5693,7 @@
         "type": "text",
         "id": "eu_uk_market_handles",
         "label": "Europe and United Kingdom market handles",
-        "default": "europe,eu,european-union,united-kingdom,uk,gb",
+        "default": "europe,eu,european-union,united-kingdom,uk,gb,germany-and-uk",
         "info": "Comma-separated exact market handles from Shopify Admin > Markets."
       }
     ]

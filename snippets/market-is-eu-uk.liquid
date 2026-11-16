@@ -6,7 +6,7 @@
   assign is_eu_uk = false
   assign market_handle = localization.market.handle | downcase | strip
 
-  if market_handle == 'europe' or market_handle == 'eu' or market_handle == 'european-union' or market_handle == 'united-kingdom' or market_handle == 'uk' or market_handle == 'gb'
+  if market_handle == 'europe' or market_handle == 'eu' or market_handle == 'european-union' or market_handle == 'united-kingdom' or market_handle == 'uk' or market_handle == 'gb' or market_handle == 'germany-and-uk'
     assign is_eu_uk = true
   endif
 
