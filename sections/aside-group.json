@@ -266,7 +266,7 @@
         "quickadd_mobile_position": "top",
         "enable_quickview": true,
         "quick_view_type": "popup",
-        "quickview_label": "Quick view",
+        "quickview_label": "Choose Options",
         "color_button": "#B9CBDD",
         "color_text_button": "#191A1B",
         "color_button_hover": "#B9CBDD",
