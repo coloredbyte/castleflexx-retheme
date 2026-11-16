@@ -5671,5 +5671,31 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "Markets",
+    "settings": [
+      {
+        "type": "text",
+        "id": "canada_market_handles",
+        "label": "Canada market handles",
+        "default": "canada,ca,can",
+        "info": "Comma-separated exact market handles from Shopify Admin > Markets."
+      },
+      {
+        "type": "checkbox",
+        "id": "canada_use_country_selector",
+        "label": "Treat country Canada (CA) as Canada market",
+        "default": false,
+        "info": "Enable only for a single market with a country selector. Keep disabled when using a separate Canada market."
+      },
+      {
+        "type": "text",
+        "id": "eu_uk_market_handles",
+        "label": "Europe and United Kingdom market handles",
+        "default": "europe,eu,european-union,united-kingdom,uk,gb",
+        "info": "Comma-separated exact market handles from Shopify Admin > Markets."
+      }
+    ]
   }
 ]

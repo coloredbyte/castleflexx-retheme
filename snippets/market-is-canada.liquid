@@ -1,0 +1,27 @@
+{%- comment -%}
+  Returns "true" or "false" — single source of truth for Canada market context.
+  Uses exact market handle matches only (no substring matching).
+{%- endcomment -%}
+{%- liquid
+  assign is_canada = false
+  assign market_handle = localization.market.handle | downcase | strip
+
+  if market_handle == 'canada' or market_handle == 'ca' or market_handle == 'can'
+    assign is_canada = true
+  endif
+
+  if settings.canada_market_handles != blank
+    assign custom_handles = settings.canada_market_handles | downcase | split: ','
+    for handle in custom_handles
+      assign handle_stripped = handle | strip
+      if handle_stripped != blank and market_handle == handle_stripped
+        assign is_canada = true
+      endif
+    endfor
+  endif
+
+  if settings.canada_use_country_selector and localization.country.iso_code == 'CA'
+    assign is_canada = true
+  endif
+-%}
+{%- if is_canada -%}true{%- else -%}false{%- endif -%}

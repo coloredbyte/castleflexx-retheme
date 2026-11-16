@@ -309,8 +309,12 @@ if (!window.Eurus.loadedScript.has('variant-select.js')) {
             if (!atcDestination) return;
 
             if (atcSource && atcDestination) atcDestination.innerHTML = atcSource.innerHTML;
+
+            // Region stock gating: server marks variants out of stock for
+            // this market; keep them disabled even if available elsewhere.
+            const regionUnavailable = atcSource?.dataset.regionUnavailable === 'true';
     
-            if (this.currentVariant?.available) {
+            if (this.currentVariant?.available && !regionUnavailable) {
               /// Enable add to cart button
               atcDestination.dataset.available = "true";
               if (html.getElementById('form-gift-card-' + sectionId)) {
@@ -335,7 +339,7 @@ if (!window.Eurus.loadedScript.has('variant-select.js')) {
 
                 if (atcSource && atcCloneDestination) atcCloneDestination.innerHTML = atcSource.innerHTML;
         
-                if (this.currentVariant?.available) {
+                if (this.currentVariant?.available && !regionUnavailable) {
                   /// Enable add to cart button
                   atcCloneDestination.dataset.available = "true";
                   if (html.getElementById('form-gift-card-' + sectionId)) {

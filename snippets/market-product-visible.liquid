@@ -1,0 +1,86 @@
+{%- comment -%}
+  Returns "true" or "false" for use with render + capture.
+
+  A product is visible in a market unless every one of its variants is
+  explicitly out of stock (per Phase A's live region metafields) for
+  that market's warehouse(s). Unset metafields count as available
+  (fail-open) — see
+  docs/superpowers/specs/2026-08-11-market-inventory-gating-phase-b-design.md.
+
+  Non-shipping variants (requires_shipping == false — digital/subscription
+  products like CastleFit) always count as available, regardless of the
+  metafield value. Phase A's Flow workflows derive these metafields from
+  real ShipBob per-warehouse stock, which isn't a meaningful signal for a
+  product that's never fulfilled from a warehouse — gating on it hid a
+  genuinely purchasable product. Found 2026-08-12: CastleFit was missing
+  from the homepage Featured Products carousel because of this.
+
+  Canada market: custom.in_stock_canada
+  Europe/United Kingdom markets: custom.in_stock_eu_uk
+  Other markets (default): custom.in_stock_us_row
+
+  Optional: canada_market (boolean) — skip re-detecting market when already set via include
+  Optional: eu_uk_market (boolean) — skip re-detecting market when already set via include
+{%- endcomment -%}
+{%- assign target_product = product -%}
+{%- if target_product == blank -%}
+  {%- assign target_product = check_product -%}
+{%- endif -%}
+
+{%- if canada_market == true -%}
+  {%- assign is_canada_market = true -%}
+{%- elsif canada_market == false -%}
+  {%- assign is_canada_market = false -%}
+{%- else -%}
+  {%- capture is_canada_capture -%}
+    {%- render 'market-is-canada' -%}
+  {%- endcapture -%}
+  {%- assign is_canada_capture = is_canada_capture | strip -%}
+  {%- assign is_canada_market = false -%}
+  {%- if is_canada_capture == 'true' -%}
+    {%- assign is_canada_market = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if eu_uk_market == true -%}
+  {%- assign is_eu_uk_market = true -%}
+{%- elsif eu_uk_market == false -%}
+  {%- assign is_eu_uk_market = false -%}
+{%- else -%}
+  {%- capture is_eu_uk_capture -%}
+    {%- render 'market-is-eu-uk' -%}
+  {%- endcapture -%}
+  {%- assign is_eu_uk_capture = is_eu_uk_capture | strip -%}
+  {%- assign is_eu_uk_market = false -%}
+  {%- if is_eu_uk_capture == 'true' -%}
+    {%- assign is_eu_uk_market = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  Region-based gating (Phase B, 2026-08-11): a product is visible unless
+  EVERY one of its variants has the relevant region's in-stock metafield
+  explicitly set to false. Unset (not yet backfilled by Phase A's Flow
+  workflows) or true both keep it visible — fail-open, see
+  docs/superpowers/specs/2026-08-11-market-inventory-gating-phase-b-design.md §4.
+  Non-shipping variants skip the metafield check entirely (see comment
+  above) — they're always counted as available.
+{%- endcomment -%}
+{%- assign any_variant_available = false -%}
+{%- for variant in target_product.variants -%}
+  {%- if variant.requires_shipping == false -%}
+    {%- assign any_variant_available = true -%}
+  {%- else -%}
+    {%- if is_canada_market -%}
+      {%- assign region_stock = variant.metafields.custom.in_stock_canada -%}
+    {%- elsif is_eu_uk_market -%}
+      {%- assign region_stock = variant.metafields.custom.in_stock_eu_uk -%}
+    {%- else -%}
+      {%- assign region_stock = variant.metafields.custom.in_stock_us_row -%}
+    {%- endif -%}
+    {%- unless region_stock == false -%}
+      {%- assign any_variant_available = true -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if any_variant_available -%}true{%- else -%}false{%- endif -%}

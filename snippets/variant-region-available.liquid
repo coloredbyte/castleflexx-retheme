@@ -1,0 +1,36 @@
+{%- comment -%}
+  Returns "true" or "false" for use with render + capture.
+
+  One variant's region stock, same rules as market-product-visible:
+  - non-shipping variants (CastleFit, After Dark) are always available
+  - only an explicit false on the market's metafield blocks; unset is
+    available (fail-open)
+
+  Canada market: custom.in_stock_canada
+  Europe/United Kingdom markets: custom.in_stock_eu_uk
+  Other markets (default): custom.in_stock_us_row
+
+  Accepts:
+  - variant: {Object} Variant Liquid object (required)
+{%- endcomment -%}
+{%- capture is_canada_capture -%}
+  {%- render 'market-is-canada' -%}
+{%- endcapture -%}
+{%- capture is_eu_uk_capture -%}
+  {%- render 'market-is-eu-uk' -%}
+{%- endcapture -%}
+
+{%- liquid
+  assign region_stock = variant.metafields.custom.in_stock_us_row
+  if is_canada_capture contains 'true'
+    assign region_stock = variant.metafields.custom.in_stock_canada
+  elsif is_eu_uk_capture contains 'true'
+    assign region_stock = variant.metafields.custom.in_stock_eu_uk
+  endif
+
+  assign is_available = true
+  if variant.requires_shipping and region_stock == false
+    assign is_available = false
+  endif
+-%}
+{%- if is_available -%}true{%- else -%}false{%- endif -%}

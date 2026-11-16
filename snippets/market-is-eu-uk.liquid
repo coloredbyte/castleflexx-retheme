@@ -1,0 +1,23 @@
+{%- comment -%}
+  Returns "true" or "false" — single source of truth for Europe and United Kingdom market context.
+  Uses exact market handle matches only (no substring matching).
+{%- endcomment -%}
+{%- liquid
+  assign is_eu_uk = false
+  assign market_handle = localization.market.handle | downcase | strip
+
+  if market_handle == 'europe' or market_handle == 'eu' or market_handle == 'european-union' or market_handle == 'united-kingdom' or market_handle == 'uk' or market_handle == 'gb'
+    assign is_eu_uk = true
+  endif
+
+  if settings.eu_uk_market_handles != blank
+    assign custom_handles = settings.eu_uk_market_handles | downcase | split: ','
+    for handle in custom_handles
+      assign handle_stripped = handle | strip
+      if handle_stripped != blank and market_handle == handle_stripped
+        assign is_eu_uk = true
+      endif
+    endfor
+  endif
+-%}
+{%- if is_eu_uk -%}true{%- else -%}false{%- endif -%}
