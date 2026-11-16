@@ -1298,6 +1298,24 @@
                       {% if sticky_atc %}x-init="initEventSticky()"{% endif %}
                       {{ block.shopify_attributes }}
                     >
+                      {%- if show_media_with_variant_selected and product.media.size > 0 -%}
+                        {%- comment -%}
+                          Variant image groups: variant id -> media ids picked in
+                          admin (custom.variant_images), e.g. {"433570": [2911, 2912]}.
+                          Empty list = show every image. Read by variant-select.js.
+                        {%- endcomment -%}
+                        <script type="application/json" id="variant-media-{{ section.id }}">
+                          {
+                            {%- for variant in product.variants -%}
+                              {%- assign variant_media_ids = '' | split: '' -%}
+                              {%- if variant.metafields.custom.variant_images != blank -%}
+                                {%- assign variant_media_ids = variant.metafields.custom.variant_images.value | map: 'id' -%}
+                              {%- endif -%}
+                              "{{ variant.id }}": {{ variant_media_ids | json }}{% unless forloop.last %},{% endunless %}
+                            {%- endfor -%}
+                          }
+                        </script>
+                      {%- endif -%}
                       <div {% if show_media_with_variant_selected and product.media.size > 0 %} x-intersect.once.margin.800px="updateMultiMediaWithVariant()"{% endif %} >
                         {% render 'product-variant',
                           show_first_image_avaiable: show_first_image_avaiable,
