@@ -86,7 +86,8 @@
         "announcement_z3c9Nn"
       ],
       "custom_css": [
-        "p {font-weight: 700; font-size: 14px;}"
+        "p {font-weight: 700; font-size: 14px;}",
+        "@media screen and (max-width: 1024px) {p {font-size: 12px; }}"
       ],
       "settings": {
         "enable": true,
