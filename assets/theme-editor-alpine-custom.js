@@ -1667,6 +1667,15 @@ document.addEventListener('alpine:init', () => {
             }
             return;
           }
+
+          // Variant image groups: staff pick each variant's images in admin
+          // (custom.variant_images). Replaces Eurus's alt/featured matching.
+          const variantMedia = document.getElementById(`variant-media-${sectionId}`);
+          if (variantMedia) {
+            this._showVariantMedia(JSON.parse(variantMedia.textContent));
+            return;
+          }
+
           const variantInputs = this.mediaOption.map(option =>
             document.querySelector(`#shopify-section-${sectionId} [data-option-name="${option}"]`)
           ).filter(el => el !== null);
@@ -1760,6 +1769,31 @@ document.addEventListener('alpine:init', () => {
               this._goToFirstSlide();
             }  
           }
+        },
+        _showVariantMedia(groups) {
+          const scopes = [`#ProductModal-${sectionId}`, `#shopify-section-${sectionId}`];
+          const find = (attr) => document.querySelectorAll(scopes.map(scope => `${scope} [data-media-option]${attr}`).join(', '));
+          const productMedias = find('');
+
+          // Picked order wins, e.g. [aqua-front, aqua-side]. No picks, or
+          // picks not on this product: every image (fail-open).
+          const ids = groups[this.currentVariant?.id] || [];
+          let newMedias = ids.flatMap(id => Array.from(find(`[data-media-id="${sectionId}-${id}"]`)));
+          if (!newMedias.length) {
+            newMedias = Array.from(productMedias);
+          }
+          this._setActiveMedia(productMedias, newMedias);
+
+          let splideEl = document.getElementById(`x-product-${ sectionId }`);
+          if (splideEl?.splide) {
+            splideEl.splide.refresh();
+            splideEl.splide.go(0);
+          }
+          let splideZoomEl = document.getElementById(`media-gallery-${ sectionId }`);
+          if (splideZoomEl?.splide) {
+            splideZoomEl.splide.refresh();
+          }
+          document.dispatchEvent(new CustomEvent(`eurus:media-gallery-ready:${sectionId}`));
         },
         _setActiveMedia(productMedias, newMedias, activeMedia) {
           productMedias.forEach(function(media){
