@@ -792,6 +792,21 @@
         "testimonial_EW34nf": {
           "type": "testimonial",
           "settings": {
+            "cards_image": "shopify://shop_images/IMG_9438.heic",
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "CastleFlexx got me there in 10 minutes",
+            "text": "<p>“My lower back has held up. It's unreal.”</p>",
+            "author_image": "shopify://shop_images/nickeil_alexander_walker_testimonial.png",
+            "show_author_image": true,
+            "author": "Nickeil Alexander-Walker",
+            "author_note": "<p>Atlanta | Shooting Guard #7</p>",
+            "product": ""
+          }
+        },
+        "testimonial_gEBd9D": {
+          "type": "testimonial",
+          "settings": {
             "icon_star": "quote",
             "custom_icon": "",
             "title": "CastleFlexx got me there in 10 minutes",
@@ -823,6 +838,7 @@
         "testimonial_hHELEa",
         "testimonial_RgEp3i",
         "testimonial_EW34nf",
+        "testimonial_gEBd9D",
         "testimonial_4hQ7GW"
       ],
       "name": "t:sections.testimonials-with-card.name",
