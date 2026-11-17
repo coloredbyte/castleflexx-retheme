@@ -1940,17 +1940,21 @@
         "social_post_RVkkCK": {
           "type": "social-post",
           "settings": {
+            "social_post_image": "shopify://shop_images/PACKS_2.png",
             "enable_video_autoplay": true,
             "show_sound_control": false,
             "social_post_content": "",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
-            "social_post_link": "",
+            "social_post_link": "https://www.instagram.com/p/DYdHrjcRLKK/",
             "open_new_window_button": true,
             "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
+            "account_username": "castleflexx",
+            "account_avatar": "shopify://shop_images/castleflexx_instagram_profile_icon_4f63eb61-e1c0-4930-a942-512b67d81126.jpg",
+            "list_products": [
+              "ice-pack"
+            ],
             "show_products_on_image": true
           }
         },
@@ -1978,9 +1982,7 @@
         "social_post_RVkkCK",
         "social_post_QyRHLF"
       ],
-      "custom_css": [
-        ".button button-quickview {background-color: #000000;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.social-feeds.name",
       "settings": {
         "heading": "Follow Us on Instagram",
