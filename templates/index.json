@@ -1682,13 +1682,13 @@
         "heading_gFabhd": {
           "type": "heading",
           "settings": {
-            "subheading": "",
-            "heading": "Media heading",
+            "subheading": "ABOUT US",
+            "heading": "A New Way of Moving",
             "highlight_type": "font_highlight",
             "heading_base_size": 100,
             "heading_tag": "h2",
-            "text": "<p>Tell your brand's story through images</p>",
-            "number_of_lines_shown": "large",
+            "text": "<p>At CastleFlexx, we believe better movement can change the way you experience life. We set out to challenge traditional approaches to stretching and create innovative tools that make mobility, flexibility, and recovery more accessible to everyone.</p><p>Our unique dual-purpose mobility system combines assisted stretching with functional movement, helping people explore new ways to care for their bodies — whether they're athletes looking to enhance performance, individuals working through everyday tension, or anyone who simply wants to move better.</p>",
+            "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
             "block_scheme": "section",
@@ -1703,8 +1703,8 @@
         "button_T6acmX": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/about-us",
             "open_new_window": false,
             "show_button_style": "primary",
             "block_scheme": "section",
