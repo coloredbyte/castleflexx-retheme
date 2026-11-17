@@ -885,7 +885,7 @@
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/4",
         "section_height_desktop": "md:py-0",
-        "spacing_desktop": 40,
+        "spacing_desktop": 28,
         "full_width": false,
         "padding_full_width": true,
         "show_section_divider": false,
