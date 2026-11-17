@@ -752,10 +752,20 @@
             "heading_size": 100,
             "heading_tag": "h2"
           }
+        },
+        "text_DDX9c6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CastleFlexx helps you make the most of it with innovative tools designed to support flexibility, mobility, and full-body wellness.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
         }
       },
       "block_order": [
-        "heading_wyJRh6"
+        "heading_wyJRh6",
+        "text_DDX9c6"
       ],
       "custom_css": [
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; } p {font-size: 15px; }}"
@@ -879,8 +889,8 @@
         "full_width": false,
         "padding_full_width": true,
         "show_section_divider": false,
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 20,
+        "padding_bottom": 80,
         "column_layout_mobile": "w-1/2",
         "section_height_mobile": "py-5",
         "spacing_mobile": 0,
