@@ -777,11 +777,12 @@
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "title": "Trusted by Clinicians & Doctors",
+            "text": "<p>\"CastleFlexx is a product that I use daily, nightly, especially with training where my muscles have been killing me, on my hip flexors and lower back - it does tend to make a huge difference.\"</p>",
+            "author_image": "shopify://shop_images/dr_adam_miller_testimonial.png",
             "show_author_image": true,
-            "author": "Add a caption",
-            "author_note": "",
+            "author": "Dr. Adam Miller, D.C., CCSP",
+            "author_note": "<p>Chiropractor | New England Revolution</p>",
             "product": ""
           }
         },
@@ -790,24 +791,11 @@
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "title": "Trusted by Athletes",
+            "text": "<p>“ This is the best stretching device on the market. I did a 10 minute review on my youtube page and i cover everything someone who is passionate about getting out of pain needs to know.”</p>",
             "show_author_image": true,
-            "author": "Add a caption",
-            "author_note": "",
-            "product": ""
-          }
-        },
-        "testimonial_GcDCFp": {
-          "type": "testimonial",
-          "settings": {
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
-            "show_author_image": true,
-            "author": "Add a caption",
-            "author_note": "",
+            "author": "Phil Heath",
+            "author_note": "<p>7x Mr Olympia</p>",
             "product": ""
           }
         }
@@ -816,8 +804,7 @@
         "testimonial_RNbdhq",
         "testimonial_EW34nf",
         "testimonial_4hQ7GW",
-        "testimonial_RgEp3i",
-        "testimonial_GcDCFp"
+        "testimonial_RgEp3i"
       ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
