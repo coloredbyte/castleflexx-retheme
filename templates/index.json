@@ -807,7 +807,7 @@
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Stretch the entire posterior chain using active and passive stretching to build strength and flexibility at the same time.</p>"
+            "text": "<p>Stretch the entire posterior chain to ease pain, and build strength + flexibility at the same time.</p>"
           }
         },
         "column_ipkiCp": {
@@ -822,7 +822,7 @@
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>CastleFlexx lets you pull your foot into a controlled dorsiflexion and toe-extension stretch comfortably, without slipping.</p>"
+            "text": "<p>Pull your foot into a controlled toe-extension and stretch without slipping.</p>"
           }
         },
         "column_C9L9mz": {
@@ -837,7 +837,7 @@
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>CastleFlexx can ease nerve pain with steady, repeatable tension,&nbsp;so you can move freely again.</p>"
+            "text": "<p>Ease nerve pain with steady, repeatable tension and move freely again.</p>"
           }
         },
         "column_ipMknc": {
@@ -852,7 +852,7 @@
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>CastleFlexx helps open the chest and train shoulder mobility with controlled tension.</p>"
+            "text": "<p>Open the chest and train shoulder mobility with controlled tension.</p>"
           }
         }
       },
@@ -864,7 +864,7 @@
       ],
       "custom_css": [
         ".color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 16px;}",
-        "@media screen and (max-width: 1024px) {.h3 {font-size: 18px; }}"
+        "@media screen and (max-width: 1024px) {.h3 {font-size: 18px; } .color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 14px; }}"
       ],
       "settings": {
         "title": "",
@@ -884,14 +884,14 @@
         "auto_play": false,
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/4",
-        "section_height_desktop": "md:py-0",
+        "section_height_desktop": "md:py-10",
         "spacing_desktop": 40,
         "full_width": false,
         "padding_full_width": true,
         "show_section_divider": false,
         "padding_top": 40,
         "padding_bottom": 40,
-        "column_layout_mobile": "w-full",
+        "column_layout_mobile": "w-1/2",
         "section_height_mobile": "py-0",
         "spacing_mobile": 16,
         "full_width_mobile": false,
@@ -901,7 +901,7 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
-        "text_light": "#3E4044",
+        "text_light": "#3e4044",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
         "color_icon_light": "rgba(0,0,0,0)",
