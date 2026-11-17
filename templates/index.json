@@ -1024,6 +1024,51 @@
         "speed": 30
       }
     },
+    "image_with_chart_VEDQLW": {
+      "type": "image-with-chart",
+      "blocks": {
+        "chart_item_pyLQRA": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Natural Stress-Free Grip",
+            "cross_item_text": "Causes Rope Burn 🔥"
+          }
+        },
+        "chart_item_iDK4XD": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "100% Toe Dorsiflexion",
+            "cross_item_text": "0% Toe Dosiflexion"
+          }
+        },
+        "chart_item_qzMiqU": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Active & Passive Stretching",
+            "cross_item_text": "Passive Only"
+          }
+        },
+        "chart_item_iLqPLR": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Neutral Spine",
+            "cross_item_text": "Awkward Positions"
+          }
+        }
+      },
+      "block_order": [
+        "chart_item_pyLQRA",
+        "chart_item_iDK4XD",
+        "chart_item_qzMiqU",
+        "chart_item_iLqPLR"
+      ],
+      "name": "Image with chart",
+      "settings": {
+        "background_colour": "#F8F8F8",
+        "chart_logo": "shopify://shop_images/castleflexx-logo.png",
+        "chart_title": "VS Straps/Bands"
+      }
+    },
     "testimonials_with_card_ErTtk4": {
       "type": "testimonials-with-card",
       "blocks": {
@@ -1668,6 +1713,7 @@
     "rich_text_N6F4mN",
     "multicolumn_rxMYDJ",
     "image_hotspot_q6W8qx",
+    "image_with_chart_VEDQLW",
     "testimonials_with_card_ErTtk4",
     "collage_D4GGTK",
     "image_with_text_EBVLU7",
