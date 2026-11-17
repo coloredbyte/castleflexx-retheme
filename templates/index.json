@@ -885,7 +885,7 @@
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/4",
         "section_height_desktop": "md:py-0",
-        "spacing_desktop": 28,
+        "spacing_desktop": 20,
         "full_width": false,
         "padding_full_width": true,
         "show_section_divider": false,
@@ -919,6 +919,7 @@
         "hotspot_AQ68Uq": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Plantar_Fasciitis.svg",
             "top": 29,
             "left": 59,
             "title": "Plantar Fasciitis",
@@ -929,6 +930,7 @@
         "hotspot_6yrbiC": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/High_Blood_Pressure.svg",
             "top": 33,
             "left": 47,
             "title": "High Blood Pressure",
@@ -939,6 +941,7 @@
         "hotspot_BRCnx3": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Circulation_Issues.svg",
             "top": 47,
             "left": 43,
             "title": "Circulation Issues",
@@ -949,9 +952,10 @@
         "hotspot_P9rRxP": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Tight_Calves.svg",
             "top": 49,
             "left": 57,
-            "title": "Tight Calfs",
+            "title": "Tight Calves",
             "pos": "right",
             "width": 14
           }
@@ -959,6 +963,7 @@
         "hotspot_98YDgf": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Shoulder_Impingement.svg",
             "top": 59,
             "left": 35,
             "title": "Shoulder Impingement",
@@ -969,6 +974,7 @@
         "hotspot_TLBAMi": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Sciatica_Herniated_Discs.svg",
             "top": 64,
             "left": 59,
             "title": "Sciatica / Herniated Discs",
@@ -979,6 +985,7 @@
         "hotspot_yN4JfQ": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Tennis_Elbow.svg",
             "top": 79,
             "left": 39,
             "title": "Tennis Elbow",
@@ -989,6 +996,7 @@
         "hotspot_m7p377": {
           "type": "hotspot",
           "settings": {
+            "img": "shopify://shop_images/Hip_Pain.svg",
             "top": 75,
             "left": 48,
             "title": "Hip Pain",
