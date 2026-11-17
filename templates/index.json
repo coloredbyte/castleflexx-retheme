@@ -1730,7 +1730,7 @@
         "button_T6acmX"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .font-medium {font-size: 13px; }}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .font-medium {font-size: 13px; } .x-block-text {margin-top: 28px; } .mt-2 {margin-bottom: 18px; } .button-button_T6acmX {margin-top: 24px;}}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
