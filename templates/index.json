@@ -1471,6 +1471,9 @@
         "column_pgyJyE",
         "column_zJDqfn"
       ],
+      "custom_css": [
+        ".inline-block {margin-right: 8px;}"
+      ],
       "name": "t:sections.multicolumn.name",
       "settings": {
         "title": "",
