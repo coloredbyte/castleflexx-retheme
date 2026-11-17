@@ -136,14 +136,14 @@
     "swatch_show_by_default": 4,
     "filter_display_text": true,
     "count_metafield_labels_display": 2,
-    "social_twitter_link": "https://twitter.com/shopify",
-    "social_facebook_link": "https://facebook.com/shopify",
-    "social_pinterest_link": "https://pinterest.com/shopify",
-    "social_instagram_link": "http://instagram.com/shopify",
+    "social_twitter_link": "https://x.com/CastleFlexx",
+    "social_facebook_link": "https://www.facebook.com/CastleFlexx/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://www.instagram.com/castleflexx/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "",
+    "social_youtube_link": "https://www.youtube.com/@castleflexx",
     "social_vimeo_link": "",
     "social_linkedin_link": "",
     "share_facebook": true,
@@ -430,11 +430,6 @@
         "disabled": false,
         "settings": {}
       },
-      "2200952712151285029": {
-        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
-      },
       "9674181886073616913": {
         "type": "shopify://apps/mida-fraud-ip-blocker/blocks/blocker-script/09aab972-8c77-47b1-a9a0-4712e9f2405d",
         "disabled": false,
@@ -478,6 +473,11 @@
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": true,
+        "settings": {}
+      },
+      "2200952712151285029": {
+        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": true,
         "settings": {}
       }
