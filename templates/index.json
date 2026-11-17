@@ -961,110 +961,6 @@
         "line_border_dark": "rgba(0,0,0,0)"
       }
     },
-    "scrolling_banner_r6XXtc": {
-      "type": "scrolling-banner",
-      "blocks": {
-        "heading_ha6Hk3": {
-          "type": "heading",
-          "settings": {
-            "text": "Talk about your brand",
-            "highlight_type": "underline",
-            "text_size": 220,
-            "spacing_left": 40,
-            "spacing_right": 40,
-            "spacing_left_mobile": 20,
-            "spacing_right_mobile": 20,
-            "block_scheme": "section",
-            "text_outline": "rgba(0,0,0,0)",
-            "text_fill": "rgba(0,0,0,0)",
-            "text_outline_dark": "rgba(0,0,0,0)",
-            "text_fill_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "heading_feDV6j": {
-          "type": "heading",
-          "settings": {
-            "text": "Talk about your brand",
-            "highlight_type": "underline",
-            "text_size": 220,
-            "spacing_left": 40,
-            "spacing_right": 40,
-            "spacing_left_mobile": 20,
-            "spacing_right_mobile": 20,
-            "block_scheme": "section",
-            "text_outline": "rgba(0,0,0,0)",
-            "text_fill": "rgba(0,0,0,0)",
-            "text_outline_dark": "rgba(0,0,0,0)",
-            "text_fill_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "heading_hbGJBk": {
-          "type": "heading",
-          "settings": {
-            "text": "Talk about your brand",
-            "highlight_type": "underline",
-            "text_size": 220,
-            "spacing_left": 40,
-            "spacing_right": 40,
-            "spacing_left_mobile": 20,
-            "spacing_right_mobile": 20,
-            "block_scheme": "section",
-            "text_outline": "rgba(0,0,0,0)",
-            "text_fill": "rgba(0,0,0,0)",
-            "text_outline_dark": "rgba(0,0,0,0)",
-            "text_fill_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "heading_W84p3w": {
-          "type": "heading",
-          "settings": {
-            "text": "Talk about your brand",
-            "highlight_type": "underline",
-            "text_size": 220,
-            "spacing_left": 40,
-            "spacing_right": 40,
-            "spacing_left_mobile": 20,
-            "spacing_right_mobile": 20,
-            "block_scheme": "section",
-            "text_outline": "rgba(0,0,0,0)",
-            "text_fill": "rgba(0,0,0,0)",
-            "text_outline_dark": "rgba(0,0,0,0)",
-            "text_fill_dark": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ha6Hk3",
-        "heading_feDV6j",
-        "heading_hbGJBk",
-        "heading_W84p3w"
-      ],
-      "settings": {
-        "show_border": false,
-        "speed": 50,
-        "direction": "left",
-        "pause_hover": true,
-        "enable_rotating_effect": false,
-        "overlay_opacity": 0,
-        "space_block": 110,
-        "desktop_height": "450px",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "space_block_mobile": 110,
-        "mobile_height": "500px",
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
-        "section_scheme": "store",
-        "bg_light": "rgba(0,0,0,0)",
-        "color_text_light": "rgba(0,0,0,0)",
-        "color_text_light_2": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "bg_dark": "rgba(0,0,0,0)",
-        "color_text_dark": "rgba(0,0,0,0)",
-        "color_text_dark_2": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)"
-      }
-    },
     "shop_the_look_NWMFNg": {
       "type": "shop-the-look",
       "blocks": {
@@ -2567,7 +2463,6 @@
     "media_gallery_B3NkJH",
     "collage_D4GGTK",
     "products_bundle_6P93z8",
-    "scrolling_banner_r6XXtc",
     "shop_the_look_NWMFNg",
     "product_attribute_table_FLAaYe",
     "6c240d5b-c5b1-4370-96f5-adff063eb83e",
