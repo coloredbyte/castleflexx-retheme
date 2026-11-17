@@ -261,7 +261,7 @@
           "settings": {
             "text": "Lab Tested",
             "highlight_type": "underline",
-            "text_size": 150,
+            "text_size": 140,
             "text_color": "primary",
             "spacing_left": 0,
             "spacing_right": 0,
@@ -287,7 +287,7 @@
           "settings": {
             "text": "Patented Innovation",
             "highlight_type": "underline",
-            "text_size": 150,
+            "text_size": 140,
             "text_color": "primary",
             "spacing_left": 0,
             "spacing_right": 0,
@@ -313,7 +313,7 @@
           "settings": {
             "text": "Award Winning",
             "highlight_type": "underline",
-            "text_size": 150,
+            "text_size": 140,
             "text_color": "primary",
             "spacing_left": 0,
             "spacing_right": 0,
@@ -342,7 +342,7 @@
         "desktop_height": "750px",
         "padding_top": 20,
         "padding_bottom": 20,
-        "space_block_mobile": 70,
+        "space_block_mobile": 50,
         "mobile_height": "500px",
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16,
@@ -384,7 +384,7 @@
         "text_cnatVM"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top:0px; padding-bottom: 0px;}}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
