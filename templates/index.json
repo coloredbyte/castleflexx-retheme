@@ -749,11 +749,12 @@
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "title": "Trusted by Clinicians & Doctors",
+            "text": "<p>\"CastleFlexx is a favorite recommendation for our patients who need safe and controlled at home solutions to help prevent or heal their pain issues.\"</p>",
+            "author_image": "shopify://shop_images/img_14.png",
             "show_author_image": true,
-            "author": "Add a caption",
-            "author_note": "",
+            "author": "Dr. Rachel Skolnick D.C",
+            "author_note": "<p>Julliard NYC</p>",
             "product": ""
           }
         },
@@ -762,11 +763,12 @@
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "title": "Trusted by Athletes",
+            "text": "<p>\"The simplest way to put it was, 10 minutes of doing a simple Pendulum stretch with CastleFlexx, my heart rate went up 20-30 beats and I was in a full body sweat and I remember thinking I've never had this with yoga, pilates, acupuncture, hot/cold baths - CastleFlexx in 10 minutes got me there.\"&nbsp;</p>",
+            "author_image": "shopify://shop_images/taylor_twellman_testimonial.jpg",
             "show_author_image": true,
-            "author": "Add a caption",
-            "author_note": "",
+            "author": "Taylor Twellman",
+            "author_note": "<p>Major League Soccer Player</p>",
             "product": ""
           }
         },
@@ -819,7 +821,7 @@
       ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
-        "heading": "Testimonial with cards",
+        "heading": "Trusted by the Experts",
         "highlight_type": "font_highlight",
         "subheading": "",
         "text": "",
