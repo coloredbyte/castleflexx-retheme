@@ -765,11 +765,26 @@
             "cards_image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
             "icon_star": "quote",
             "custom_icon": "",
+            "title": "This Thing Is Amazing!",
+            "text": "<p>“We dont use cheap straps anymore, we use CastleFlexx. I use it an hour a day. CastleFlexx is by far the best.”</p>",
+            "author_image": "shopify://shop_images/ronald_acuna_jr_testimonial.jpg",
+            "show_author_image": true,
+            "author": "Ronald Acuna Jr",
+            "author_note": "<p>Baseball Player | #13 Atlanta</p>",
+            "product": ""
+          }
+        },
+        "testimonial_RgEp3i": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/Rectangle_2.png",
+            "icon_star": "quote",
+            "custom_icon": "",
             "title": "The best stretching device on the market",
             "text": "<p>“ This is the best stretching device on the market. I did a 10 minute review on my youtube page and i cover everything someone who is passionate about getting out of pain needs to know.”</p>",
             "author_image": "shopify://shop_images/phil_heath_testimonial.avif",
             "show_author_image": true,
-            "author": "Ronald Acuna Jr",
+            "author": "Phil Heath",
             "author_note": "<p>7x Mr Olympia</p>",
             "product": ""
           }
@@ -801,28 +816,14 @@
             "author_note": "<p>Chiropractor | New England Revolution</p>",
             "product": ""
           }
-        },
-        "testimonial_RgEp3i": {
-          "type": "testimonial",
-          "settings": {
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "The best stretching device on the market",
-            "text": "<p>“ This is the best stretching device on the market. I did a 10 minute review on my youtube page and i cover everything someone who is passionate about getting out of pain needs to know.”</p>",
-            "author_image": "shopify://shop_images/phil_heath_testimonial.avif",
-            "show_author_image": true,
-            "author": "Phil Heath",
-            "author_note": "<p>7x Mr Olympia</p>",
-            "product": ""
-          }
         }
       },
       "block_order": [
         "testimonial_RNbdhq",
         "testimonial_hHELEa",
+        "testimonial_RgEp3i",
         "testimonial_EW34nf",
-        "testimonial_4hQ7GW",
-        "testimonial_RgEp3i"
+        "testimonial_4hQ7GW"
       ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
