@@ -1853,6 +1853,9 @@
       "block_order": [
         "slide_fYH3xg"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px;}}"
+      ],
       "name": "t:sections.slideshow.name",
       "settings": {
         "show_hero": false,
