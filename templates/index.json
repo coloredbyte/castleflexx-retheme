@@ -470,7 +470,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
-            "image_link": "",
+            "image_link": "shopify://products/castleflexx-sport",
             "open_new_window": false,
             "show_sound_control": false,
             "video_url": "",
@@ -524,8 +524,8 @@
         "media_jmXnU9": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
-            "image_link": "",
+            "image": "shopify://shop_images/Rectangle_17601.png",
+            "image_link": "shopify://products/castle-flexx",
             "open_new_window": false,
             "show_sound_control": false,
             "video_url": "",
@@ -541,7 +541,7 @@
             "custom_icon": "",
             "icon_size": 45,
             "sub_title": "",
-            "title": "For Athletes",
+            "title": "At-home Stretching",
             "highlight_type": "font_highlight",
             "title_size": 70,
             "text": "",
@@ -549,7 +549,7 @@
             "text_align": "center",
             "media_position": "top",
             "button_label": "Shop Now",
-            "button_link": "shopify://products/castleflexx-sport",
+            "button_link": "shopify://products/castle-flexx",
             "open_new_window_button": false,
             "show_button_style": "secondary",
             "block_scheme": "section",
