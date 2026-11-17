@@ -747,7 +747,7 @@
         "heading_wyJRh6": {
           "type": "heading",
           "settings": {
-            "heading": "A Device for Every Goal",
+            "heading": "More Than Just a Stretch",
             "highlight_type": "underline",
             "heading_size": 100,
             "heading_tag": "h2"
@@ -756,7 +756,7 @@
         "text_DDX9c6": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether you're training hard, staying active, recovering at home, or simply looking to move better.</p>",
+            "text": "<p>CastleFlexx helps you make the most of it with innovative tools designed to support flexibility, mobility, and full-body wellness.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
