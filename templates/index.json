@@ -1550,7 +1550,7 @@
             "title": "Easier to hold, comfortable and more effective",
             "text": "<p>\"CastleFlexx is a favorite recommendation for our patients who need safe and controlled at home solutions to help prevent or heal their pain issues.\"</p>",
             "author_image": "shopify://shop_images/Dr._Rachel_Skolnick_testimonial.png",
-            "show_author_image": true,
+            "show_author_image": false,
             "author": "Dr. Rachel Skolnick D.C",
             "author_note": "<p>Julliard NYC</p>",
             "product": ""
@@ -1565,7 +1565,7 @@
             "title": "This Thing Is Amazing!",
             "text": "<p>“We dont use cheap straps anymore, we use CastleFlexx. I use it an hour a day. CastleFlexx is by far the best.”</p>",
             "author_image": "shopify://shop_images/ronald_acuna_jr_testimonial.jpg",
-            "show_author_image": true,
+            "show_author_image": false,
             "author": "Ronald Acuna Jr",
             "author_note": "<p>Baseball Player | #13 Atlanta</p>",
             "product": ""
@@ -1580,7 +1580,7 @@
             "title": "The best stretching device on the market",
             "text": "<p>“ This is the best stretching device on the market. I did a 10 minute review on my youtube page and i cover everything someone who is passionate about getting out of pain needs to know.”</p>",
             "author_image": "shopify://shop_images/phil_heath_testimonial.avif",
-            "show_author_image": true,
+            "show_author_image": false,
             "author": "Phil Heath",
             "author_note": "<p>7x Mr Olympia</p>",
             "product": ""
@@ -1595,7 +1595,7 @@
             "title": "CastleFlexx got me there in 10 minutes",
             "text": "<p>“My lower back has held up. It's unreal.”</p>",
             "author_image": "shopify://shop_images/nickeil_alexander_walker_testimonial.png",
-            "show_author_image": true,
+            "show_author_image": false,
             "author": "Nickeil Alexander-Walker",
             "author_note": "<p>Atlanta | Shooting Guard #7</p>",
             "product": ""
