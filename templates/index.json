@@ -1898,17 +1898,21 @@
         "social_post_HgCTt8": {
           "type": "social-post",
           "settings": {
+            "social_post_image": "shopify://shop_images/instagram_feed_1.png",
             "enable_video_autoplay": true,
             "show_sound_control": false,
-            "social_post_content": "<p>Show your customers' feedback<br/><br/>#hastag</p>",
+            "social_post_content": "<p>Some things feel better in bed.<br/>✨✨✨<br/>AFTER DARK STRETCH IN BED SERIES<br/><br/><a href=\"https://www.instagram.com/explore/tags/heat/\">#heat</a> <a href=\"https://www.instagram.com/explore/tags/edition/\">#edition</a> <a href=\"https://www.instagram.com/explore/tags/stretch/\">#stretch</a></p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
-            "social_post_link": "",
+            "social_post_link": "https://www.instagram.com/p/DeU7531GWBa/?img_index=1",
             "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
+            "integrated_social_media": "instagram",
+            "account_username": "castleflexx",
+            "account_avatar": "shopify://shop_images/castleflexx_instagram_profile_icon_4f63eb61-e1c0-4930-a942-512b67d81126.jpg",
+            "list_products": [
+              "heat"
+            ],
             "show_products_on_image": true
           }
         },
@@ -1962,49 +1966,16 @@
             "list_products": [],
             "show_products_on_image": true
           }
-        },
-        "social_post_Jg8G7H": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
-        },
-        "social_post_Lg7b4D": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
         }
       },
       "block_order": [
         "social_post_HgCTt8",
         "social_post_rfzkfd",
         "social_post_RVkkCK",
-        "social_post_QyRHLF",
-        "social_post_Jg8G7H",
-        "social_post_Lg7b4D"
+        "social_post_QyRHLF"
+      ],
+      "custom_css": [
+        ".button button-quickview {background-color: #000000;}"
       ],
       "name": "t:sections.social-feeds.name",
       "settings": {
@@ -2021,7 +1992,7 @@
         "show_button_style": "secondary",
         "integrated_social_media": "instagram",
         "media_ratio": "aspect-square",
-        "show_border": true,
+        "show_border": false,
         "social_post_layout": "3",
         "enable_carousel_on_desktop": true,
         "pagination_desktop": "none",
@@ -2029,7 +2000,7 @@
         "swiper_on_mobile": false,
         "pagination_mobile": "none",
         "change_slides_speed": 0,
-        "columns_desktop": 6,
+        "columns_desktop": 4,
         "full_width": true,
         "padding_full_width": true,
         "show_section_divider": false,
@@ -2047,8 +2018,8 @@
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "text_light": "rgba(0,0,0,0)",
-        "button_light": "rgba(0,0,0,0)",
-        "button_text_light": "rgba(0,0,0,0)",
+        "button_light": "#3E4044",
+        "button_text_light": "#FFFFFF",
         "button_hover_light": "rgba(0,0,0,0)",
         "button_text_hover_light": "rgba(0,0,0,0)",
         "secondary_button_light": "rgba(0,0,0,0)",

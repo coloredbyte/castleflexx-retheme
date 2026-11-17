@@ -148,7 +148,7 @@
     "social_linkedin_link": "",
     "share_facebook": true,
     "share_twitter": true,
-    "share_pinterest": true,
+    "share_pinterest": false,
     "share_sms": false,
     "search_enabled": true,
     "mobile_search_position": "header",
