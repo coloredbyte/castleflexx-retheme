@@ -1062,6 +1062,9 @@
         "chart_item_qzMiqU",
         "chart_item_iLqPLR"
       ],
+      "custom_css": [
+        ".iwc__inner{padding-top: 60px;}"
+      ],
       "name": "Image with chart",
       "settings": {
         "background_colour": "#F8F8F8",
