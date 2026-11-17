@@ -1961,17 +1961,21 @@
         "social_post_QyRHLF": {
           "type": "social-post",
           "settings": {
+            "social_post_image": "shopify://shop_images/instagram_feed_4.png",
             "enable_video_autoplay": true,
             "show_sound_control": false,
-            "social_post_content": "",
+            "social_post_content": "<p>Only YOU decide the ways you want to utilize this miracle worker. 🪄 Sitting, Standing, Lying down …. Doesnt matter to us as long as youre doing 12 minutes a day.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
-            "social_post_link": "",
+            "social_post_link": "https://www.instagram.com/p/DMd2wx8MrKb/?img_index=1",
             "open_new_window_button": true,
             "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
+            "account_username": "castleflexx",
+            "account_avatar": "shopify://shop_images/castleflexx_instagram_profile_icon_4f63eb61-e1c0-4930-a942-512b67d81126.jpg",
+            "list_products": [
+              "castle-flexx"
+            ],
             "show_products_on_image": true
           }
         }
