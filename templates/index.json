@@ -384,7 +384,7 @@
         "text_cnatVM"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top:0px; padding-bottom: 0px;}}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
