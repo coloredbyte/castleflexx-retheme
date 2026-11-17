@@ -1854,7 +1854,7 @@
         "slide_fYH3xg"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 32px;}}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.slideshow.name",
       "settings": {
@@ -1880,7 +1880,7 @@
         "rounded_corner_image_mobile": false,
         "show_content_below_image": false,
         "mobile_ratio": "px",
-        "mobile_height": "500",
+        "mobile_height": "400",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 20,
         "section_scheme": "store"
