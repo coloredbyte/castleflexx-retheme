@@ -747,7 +747,7 @@
         "heading_wyJRh6": {
           "type": "heading",
           "settings": {
-            "heading": "Relieve Tension Across Your Body",
+            "heading": "Target the Pain",
             "highlight_type": "font_highlight",
             "heading_size": 100,
             "heading_tag": "h2"
@@ -756,7 +756,7 @@
         "text_DDX9c6": {
           "type": "text",
           "settings": {
-            "text": "<p>CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching.</p>",
+            "text": "<p>CastleFlexx helps you make the most of it with innovative tools designed to support flexibility, mobility, and full-body wellness.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
@@ -890,7 +890,7 @@
         "padding_full_width": true,
         "show_section_divider": false,
         "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_bottom": 40,
         "column_layout_mobile": "w-1/2",
         "section_height_mobile": "py-5",
         "spacing_mobile": 0,
@@ -1010,8 +1010,8 @@
       "name": "Image with hotspots",
       "settings": {
         "hide_products": [],
-        "title": "",
-        "subtitle": "",
+        "title": "Relieve tension across your body",
+        "subtitle": "CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching.",
         "img": "shopify://shop_images/45615a4bbce61dd89c3af5b1b77227a7.jpg",
         "speed": 25
       }
