@@ -18,7 +18,7 @@
         "show_collection_name": true,
         "show_breadcrumb_below_title": true,
         "title_position": "text-center",
-        "size_title": 150,
+        "size_title": 170,
         "heading_tag": "h1",
         "full_width_title": true,
         "desktop_height": "auto",
