@@ -1931,7 +1931,9 @@
             "integrated_social_media": "adapt",
             "account_username": "castleflexx",
             "account_avatar": "shopify://shop_images/castleflexx_instagram_profile_icon_4f63eb61-e1c0-4930-a942-512b67d81126.jpg",
-            "list_products": [],
+            "list_products": [
+              "castleflexx-sport"
+            ],
             "show_products_on_image": true
           }
         },
