@@ -1,0 +1,242 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Image with chart (image-with-chart)
+  - Ported from the live theme (homepage "CastleFlexx VS Straps/Bands").
+  - Image on the left, logo + title + check/cross rows on the right.
+  - Live used Tailwind utilities Eurus doesn't ship, so styles are scoped here.
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+<section class="iwc" style="--iwc-bg: {{ section.settings.background_colour }};">
+  <div class="iwc__inner">
+    <div class="iwc__media">
+      {%- comment -%} Original URL, no resize: live image is an animated GIF {%- endcomment -%}
+      {% if section.settings.image != blank %}
+        <img
+          class="iwc__image"
+          src="{{ section.settings.image | image_url }}"
+          alt="{{ section.settings.chart_title | default: section.settings.image.alt | escape }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+
+    <div class="iwc__chart">
+      {%- comment -%} Header row: logo left, title right {%- endcomment -%}
+      <div class="iwc__head">
+        {% if section.settings.chart_logo != blank %}
+          {{
+            section.settings.chart_logo
+            | image_url: width: 600
+            | image_tag: class: 'iwc__logo', alt: section.settings.chart_title, loading: 'lazy'
+          }}
+        {% endif %}
+
+        {% if section.settings.chart_title != blank %}
+          <h4 class="iwc__title">{{ section.settings.chart_title }}</h4>
+        {% endif %}
+      </div>
+
+      {% if section.blocks.size > 0 %}
+        <div class="iwc__rows">
+          {% for block in section.blocks %}
+            <div class="iwc__row" {{ block.shopify_attributes }}>
+              {% if block.settings.check_item_text != blank %}
+                <div class="iwc__cell">
+                  <span class="iwc__icon">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  <span class="iwc__text">{{ block.settings.check_item_text }}</span>
+                </div>
+              {% endif %}
+
+              {% if block.settings.cross_item_text != blank %}
+                <div class="iwc__cell">
+                  <span class="iwc__icon">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+                      <path d="M6 18.2109L18 6.21094M6 6.21094L18 18.2109" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="iwc__text">{{ block.settings.cross_item_text }}</span>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  #shopify-section-{{ section.id }} .iwc {
+    background-color: var(--iwc-bg);
+  }
+
+  #shopify-section-{{ section.id }} .iwc__inner {
+    display: grid;
+    gap: 39px;
+    padding: 32px 16px;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 24px;
+    margin-bottom: 32px;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__logo {
+    display: block;
+    max-width: 50%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__title {
+    margin: 0;
+    color: #000;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2px;
+    padding: 16px 8px;
+    background: #fff;
+    border-radius: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #191919;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .iwc__text {
+    color: #000;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+  }
+
+  /* Desktop: two columns, wider gaps (live lg/xl breakpoints) */
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .iwc__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 1440px;
+      margin-inline: auto;
+      padding: 32px 40px;
+    }
+
+    #shopify-section-{{ section.id }} .iwc__title { font-size: 24px; }
+    #shopify-section-{{ section.id }} .iwc__row { gap: 80px; padding-inline: 24px; }
+    #shopify-section-{{ section.id }} .iwc__icon { width: 24px; height: 24px; }
+    #shopify-section-{{ section.id }} .iwc__text { font-size: 14px; }
+  }
+
+  @media (min-width: 1280px) {
+    #shopify-section-{{ section.id }} .iwc__inner { gap: 56px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Image with chart",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_colour",
+      "label": "Background colour",
+      "default": "#F8F8F8"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main image"
+    },
+    {
+      "type": "image_picker",
+      "id": "chart_logo",
+      "label": "Chart logo image"
+    },
+    {
+      "type": "text",
+      "id": "chart_title",
+      "label": "Chart Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chart_item",
+      "name": "Chart Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "check_item_text",
+          "label": "Check Item Text"
+        },
+        {
+          "type": "text",
+          "id": "cross_item_text",
+          "label": "Cross Item Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Image with chart",
+      "settings": {
+        "chart_title": "VS Straps/Bands"
+      },
+      "blocks": [
+        { "type": "chart_item", "settings": { "check_item_text": "Natural Stress-Free Grip", "cross_item_text": "Causes Rope Burn 🔥" } },
+        { "type": "chart_item", "settings": { "check_item_text": "100% Toe Dorsiflexion", "cross_item_text": "0% Toe Dosiflexion" } },
+        { "type": "chart_item", "settings": { "check_item_text": "Active & Passive Stretching", "cross_item_text": "Passive Only" } },
+        { "type": "chart_item", "settings": { "check_item_text": "Neutral Spine", "cross_item_text": "Awkward Positions" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

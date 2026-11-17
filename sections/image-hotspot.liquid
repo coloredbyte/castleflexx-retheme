@@ -1,0 +1,382 @@
+{% comment %}
+------------------------------------------------------------------------------
+  Section: Image with hotspots (image-hotspot)
+  - Ported from the live theme ("Relieve tension across your body").
+  - Desktop: full-width image, icon hotspots placed by top/left %, labels
+    with lines that animate in when half the section is on screen.
+  - Mobile: no image; hotspots run as two marquee rows
+    (left-positioned items scroll left, right-positioned scroll right).
+  - Live used Tailwind utilities Eurus doesn't ship, so styles are scoped here.
+------------------------------------------------------------------------------
+{% endcomment %}
+
+{%- comment -%} Hide on products picked in "Hide this section for selected products" {%- endcomment -%}
+{% assign show_section = true %}
+{% if template.name == 'product' %}
+  {% for hidden in section.settings.hide_products %}
+    {% if hidden.id == product.id %}
+      {% assign show_section = false %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if show_section %}
+  <image-hotspots
+    class="ihs"
+    style="--ihs-speed: {{ section.settings.speed }}s;"
+  >
+    {% if section.settings.img != blank %}
+      {{
+        section.settings.img
+        | image_url: width: 2400
+        | image_tag: class: 'ihs__image', loading: 'lazy', sizes: '100vw'
+      }}
+    {% endif %}
+
+    <div class="ihs__intro ihs--hidden">
+      <h2 class="ihs__title">{{ section.settings.title }}</h2>
+      <div class="ihs__subtitle">{{ section.settings.subtitle }}</div>
+    </div>
+
+    {%- comment -%} Desktop hotspots {%- endcomment -%}
+    {% for block in section.blocks %}
+      <span
+        class="ihs__spot ihs--hidden"
+        style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+        {{ block.shopify_attributes }}
+      >
+        {% if block.settings.img != blank %}
+          {{ block.settings.img | image_url: width: 50 | image_tag: class: 'ihs__icon', alt: '' }}
+        {% endif %}
+
+        <span class="ihs__label ihs__label--{{ block.settings.pos }}">
+          <span class="ihs__line" data-width="{{ block.settings.width }}"></span>
+          {{ block.settings.title }}
+        </span>
+      </span>
+    {% endfor %}
+
+    {%- comment -%} Mobile marquee rows, content tripled for a seamless loop {%- endcomment -%}
+    {% assign row_positions = 'left,right' | split: ',' %}
+    {% for pos in row_positions %}
+      <div class="ihs__marquee{% if forloop.first %} ihs__marquee--first{% endif %}" aria-hidden="true">
+        {% for i in (1..3) %}
+          <div class="ihs__track ihs__track--{{ pos }}">
+            {% for block in section.blocks %}
+              {% if block.settings.pos != pos %}
+                {% continue %}
+              {% endif %}
+
+              <div class="ihs__chip">
+                <div class="ihs__chip-icon">
+                  {% if block.settings.img != blank %}
+                    {{ block.settings.img | image_url: width: 50 | image_tag: class: 'ihs__icon', alt: '' }}
+                  {% endif %}
+                </div>
+                <span class="ihs__chip-text">{{ block.settings.title }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </image-hotspots>
+{% endif %}
+
+<style>
+  #shopify-section-{{ section.id }} .ihs {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-block: 80px;
+    background: #191a1b;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__image {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__intro {
+    width: 100%;
+    padding-inline: 16px;
+    transition: opacity 0.5s;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__title {
+    max-width: 325px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__subtitle {
+    margin: 16px auto 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  /* Desktop hotspot: white circle with icon, label beside it */
+  #shopify-section-{{ section.id }} .ihs__spot {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: #fff;
+    transition: opacity 0.5s;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__icon {
+    display: block;
+    width: 25px;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__label {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__label--right { left: 40px; }
+  #shopify-section-{{ section.id }} .ihs__label--left { right: 40px; flex-direction: row-reverse; }
+
+  #shopify-section-{{ section.id }} .ihs__line {
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-inline: 4px;
+    background: #fff;
+    transition: width 0.5s;
+  }
+
+  /* Revealed state, set by the custom element once in view */
+  #shopify-section-{{ section.id }} .ihs.is-revealed .ihs__label { opacity: 1; }
+  #shopify-section-{{ section.id }} .ihs.is-revealed .ihs__line { width: var(--ihs-line-width, 0); }
+
+  /* Mobile marquee */
+  #shopify-section-{{ section.id }} .ihs__marquee {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__marquee--first { margin-top: 40px; }
+
+  #shopify-section-{{ section.id }} .ihs__track {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__track--left { animation: ihs-scroll-left var(--ihs-speed) linear infinite; }
+  #shopify-section-{{ section.id }} .ihs__track--right { animation: ihs-scroll-right var(--ihs-speed) linear infinite; }
+
+  #shopify-section-{{ section.id }} .ihs__chip {
+    display: flex;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__chip-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: #fff;
+  }
+
+  #shopify-section-{{ section.id }} .ihs__chip-text {
+    margin: 0 16px 0 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    white-space: nowrap;
+  }
+
+  @keyframes ihs-scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  @keyframes ihs-scroll-right {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+
+  /* Desktop (live lg breakpoint): image + overlaid hotspots, no marquee */
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .ihs { padding-block: 0; }
+    #shopify-section-{{ section.id }} .ihs__image { display: block; }
+
+    #shopify-section-{{ section.id }} .ihs__intro {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      z-index: 2;
+    }
+
+    #shopify-section-{{ section.id }} .ihs__title { max-width: none; font-size: 40px; }
+    #shopify-section-{{ section.id }} .ihs__subtitle { max-width: 653px; font-size: 16px; }
+    #shopify-section-{{ section.id }} .ihs__spot { display: flex; }
+    #shopify-section-{{ section.id }} .ihs__marquee { display: none; }
+    #shopify-section-{{ section.id }} .ihs--hidden { opacity: 0; }
+  }
+</style>
+
+<script>
+  // Desktop reveal: fade in title + spots when half the section is visible,
+  // then show labels and grow lines to `width`% of the viewport.
+  if (!customElements.get('image-hotspots')) {
+    const DESKTOP_MIN = 1024;
+    const REVEAL_DELAY_MS = 500;
+
+    class ImageHotspots extends HTMLElement {
+      connectedCallback() {
+        this.querySelectorAll('.ihs__line').forEach((line) => {
+          line.style.setProperty('--ihs-line-width', `${window.innerWidth * (Number(line.dataset.width) / 100)}px`);
+        });
+
+        if (window.innerWidth < DESKTOP_MIN) {
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (!entries.some((entry) => entry.isIntersecting)) {
+              return;
+            }
+
+            observer.disconnect();
+            this.querySelectorAll('.ihs--hidden').forEach((el) => el.classList.remove('ihs--hidden'));
+            setTimeout(() => this.classList.add('is-revealed'), REVEAL_DELAY_MS);
+          },
+          { threshold: 0.5 }
+        );
+
+        observer.observe(this);
+      }
+    }
+
+    customElements.define('image-hotspots', ImageHotspots);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Image with hotspots",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "hide_products",
+      "label": "Hide this section for selected products"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Relieve tension across your body"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching."
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Items speed on mobile",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 25
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hotspot",
+      "name": "hotspot",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "number",
+          "id": "top",
+          "label": "Image top position in %"
+        },
+        {
+          "type": "number",
+          "id": "left",
+          "label": "Image left position in %"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "pos",
+          "label": "Text position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "number",
+          "id": "width",
+          "label": "Line width in %",
+          "default": 73
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with hotspots",
+      "blocks": [
+        { "type": "hotspot", "settings": { "top": 29, "left": 59, "title": "Plantar Fasciitis", "pos": "right", "width": 6 } },
+        { "type": "hotspot", "settings": { "top": 33, "left": 47, "title": "High Blood Pressure", "pos": "left", "width": 11 } },
+        { "type": "hotspot", "settings": { "top": 47, "left": 43, "title": "Circulation Issues", "pos": "left", "width": 14 } },
+        { "type": "hotspot", "settings": { "top": 49, "left": 57, "title": "Tight Calfs", "pos": "right", "width": 14 } },
+        { "type": "hotspot", "settings": { "top": 59, "left": 35, "title": "Shoulder Impingement", "pos": "left", "width": 8 } },
+        { "type": "hotspot", "settings": { "top": 64, "left": 59, "title": "Sciatica / Herniated Discs", "pos": "right", "width": 8 } },
+        { "type": "hotspot", "settings": { "top": 79, "left": 39, "title": "Tennis Elbow", "pos": "left", "width": 18 } },
+        { "type": "hotspot", "settings": { "top": 75, "left": 48, "title": "Hip Pain", "pos": "right", "width": 31 } }
+      ]
+    }
+  ]
+}
+{% endschema %}
