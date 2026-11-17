@@ -1979,91 +1979,6 @@
             "list_products": [],
             "show_products_on_image": true
           }
-        },
-        "social_post_XDkVeh": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
-        },
-        "social_post_znHtRY": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
-        },
-        "social_post_R97iLM": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
-        },
-        "social_post_cR7xK7": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
-        },
-        "social_post_yA8g6f": {
-          "type": "social-post",
-          "settings": {
-            "enable_video_autoplay": true,
-            "show_sound_control": false,
-            "social_post_content": "",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "social_post_link": "",
-            "open_new_window_button": true,
-            "integrated_social_media": "adapt",
-            "account_username": "Eurus",
-            "list_products": [],
-            "show_products_on_image": true
-          }
         }
       },
       "block_order": [
@@ -2071,12 +1986,7 @@
         "social_post_rfzkfd",
         "social_post_RVkkCK",
         "social_post_QyRHLF",
-        "social_post_PmXxMz",
-        "social_post_XDkVeh",
-        "social_post_znHtRY",
-        "social_post_R97iLM",
-        "social_post_cR7xK7",
-        "social_post_yA8g6f"
+        "social_post_PmXxMz"
       ],
       "name": "t:sections.social-feeds.name",
       "settings": {
