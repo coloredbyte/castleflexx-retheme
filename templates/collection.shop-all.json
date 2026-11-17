@@ -32,6 +32,57 @@
         "section_scheme": "store"
       }
     },
+    "rich_text_63f7dh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xg8d8g": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Device for Every Goal",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "heading_tag": "h2"
+          }
+        },
+        "text_qzPdTx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're training hard, staying active, recovering at home, or simply looking to move better.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xg8d8g",
+        "text_qzPdTx"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "#191a1b",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "media_gallery_6mhP9L": {
       "type": "media-gallery",
       "blocks": {
@@ -352,7 +403,7 @@
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
         "edge_style_mobile": "square",
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
@@ -1777,6 +1828,7 @@
   },
   "order": [
     "banner",
+    "rich_text_63f7dh",
     "media_gallery_6mhP9L",
     "media_gallery_F9KLPj",
     "product-grid",
