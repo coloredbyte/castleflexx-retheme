@@ -321,17 +321,17 @@
       "custom_css": [
         ".button {margin-top: 12px; padding-top: 10px; padding-bottom: 10px;}",
         ".max-w-full {font-size: 14px;}",
-        "@media screen and (max-width: 1024px) {.heading-media_Fq8UJV {font-size: 26px;} .button {margin-top: 12px; padding-left: 32px; padding-right: 32px; }}"
+        "@media screen and (max-width: 1024px) {p {font-size: 26px; } .button {margin-top: 12px; padding-left: 32px; padding-right: 32px; }}"
       ],
       "name": "t:sections.media-gallery.name",
       "settings": {
-        "heading": "Shop by Use",
+        "heading": "",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
         "heading_alignment": "center",
         "subheading": "",
-        "text": "<p>Whether you're training hard, staying active, recovering at home, or simply looking to move better.</p>",
+        "text": "",
         "swiper_on_mobile": true,
         "pagination_mobile": "line",
         "auto_play": true,
