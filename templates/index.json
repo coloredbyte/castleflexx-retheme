@@ -1159,12 +1159,41 @@
             "read_more_label": "Read more",
             "see_less_label": "See less"
           }
+        },
+        "button_RCWLWM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Now",
+            "button_link": "shopify://products/castlefit",
+            "open_new_window_button": false,
+            "show_button_style_1": "primary",
+            "button_label_2": "Sign In",
+            "button_link_2": "",
+            "open_new_window_button_2": false,
+            "show_button_style_2": "secondary",
+            "block_scheme": "section",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "color_text_button_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_text_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
         }
       },
       "block_order": [
         "caption_xt4yYW",
         "heading_JTNExH",
-        "text_pbDakY"
+        "text_pbDakY",
+        "button_RCWLWM"
       ],
       "custom_css": [
         "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
@@ -1422,32 +1451,19 @@
             "text": ""
           }
         },
-        "column_i9w9LE": {
+        "column_CbTCdk": {
           "type": "column",
           "settings": {
-            "icon": "truck",
+            "icon": "star",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Star.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "200+ guided classes",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
-          }
-        },
-        "column_pgyJyE": {
-          "type": "column",
-          "settings": {
-            "icon": "truck",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "Column",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": ""
           }
         },
         "column_zJDqfn": {
@@ -1467,8 +1483,7 @@
       },
       "block_order": [
         "column_7GYxQa",
-        "column_i9w9LE",
-        "column_pgyJyE",
+        "column_CbTCdk",
         "column_zJDqfn"
       ],
       "custom_css": [
@@ -1520,76 +1535,6 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "color_icon_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "rich_text_BfG6Y6": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_hEJaxY": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "highlight_type": "underline",
-            "heading_size": 100,
-            "heading_tag": "h2"
-          }
-        },
-        "button_QW9XhD": {
-          "type": "button",
-          "settings": {
-            "button_label": "Start Now",
-            "button_link": "shopify://products/castlefit",
-            "open_new_window_button": false,
-            "show_button_style_1": "primary",
-            "button_label_2": "Sign In",
-            "button_link_2": "",
-            "open_new_window_button_2": false,
-            "show_button_style_2": "secondary",
-            "block_scheme": "section",
-            "color_button": "rgba(0,0,0,0)",
-            "color_text_button": "rgba(0,0,0,0)",
-            "color_button_hover": "rgba(0,0,0,0)",
-            "color_text_button_hover": "rgba(0,0,0,0)",
-            "color_button_secondary": "rgba(0,0,0,0)",
-            "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)",
-            "color_button_dark": "rgba(0,0,0,0)",
-            "color_text_button_dark": "rgba(0,0,0,0)",
-            "color_button_hover_dark": "rgba(0,0,0,0)",
-            "color_text_button_hover_dark": "rgba(0,0,0,0)",
-            "color_button_secondary_dark": "rgba(0,0,0,0)",
-            "secondary_button_text_dark": "rgba(0,0,0,0)",
-            "colors_text_link_dark": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hEJaxY",
-        "button_QW9XhD"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "content_alignment": "center",
-        "show_section_divider": false,
-        "make_full_page_width": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "content_alignment_mobile": "center",
-        "show_section_divider_mobile": false,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40,
-        "section_scheme": "store",
-        "heading_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "testimonials_with_card_ErTtk4": {
@@ -2243,7 +2188,6 @@
     "rich_text_3qNkUD",
     "media_gallery_6VfHer",
     "multicolumn_XQAGfi",
-    "rich_text_BfG6Y6",
     "testimonials_with_card_ErTtk4",
     "collage_D4GGTK",
     "image_with_text_EBVLU7",
