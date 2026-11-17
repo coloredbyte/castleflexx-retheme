@@ -1286,7 +1286,7 @@
         "heading_alignment": "center",
         "secondary_background": "none",
         "border_column": "none",
-        "column_content_alignment": "start",
+        "column_content_alignment": "center",
         "icon_position": "next",
         "icon_size": 40,
         "enable_desktop_slider": false,
