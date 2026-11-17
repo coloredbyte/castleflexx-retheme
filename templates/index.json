@@ -1064,7 +1064,7 @@
       ],
       "custom_css": [
         ".iwc__inner {padding-top: 60px;}",
-        " .iwc__title{font-size: 16px;}"
+        "@media screen and (max-width: 1024px) {.iwc__title {font-size: 16px;}}"
       ],
       "name": "Image with chart",
       "settings": {
