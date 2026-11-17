@@ -852,7 +852,7 @@
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Improve range and reduce discomfort.</p>"
+            "text": "<p>CastleFlexx helps open the chest and train shoulder mobility with controlled tension.</p>"
           }
         }
       },
@@ -901,7 +901,7 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
+        "text_light": "#3E4044",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
         "color_icon_light": "rgba(0,0,0,0)",
