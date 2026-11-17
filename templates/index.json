@@ -1196,6 +1196,7 @@
         },
         "testimonial_gEBd9D": {
           "type": "testimonial",
+          "disabled": true,
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
@@ -1210,6 +1211,7 @@
         },
         "testimonial_4hQ7GW": {
           "type": "testimonial",
+          "disabled": true,
           "settings": {
             "icon_star": "quote",
             "custom_icon": "",
