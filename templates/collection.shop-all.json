@@ -703,7 +703,7 @@
         "padding_bottom": 60,
         "min_columns_mobile": "1",
         "spacing_mobile": 16,
-        "height_mobile": 320,
+        "height_mobile": 360,
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
         "edge_style_mobile": "adapt",
