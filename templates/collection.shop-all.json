@@ -692,7 +692,7 @@
         "change_slides_speed": 5,
         "max_columns": 2,
         "spacing": 28,
-        "height_desktop": 450,
+        "height_desktop": 500,
         "keep_ratio_on_different_width": false,
         "show_section_divider": false,
         "full_width": false,
