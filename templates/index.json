@@ -1208,7 +1208,7 @@
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20,
+        "padding_bottom_mobile": 0,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
@@ -1218,6 +1218,111 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "multicolumn_XQAGfi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7GYxQa": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Star.svg",
+            "custom_icon": "",
+            "title": "200+ guided classes",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": ""
+          }
+        },
+        "column_CbTCdk": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit_icon_person.svg",
+            "custom_icon": "",
+            "title": "All mobility levels welcome",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": ""
+          }
+        },
+        "column_eaEkeb": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Target.svg",
+            "custom_icon": "",
+            "title": "Targeted by pain area",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_7GYxQa",
+        "column_CbTCdk",
+        "column_eaEkeb"
+      ],
+      "custom_css": [
+        ".inline-block {margin-right: 8px;}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "secondary_background": "none",
+        "border_column": "none",
+        "column_content_alignment": "start",
+        "icon_position": "next",
+        "icon_size": 40,
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 12,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 32,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "media_gallery_6VfHer": {
@@ -1431,111 +1536,6 @@
         "heading_color_dark": "rgba(0,0,0,0)",
         "heading_highlight_color_dark": "rgba(0,0,0,0)",
         "text_color_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "multicolumn_XQAGfi": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_7GYxQa": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/iconstack.io_-_Star.svg",
-            "custom_icon": "",
-            "title": "200+ guided classes",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": ""
-          }
-        },
-        "column_CbTCdk": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/castlefit_icon_person.svg",
-            "custom_icon": "",
-            "title": "All mobility levels welcome",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": ""
-          }
-        },
-        "column_eaEkeb": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/iconstack.io_-_Target.svg",
-            "custom_icon": "",
-            "title": "Targeted by pain area",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_7GYxQa",
-        "column_CbTCdk",
-        "column_eaEkeb"
-      ],
-      "custom_css": [
-        ".inline-block {margin-right: 8px;}"
-      ],
-      "name": "t:sections.multicolumn.name",
-      "settings": {
-        "title": "",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "secondary_background": "none",
-        "border_column": "none",
-        "column_content_alignment": "start",
-        "icon_position": "next",
-        "icon_size": 40,
-        "enable_desktop_slider": false,
-        "pagination_desktop": "dots",
-        "swiper_on_mobile": false,
-        "pagination_mobile": "dots",
-        "auto_play": false,
-        "change_bar_every": 5,
-        "column_layout_desktop": "lg:w-1/4",
-        "section_height_desktop": "md:py-7",
-        "spacing_desktop": 28,
-        "full_width": false,
-        "padding_full_width": false,
-        "show_section_divider": false,
-        "padding_top": 28,
-        "padding_bottom": 28,
-        "column_layout_mobile": "w-full",
-        "section_height_mobile": "py-0",
-        "spacing_mobile": 12,
-        "full_width_mobile": false,
-        "show_section_divider_mobile": false,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "color_icon_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "testimonials_with_card_ErTtk4": {
@@ -2187,8 +2187,8 @@
     "image_with_chart_VEDQLW",
     "rich_text_WQFF8r",
     "rich_text_3qNkUD",
-    "media_gallery_6VfHer",
     "multicolumn_XQAGfi",
+    "media_gallery_6VfHer",
     "testimonials_with_card_ErTtk4",
     "collage_D4GGTK",
     "image_with_text_EBVLU7",
