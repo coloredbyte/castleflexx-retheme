@@ -21,7 +21,7 @@
         "size_title": 150,
         "heading_tag": "h1",
         "full_width_title": true,
-        "desktop_height": "450px",
+        "desktop_height": "auto",
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 0,
