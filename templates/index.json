@@ -1858,7 +1858,8 @@
       ],
       "custom_css": [
         "p {font-size: 16px;}",
-        " .animate_transition_slide__box {padding-top: 32px; padding-bottom: 32px; }",
+        ".animate_transition_slide__box {padding-top: 32px; padding-bottom: 32px;}",
+        " .mt-4 {margin-top: 20px;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .x-subheading {font-size: 13px; } p {font-size: 14px; } .animate_transition_slide__box {padding-top: 28px; padding-bottom: 28px; }}"
       ],
       "name": "t:sections.slideshow.name",
