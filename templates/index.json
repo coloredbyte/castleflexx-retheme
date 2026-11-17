@@ -1065,6 +1065,7 @@
       "name": "Image with chart",
       "settings": {
         "background_colour": "#F8F8F8",
+        "image": "shopify://shop_images/6303abd84f383481af5c0b0188965a59.gif",
         "chart_logo": "shopify://shop_images/castleflexx-logo.png",
         "chart_title": "VS Straps/Bands"
       }
