@@ -1729,6 +1729,9 @@
         "heading_gFabhd",
         "button_T6acmX"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
@@ -1854,7 +1857,7 @@
         "slide_fYH3xg"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .x-subheading {font-size: 13px; } p{font-size: 14px; }.animate_transition_slide__box{padding-top: 28px; padding-bottom: 28px;}}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .x-subheading {font-size: 13px; } p {font-size: 14px; } .animate_transition_slide__box {padding-top: 28px; padding-bottom: 28px; }}"
       ],
       "name": "t:sections.slideshow.name",
       "settings": {
