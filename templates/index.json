@@ -533,7 +533,7 @@
             "video_alt_text": "",
             "enable_content_overlay": true,
             "content_position": "bottom",
-            "overlay_opacity": 20,
+            "overlay_opacity": 30,
             "number_of_columns": 1,
             "number_of_row": 2,
             "icon": "none",
