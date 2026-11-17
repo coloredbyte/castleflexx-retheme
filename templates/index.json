@@ -779,7 +779,7 @@
         "padding_bottom": 0,
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 60,
         "padding_bottom_mobile": 20,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
@@ -861,7 +861,7 @@
       ],
       "custom_css": [
         ".color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 16px;}",
-        "@media screen and (max-width: 1024px) {.h3 {font-size: 18px;}}"
+        "@media screen and (max-width: 1024px) {.h3 {font-size: 18px; }}"
       ],
       "settings": {
         "title": "",
@@ -889,12 +889,12 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "column_layout_mobile": "w-full",
-        "section_height_mobile": "py-5",
+        "section_height_mobile": "py-0",
         "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 32,
-        "padding_bottom_mobile": 28,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
