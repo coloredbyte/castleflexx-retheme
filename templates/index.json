@@ -1798,7 +1798,7 @@
             "heading": "Find Your Device",
             "heading_mobile": "",
             "highlight_type": "underline",
-            "heading_size": 150,
+            "heading_size": 120,
             "heading_tag": "h2",
             "text": "<p>Need help finding which CastleFlexx device is right for you? Take our brief quiz to learn which device is best designed to address your specific wants and needs</p>",
             "button_label_1": "Take Quiz",
@@ -1857,6 +1857,8 @@
         "slide_fYH3xg"
       ],
       "custom_css": [
+        "p {font-size: 16px;}",
+        " .animate_transition_slide__box {padding-top: 32px; padding-bottom: 32px; }",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .x-subheading {font-size: 13px; } p {font-size: 14px; } .animate_transition_slide__box {padding-top: 28px; padding-bottom: 28px; }}"
       ],
       "name": "t:sections.slideshow.name",
@@ -1875,7 +1877,7 @@
         "adapt_corners_desktop": false,
         "rounded_corner_image": false,
         "desktop_ratio": "px",
-        "desktop_height": "450",
+        "desktop_height": "550",
         "padding_top": 0,
         "padding_bottom": 0,
         "full_width_mobile": true,
