@@ -1064,7 +1064,7 @@
       ],
       "custom_css": [
         ".iwc__inner {padding-top: 60px;}",
-        "@media screen and (max-width: 1024px) {.iwc__title {font-size: 16px;}}"
+        "@media screen and (max-width: 1024px) {.iwc__title {font-size: 16px; }}"
       ],
       "name": "Image with chart",
       "settings": {
@@ -1072,6 +1072,63 @@
         "image": "shopify://shop_images/6303abd84f383481af5c0b0188965a59.gif",
         "chart_logo": "shopify://shop_images/castleflexx-logo.png",
         "chart_title": "VS Straps/Bands"
+      }
+    },
+    "rich_text_WQFF8r": {
+      "type": "rich-text",
+      "blocks": {
+        "button_PK7JXL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/shop-all",
+            "open_new_window_button": false,
+            "show_button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "open_new_window_button_2": false,
+            "show_button_style_2": "primary",
+            "block_scheme": "section",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "color_text_button_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_text_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "button_PK7JXL"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "testimonials_with_card_ErTtk4": {
@@ -1719,6 +1776,7 @@
     "multicolumn_rxMYDJ",
     "image_hotspot_q6W8qx",
     "image_with_chart_VEDQLW",
+    "rich_text_WQFF8r",
     "testimonials_with_card_ErTtk4",
     "collage_D4GGTK",
     "image_with_text_EBVLU7",
