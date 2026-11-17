@@ -579,8 +579,8 @@
         "media_xiWAPr": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
-            "image_link": "",
+            "image": "shopify://shop_images/fb7d6abf9aef307f6e41681b4ef79045fabfe631.jpg",
+            "image_link": "shopify://products/castleair",
             "open_new_window": false,
             "show_sound_control": false,
             "video_url": "",
@@ -596,7 +596,7 @@
             "custom_icon": "",
             "icon_size": 45,
             "sub_title": "",
-            "title": "For Athletes",
+            "title": "Neck Pain Relief",
             "highlight_type": "font_highlight",
             "title_size": 70,
             "text": "",
@@ -604,7 +604,7 @@
             "text_align": "center",
             "media_position": "top",
             "button_label": "Shop Now",
-            "button_link": "shopify://products/castleflexx-sport",
+            "button_link": "shopify://products/castleair",
             "open_new_window_button": false,
             "show_button_style": "secondary",
             "block_scheme": "section",
