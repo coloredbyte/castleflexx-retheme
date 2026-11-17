@@ -890,7 +890,7 @@
         "padding_full_width": true,
         "show_section_divider": false,
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 80,
         "column_layout_mobile": "w-1/2",
         "section_height_mobile": "py-5",
         "spacing_mobile": 0,
@@ -911,6 +911,109 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "image_hotspot_q6W8qx": {
+      "type": "image-hotspot",
+      "blocks": {
+        "hotspot_AQ68Uq": {
+          "type": "hotspot",
+          "settings": {
+            "top": 29,
+            "left": 59,
+            "title": "Plantar Fasciitis",
+            "pos": "right",
+            "width": 6
+          }
+        },
+        "hotspot_6yrbiC": {
+          "type": "hotspot",
+          "settings": {
+            "top": 33,
+            "left": 47,
+            "title": "High Blood Pressure",
+            "pos": "left",
+            "width": 11
+          }
+        },
+        "hotspot_BRCnx3": {
+          "type": "hotspot",
+          "settings": {
+            "top": 47,
+            "left": 43,
+            "title": "Circulation Issues",
+            "pos": "left",
+            "width": 14
+          }
+        },
+        "hotspot_P9rRxP": {
+          "type": "hotspot",
+          "settings": {
+            "top": 49,
+            "left": 57,
+            "title": "Tight Calfs",
+            "pos": "right",
+            "width": 14
+          }
+        },
+        "hotspot_98YDgf": {
+          "type": "hotspot",
+          "settings": {
+            "top": 59,
+            "left": 35,
+            "title": "Shoulder Impingement",
+            "pos": "left",
+            "width": 8
+          }
+        },
+        "hotspot_TLBAMi": {
+          "type": "hotspot",
+          "settings": {
+            "top": 64,
+            "left": 59,
+            "title": "Sciatica / Herniated Discs",
+            "pos": "right",
+            "width": 8
+          }
+        },
+        "hotspot_yN4JfQ": {
+          "type": "hotspot",
+          "settings": {
+            "top": 79,
+            "left": 39,
+            "title": "Tennis Elbow",
+            "pos": "left",
+            "width": 18
+          }
+        },
+        "hotspot_m7p377": {
+          "type": "hotspot",
+          "settings": {
+            "top": 75,
+            "left": 48,
+            "title": "Hip Pain",
+            "pos": "right",
+            "width": 31
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_AQ68Uq",
+        "hotspot_6yrbiC",
+        "hotspot_BRCnx3",
+        "hotspot_P9rRxP",
+        "hotspot_98YDgf",
+        "hotspot_TLBAMi",
+        "hotspot_yN4JfQ",
+        "hotspot_m7p377"
+      ],
+      "name": "Image with hotspots",
+      "settings": {
+        "hide_products": [],
+        "title": "Relieve tension across your body",
+        "subtitle": "CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching.",
+        "img": "shopify://shop_images/45615a4bbce61dd89c3af5b1b77227a7.jpg",
+        "speed": 25
       }
     },
     "testimonials_with_card_ErTtk4": {
@@ -1556,6 +1659,7 @@
     "media_gallery_B3NkJH",
     "rich_text_N6F4mN",
     "multicolumn_rxMYDJ",
+    "image_hotspot_q6W8qx",
     "testimonials_with_card_ErTtk4",
     "collage_D4GGTK",
     "image_with_text_EBVLU7",
