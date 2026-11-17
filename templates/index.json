@@ -841,13 +841,16 @@
         "testimonial_gEBd9D",
         "testimonial_4hQ7GW"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
+      ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
         "heading": "Trusted by the Experts",
         "highlight_type": "font_highlight",
         "subheading": "",
         "text": "",
-        "heading_alignment": "left",
+        "heading_alignment": "center",
         "heading_size": 100,
         "heading_tag": "h2",
         "auto_play": true,
