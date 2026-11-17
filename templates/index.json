@@ -1963,7 +1963,24 @@
             "show_products_on_image": true
           }
         },
-        "social_post_PmXxMz": {
+        "social_post_Jg8G7H": {
+          "type": "social-post",
+          "settings": {
+            "enable_video_autoplay": true,
+            "show_sound_control": false,
+            "social_post_content": "",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "social_post_link": "",
+            "open_new_window_button": true,
+            "integrated_social_media": "adapt",
+            "account_username": "Eurus",
+            "list_products": [],
+            "show_products_on_image": true
+          }
+        },
+        "social_post_Lg7b4D": {
           "type": "social-post",
           "settings": {
             "enable_video_autoplay": true,
@@ -1986,7 +2003,8 @@
         "social_post_rfzkfd",
         "social_post_RVkkCK",
         "social_post_QyRHLF",
-        "social_post_PmXxMz"
+        "social_post_Jg8G7H",
+        "social_post_Lg7b4D"
       ],
       "name": "t:sections.social-feeds.name",
       "settings": {
@@ -1997,7 +2015,7 @@
         "heading_alignment": "center",
         "subheading": "",
         "text": "",
-        "button_label": "Follow us",
+        "button_label": "@castleflexx",
         "button_link": "",
         "open_new_window_button": false,
         "show_button_style": "secondary",
@@ -2005,14 +2023,14 @@
         "media_ratio": "aspect-square",
         "show_border": true,
         "social_post_layout": "3",
-        "enable_carousel_on_desktop": false,
-        "pagination_desktop": "dots",
-        "show_navigation": true,
-        "swiper_on_mobile": true,
-        "pagination_mobile": "dots",
-        "change_slides_speed": 5,
-        "columns_desktop": 5,
-        "full_width": false,
+        "enable_carousel_on_desktop": true,
+        "pagination_desktop": "none",
+        "show_navigation": false,
+        "swiper_on_mobile": false,
+        "pagination_mobile": "none",
+        "change_slides_speed": 0,
+        "columns_desktop": 6,
+        "full_width": true,
         "padding_full_width": true,
         "show_section_divider": false,
         "spacing": 8,
@@ -2022,8 +2040,8 @@
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
         "spacing_mobile": 8,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
