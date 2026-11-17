@@ -864,7 +864,7 @@
       ],
       "custom_css": [
         ".color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 16px;}",
-        "@media screen and (max-width: 1024px) {.h3 {font-size: 18px; } .color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 14px; }}"
+        "@media screen and (max-width: 1024px) {.h3 {font-size: 17px; } .color-text--template--23377893064895__multicolumn_rxMYDJ {font-size: 14px; }}"
       ],
       "settings": {
         "title": "",
@@ -884,7 +884,7 @@
         "auto_play": false,
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/4",
-        "section_height_desktop": "md:py-10",
+        "section_height_desktop": "md:py-0",
         "spacing_desktop": 40,
         "full_width": false,
         "padding_full_width": true,
@@ -892,9 +892,9 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "column_layout_mobile": "w-1/2",
-        "section_height_mobile": "py-0",
-        "spacing_mobile": 16,
-        "full_width_mobile": false,
+        "section_height_mobile": "py-5",
+        "spacing_mobile": 0,
+        "full_width_mobile": true,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
