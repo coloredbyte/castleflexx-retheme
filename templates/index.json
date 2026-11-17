@@ -691,7 +691,8 @@
         "media_p4ReKF"
       ],
       "custom_css": [
-        ".x-block-items-media-3 > .rounded-\\[10px\\],.x-block-items-media-2 > .rounded-\\[10px\\],.x-block-items-media-1 > .rounded-\\[10px\\] {border-radius: 0px;}"
+        ".button {margin-top: 12px;}",
+        "@media screen and (max-width: 1024px) {p {font-size: 24px; }}"
       ],
       "name": "t:sections.media-gallery.name",
       "settings": {
