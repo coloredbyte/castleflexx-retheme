@@ -478,7 +478,7 @@
             "video_alt_text": "",
             "enable_content_overlay": true,
             "content_position": "bottom",
-            "overlay_opacity": 30,
+            "overlay_opacity": 20,
             "number_of_columns": 1,
             "number_of_row": 2,
             "icon": "none",
@@ -486,7 +486,7 @@
             "custom_icon": "",
             "icon_size": 45,
             "sub_title": "",
-            "title": "Media heading",
+            "title": "For Athletes",
             "highlight_type": "font_highlight",
             "title_size": 100,
             "text": "",
@@ -694,7 +694,7 @@
       "custom_css": [
         ".button {margin-top: 12px; padding-top: 10px; padding-bottom: 10px;}",
         ".max-w-full {font-size: 14px;}",
-        "@media screen and (max-width: 1024px) {p {font-size: 24px; } .button {margin-top: 12px; padding-left: 32px; padding-right: 32px; }}"
+        "@media screen and (max-width: 1024px) {p {font-size: 26px; } .button {margin-top: 12px; padding-left: 32px; padding-right: 32px; }}"
       ],
       "name": "t:sections.media-gallery.name",
       "settings": {
