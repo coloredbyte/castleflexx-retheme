@@ -815,13 +815,14 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/Plantar_Fasciitis_icon_02c33e8d-5fb5-4e34-af68-3308c166c4e9.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Plantar Fasciitis",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Loosen tightness, reduce heel pain.</p>"
           }
         },
         "column_C9L9mz": {
@@ -829,13 +830,14 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/sciatica_icon_afb3e0eb-5a80-431f-b9ef-f7a5dcc302f9.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Sciatica",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Ease nerve pain and move freely again.</p>"
           }
         },
         "column_ipMknc": {
@@ -843,13 +845,14 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/Shoulder_icon_6992f40d-86fa-457f-9518-4580aca0a34a.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Shoulder Impingement",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Improve range and reduce discomfort.</p>"
           }
         }
       },
