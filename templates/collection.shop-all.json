@@ -834,7 +834,7 @@
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
-            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "criterion_detail_externals": "No\nYes",
             "icon_external_item": "none",
             "another_icon_external_item": "",
             "custom_icon_external_item": ""
