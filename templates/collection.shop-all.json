@@ -1015,6 +1015,20 @@
     "testimonials_with_card_kByCFm": {
       "type": "testimonials-with-card",
       "blocks": {
+        "testimonial_qYQP8b": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“I use it an hour a day.",
+            "text": "<p>We dont use cheap straps anymore, we use CastleFlexx. I use it an hour a day. CastleFlexx is by far the best.”</p>",
+            "show_author_image": false,
+            "author": "Ronald Acuna Jr",
+            "author_note": "<p>#13 | NL MVP 2023</p>",
+            "product": ""
+          }
+        },
         "testimonial_4yjyX6": {
           "type": "testimonial",
           "settings": {
@@ -1027,20 +1041,6 @@
             "show_author_image": false,
             "author": "Dr. Rachel Skolnick D.C",
             "author_note": "<p>Julliard NYC</p>",
-            "product": ""
-          }
-        },
-        "testimonial_qYQP8b": {
-          "type": "testimonial",
-          "settings": {
-            "cards_image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "This Thing Is Amazing!",
-            "text": "<p>“We dont use cheap straps anymore, we use CastleFlexx. I use it an hour a day. CastleFlexx is by far the best.”</p>",
-            "show_author_image": false,
-            "author": "Ronald Acuna Jr",
-            "author_note": "<p>Baseball Player | #13 Atlanta</p>",
             "product": ""
           }
         },
@@ -1106,8 +1106,8 @@
         }
       },
       "block_order": [
-        "testimonial_4yjyX6",
         "testimonial_qYQP8b",
+        "testimonial_4yjyX6",
         "testimonial_BWHjyG",
         "testimonial_QLcDqG",
         "testimonial_gtrCBk",
