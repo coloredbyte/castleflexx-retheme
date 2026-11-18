@@ -681,7 +681,8 @@
         "button_hover_dark": "rgba(0,0,0,0)",
         "button_text_hover_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)"
-      }
+      },
+      "disabled": true
     },
     "text_column_with_image_MUhrhK": {
       "type": "text-column-with-image",
