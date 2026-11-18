@@ -760,6 +760,10 @@
         "device_igJmFK",
         "device_tUphBx"
       ],
+      "custom_css": [
+        "h2 {font-weight: 500;}",
+        "p {color: #191A1B;}"
+      ],
       "name": "Choose your device",
       "settings": {
         "heading": "Choose Your Device",
