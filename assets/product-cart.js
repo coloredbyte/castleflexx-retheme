@@ -127,12 +127,18 @@ if (!window.Eurus.loadedScript.has('product-cart.js')) {
             const match = document.cookie.match('(^|;)\\s*' + 'eurus_insurance' + '\\s*=\\s*([^;]+)');
             const linkedProductList = newFormData.getAll('properties[_linked_product_id][]');
             const linkedProductListQty = newFormData.getAll('properties[_linked_product_id_qty][]');
+
+            // Upsell checkbox (snippets/product-upsell.liquid) posts
+            // "<variant id>|<selling plan id>"; it becomes its own line, not a property.
+            const upsellValue = newFormData.get('properties[_upsell]');
+            newFormData.delete('properties[_upsell]');
             if (
               (this.$refs.gift_wrapping_checkbox && this.$refs.gift_wrapping_checkbox.checked && wrappringVariantId) || 
               (this.$refs.engraving_text && engravingVariantId && this.$refs.engraving_text.value.trim()) || 
               (this.insuranceVariantId && !localStorage.getItem('insuranceRemoved') && (!match || match[1].trim() === '')) || 
               (linkedProductList.length > 0) ||
-              (linkedProductListQty.length > 0)
+              (linkedProductListQty.length > 0) ||
+              upsellValue
             ) {
               const variantId = formData.get('id');
               const productTitle = productForm ? productForm.querySelector(`.product-variant-title-${formData.get('product-id')}-${variantId}`)?.textContent : null
@@ -179,6 +185,11 @@ if (!window.Eurus.loadedScript.has('product-cart.js')) {
                 });
               }
               
+              if (upsellValue) {
+                const [upsellId, upsellPlanId] = upsellValue.split('|');
+                additionalOptionData.push({ id: upsellId, quantity: 1, selling_plan: upsellPlanId });
+              }
+
               if (this.$refs.engraving_text && engravingVariantId && this.$refs.engraving_text.value.trim()) {
                 additionalOptionData.push(
                   {
@@ -208,6 +219,10 @@ if (!window.Eurus.loadedScript.has('product-cart.js')) {
 
                   if (item.parent_id) {
                     newFormData.append(`${base}[parent_id]`, item.parent_id);
+                  }
+
+                  if (item.selling_plan) {
+                    newFormData.append(`${base}[selling_plan]`, item.selling_plan);
                   }
 
                   if (item.properties) {

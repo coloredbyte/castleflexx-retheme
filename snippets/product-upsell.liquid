@@ -1,0 +1,99 @@
+{%- comment -%}
+  PDP upsell: one checkbox that adds a second item with the main product.
+
+  Content comes from the product's metafields, so each product sets its own
+  offer in admin (same data the old theme used):
+  - custom.upsell_product: variant reference (e.g. CastleFit 12 months)
+  - custom.upsell_title: rich text above the box
+  - custom.upsell_description: text under the product name
+
+  If the upsell product has a selling plan (CastleFit membership), the
+  first plan is used and its discounted price is shown.
+
+  The checkbox posts "properties[_upsell]" = "<variant id>|<selling plan id>"
+  with the product form; product-cart.js turns it into a second cart line.
+  Nothing renders when the metafield is empty or the variant can't be sold
+  in this market.
+
+  Accepts:
+  - product: {Object} Main product (required)
+  - block: {Object} Upsell block (required)
+  - product_form_id: {String} Id of the product form (required)
+{%- endcomment -%}
+{%- liquid
+  assign upsell_variant = product.metafields.custom.upsell_product.value
+  assign upsell_ok = false
+  if upsell_variant != blank and upsell_variant.available
+    capture upsell_region_ok
+      render 'variant-region-available', variant: upsell_variant
+    endcapture
+    unless upsell_region_ok contains 'false'
+      assign upsell_ok = true
+    endunless
+  endif
+
+  # Subscription price, e.g. CastleFit $149 -> $99 on the yearly plan.
+  assign upsell_plan_id = ''
+  assign upsell_price = upsell_variant.price
+  assign upsell_allocation = upsell_variant.selling_plan_allocations.first
+  if upsell_allocation != blank
+    assign upsell_plan_id = upsell_allocation.selling_plan.id
+    assign upsell_price = upsell_allocation.price
+  endif
+
+  assign upsell_input_id = 'x-upsell-' | append: product_form_id
+  assign upsell_title = block.settings.heading
+  if upsell_title == blank
+    assign upsell_title = product.metafields.custom.upsell_title | metafield_tag
+  endif
+  assign upsell_description = block.settings.description
+  if upsell_description == blank
+    assign upsell_description = product.metafields.custom.upsell_description
+  endif
+-%}
+{%- if upsell_ok -%}
+<div class="{% render 'scheme-class', scheme: block.settings.block_scheme, is_block: true %} x-product-upsell w-full mb-4 md:mb-6" {{ block.shopify_attributes }}>
+  {%- if upsell_title != blank -%}
+    <div class="x-product-upsell__title mb-2 font-medium">{{ upsell_title }}</div>
+  {%- endif -%}
+
+  <label
+    for="{{ upsell_input_id }}"
+    class="flex items-start gap-3 cursor-pointer{% if block.settings.show_border %} p-4 border border-solid border-[rgba(var(--colors-line-and-border))]{% if settings.edges_type == 'rounded_corners' %} rounded-md{% endif %}{% endif %}"
+  >
+    <input
+      id="{{ upsell_input_id }}"
+      type="checkbox"
+      form="{{ product_form_id }}"
+      name="properties[_upsell]"
+      value="{{ upsell_variant.id }}|{{ upsell_plan_id }}"
+      class="checkbox checkbox-checked shrink-0 mt-0.5 w-5 h-5 min-w-[20px] md:h-6 md:w-6 md:min-w-[24px] border-2 checked:border-[rgba(var(--colors-text-link))] checked:bg-[rgba(var(--colors-text-link))] relative cursor-pointer{% if settings.edges_type == 'rounded_corners' %} rounded{% else %} rounded-none{% endif %}"
+      {% if block.settings.checked_by_default %}checked{% endif %}
+    >
+
+    {%- if block.settings.show_image and upsell_variant.product.featured_image != blank -%}
+      <img
+        src="{{ upsell_variant.product.featured_image | image_url: width: 120 }}"
+        alt="{{ upsell_variant.product.featured_image.alt | escape }}"
+        width="60"
+        height="60"
+        loading="lazy"
+        class="shrink-0 w-[60px] h-[60px] object-cover{% if settings.edges_type == 'rounded_corners' %} rounded{% endif %}"
+      >
+    {%- endif -%}
+
+    <span class="flex flex-col gap-1">
+      <a href="{{ upsell_variant.product.url }}" class="underline" @click.stop>{{ upsell_variant.product.title }}</a>
+      {%- if upsell_description != blank -%}
+        <span class="text-sm opacity-80">{{ upsell_description }}</span>
+      {%- endif -%}
+      <span class="flex gap-2 text-sm">
+        {%- if upsell_price < upsell_variant.price -%}
+          <s class="opacity-60">{{ upsell_variant.price | money }}</s>
+        {%- endif -%}
+        <span class="font-medium">{{ upsell_price | money }}</span>
+      </span>
+    </span>
+  </label>
+</div>
+{%- endif -%}
