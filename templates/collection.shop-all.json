@@ -1225,7 +1225,7 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
-        "text_light": "#191A1B",
+        "text_light": "#191a1b",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
         "color_icon_light": "rgba(0,0,0,0)",
@@ -1294,6 +1294,7 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)",
             "colors_text_link_dark": "rgba(0,0,0,0)",
             "show_sound_control": false,
+            "video_url": "",
             "enable_video_autoplay": false,
             "video_alt_text": "",
             "product_card": "",
@@ -1398,7 +1399,7 @@
         "image_9PP9iA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2d4a3457209dd6c03e1da8667b78e3179fc95a14.png",
+            "image": "shopify://shop_images/accessories_img.png",
             "overlay_opacity": 0,
             "image_link": "shopify://products/cork-mat",
             "open_new_window": false,
@@ -1426,7 +1427,7 @@
             "color_text_button_hover": "rgba(0,0,0,0)",
             "color_button_secondary": "rgba(0,0,0,0)",
             "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "#191A1B"
+            "colors_text_link": "#191a1b"
           }
         },
         "image_J7fxJj": {
@@ -1460,7 +1461,7 @@
             "color_text_button_hover": "rgba(0,0,0,0)",
             "color_button_secondary": "rgba(0,0,0,0)",
             "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "#191A1B"
+            "colors_text_link": "#191a1b"
           }
         },
         "image_UAVwif": {
@@ -1494,7 +1495,7 @@
             "color_text_button_hover": "rgba(0,0,0,0)",
             "color_button_secondary": "rgba(0,0,0,0)",
             "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "#191A1B"
+            "colors_text_link": "#191a1b"
           }
         }
       },
@@ -1506,7 +1507,7 @@
       ],
       "custom_css": [
         ".promotion-content {padding-bottom: 0px;}",
-        ".heading-image_9PP9iA {margin-bottom: 0px;}"
+        " .button {padding-left: 0px; padding-right: 0px;}"
       ],
       "name": "t:sections.collage.name",
       "settings": {
