@@ -1012,57 +1012,6 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
-    "rich_text_7rXjzd": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_8BhYqJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Trusted by the Experts",
-            "highlight_type": "underline",
-            "heading_size": 100,
-            "heading_tag": "h2"
-          }
-        },
-        "text_hAPaFP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The most accomplished team doctors, pro athletes and business moguls trust CastleFlexx for their recovery.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8BhYqJ",
-        "text_hAPaFP"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "content_alignment": "center",
-        "show_section_divider": false,
-        "make_full_page_width": false,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "content_alignment_mobile": "center",
-        "show_section_divider_mobile": false,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 0,
-        "section_scheme": "store",
-        "heading_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "text_light": "#191a1b",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)"
-      }
-    },
     "testimonials_with_card_kByCFm": {
       "type": "testimonials-with-card",
       "blocks": {
@@ -1169,10 +1118,10 @@
       ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
-        "heading": "",
+        "heading": "Trusted by the Experts",
         "highlight_type": "font_highlight",
         "subheading": "",
-        "text": "",
+        "text": "<p>The most accomplished team doctors, pro athletes and business moguls trust CastleFlexx for their recovery.</p>",
         "heading_alignment": "center",
         "heading_size": 100,
         "heading_tag": "h2",
@@ -1182,11 +1131,11 @@
         "full_width": false,
         "padding_full_width": false,
         "show_section_divider": false,
-        "top_padding": 0,
+        "top_padding": 60,
         "bottom_padding": 60,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "top_padding_mobile": 0,
+        "top_padding_mobile": 20,
         "bottom_padding_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
@@ -1213,7 +1162,6 @@
     "rich_text_g8ew8w",
     "comparison_table_VTBJ99",
     "rich_text_MtYiFR",
-    "rich_text_7rXjzd",
     "testimonials_with_card_kByCFm"
   ]
 }
