@@ -710,7 +710,7 @@
         "padding_full_width": false,
         "edge_style": "rounded_corners",
         "padding_top": 28,
-        "padding_bottom": 60,
+        "padding_bottom": 80,
         "min_columns_mobile": "1",
         "spacing_mobile": 16,
         "height_mobile": 360,
