@@ -686,7 +686,7 @@
         ".content-media_V38kbk {padding-left: 24px; padding-right: 0px;}",
         ".content-media_cpQ8Fx {padding-left: 24px; padding-right: 0px;}",
         ".x-container-media-gallery {padding-left: 80px; padding-right: 80px;}",
-        "@media screen and (max-width: 1024px) {.x-container-media-gallery {padding-left: 20px; padding-right: 20px; } .content-media_V38kbk {padding-left: 18px; padding-right: 0px; } .content-media_cpQ8Fx {padding-left: 18px; padding-right: 0px; }}"
+        "@media screen and (max-width: 1024px) {.x-container-media-gallery {padding-left: 20px; padding-right: 20px; } .content-media_V38kbk {padding-left: 18px; padding-right: 0px; } .content-media_cpQ8Fx {padding-left: 18px; padding-right: 0px; } h2 {font-size: 28px;}}"
       ],
       "name": "t:sections.media-gallery.name",
       "settings": {
