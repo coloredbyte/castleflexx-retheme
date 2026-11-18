@@ -1433,11 +1433,11 @@
         "image_J7fxJj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/7d3631ad09936a87819c063b078a5b67291e0362.png",
+            "image": "shopify://shop_images/cork_handle_img_2205a7ce-6a59-4ec5-bef8-4e2692077562.png",
             "overlay_opacity": 0,
             "image_link": "shopify://products/cork",
             "open_new_window": false,
-            "image_padding": true,
+            "image_padding": false,
             "number_of_columns": 1,
             "number_of_row": 1,
             "title": "",
@@ -1467,11 +1467,11 @@
         "image_UAVwif": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/71246b6c3d9e09f686d5a327a11e2f85c23be34d.png",
+            "image": "shopify://shop_images/hot_cold_pack_img.png",
             "overlay_opacity": 0,
             "image_link": "",
             "open_new_window": false,
-            "image_padding": true,
+            "image_padding": false,
             "number_of_columns": 1,
             "number_of_row": 1,
             "title": "",
