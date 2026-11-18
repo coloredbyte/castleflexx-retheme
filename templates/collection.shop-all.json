@@ -1018,12 +1018,12 @@
         "testimonial_MKEPBF": {
           "type": "testimonial",
           "settings": {
-            "icon_star": "quote",
+            "icon_star": "5_star",
             "custom_icon": "",
-            "title": "Testimonials",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
-            "author": "Add a caption",
-            "author_note": "",
+            "title": "“I use it an hour a day.”",
+            "text": "",
+            "author": "Ronald Acuna Jr 🏏",
+            "author_note": "<p>#13 | NL MVP 2023</p>",
             "product": ""
           }
         },
@@ -1093,7 +1093,7 @@
         "heading_size": 100,
         "heading_tag": "h2",
         "text_alignment": "center",
-        "testimonial_items_view": "multiple",
+        "testimonial_items_view": "single",
         "pagination_desktop": "line",
         "pagination_mobile": "line",
         "show_arrow": true,
@@ -1108,7 +1108,7 @@
         "bottom_padding": 60,
         "show_section_divider_mobile": false,
         "top_padding_mobile": 20,
-        "bottom_padding_mobile": 20,
+        "bottom_padding_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "item_background_color_light": "rgba(0,0,0,0)",
