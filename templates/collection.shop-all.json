@@ -1521,7 +1521,7 @@
         "show_rating": false,
         "show_highlighted_features": true,
         "show_highlighted_attributes": true,
-        "swiper_on_mobile": true,
+        "swiper_on_mobile": false,
         "pagination_mobile": "dots",
         "auto_play": false,
         "change_slides_speed": 5,
@@ -1532,7 +1532,7 @@
         "padding_top": 40,
         "padding_bottom": 80,
         "min_columns_mobile": "2",
-        "spacing_mobile": 20,
+        "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 28,
@@ -1546,117 +1546,6 @@
         "heading_color_dark": "rgba(0,0,0,0)",
         "heading_highlight_color_dark": "rgba(0,0,0,0)",
         "text_color_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "collection_list_carousel_i9QJbd": {
-      "type": "collection-list-carousel",
-      "blocks": {
-        "featured_collection_yTNjbt": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "accessories",
-            "collection_metafield": "",
-            "use_collection_description": false,
-            "custom_text": "",
-            "image_overlay_opacity": 0,
-            "button_label": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "color_text": "rgba(0,0,0,0)",
-            "color_button": "rgba(0,0,0,0)",
-            "color_text_button": "rgba(0,0,0,0)",
-            "color_button_hover": "rgba(0,0,0,0)",
-            "color_text_button_hover": "rgba(0,0,0,0)",
-            "color_button_secondary": "rgba(0,0,0,0)",
-            "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)"
-          }
-        },
-        "featured_collection_dexYwz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "collection_metafield": "",
-            "use_collection_description": false,
-            "custom_text": "",
-            "image_overlay_opacity": 0,
-            "button_label": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "color_text": "rgba(0,0,0,0)",
-            "color_button": "rgba(0,0,0,0)",
-            "color_text_button": "rgba(0,0,0,0)",
-            "color_button_hover": "rgba(0,0,0,0)",
-            "color_text_button_hover": "rgba(0,0,0,0)",
-            "color_button_secondary": "rgba(0,0,0,0)",
-            "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)"
-          }
-        },
-        "featured_collection_xLRicH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "collection_metafield": "",
-            "use_collection_description": false,
-            "custom_text": "",
-            "image_overlay_opacity": 0,
-            "button_label": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "color_text": "rgba(0,0,0,0)",
-            "color_button": "rgba(0,0,0,0)",
-            "color_text_button": "rgba(0,0,0,0)",
-            "color_button_hover": "rgba(0,0,0,0)",
-            "color_text_button_hover": "rgba(0,0,0,0)",
-            "color_button_secondary": "rgba(0,0,0,0)",
-            "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_yTNjbt",
-        "featured_collection_dexYwz",
-        "featured_collection_xLRicH"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .rte {padding-bottom: 20px; }}"
-      ],
-      "name": "t:sections.collection-list-carousel.name",
-      "settings": {
-        "heading": "Keep Your CastleFlexx Ready",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "text": "<p>Find replacement components, accessories, and add-ons designed to help you maintain and personalize your CastleFlexx setup.</p>",
-        "heading_alignment": "center",
-        "card_image_ratio": "100",
-        "main_image_url": "",
-        "main_image_open_new_window": false,
-        "image_ratio": "square",
-        "title_size": 90,
-        "content_alignment": "center",
-        "columns_desktop": 3,
-        "columns_mobile": "2",
-        "pagination_desktop": "dots",
-        "pagination_mobile": "dots",
-        "promotion_position": "right",
-        "spacing": 20,
-        "show_section_divider": false,
-        "full_width": false,
-        "padding_top": 60,
-        "padding_bottom": 80,
-        "promotion_position_mobile": "above",
-        "spacing_mobile": 16,
-        "show_section_divider_mobile": false,
-        "full_width_mobile": false,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 60,
-        "section_scheme": "store"
       }
     }
   },
@@ -1674,7 +1563,6 @@
     "testimonials_with_card_kByCFm",
     "multicolumn_Y8KGnG",
     "featured_collection_UdRB7M",
-    "collage_7R84nG",
-    "collection_list_carousel_i9QJbd"
+    "collage_7R84nG"
   ]
 }
