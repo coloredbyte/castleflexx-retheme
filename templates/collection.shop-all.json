@@ -756,6 +756,7 @@
         "heading_nWiFwM",
         "text_hajqyr"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
       ],
@@ -779,6 +780,94 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "comparison_table_VTBJ99": {
+      "type": "comparison-table",
+      "blocks": {
+        "criterion_p4BWdd": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Criterion label",
+            "criterion_detail_product": "Yes",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_A9Dtre": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Criterion label",
+            "criterion_detail_product": "Yes",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_BmrQ98": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Criterion label",
+            "criterion_detail_product": "Yes",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "criterion_p4BWdd",
+        "criterion_A9Dtre",
+        "criterion_BmrQ98"
+      ],
+      "name": "t:sections.comparision-table.name",
+      "settings": {
+        "heading": "Which CastleFlexx Is Right for You",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "description": "<p>Learn the difference between each model and how it can fit into your routine.</p>",
+        "product": "",
+        "alternative_text": "",
+        "external_item_labels": "First item\nSecond item\nThird item\nFourth item",
+        "icon_position": "next",
+        "icon_size": 45,
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "column_highlight_light": "rgba(0,0,0,0)",
+        "line_border": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "column_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "multicolumn_M3Rbqp": {
@@ -1604,6 +1693,7 @@
     "related_collections_WxWAqB",
     "media_gallery_maFEhn",
     "rich_text_g8ew8w",
+    "comparison_table_VTBJ99",
     "multicolumn_M3Rbqp",
     "media_gallery_chyViy",
     "featured_collection_z9r7qr"
