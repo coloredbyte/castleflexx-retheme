@@ -1305,7 +1305,7 @@
         "collection_9hJRky"
       ],
       "custom_css": [
-        "h2 {font-size: 30px;}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.featured-collection.name",
       "settings": {
@@ -1433,14 +1433,17 @@
         "featured_collection_dexYwz",
         "featured_collection_xLRicH"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px;}}"
+      ],
       "name": "t:sections.collection-list-carousel.name",
       "settings": {
-        "heading": "Collection Showcase",
+        "heading": "Keep Your CastleFlexx Ready",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
-        "text": "<p>Add a short description to showcase your collections in carousel together with a featured promotion banner.</p>",
-        "heading_alignment": "left",
+        "text": "<p>Find replacement components, accessories, and add-ons designed to help you maintain and personalize your CastleFlexx setup.</p>",
+        "heading_alignment": "center",
         "card_image_ratio": "100",
         "main_image_url": "",
         "main_image_open_new_window": false,
@@ -1461,7 +1464,7 @@
         "spacing_mobile": 16,
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
-        "padding_top_mobile": 28,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 60,
         "section_scheme": "store"
       }
