@@ -1056,12 +1056,27 @@
             "author_note": "<p>Atlanta | Shooting Guard #7</p>",
             "product": "castle-flexx"
           }
+        },
+        "testimonial_p8kaBh": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/dr_rachel_testimonial.png",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“Gripping a band or a strap is painful. This changes everything.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Dr. Rachel Skolnick D.C",
+            "author_note": "<p>Julliard NYC</p>",
+            "product": "castle-flexx"
+          }
         }
       },
       "block_order": [
         "testimonial_qYQP8b",
         "testimonial_pQHMeA",
-        "testimonial_kQRA6k"
+        "testimonial_kQRA6k",
+        "testimonial_p8kaBh"
       ],
       "custom_css": [
         ".author-caption-text {font-weight: 500;}",
