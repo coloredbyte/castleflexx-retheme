@@ -1361,7 +1361,8 @@
       ],
       "custom_css": [
         ".promotion-content {padding-bottom: 0px;}",
-        ".promotion-content,.button {padding-left: 0px; padding-right: 0px;}"
+        ".promotion-content,.button {padding-left: 0px; padding-right: 0px;}",
+        " @media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.collage.name",
       "settings": {
@@ -1390,8 +1391,8 @@
         "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_color_light": "rgba(0,0,0,0)",
