@@ -1485,7 +1485,7 @@
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
         "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_bottom_mobile": 60,
         "section_scheme": "store"
       }
     }
