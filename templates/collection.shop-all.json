@@ -578,7 +578,7 @@
             "video_alt_text": "",
             "enable_content_overlay": true,
             "content_position": "bottom",
-            "overlay_opacity": 0,
+            "overlay_opacity": 10,
             "number_of_columns": 1,
             "number_of_row": 1,
             "icon": "none",
@@ -624,6 +624,7 @@
         "media_V38kbk": {
           "type": "media",
           "settings": {
+            "image": "shopify://shop_images/v2_in_sunlighgt_on_side_tab_e.png",
             "image_link": "",
             "open_new_window": false,
             "show_sound_control": false,
@@ -632,7 +633,7 @@
             "video_alt_text": "",
             "enable_content_overlay": true,
             "content_position": "bottom",
-            "overlay_opacity": 0,
+            "overlay_opacity": 20,
             "number_of_columns": 1,
             "number_of_row": 1,
             "icon": "none",
