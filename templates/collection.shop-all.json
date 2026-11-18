@@ -1122,65 +1122,69 @@
         "column_CJd3z4": {
           "type": "column",
           "settings": {
-            "icon": "truck",
+            "icon": "another_icon",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit-icon-chemistry.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Lab Tested",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Eurofins PFAS Screening PASS ISO 20743 PASS</p>"
           }
         },
-        "column_PyaM9R": {
+        "column_P6yJRC": {
           "type": "column",
           "settings": {
-            "icon": "truck",
+            "icon": "another_icon",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit-icon-star-outline.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Patented Innovation",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Protected by U.S. patents and international patents.</p>"
           }
         },
-        "column_mjz68b": {
+        "column_rFDXED": {
           "type": "column",
           "settings": {
-            "icon": "truck",
+            "icon": "another_icon",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit-icon-award.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Award Winning",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>HEALTH Magazine Best of 2024 - Recovery Devices 1st place</p>"
           }
         },
-        "column_RwQbkz": {
+        "column_NUTCFK": {
           "type": "column",
           "settings": {
-            "icon": "truck",
+            "icon": "another_icon",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit-icon-security-check.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "30-Day Trial Period",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Love it or return it. No questions asked.</p>"
           }
         }
       },
       "block_order": [
         "column_CJd3z4",
-        "column_PyaM9R",
-        "column_mjz68b",
-        "column_RwQbkz"
+        "column_P6yJRC",
+        "column_rFDXED",
+        "column_NUTCFK"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
