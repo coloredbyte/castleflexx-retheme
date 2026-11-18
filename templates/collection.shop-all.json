@@ -834,7 +834,8 @@
         "criterion_BmrQ98"
       ],
       "custom_css": [
-        ".table-header {background-color: #ffffff;}"
+        ".table-header {background-color: #ffffff;}",
+        " .criterion-detail-product {background-color: #ffffff;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
