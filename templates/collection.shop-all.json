@@ -789,7 +789,7 @@
           "type": "criterion",
           "settings": {
             "heading": "Criterion label",
-            "criterion_detail_product": "Yes",
+            "criterion_detail_product": "Gym, PT, Outdoors",
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
@@ -832,6 +832,9 @@
         "criterion_p4BWdd",
         "criterion_A9Dtre",
         "criterion_BmrQ98"
+      ],
+      "custom_css": [
+        ".table-header {background-color: #ffffff;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
