@@ -1364,7 +1364,7 @@
         "featured_collection_yTNjbt": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "accessories",
             "collection_metafield": "",
             "use_collection_description": false,
             "custom_text": "",
@@ -1434,7 +1434,7 @@
         "featured_collection_xLRicH"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .rte {padding-bottom: 20px;}}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .rte {padding-bottom: 20px; }}"
       ],
       "name": "t:sections.collection-list-carousel.name",
       "settings": {
@@ -1448,7 +1448,7 @@
         "main_image_url": "",
         "main_image_open_new_window": false,
         "image_ratio": "square",
-        "title_size": 80,
+        "title_size": 90,
         "content_alignment": "center",
         "columns_desktop": 3,
         "columns_mobile": "2",
