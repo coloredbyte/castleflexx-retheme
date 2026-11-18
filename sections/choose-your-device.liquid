@@ -1,0 +1,460 @@
+{% comment %}
+-----------------------------------------------------------------------------
+  Section: Choose Your Device (choose-your-device)
+  - Heading + subheading, then a grid of device comparison cards (blocks).
+  - All card content comes from the product's `custom.device_card` metaobject
+    (tag, description, features, icons, colors, image). Price and title always
+    come from the product itself, never the metaobject.
+  - A new device ships by creating a product plus metaobject entries. No code
+    change, no hardcoded handles or IDs.
+  - Every metaobject field is optional: a product with no `device_card` at all
+    still renders a valid card from product data alone.
+  - Single-variant products get a real add to cart via Eurus's xProductCart,
+    region-gated by snippets/variant-region-available.liquid. Multi-variant
+    products get a styled link to the PDP.
+  - Desktop 3 columns, tablet 2, mobile 1. Mobile can optionally be a
+    scroll-snap carousel (assets/choose-your-device.js adds the dots; the
+    scrolling itself is pure CSS and works without JS).
+-----------------------------------------------------------------------------
+{% endcomment %}
+
+{{ 'choose-your-device.css' | asset_url | stylesheet_tag }}
+{% render 'cf-styles' %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+{%- liquid
+  assign heading_level = section.settings.heading_level | default: 'h2'
+  comment
+    Card titles sit one level below the section heading whichever level is
+    chosen, so the hierarchy never flattens into siblings.
+  endcomment
+  assign card_heading_level = 'h3'
+  if heading_level == 'h3'
+    assign card_heading_level = 'h4'
+  endif
+  assign is_carousel = false
+  if section.settings.mobile_layout == 'carousel'
+    assign is_carousel = true
+  endif
+-%}
+
+<div
+  class="cyd"
+  style="
+    --pt: {{ section.settings.desktop_padding_top }}px;
+    --pb: {{ section.settings.desktop_padding_bottom }}px;
+    --pt-m: {{ section.settings.mobile_padding_top }}px;
+    --pb-m: {{ section.settings.mobile_padding_bottom }}px;
+  "
+>
+  <div class="cyd__inner">
+    {%- if section.settings.heading != blank -%}
+      <{{ heading_level }} class="cf-title cyd__heading">{{ section.settings.heading | escape }}</{{ heading_level }}>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <p class="cf-subtitle cyd__subheading">{{ section.settings.subheading | escape | newline_to_br }}</p>
+    {%- endif -%}
+
+    <div
+      class="cyd__grid{% if is_carousel %} cyd__grid--carousel{% endif %}"
+      {% if is_carousel %}
+        data-cyd-track
+        tabindex="0"
+        role="group"
+        aria-label="{{ 'sections.choose_your_device.carousel_label' | t }}"
+      {% endif %}
+    >
+      {%- for block in section.blocks -%}
+        {%- assign p = block.settings.product -%}
+        {%- if p == blank -%}
+          {%- continue -%}
+        {%- endif -%}
+
+        {%- liquid
+          assign card = p.metafields.custom.device_card.value
+
+          assign surface = card.card_surface.value | default: '#F7F8F6'
+          assign image_bg = card.image_background.value | default: surface
+
+          comment
+            The bottom fade is drawn ON TOP of the image (see the ::after rule in
+            choose-your-device.css), so it renders whether the card shows a
+            transparent card_image over image_background or an opaque product
+            photo. Figma fades from the surface colour at zero alpha rather than
+            the `transparent` keyword, so match that exactly.
+          endcomment
+          assign surface_fade = surface | color_modify: 'alpha', 0
+          if surface_fade == blank
+            assign surface_fade = 'transparent'
+          endif
+          assign accent = card.accent_color.value | default: '#191A1B'
+          assign tag_bg = card.tag_background.value | default: accent
+          assign tag_fg = card.tag_text_color.value | default: '#FFFFFF'
+
+          assign card_image = card.card_image.value | default: p.featured_image
+
+          assign features = card.features.value
+          assign icons = card.icons.value
+          if block.settings.hide_icons
+            assign icons = nil
+          endif
+
+          if settings.currency_code_enable
+            assign price_single = p.price | money_with_currency
+            assign price_from = p.price_min | money_with_currency
+            assign price_to = p.price_max | money_with_currency
+          else
+            assign price_single = p.price | money
+            assign price_from = p.price_min | money
+            assign price_to = p.price_max | money
+          endif
+        -%}
+
+        <article
+          class="cyd-card"
+          style="--cyd-image-bg: {{ image_bg }}; --cyd-surface: {{ surface }}; --cyd-surface-0: {{ surface_fade }}; --cyd-accent: {{ accent }};"
+          {{ block.shopify_attributes }}
+        >
+          {%- if card_image != blank -%}
+            <div class="cyd-card__media">
+              {%- liquid
+                assign img_loading = 'lazy'
+                assign img_priority = 'auto'
+                if section.index == 1 and forloop.first
+                  assign img_loading = 'eager'
+                  assign img_priority = 'high'
+                endif
+                assign img_alt = card_image.alt | default: p.title
+              -%}
+              {{
+                card_image
+                | image_url: width: 1200
+                | image_tag:
+                  class: 'cyd-card__image',
+                  widths: '300, 450, 600, 900, 1200',
+                  sizes: '(min-width: 1024px) 411px, (min-width: 768px) calc(50vw - 40px), calc(100vw - 32px)',
+                  loading: img_loading,
+                  fetchpriority: img_priority,
+                  alt: img_alt
+              }}
+            </div>
+          {%- endif -%}
+
+          <div class="cyd-card__body">
+            <div class="cyd-card__head">
+              <{{ card_heading_level }} class="cyd-card__title">
+                {%- if section.settings.enable_card_link -%}
+                  <a class="cyd-card__title-link" href="{{ p.url }}">{{ p.title | escape }}</a>
+                {%- else -%}
+                  {{ p.title | escape }}
+                {%- endif -%}
+              </{{ card_heading_level }}>
+
+              {%- if card.tag_label.value != blank -%}
+                <span class="cyd-card__tag" style="background: {{ tag_bg }}; color: {{ tag_fg }};">
+                  {{- card.tag_label.value | escape -}}
+                </span>
+              {%- endif -%}
+            </div>
+
+            <p class="cyd-card__price">
+              {%- if p.price_varies -%}
+                {{ price_from }} - {{ price_to }}
+              {%- else -%}
+                {{ price_single }}
+              {%- endif -%}
+            </p>
+
+            {%- if card.description.value != blank -%}
+              <p class="cyd-card__desc">{{ card.description.value | escape | newline_to_br }}</p>
+            {%- endif -%}
+
+            {%- if icons != blank and icons.size > 0 -%}
+              <ul class="cyd-card__icons" role="list">
+                {%- for icon in icons -%}
+                  <li class="cyd-card__icon">
+                    {%- assign icon_file = icon.icon.value -%}
+                    {%- if icon_file != blank -%}
+                      {%- comment -%}
+                        The uploaded artwork carries its own circle, so there is no wrapper
+                        border here - the file is the whole visual.
+
+                        Shopify exposes most uploaded SVGs as an image (they have .width) and
+                        image_url handles them, so that is the primary branch. A file stored
+                        as a generic_file has no .width and image_url would fail on it, hence
+                        the file_url fallback. The visible label below carries the meaning, so
+                        the glyph is decorative either way.
+                      {%- endcomment -%}
+                      {%- if icon_file.width > 0 -%}
+                        {{
+                          icon_file
+                          | image_url: width: 180
+                          | image_tag:
+                            class: 'cyd-card__icon-img',
+                            widths: '60, 120, 180',
+                            sizes: '60px',
+                            loading: 'lazy',
+                            alt: '',
+                            aria-hidden: 'true',
+                            width: 60,
+                            height: 60
+                        }}
+                      {%- else -%}
+                        <img
+                          class="cyd-card__icon-img"
+                          src="{{ icon_file | file_url }}"
+                          width="60"
+                          height="60"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                        >
+                      {%- endif -%}
+                    {%- endif -%}
+                    {%- if icon.label.value != blank -%}
+                      <span class="cyd-card__icon-label">{{ icon.label.value | escape }}</span>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            {%- if features != blank and features.size > 0 -%}
+              <ul class="cyd-card__features" role="list">
+                {%- for feature in features -%}
+                  <li class="cyd-card__feature">
+                    <svg
+                      class="cyd-card__check"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M2.5 8.5 6 12l7.5-8"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>{{ feature | escape }}</span>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            <div class="cyd-card__cta">
+              {%- if p.available == false -%}
+                <button type="button" class="cyd-card__btn" disabled>
+                  {{- 'sections.choose_your_device.sold_out' | t -}}
+                </button>
+              {%- elsif p.variants.size == 1 -%}
+                {%- comment -%}
+                  Eurus add to cart (assets/product-cart.js opens the cart
+                  drawer). Region gate: variant-region-available, same rule
+                  as the PDP; unset metafields stay buyable.
+                {%- endcomment -%}
+                {%- liquid
+                  assign cyd_variant = p.selected_or_first_available_variant
+                  capture cyd_region_ok
+                    render 'variant-region-available', variant: cyd_variant
+                  endcapture
+                  assign cyd_form_id = 'cyd-form-' | append: section.id | append: '-' | append: block.id
+                -%}
+                {%- if cyd_region_ok contains 'false' -%}
+                  <button type="button" class="cyd-card__btn" disabled>Unavailable in Your Region</button>
+                {%- else -%}
+                  <div class="cyd-card__buy" x-data="xProductCart">
+                    {%- form 'product', p, id: cyd_form_id, novalidate: 'novalidate', x-ref: 'product_form' -%}
+                      <input type="hidden" name="id" value="{{ cyd_variant.id }}">
+                      <button
+                        type="submit"
+                        name="add"
+                        class="cyd-card__btn"
+                        @click.prevent="addToCart($event)"
+                        :disabled="loading"
+                      >
+                        {{- section.settings.button_label_single | default: 'Add to Cart' | escape -}}
+                      </button>
+                    {%- endform -%}
+                  </div>
+                {%- endif -%}
+              {%- else -%}
+                <a class="cyd-card__btn" href="{{ p.url }}">
+                  {{- section.settings.button_label_multi | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if is_carousel -%}
+      <div
+        class="cyd__dots"
+        data-cyd-dots
+        data-dot-label="{{ 'sections.choose_your_device.go_to_slide' | t: index: '__i__' | escape }}"
+      ></div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Choose your device",
+  "tag": "section",
+  "class": "section-choose-your-device",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose Your Device"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "default": "h2",
+      "info": "Card titles always render one level below this.",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Three ways to experience the CastleFlexx difference. Choose the design that matches the way you stretch, train, and recover."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "default": "stacked",
+      "options": [
+        { "value": "stacked", "label": "Stacked" },
+        { "value": "carousel", "label": "Carousel" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_card_link",
+      "label": "Make the whole card link to the product",
+      "default": true,
+      "info": "The link sits on the card title. The button stays separately clickable."
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label_single",
+      "label": "Label for single-variant products",
+      "default": "Add to Cart",
+      "info": "These products add to the cart directly."
+    },
+    {
+      "type": "text",
+      "id": "button_label_multi",
+      "label": "Label for multi-variant products",
+      "default": "Add to Cart",
+      "info": "These products link to the product page so a variant can be chosen."
+    },
+    {
+      "type": "header",
+      "content": "Padding (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Padding (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "device",
+      "name": "Device",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Card content comes from this product's Device card metafield."
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_icons",
+          "label": "Hide the icon row",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Choose your device",
+      "blocks": [
+        { "type": "device" },
+        { "type": "device" },
+        { "type": "device" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script src="{{ 'choose-your-device.js' | asset_url }}" defer="defer"></script>

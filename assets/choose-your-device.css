@@ -1,0 +1,408 @@
+/* assets/choose-your-device.css
+   Styles for sections/choose-your-device.liquid.
+
+   Per-instance values arrive as inline CSS custom properties on the wrapper
+   (--pt/--pb section padding) and on each card (--cyd-image-bg, --cyd-surface,
+   --cyd-accent, all metaobject-driven), so this file stays static and cacheable.
+
+   Mobile-first. Breakpoints are the theme's real ones - 768px is the primary
+   split used by every 2026 section, 1024px is the CastleFit-suite split. Dawn's
+   750/990/1200 are not used anywhere in this theme. */
+
+.cyd {
+	padding-top: var(--pt-m, 56px);
+	padding-bottom: var(--pb-m, 56px);
+	font-family: 'Inter', 'Inter-regular', system-ui, -apple-system, sans-serif;
+	color: #191a1b;
+}
+
+/* Sized so the desktop grid lands on Figma's 411px card exactly:
+   3 x 411 + 2 x 32 gap = 1297 content, + 2 x 16 padding = 1329.
+   Below 1329px the columns stay fluid and shrink together. */
+.cyd__inner {
+	max-width: 1329px;
+	margin-inline: auto;
+	padding-inline: 16px;
+}
+
+/* cf-styles.liquid supplies .cf-title / .cf-subtitle. Only the width the
+   shared class does not set is added here. */
+.cyd__subheading {
+	max-width: 700px;
+	margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------- grid ---- */
+
+.cyd__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 24px;
+	align-items: stretch;
+}
+
+@media (min-width: 768px) {
+	.cyd__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.cyd__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 32px;
+	}
+}
+
+/* ---------------------------------------------------------------- card ---- */
+
+.cyd-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background: var(--cyd-surface, #f7f8f6);
+	border-radius: 16px;
+}
+
+/* Layer 1 of the Figma spec: the solid image_background sitting behind a
+   transparent card_image. Falls back to the card surface when unset. */
+.cyd-card__media {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background: var(--cyd-image-bg, #f7f8f6);
+}
+
+/* Layer 2: the bottom fade into the card surface. It is painted ON TOP of the
+   image rather than behind it, so the image melts into the card body whatever
+   the image is - a transparent card_image, or an opaque product photo that
+   would otherwise hide a background gradient completely. */
+.cyd-card__media::after {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	content: '';
+	background: linear-gradient(
+		180deg,
+		var(--cyd-surface-0, transparent) 77.86%,
+		var(--cyd-surface, #f7f8f6) 100%
+	);
+}
+
+/* contain, not cover: the intended asset is a transparent product PNG floating
+   on the gradient. A photographic featured-image fallback letterboxes, which is
+   a deliberate visual signal that the card is missing its own image. */
+.cyd-card__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.cyd-card__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 24px;
+	padding: 24px 20px 32px;
+}
+
+@media (min-width: 1024px) {
+	.cyd-card__body {
+		gap: 32px;
+		padding: 32px 20px 48px;
+	}
+}
+
+/* --------------------------------------------------------- title + tag ---- */
+
+.cyd-card__head {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cyd-card__title {
+	flex: 1;
+	margin: 0;
+	font-size: clamp(28px, 2.6vw, 36px);
+	font-weight: 600;
+	line-height: 1;
+}
+
+.cyd-card__title-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Stretched pseudo-element rather than an <a> around the card: a link
+   containing a button is invalid HTML and breaks keyboard and screen reader
+   behaviour. One tab stop, accessible name = the product title. */
+.cyd-card__title-link::after {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	content: '';
+}
+
+.cyd-card__title-link:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.cyd-card:has(.cyd-card__title-link:focus-visible) {
+	outline: 2px solid #191a1b;
+	outline-offset: 2px;
+}
+
+/* No fixed width: the pill sizes to its label, so "KNEE" and
+   "HOME & STRETCH ASSIST" both work. */
+.cyd-card__tag {
+	flex: none;
+	padding: 8px 20px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 15px;
+	letter-spacing: 0.02em;
+	white-space: nowrap;
+	border-radius: 55px;
+}
+
+@media (max-width: 767px) {
+	.cyd-card__tag {
+		padding: 6px 16px;
+	}
+}
+
+/* ------------------------------------------------------- price + descr ---- */
+
+.cyd-card__price {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6;
+}
+
+.cyd-card__desc {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+	.cyd-card__price {
+		font-size: 20px;
+	}
+
+	.cyd-card__desc {
+		font-size: 16px;
+	}
+}
+
+/* ------------------------------------------------------------- icon row --- */
+
+/* auto-fit rather than a hardcoded 4 columns, so 3 or 5 icons also lay out. */
+.cyd-card__icons {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.cyd-card__icon {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: center;
+	text-align: center;
+}
+
+/* No border or background here: the uploaded icon artwork already draws its own
+   circle, so a wrapper ring would double it. */
+.cyd-card__icon-img {
+	display: block;
+	flex: none;
+	width: 52px;
+	height: 52px;
+	object-fit: contain;
+}
+
+.cyd-card__icon-label {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+@media (min-width: 1024px) {
+	.cyd-card__icon-img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.cyd-card__icon-label {
+		font-size: 13px;
+	}
+}
+
+/* --------------------------------------------------------- feature list --- */
+
+.cyd-card__features {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.cyd-card__feature {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.cyd-card__check {
+	flex: none;
+	margin-top: 2px;
+	color: var(--cyd-accent, #191a1b);
+}
+
+/* -------------------------------------------------------------- button ---- */
+
+/* margin-top: auto pins the button to the bottom, so cards with three features
+   and cards with seven still end flush. This is why the 1004px Figma card
+   height is deliberately not implemented. */
+.cyd-card__cta {
+	position: relative;
+	z-index: 2;
+	margin-top: auto;
+}
+
+/* Wrapper around the add to cart form. */
+.cyd-card__cta .cyd-card__buy {
+	width: 100%;
+	margin-left: 0;
+}
+
+/* Same selector covers the <a>, the <button disabled> and the form's
+   <button>, and outranks single-class theme utilities. */
+.cyd-card__cta .cyd-card__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 47px;
+	padding: 14px 24px;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	background: #3e4044;
+	border: 0;
+	border-radius: 55px;
+	transition: background-color 0.3s ease;
+}
+
+.cyd-card__cta .cyd-card__btn:hover {
+	background: #7d90a2;
+}
+
+.cyd-card__cta .cyd-card__btn:focus-visible {
+	outline: 2px solid #191a1b;
+	outline-offset: 2px;
+}
+
+.cyd-card__cta .cyd-card__btn[disabled] {
+	cursor: not-allowed;
+	background: #c5c5c7;
+}
+
+/* ------------------------------------------------------------ carousel ---- */
+
+/* Scroll, snap and peek are pure CSS and work with JS disabled.
+   assets/choose-your-device.js only adds the dots. */
+@media (max-width: 767px) {
+	.cyd__grid--carousel {
+		display: flex;
+		gap: 16px;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-padding-inline: 16px;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+
+	.cyd__grid--carousel::-webkit-scrollbar {
+		display: none;
+	}
+
+	.cyd__grid--carousel .cyd-card {
+		flex: 0 0 85%;
+		scroll-snap-align: start;
+	}
+
+	.cyd__grid--carousel:focus-visible {
+		outline: 2px solid #191a1b;
+		outline-offset: 4px;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.cyd__grid--carousel {
+		scroll-behavior: smooth;
+	}
+}
+
+.cyd__dots {
+	display: none;
+	gap: 8px;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+@media (max-width: 767px) {
+	.cyd__grid--carousel ~ .cyd__dots:not(:empty) {
+		display: flex;
+	}
+}
+
+.cyd__dot {
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	cursor: pointer;
+	background: #c5c5c7;
+	border: 0;
+	border-radius: 50%;
+	transition: background-color 0.2s ease;
+}
+
+.cyd__dot[aria-current='true'] {
+	background: #191a1b;
+}
+
+.cyd__dot:focus-visible {
+	outline: 2px solid #191a1b;
+	outline-offset: 3px;
+}
+
+/* --------------------------------------------------------- section pad ---- */
+
+@media (min-width: 768px) {
+	.cyd {
+		padding-top: var(--pt, 80px);
+		padding-bottom: var(--pb, 80px);
+	}
+}

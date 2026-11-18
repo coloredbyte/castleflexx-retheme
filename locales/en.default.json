@@ -412,6 +412,11 @@
     }
   },
   "sections": {
+    "choose_your_device": {
+      "sold_out": "Sold out",
+      "carousel_label": "Device cards",
+      "go_to_slide": "Go to device {{ index }}"
+    },
     "mobile-navigation": {
       "my_cart": "My cart"
     },
