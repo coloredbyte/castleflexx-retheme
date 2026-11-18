@@ -416,6 +416,223 @@
         "text_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "media_gallery_4iUmXB": {
+      "type": "media-gallery",
+      "blocks": {
+        "media_Vn9CB7": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_banner.png",
+            "image_mobile": "shopify://shop_images/card.png",
+            "image_link": "shopify://products/castlefit",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": true,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 10,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "CastleFit",
+            "highlight_type": "underline",
+            "title_size": 90,
+            "text": "<p>200+ stretching guided classes to make the most of your CastleFlexx device.</p>",
+            "text_size": 100,
+            "text_align": "left",
+            "media_position": "top",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/castlefit",
+            "open_new_window_button": false,
+            "show_button_style": "secondary",
+            "block_scheme": "section",
+            "color_overlay": "rgba(0,0,0,0)",
+            "title_color": "#ffffff",
+            "text_color": "#ffffff",
+            "color_heading_highlight_light": "#ffffff",
+            "background_button": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "background_button_hover": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "#ffffff",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "title_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)",
+            "background_button_dark": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "background_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "media_GnQ9Wj": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/castleflexx_guide_book.png",
+            "image_link": "shopify://products/castleflexx-stretching-guide-book-vol-1",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": true,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "CastleFlexx Stretch Guide",
+            "highlight_type": "underline",
+            "title_size": 90,
+            "text": "<p>Discover more ways to use your CastleFlexx, with beautifully photographed stretches organized by body area.</p>",
+            "text_size": 100,
+            "text_align": "left",
+            "media_position": "top",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/castleflexx-stretching-guide-book-vol-1",
+            "open_new_window_button": false,
+            "show_button_style": "secondary",
+            "block_scheme": "section",
+            "color_overlay": "rgba(0,0,0,0)",
+            "title_color": "#ffffff",
+            "text_color": "#ffffff",
+            "color_heading_highlight_light": "#ffffff",
+            "background_button": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "background_button_hover": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "#ffffff",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "title_color_dark": "rgba(0,0,0,0)",
+            "text_color_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)",
+            "background_button_dark": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "background_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "media_Vn9CB7",
+        "media_GnQ9Wj"
+      ],
+      "custom_css": [
+        ".button {margin-top: 8px; padding-left: 32px; padding-right: 32px;}",
+        ".content-media_V38kbk {padding-left: 24px; padding-right: 0px;}",
+        ".content-media_cpQ8Fx {padding-left: 24px; padding-right: 0px;}",
+        ".x-container-media-gallery {padding-left: 80px; padding-right: 80px;}",
+        "@media screen and (max-width: 1024px) {.x-container-media-gallery {padding-left: 20px; padding-right: 20px; } .content-media_V38kbk {padding-left: 18px; padding-right: 0px; } .content-media_cpQ8Fx {padding-left: 18px; padding-right: 0px; } h2 {font-size: 28px; }}"
+      ],
+      "name": "t:sections.media-gallery.name",
+      "settings": {
+        "heading": "Own the CastleFlexx Recovery Systems",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "<p>Get all the parts of the CastleFlexx ecosystem to make your routine more consistent and effective.</p>",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_slides_speed": 5,
+        "max_columns": 2,
+        "spacing": 28,
+        "height_desktop": 500,
+        "keep_ratio_on_different_width": false,
+        "show_section_divider": false,
+        "full_width": false,
+        "padding_full_width": false,
+        "edge_style": "rounded_corners",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 16,
+        "height_mobile": 360,
+        "show_section_divider_mobile": false,
+        "full_width_mobile": false,
+        "edge_style_mobile": "adapt",
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "heading_highlight_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "heading_highlight_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "choose_your_device_cAM7X8": {
+      "type": "choose-your-device",
+      "blocks": {
+        "device_njHW4x": {
+          "type": "device",
+          "settings": {
+            "product": "heat",
+            "hide_icons": false
+          }
+        },
+        "device_WThzep": {
+          "type": "device",
+          "settings": {
+            "product": "castle-flexx",
+            "hide_icons": false
+          }
+        },
+        "device_EyaTQj": {
+          "type": "device",
+          "settings": {
+            "product": "castleflexx-sport",
+            "hide_icons": false
+          }
+        }
+      },
+      "block_order": [
+        "device_njHW4x",
+        "device_WThzep",
+        "device_EyaTQj"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 500;}",
+        "p {color: #191a1b;}"
+      ],
+      "name": "Choose your device",
+      "settings": {
+        "heading": "Choose Your Device",
+        "heading_level": "h2",
+        "subheading": "Three ways to experience the CastleFlexx difference. Choose the design that matches the way you stretch, train, and recover.",
+        "mobile_layout": "stacked",
+        "enable_card_link": true,
+        "button_label_single": "Add to Cart",
+        "button_label_multi": "Add to Cart",
+        "desktop_padding_top": 80,
+        "desktop_padding_bottom": 80,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -1122,6 +1339,8 @@
     "banner",
     "rich_text_mXLcaa",
     "media_gallery_gLQNEy",
+    "media_gallery_4iUmXB",
+    "choose_your_device_cAM7X8",
     "product-grid",
     "media_gallery_chyViy"
   ]
