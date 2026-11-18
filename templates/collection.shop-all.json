@@ -1083,6 +1083,9 @@
         "testimonial_A9GxQa",
         "testimonial_X4k4CT"
       ],
+      "custom_css": [
+        ".text-center {font-size: 16px;}"
+      ],
       "name": "t:sections.testimonials.name",
       "settings": {
         "heading": "Trusted by the Experts",
@@ -1097,7 +1100,7 @@
         "pagination_desktop": "line",
         "pagination_mobile": "line",
         "show_arrow": true,
-        "auto_play": true,
+        "auto_play": false,
         "change_slides_speed": 6,
         "show_author_image": true,
         "author_image": "top",
