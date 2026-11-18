@@ -1087,7 +1087,7 @@
         ".text-center {font-size: 18px;}",
         "p {font-size: 14px;}",
         ".h2 {padding-bottom: 60px;}",
-        "@media screen and (max-width: 1024px) {.text-center {font-size: 15px; } p {font-size: 12px; } .h2 {padding-bottom: 12px;}}"
+        "@media screen and (max-width: 1024px) {.text-center {font-size: 15px; } p {font-size: 12px; } .h2 {padding-bottom: 12px; } h2 {font-size: 28px;}}"
       ],
       "name": "t:sections.testimonials.name",
       "settings": {
