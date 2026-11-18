@@ -792,7 +792,7 @@
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
-            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "criterion_detail_externals": "Home / Indoors\nHome / Indoors",
             "icon_external_item": "none",
             "another_icon_external_item": "",
             "custom_icon_external_item": ""
@@ -801,8 +801,8 @@
         "criterion_A9Dtre": {
           "type": "criterion",
           "settings": {
-            "heading": "Criterion label",
-            "criterion_detail_product": "Yes",
+            "heading": "Includes",
+            "criterion_detail_product": "Super-grip handles",
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
@@ -815,8 +815,36 @@
         "criterion_BmrQ98": {
           "type": "criterion",
           "settings": {
-            "heading": "Criterion label",
-            "criterion_detail_product": "Yes",
+            "heading": "Weighted Mobility Bar",
+            "criterion_detail_product": "No",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_bXPfC6": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Built-in Heat",
+            "criterion_detail_product": "No",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nNo\nNo\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_qDQedM": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Handles",
+            "criterion_detail_product": "Super-grip silicone",
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
@@ -830,7 +858,9 @@
       "block_order": [
         "criterion_p4BWdd",
         "criterion_A9Dtre",
-        "criterion_BmrQ98"
+        "criterion_BmrQ98",
+        "criterion_bXPfC6",
+        "criterion_qDQedM"
       ],
       "custom_css": [
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
