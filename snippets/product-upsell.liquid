@@ -100,7 +100,8 @@
   <script>
     // Add the upsell to the add to cart total while ticked, e.g. $239 -> $338.
     // Variant changes re-render the button from the server, so re-apply then.
-    (() => {
+    // Runs after load: the button sits below this block in the page.
+    document.addEventListener('DOMContentLoaded', () => {
       const UPSELL_PRICE = {{ upsell_price }};
       const input = document.getElementById('{{ upsell_input_id }}');
       const button = document.getElementById('x-atc-button-{{ section_id }}');
@@ -136,7 +137,7 @@
       new MutationObserver(sync).observe(button, { childList: true, subtree: true });
       document.addEventListener('alpine:initialized', sync);
       sync();
-    })();
+    });
   </script>
 </div>
 {%- endif -%}
