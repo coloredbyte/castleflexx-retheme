@@ -1021,99 +1021,50 @@
             "cards_image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
             "icon_star": "5_star",
             "custom_icon": "",
-            "title": "“I use it an hour a day.",
-            "text": "<p>We dont use cheap straps anymore, we use CastleFlexx. I use it an hour a day. CastleFlexx is by far the best.”</p>",
+            "title": "\"I use it an hour a day. CastleFlexx is by far the best.”",
+            "text": "",
             "show_author_image": false,
             "author": "Ronald Acuna Jr",
             "author_note": "<p>#13 | NL MVP 2023</p>",
-            "product": ""
+            "product": "castleflexx-sport"
           }
         },
-        "testimonial_4yjyX6": {
+        "testimonial_pQHMeA": {
           "type": "testimonial",
           "settings": {
-            "cards_image": "shopify://shop_images/dr_rachel_testimonial.png",
-            "icon_star": "quote",
+            "cards_image": "shopify://shop_images/castleflexx-audience-martha.jpg",
+            "icon_star": "5_star",
             "custom_icon": "",
-            "title": "Easier to hold and effective",
-            "text": "<p>\"CastleFlexx is a favorite recommendation for our patients who need safe and controlled at home solutions to help prevent or heal their pain issues.\"</p>",
-            "author_image": "shopify://shop_images/Dr._Rachel_Skolnick_testimonial.png",
+            "title": "“Well designed and very nice colors.”",
+            "text": "",
             "show_author_image": false,
-            "author": "Dr. Rachel Skolnick D.C",
-            "author_note": "<p>Julliard NYC</p>",
-            "product": ""
+            "author": "Martha Stewart",
+            "author_note": "<p>Businesswoman & Writer</p>",
+            "product": "castle-flexx"
           }
         },
-        "testimonial_BWHjyG": {
+        "testimonial_kQRA6k": {
           "type": "testimonial",
           "settings": {
-            "cards_image": "shopify://shop_images/Rectangle_2.png",
-            "icon_star": "quote",
+            "cards_image": "shopify://shop_images/img_desk.png",
+            "icon_star": "5_star",
             "custom_icon": "",
-            "title": "The best stretching device on the market",
-            "text": "<p>“ This is the best stretching device on the market. I did a 10 minute review on my youtube page and i cover everything someone who is passionate about getting out of pain needs to know.”</p>",
-            "author_image": "shopify://shop_images/phil_heath_testimonial.avif",
-            "show_author_image": false,
-            "author": "Phil Heath",
-            "author_note": "<p>7x Mr Olympia</p>",
-            "product": ""
-          }
-        },
-        "testimonial_QLcDqG": {
-          "type": "testimonial",
-          "settings": {
-            "cards_image": "shopify://shop_images/IMG_9438.heic",
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "CastleFlexx got me there in 10 minutes",
-            "text": "<p>“My lower back has held up. It's unreal.”</p>",
-            "author_image": "shopify://shop_images/nickeil_alexander_walker_testimonial.png",
+            "title": "“My lower back has held up. It's unreal.”",
+            "text": "",
             "show_author_image": false,
             "author": "Nickeil Alexander-Walker",
             "author_note": "<p>Atlanta | Shooting Guard #7</p>",
-            "product": ""
-          }
-        },
-        "testimonial_gtrCBk": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "CastleFlexx got me there in 10 minutes",
-            "text": "<p>\"The simplest way to put it was, 10 minutes of doing a simple Pendulum stretch with CastleFlexx, my heart rate went up 20-30 beats and I was in a full body sweat and I remember thinking I've never had this with yoga, pilates, acupuncture, hot/cold baths - CastleFlexx in 10 minutes got me there.\"&nbsp;</p>",
-            "author_image": "shopify://shop_images/taylor_twellman_testimonial.jpg",
-            "show_author_image": true,
-            "author": "Taylor Twellman",
-            "author_note": "<p>Major League Soccer Player</p>",
-            "product": ""
-          }
-        },
-        "testimonial_qHAxVe": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "icon_star": "quote",
-            "custom_icon": "",
-            "title": "CastleFlexx is a product that I use daily",
-            "text": "<p>\"CastleFlexx is a product that I use daily, nightly, especially with training where my muscles have been killing me, on my hip flexors and lower back - it does tend to make a huge difference.\"</p>",
-            "author_image": "shopify://shop_images/dr_adam_miller_testimonial.png",
-            "show_author_image": true,
-            "author": "Dr. Adam Miller, D.C., CCSP",
-            "author_note": "<p>Chiropractor | New England Revolution</p>",
-            "product": ""
+            "product": "castle-flexx"
           }
         }
       },
       "block_order": [
         "testimonial_qYQP8b",
-        "testimonial_4yjyX6",
-        "testimonial_BWHjyG",
-        "testimonial_QLcDqG",
-        "testimonial_gtrCBk",
-        "testimonial_qHAxVe"
+        "testimonial_pQHMeA",
+        "testimonial_kQRA6k"
       ],
       "custom_css": [
+        ".author-caption-text {font-weight: 500;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
       ],
       "name": "t:sections.testimonials-with-card.name",
