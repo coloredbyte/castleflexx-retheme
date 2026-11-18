@@ -1435,7 +1435,7 @@
           "settings": {
             "image": "shopify://shop_images/hot_cold_pack_img.png",
             "overlay_opacity": 0,
-            "image_link": "",
+            "image_link": "shopify://products/ice-pack",
             "open_new_window": false,
             "image_padding": false,
             "number_of_columns": 1,
