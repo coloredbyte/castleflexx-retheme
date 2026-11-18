@@ -834,8 +834,9 @@
         "criterion_BmrQ98"
       ],
       "custom_css": [
-        ".table-header {background-color: transparent; border-bottom-width: 1px;}",
-        ".criterion-detail-product {background-color: transparent; border-bottom-width: 1px;}"
+        ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
+        ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
+        ".table-header,.criterion-detail-product {background-color: transparent !important;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
