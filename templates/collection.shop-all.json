@@ -1507,7 +1507,7 @@
       ],
       "custom_css": [
         ".promotion-content {padding-bottom: 0px;}",
-        " .button {padding-left: 0px; padding-right: 0px;}"
+        ".promotion-content,.button {padding-left: 0px; padding-right: 0px;}"
       ],
       "name": "t:sections.collage.name",
       "settings": {
