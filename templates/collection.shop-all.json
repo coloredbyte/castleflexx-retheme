@@ -833,10 +833,10 @@
         "criterion_BmrQ98"
       ],
       "custom_css": [
-        ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
+        ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
         ".table-header,.criterion-detail-product {background-color: transparent !important;}",
-        ".criterion-detail-heading,.table-header,.criterion-detail-product {font-size: 12px; font-weight: 400;}"
+        "@media screen and (max-width: 1024px) {.criterion-detail-heading,.table-header,.criterion-detail-product {font-size: 12px;}}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
