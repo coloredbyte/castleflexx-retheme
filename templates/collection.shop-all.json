@@ -710,7 +710,7 @@
         "padding_full_width": false,
         "edge_style": "rounded_corners",
         "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_bottom": 60,
         "min_columns_mobile": "1",
         "spacing_mobile": 16,
         "height_mobile": 360,
@@ -728,6 +728,57 @@
         "heading_color_dark": "rgba(0,0,0,0)",
         "heading_highlight_color_dark": "rgba(0,0,0,0)",
         "text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_g8ew8w": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nWiFwM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Choose Your Device",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "heading_tag": "h2"
+          }
+        },
+        "text_hajqyr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Three ways to experience the CastleFlexx difference. Choose the design that matches the way you stretch, train, and recover.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nWiFwM",
+        "text_hajqyr"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 40,
+        "padding_bottom": 32,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "#191a1b",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "multicolumn_M3Rbqp": {
@@ -1552,6 +1603,7 @@
     "product-grid",
     "related_collections_WxWAqB",
     "media_gallery_maFEhn",
+    "rich_text_g8ew8w",
     "multicolumn_M3Rbqp",
     "media_gallery_chyViy",
     "featured_collection_z9r7qr"
