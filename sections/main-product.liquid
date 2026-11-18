@@ -3718,6 +3718,76 @@
       ]
     },
     {
+      "type": "upsell",
+      "name": "Upsell",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Adds a second item with the product. Set the item and its text per product in the metafields Upsell product, Upsell title and Upsell description. Nothing shows on products without one."
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Title",
+          "info": "Leave empty to use the product's Upsell title metafield."
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "info": "Leave empty to use the product's Upsell description metafield."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_image",
+          "label": "Show image",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "checked_by_default",
+          "label": "Checked by default",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_border",
+          "label": "t:sections.question_and_answer.settings.show_border.label",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "block_scheme",
+          "label": "t:sections.all.color_scheme.label",
+          "info": "t:sections.all.color_scheme.info",
+          "default": "section",
+          "options": [
+            {
+              "value": "section",
+              "label": "t:sections.highlight-text-with-image.blocks.image.settings.image_ratio.option__1.label"
+            },
+            {
+              "value": "store",
+              "label": "t:sections.all.color_scheme.store"
+            },
+            {
+              "value": "scheme2",
+              "label": "t:sections.all.color_scheme.soft"
+            },
+            {
+              "value": "scheme3",
+              "label": "t:sections.all.color_scheme.bold"
+            },
+            {
+              "value": "scheme4",
+              "label": "t:sections.all.color_scheme.accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "back_in_stock_alert",
       "name": "t:sections.featured-product.blocks.back_in_stock_alert.name",
       "limit": 1,

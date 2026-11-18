@@ -394,6 +394,17 @@
             "enable_color_swatch": true,
             "swatch_size": "medium"
           }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "show_image": false,
+            "checked_by_default": false,
+            "show_border": true,
+            "block_scheme": "section"
+          }
         }
       },
       "block_order": [
@@ -406,6 +417,7 @@
         "gift_wrapping_EK3NQn",
         "variant_picker",
         "quantity_selector",
+        "upsell",
         "buy_buttons",
         "coupon_code_d4T8zk",
         "frequently_bought_pGGTM8",
@@ -610,7 +622,7 @@
         "highlight_type": "font_highlight",
         "heading_size": 100,
         "heading_tag": "h2",
-        "description": "Create a bundle and save up to 30%",
+        "description": "",
         "heading_alignment": "center",
         "show_discount_value_label": false,
         "label_type": "rounded",
@@ -620,15 +632,15 @@
         "discount_value_label_text_dark": "rgba(0,0,0,0)",
         "button_atb_label": "Add to bundle",
         "enable_quickview": false,
-        "collection": "",
-        "product_to_show": 3,
+        "collection": "accessories",
+        "product_to_show": 4,
         "products": [],
         "show_highlighted_features": false,
         "each_product_can_added_to_bundle_once": true,
         "show_qty": false,
-        "minimum_items": 3,
+        "minimum_items": 2,
         "discount_type": "percentage",
-        "discount_value": "33",
+        "discount_value": "",
         "apply_discount_once_per_order": true,
         "picker_type": "adapt",
         "max_swatch": 20,
@@ -640,8 +652,8 @@
         "change_slides_speed": 5,
         "summary_layout": "vertical",
         "summary_position": "right",
-        "bundler_heading": "Radiance Bundle",
-        "bundler_text": "<p>Add at least 3 items to get 30% Off</p>",
+        "bundler_heading": "Your bundle",
+        "bundler_text": "<p>Add at least 2 items</p>",
         "spacing": 20,
         "show_section_divider": false,
         "full_width": false,

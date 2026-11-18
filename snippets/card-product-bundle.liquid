@@ -1,4 +1,16 @@
 {%- liquid
+  # Region stock gating, same as card-product: skip products with no
+  # variant in stock for this market. Blank card = editor placeholder, keep.
+  assign card_region_visible = 'true'
+  if card_product != blank
+    capture card_region_visible
+      render 'market-product-visible', product: card_product
+    endcapture
+    assign card_region_visible = card_region_visible | strip
+  endif
+-%}
+{%- if card_region_visible == 'true' -%}
+{%- liquid
   assign url_collection = collection
   if settings.disable_collection_context_url
     assign url_collection = nil
@@ -1046,3 +1058,4 @@
     </div>
   </div>
 {% endif %}
+{%- endif -%}
