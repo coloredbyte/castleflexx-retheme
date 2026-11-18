@@ -1180,9 +1180,13 @@
                     <p x-show="totalDiscount == 0" class="text-[rgba(var(--colors-heading))] text-medium font-semibold" id="total-price" x-html="totalPrice"></p>
                     <div class="flex flex-wrap items-center justify-start {% if section.settings.summary_layout == 'vertical' %}md:justify-center{% else %}md:justify-end{% endif %} w-full md:w-auto" x-show="totalDiscount != 0">
                       <p class="text-medium font-semibold {% if section.settings.summary_layout != 'vertical' %}md:border-0 rtl:md:border-0{% else %}pr-3 rtl:pl-3 rtl:pr-0{% endif %} border-r rtl:border-l rtl:border-r-0" id="total-price-discount" x-html="totalDiscount"></p>
+                      {%- comment -%} No discount set: hide "Save $0.00". {%- endcomment -%}
+                      {%- assign bundle_discount = section.settings.discount_value | plus: 0 -%}
+                      {%- if bundle_discount > 0 -%}
                       <span class="{% if section.settings.summary_layout != 'vertical' %}ml-2 rtl:mr-2 rtl:ml-0{% else %}ml-3 rtl:mr-3 rtl:ml-0{% endif %} pl-2 pr-2 pt-0.5 pb-0.5 label-discount-value-{{ section.id }} bg-[rgba(var(--discount-label-color))] text-[rgba(var(--discount-label-text-color))] text-sm {{ small_label_radius }}">
                         {{ 'sections.product-bundle.save' | t }} <span class="font-semibold text-[rgba(var(--discount-label-text-color))]" x-html="amountPrice"></span>
                       </span>
+                      {%- endif -%}
                     </div>
                   </div>
                 </div>
