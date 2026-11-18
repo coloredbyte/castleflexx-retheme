@@ -1395,36 +1395,115 @@
             "colors_text_link": "rgba(0,0,0,0)"
           }
         },
-        "collection_jr7zii": {
-          "type": "collection",
+        "image_9PP9iA": {
+          "type": "image",
           "settings": {
-            "collection": "",
+            "image": "shopify://shop_images/2d4a3457209dd6c03e1da8667b78e3179fc95a14.png",
+            "overlay_opacity": 0,
+            "image_link": "shopify://products/cork-mat",
+            "open_new_window": false,
+            "image_padding": true,
             "number_of_columns": 1,
-            "number_of_row": 1
+            "number_of_row": 1,
+            "title": "",
+            "highlight_type": "underline",
+            "title_size": 50,
+            "text": "",
+            "text_size": 100,
+            "button_label": "Accessories",
+            "button_link": "shopify://products/cork-mat",
+            "show_button_style": "text-link",
+            "open_new_window_button": false,
+            "text_align": "center",
+            "content_position": "bottom",
+            "block_scheme": "section",
+            "title_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "#191A1B"
           }
         },
-        "collection_BdYM3J": {
-          "type": "collection",
+        "image_kL4rC7": {
+          "type": "image",
           "settings": {
-            "collection": "",
+            "overlay_opacity": 0,
+            "image_link": "",
+            "open_new_window": false,
+            "image_padding": false,
             "number_of_columns": 1,
-            "number_of_row": 1
+            "number_of_row": 1,
+            "title": "",
+            "highlight_type": "underline",
+            "title_size": 80,
+            "text": "",
+            "text_size": 100,
+            "button_label": "",
+            "button_link": "",
+            "show_button_style": "primary",
+            "open_new_window_button": false,
+            "text_align": "center",
+            "content_position": "center",
+            "block_scheme": "section",
+            "title_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)"
           }
         },
-        "collection_7nPVYx": {
-          "type": "collection",
+        "image_JkQMai": {
+          "type": "image",
           "settings": {
-            "collection": "",
+            "overlay_opacity": 0,
+            "image_link": "",
+            "open_new_window": false,
+            "image_padding": false,
             "number_of_columns": 1,
-            "number_of_row": 1
+            "number_of_row": 1,
+            "title": "",
+            "highlight_type": "underline",
+            "title_size": 80,
+            "text": "",
+            "text_size": 100,
+            "button_label": "",
+            "button_link": "",
+            "show_button_style": "primary",
+            "open_new_window_button": false,
+            "text_align": "center",
+            "content_position": "center",
+            "block_scheme": "section",
+            "title_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)"
           }
         }
       },
       "block_order": [
         "image_NNXYqD",
-        "collection_jr7zii",
-        "collection_BdYM3J",
-        "collection_7nPVYx"
+        "image_9PP9iA",
+        "image_kL4rC7",
+        "image_JkQMai"
+      ],
+      "custom_css": [
+        ".promotion-content {padding-bottom: 0px;}"
       ],
       "name": "t:sections.collage.name",
       "settings": {
