@@ -762,7 +762,7 @@
       ],
       "custom_css": [
         "h2 {font-weight: 500;}",
-        "p {color: #191A1B;}"
+        "p {color: #191a1b;}"
       ],
       "name": "Choose your device",
       "settings": {
@@ -1011,6 +1011,114 @@
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
       }
+    },
+    "testimonials_ehDyqP": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_MKEPBF": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "author": "Add a caption",
+            "author_note": "",
+            "product": ""
+          }
+        },
+        "testimonial_PwENhy": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "author": "Add a caption",
+            "author_note": "",
+            "product": ""
+          }
+        },
+        "testimonial_LUPbEj": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "author": "Add a caption",
+            "author_note": "",
+            "product": ""
+          }
+        },
+        "testimonial_A9GxQa": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "author": "Add a caption",
+            "author_note": "",
+            "product": ""
+          }
+        },
+        "testimonial_X4k4CT": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "quote",
+            "custom_icon": "",
+            "title": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers</p>",
+            "author": "Add a caption",
+            "author_note": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_MKEPBF",
+        "testimonial_PwENhy",
+        "testimonial_LUPbEj",
+        "testimonial_A9GxQa",
+        "testimonial_X4k4CT"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "heading": "Trusted by the Experts",
+        "subheading": "",
+        "text": "<p>The most accomplished team doctors, pro athletes and business moguls trust CastleFlexx for their recovery.</p>",
+        "heading_alignment": "center",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "text_alignment": "center",
+        "testimonial_items_view": "multiple",
+        "pagination_desktop": "line",
+        "pagination_mobile": "line",
+        "show_arrow": true,
+        "auto_play": false,
+        "change_slides_speed": 5,
+        "show_author_image": true,
+        "author_image": "top",
+        "image_ratio": "round",
+        "desktop_height": 300,
+        "show_section_divider": false,
+        "top_padding": 28,
+        "bottom_padding": 28,
+        "show_section_divider_mobile": false,
+        "top_padding_mobile": 20,
+        "bottom_padding_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "item_background_color_light": "rgba(0,0,0,0)",
+        "heading_and_title_light": "rgba(0,0,0,0)",
+        "item_text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "item_background_color_dark": "rgba(0,0,0,0)",
+        "heading_and_title_dark": "rgba(0,0,0,0)",
+        "item_text_color_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -1023,6 +1131,7 @@
     "choose_your_device_JQMURN",
     "rich_text_g8ew8w",
     "comparison_table_VTBJ99",
-    "rich_text_MtYiFR"
+    "rich_text_MtYiFR",
+    "testimonials_ehDyqP"
   ]
 }
