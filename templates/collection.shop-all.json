@@ -730,6 +730,51 @@
         "text_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "choose_your_device_JQMURN": {
+      "type": "choose-your-device",
+      "blocks": {
+        "device_ciphHk": {
+          "type": "device",
+          "settings": {
+            "product": "heat",
+            "hide_icons": false
+          }
+        },
+        "device_igJmFK": {
+          "type": "device",
+          "settings": {
+            "product": "castle-flexx",
+            "hide_icons": false
+          }
+        },
+        "device_tUphBx": {
+          "type": "device",
+          "settings": {
+            "product": "castleflexx-sport",
+            "hide_icons": false
+          }
+        }
+      },
+      "block_order": [
+        "device_ciphHk",
+        "device_igJmFK",
+        "device_tUphBx"
+      ],
+      "name": "Choose your device",
+      "settings": {
+        "heading": "Choose Your Device",
+        "heading_level": "h2",
+        "subheading": "Three ways to experience the CastleFlexx difference. Choose the design that matches the way you stretch, train, and recover.",
+        "mobile_layout": "stacked",
+        "enable_card_link": true,
+        "button_label_single": "Add to Cart",
+        "button_label_multi": "Add to Cart",
+        "desktop_padding_top": 80,
+        "desktop_padding_bottom": 80,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40
+      }
+    },
     "rich_text_g8ew8w": {
       "type": "rich-text",
       "blocks": {
@@ -971,6 +1016,7 @@
     "product-grid",
     "related_collections_WxWAqB",
     "media_gallery_maFEhn",
+    "choose_your_device_JQMURN",
     "rich_text_g8ew8w",
     "comparison_table_VTBJ99",
     "rich_text_MtYiFR"
