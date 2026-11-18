@@ -836,7 +836,7 @@
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
         ".table-header,.criterion-detail-product {background-color: transparent !important;}",
-        ".criterion-detail-heading,.table-header,.criterion-detail-product {font-size: 12px;}"
+        ".criterion-detail-heading,.table-header,.criterion-detail-product {font-size: 12px; font-weight: 400;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
