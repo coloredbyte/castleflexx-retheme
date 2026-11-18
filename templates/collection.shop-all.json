@@ -1304,6 +1304,9 @@
       "block_order": [
         "collection_9hJRky"
       ],
+      "custom_css": [
+        "h2 {font-size: 30px;}"
+      ],
       "name": "t:sections.featured-collection.name",
       "settings": {
         "title": "Start Your Journey Today",
@@ -1350,7 +1353,7 @@
         "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 60,
+        "padding_top_mobile": 48,
         "padding_bottom_mobile": 40,
         "section_scheme": "store"
       }
