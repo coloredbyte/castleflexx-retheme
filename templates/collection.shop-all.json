@@ -1358,6 +1358,114 @@
         "section_scheme": "store"
       }
     },
+    "collage_7R84nG": {
+      "type": "collage",
+      "blocks": {
+        "image_NNXYqD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/CFSR-38_1.png",
+            "overlay_opacity": 0,
+            "image_link": "",
+            "open_new_window": false,
+            "image_padding": false,
+            "number_of_columns": 2,
+            "number_of_row": 1,
+            "title": "",
+            "highlight_type": "underline",
+            "title_size": 80,
+            "text": "",
+            "text_size": 100,
+            "button_label": "",
+            "button_link": "",
+            "show_button_style": "primary",
+            "open_new_window_button": false,
+            "text_align": "center",
+            "content_position": "center",
+            "block_scheme": "section",
+            "title_color": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)"
+          }
+        },
+        "collection_jr7zii": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "number_of_columns": 1,
+            "number_of_row": 1
+          }
+        },
+        "collection_BdYM3J": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "number_of_columns": 1,
+            "number_of_row": 1
+          }
+        },
+        "collection_7nPVYx": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "number_of_columns": 1,
+            "number_of_row": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_NNXYqD",
+        "collection_jr7zii",
+        "collection_BdYM3J",
+        "collection_7nPVYx"
+      ],
+      "name": "t:sections.collage.name",
+      "settings": {
+        "heading": "Keep Your CastleFlexx Ready",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "<p>Find replacement components, accessories, and add-ons designed to help you maintain and personalize your CastleFlexx setup.</p>",
+        "show_vendor": false,
+        "show_rating": false,
+        "show_highlighted_features": true,
+        "show_highlighted_attributes": true,
+        "swiper_on_mobile": true,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_slides_speed": 5,
+        "max_columns": 5,
+        "spacing": 28,
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "min_columns_mobile": "2",
+        "spacing_mobile": 20,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "heading_highlight_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "heading_highlight_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "collection_list_carousel_i9QJbd": {
       "type": "collection-list-carousel",
       "blocks": {
@@ -1484,6 +1592,7 @@
     "testimonials_with_card_kByCFm",
     "multicolumn_Y8KGnG",
     "featured_collection_UdRB7M",
+    "collage_7R84nG",
     "collection_list_carousel_i9QJbd"
   ]
 }
