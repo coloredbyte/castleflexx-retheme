@@ -736,7 +736,7 @@
         "heading_nWiFwM": {
           "type": "heading",
           "settings": {
-            "heading": "Choose Your Device",
+            "heading": "Which CastleFlexx Is Right for You",
             "highlight_type": "underline",
             "heading_size": 100,
             "heading_tag": "h2"
@@ -745,7 +745,7 @@
         "text_hajqyr": {
           "type": "text",
           "settings": {
-            "text": "<p>Three ways to experience the CastleFlexx difference. Choose the design that matches the way you stretch, train, and recover.</p>",
+            "text": "<p>Learn the difference between each model and how it can fit into your routine.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
@@ -756,7 +756,6 @@
         "heading_nWiFwM",
         "text_hajqyr"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 1024px) {h2 {font-size: 28px; } .x-block-text {padding-top: 0px; padding-bottom: 0px; }}"
       ],
@@ -770,7 +769,7 @@
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20,
+        "padding_bottom_mobile": 16,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
@@ -837,16 +836,16 @@
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
         ".table-header,.criterion-detail-product {background-color: transparent !important;}",
-        " .criterion-detail-heading, .table-header, .criterion-detail-product {font-size: 12px;}"
+        ".criterion-detail-heading,.table-header,.criterion-detail-product {font-size: 12px;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
-        "heading": "Which CastleFlexx Is Right for You",
+        "heading": "",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
         "heading_alignment": "center",
-        "description": "<p>Learn the difference between each model and how it can fit into your routine.</p>",
+        "description": "",
         "product": "",
         "alternative_text": "Sport",
         "external_item_labels": "Luxury\nHeat",
@@ -854,11 +853,11 @@
         "icon_size": 40,
         "full_width": false,
         "show_section_divider": false,
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 60,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
