@@ -1131,7 +1131,7 @@
         "full_width": false,
         "padding_full_width": false,
         "show_section_divider": false,
-        "top_padding": 60,
+        "top_padding": 40,
         "bottom_padding": 60,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
