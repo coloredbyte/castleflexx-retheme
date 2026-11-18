@@ -1426,35 +1426,12 @@
             "secondary_button_text": "rgba(0,0,0,0)",
             "colors_text_link": "rgba(0,0,0,0)"
           }
-        },
-        "featured_collection_fVM9NG": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "collection_metafield": "",
-            "use_collection_description": false,
-            "custom_text": "",
-            "image_overlay_opacity": 0,
-            "button_label": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "color_text": "rgba(0,0,0,0)",
-            "color_button": "rgba(0,0,0,0)",
-            "color_text_button": "rgba(0,0,0,0)",
-            "color_button_hover": "rgba(0,0,0,0)",
-            "color_text_button_hover": "rgba(0,0,0,0)",
-            "color_button_secondary": "rgba(0,0,0,0)",
-            "secondary_button_text": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)"
-          }
         }
       },
       "block_order": [
         "featured_collection_yTNjbt",
         "featured_collection_dexYwz",
-        "featured_collection_xLRicH",
-        "featured_collection_fVM9NG"
+        "featured_collection_xLRicH"
       ],
       "name": "t:sections.collection-list-carousel.name",
       "settings": {
@@ -1469,19 +1446,19 @@
         "main_image_open_new_window": false,
         "image_ratio": "square",
         "title_size": 80,
-        "content_alignment": "left",
+        "content_alignment": "center",
         "columns_desktop": 3,
         "columns_mobile": "2",
         "pagination_desktop": "dots",
         "pagination_mobile": "dots",
-        "promotion_position": "left",
-        "spacing": 4,
+        "promotion_position": "right",
+        "spacing": 20,
         "show_section_divider": false,
         "full_width": false,
         "padding_top": 60,
         "padding_bottom": 80,
-        "promotion_position_mobile": "top",
-        "spacing_mobile": 4,
+        "promotion_position_mobile": "above",
+        "spacing_mobile": 16,
         "show_section_divider_mobile": false,
         "full_width_mobile": false,
         "padding_top_mobile": 28,
