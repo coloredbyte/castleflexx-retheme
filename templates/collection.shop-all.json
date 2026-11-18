@@ -1187,7 +1187,7 @@
         "column_NUTCFK"
       ],
       "custom_css": [
-        ".splide__list {row-gap: 20px;}"
+        "@media screen and (max-width: 1024px) {.splide__list {row-gap: 20px;}}"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
