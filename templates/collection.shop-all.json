@@ -788,7 +788,7 @@
         "criterion_p4BWdd": {
           "type": "criterion",
           "settings": {
-            "heading": "Criterion label",
+            "heading": "Where to use it",
             "criterion_detail_product": "Gym, PT, Outdoors",
             "icon_store_item": "none",
             "another_icon_store_item": "",
@@ -836,7 +836,8 @@
       "custom_css": [
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
-        ".table-header,.criterion-detail-product {background-color: transparent !important;}"
+        ".table-header,.criterion-detail-product {background-color: transparent !important;}",
+        " .criterion-detail-heading, .table-header, .criterion-detail-product {font-size: 12px;}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
