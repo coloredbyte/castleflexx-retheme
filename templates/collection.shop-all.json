@@ -865,7 +865,7 @@
       "custom_css": [
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
-        "@media screen and (max-width: 1024px) {.criterion-detail-heading, .criterion-detail-product, .criterion-detail-external{font-size: 12px; }}"
+        "@media screen and (max-width: 1024px) {.criterion-detail-heading, .table-header {font-size: 11px; } .criterion-detail-product, .criterion-detail-external {font-size: 12px; }}"
       ],
       "name": "t:sections.comparision-table.name",
       "settings": {
