@@ -625,7 +625,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/castleflexx_guide_book.png",
-            "image_link": "",
+            "image_link": "shopify://products/castleflexx-stretching-guide-book-vol-1",
             "open_new_window": false,
             "show_sound_control": false,
             "video_url": "",
