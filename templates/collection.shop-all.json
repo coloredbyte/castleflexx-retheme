@@ -1503,7 +1503,8 @@
         "image_JkQMai"
       ],
       "custom_css": [
-        ".promotion-content {padding-bottom: 0px;}"
+        ".promotion-content {padding-bottom: 0px;}",
+        " .heading-image_9PP9iA {margin-bottom: 0px;}"
       ],
       "name": "t:sections.collage.name",
       "settings": {
