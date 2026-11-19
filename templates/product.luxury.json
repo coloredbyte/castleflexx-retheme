@@ -335,7 +335,7 @@
         "desktop_height": "natural",
         "padding_top": 80,
         "padding_bottom": 80,
-        "image_position_mobile": "second",
+        "image_position_mobile": "first",
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
         "mobile_height": "400px",
