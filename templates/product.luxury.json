@@ -588,12 +588,44 @@
             "heading_size": 100,
             "text": "<p>Understanding that one size doesn't fit all in stretching aids, we offer CastleFlexx stretching devices in Standard, Large, and XLarge sizes to cater to everyone's needs.</p>"
           }
+        },
+        "column_TaFjdM": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_77f37c9b-2411-42e4-bdfd-4d702a2e24b7.svg",
+            "custom_icon": "",
+            "title": "Comfortable, Controlled Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Designed to provide a more comfortable and controlled stretching experience.</p>"
+          }
+        },
+        "column_zygjRc": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_77f37c9b-2411-42e4-bdfd-4d702a2e24b7.svg",
+            "custom_icon": "",
+            "title": "Co",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Understanding that one size doesn't fit all in stretching aids, we offer CastleFlexx stretching devices in Standard, Large, and XLarge sizes to cater to everyone's needs.</p>"
+          }
         }
       },
       "block_order": [
         "column_y7bRir",
         "column_XbXwkj",
-        "column_D4NA9Q"
+        "column_D4NA9Q",
+        "column_TaFjdM",
+        "column_zygjRc"
       ],
       "custom_css": [
         ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}"
