@@ -402,7 +402,10 @@
         "sticky-atc",
         "product_sibling_9zde9d"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".x-review-product {margin-bottom: 12px;}",
+        " .w-full .x-block-breadcrumb {margin-bottom: 12px;}"
+      ],
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
