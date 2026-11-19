@@ -36,15 +36,6 @@
             "text_size_price": 50
           }
         },
-        "inventory_status_LrbyC8": {
-          "type": "inventory_status",
-          "settings": {
-            "incoming": false,
-            "message_incoming": "",
-            "message_backorder": "",
-            "hide_preorder": false
-          }
-        },
         "gift_wrapping_EK3NQn": {
           "type": "gift_wrapping",
           "settings": {
@@ -178,7 +169,6 @@
         "breadcrumb_CXCUEY",
         "product_name_xkPbAa",
         "price",
-        "inventory_status_LrbyC8",
         "gift_wrapping_EK3NQn",
         "variant_picker",
         "upsell",
