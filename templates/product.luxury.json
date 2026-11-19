@@ -65,10 +65,10 @@
             "show_variant_option": true,
             "enable_color_swatches": true,
             "swatch_size": "large",
-            "enable_size_chart": false,
+            "enable_size_chart": true,
             "option_to_show_size_chart": "",
-            "heading": "Size chart",
-            "select_page": "",
+            "heading": "Size Guide",
+            "select_page": "size-guide",
             "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
             "size_chart_type": "popup"
           }
