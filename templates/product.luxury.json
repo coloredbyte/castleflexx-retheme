@@ -629,7 +629,7 @@
       ],
       "custom_css": [
         ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}",
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .h3 {font-size: 20px;} p {font-size: 15px; }}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .h3 {font-size: 20px; } p {font-size: 15px; }}"
       ],
       "settings": {
         "title": "Why Choose CastleFlexx {{ product.title }}",
@@ -646,7 +646,7 @@
         "pagination_desktop": "dots",
         "swiper_on_mobile": true,
         "pagination_mobile": "dots",
-        "auto_play": false,
+        "auto_play": true,
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/3",
         "section_height_desktop": "md:py-7",
