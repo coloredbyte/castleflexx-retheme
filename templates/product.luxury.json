@@ -61,7 +61,7 @@
             "custom_image": "shopify://shop_images/Removable_2lb_Weight_Icon_cad2451a-dafa-4544-9fcc-2249766a08ce.svg",
             "custom_icon": "",
             "icon_size": 40,
-            "text": "<p><strong>Removable 2lb Weight</strong></p>",
+            "text": "<p><strong>Removable Weight</strong></p>",
             "additional_text": "",
             "block_scheme": "section",
             "background_color_light": "rgba(0,0,0,0)",
