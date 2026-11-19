@@ -23,7 +23,7 @@
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
-            "title_size": 120,
+            "title_size": 130,
             "heading_tag": "h1",
             "enable_product_rating": false
           }
@@ -33,7 +33,7 @@
           "settings": {
             "adapt_custom_price_format": false,
             "show_tax_and_shipping": false,
-            "text_size_price": 60
+            "text_size_price": 50
           }
         },
         "inventory_status_LrbyC8": {
@@ -404,7 +404,7 @@
       ],
       "custom_css": [
         ".x-review-product {margin-bottom: 12px;}",
-        " .w-full .x-block-breadcrumb {margin-bottom: 12px;}"
+        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}"
       ],
       "settings": {
         "enable_sticky_image": true,
