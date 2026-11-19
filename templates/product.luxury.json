@@ -910,6 +910,63 @@
         "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_BcNEkV": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Ca9Jdx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Add CastleFit to Your Order",
+            "button_link": "shopify://products/castlefit",
+            "open_new_window_button": false,
+            "show_button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "open_new_window_button_2": false,
+            "show_button_style_2": "primary",
+            "block_scheme": "section",
+            "color_button": "rgba(0,0,0,0)",
+            "color_text_button": "rgba(0,0,0,0)",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "rgba(0,0,0,0)",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "color_text_button_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_text_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "button_Ca9Jdx"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 0,
+        "padding_bottom": 28,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "scheme3",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "image_with_text_RBtGLj": {
       "type": "image-with-text",
       "blocks": {
@@ -1484,6 +1541,7 @@
     "331e6fca-2947-4a19-89c5-9396be0d666a",
     "text_column_with_image_QdkzQL",
     "multicolumn_iF4zjY",
+    "rich_text_BcNEkV",
     "image_with_text_RBtGLj",
     "image_with_text_ehEUt4",
     "product_comparison_table_jjhwBg",
