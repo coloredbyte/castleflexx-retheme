@@ -209,7 +209,8 @@
       ],
       "custom_css": [
         ".x-review-product {margin-bottom: 12px;}",
-        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}"
+        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
+        " .w-full .x-block-text-icon {padding-bottom: 12px;}"
       ],
       "settings": {
         "enable_sticky_image": true,
