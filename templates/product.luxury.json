@@ -1069,24 +1069,14 @@
     "faq_hgd9PK": {
       "type": "faq",
       "blocks": {
-        "category_WF3Wr7": {
-          "type": "category",
+        "frequently_asked_question_9CdJxg": {
+          "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "icon_size": 28,
-            "title": "Category"
-          }
-        },
-        "frequently_asked_question_9CdJxg": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "How is this better than typical stretch straps?",
+            "row_content": "<p>CastleFlexx combines a patented foot hammock with a weighted mobility bar for a more comfortable, controlled stretching experience.</p>",
             "open_by_default": false
           }
         },
@@ -1125,7 +1115,6 @@
         }
       },
       "block_order": [
-        "category_WF3Wr7",
         "frequently_asked_question_9CdJxg",
         "frequently_asked_question_K9UR6Q",
         "frequently_asked_question_pf8xa9",
@@ -1139,9 +1128,9 @@
         "heading_tag": "h2",
         "heading_alignment": "center",
         "show_border": false,
-        "row_background": false,
+        "row_background": true,
         "collapsible": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_position": "top",
         "button_link": "",
         "open_new_window": false,
