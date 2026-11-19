@@ -305,7 +305,8 @@
         "media_CE9FQ9"
       ],
       "custom_css": [
-        "h3 {font-size: 20px;}"
+        "h3 {font-size: 20px;}",
+        ".rte p {font-size: 15px;}"
       ],
       "name": "t:sections.flow.name",
       "settings": {
