@@ -458,7 +458,7 @@
         "h3 {font-size: 20px;}",
         ".rte p {font-size: 15px;}",
         "[class*=\"heading--template--23520791068863\"] svg,[class*=\"heading--template--23520791068863\"] img {width: 48px; height: auto; max-width: 100%;}",
-        " @media screen and (max-width: 1024px) {.w-full {padding-right: 0px; padding-left: 0px;}}"
+        "@media screen and (max-width: 1024px) {.w-full {padding-right: 0px; padding-left: 0px; }}"
       ],
       "name": "t:sections.flow.name",
       "settings": {
@@ -489,7 +489,7 @@
         "image_position_mobile": "first",
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "mobile_height": "400px",
+        "mobile_height": "250px",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "section_scheme": "scheme3",
