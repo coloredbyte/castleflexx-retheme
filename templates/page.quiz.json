@@ -142,7 +142,7 @@
           "settings": {
             "question_id": "q1",
             "question_type": "multi",
-            "title": "What's your approximate height?",
+            "title": "1. What's your approximate height?",
             "highlight_type": "underline",
             "heading_size": 90,
             "text_alignment": "left",
@@ -169,9 +169,14 @@
             "option_VtMpQf": {
               "type": "_option",
               "settings": {
-                "strong_match": [],
+                "strong_match": [
+                  "castleflexx-sport"
+                ],
                 "partial_match": [],
-                "exclude_product": [],
+                "exclude_product": [
+                  "heat",
+                  "castle-flexx"
+                ],
                 "skip_questions": "",
                 "icon": "none",
                 "another_icon": "",
@@ -192,7 +197,11 @@
             "option_VhQhBc": {
               "type": "_option",
               "settings": {
-                "strong_match": [],
+                "strong_match": [
+                  "castle-flexx",
+                  "heat",
+                  "castleflexx-sport"
+                ],
                 "partial_match": [],
                 "exclude_product": [],
                 "skip_questions": "",
@@ -215,7 +224,11 @@
             "option_N7BiK8": {
               "type": "_option",
               "settings": {
-                "strong_match": [],
+                "strong_match": [
+                  "castle-flexx",
+                  "castleflexx-sport",
+                  "heat"
+                ],
                 "partial_match": [],
                 "exclude_product": [],
                 "skip_questions": "",
@@ -238,7 +251,11 @@
             "option_Y7R3gN": {
               "type": "_option",
               "settings": {
-                "strong_match": [],
+                "strong_match": [
+                  "castle-flexx",
+                  "heat",
+                  "castleflexx-sport"
+                ],
                 "partial_match": [],
                 "exclude_product": [],
                 "skip_questions": "",
