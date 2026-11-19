@@ -86,6 +86,9 @@
       "block_order": [
         "slide_ewJma9"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px;}p {font-size: 15px;}}"
+      ],
       "name": "t:sections.slideshow.name",
       "settings": {
         "show_hero": false,
@@ -106,11 +109,11 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "full_width_mobile": true,
-        "adapt_corners_mobile": true,
+        "adapt_corners_mobile": false,
         "rounded_corner_image_mobile": false,
         "show_content_below_image": false,
         "mobile_ratio": "px",
-        "mobile_height": "500",
+        "mobile_height": "400",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "section_scheme": "store"
