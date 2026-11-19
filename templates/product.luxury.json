@@ -471,7 +471,7 @@
         "text": "",
         "content_position": "middle",
         "content_alignment": "left",
-        "select_motion": "hover",
+        "select_motion": "click",
         "open_first_tab": false,
         "adapt_radius": true,
         "image_corner_radius": 0,
