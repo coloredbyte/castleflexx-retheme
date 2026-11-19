@@ -56,8 +56,17 @@
             "show_variant_option": true,
             "enable_color_swatches": true,
             "swatch_size": "large",
-            "enable_size_chart": true,
+            "enable_size_chart": false,
             "option_to_show_size_chart": "",
+            "heading": "",
+            "select_page": "",
+            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
+            "size_chart_type": "popup"
+          }
+        },
+        "size_chart_N4DErU": {
+          "type": "size_chart",
+          "settings": {
             "heading": "Size Guide",
             "select_page": "size-guide",
             "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
@@ -171,6 +180,7 @@
         "price",
         "gift_wrapping_EK3NQn",
         "variant_picker",
+        "size_chart_N4DErU",
         "upsell",
         "buy_buttons",
         "collapsible_tab_MgjKqH",
