@@ -372,7 +372,7 @@
             "enable_video_autoplay": true,
             "subheading": "",
             "heading": "Knee Pain",
-            "image_heading": "shopify://shop_images/tight_calves_icon_3140a72a-51de-459a-b5e3-8bdbb31bc405.svg",
+            "image_heading": "shopify://shop_images/back_pain_icon_c912bfa0-7aa4-4320-a30c-99044ddf543b.svg",
             "image_style_heading": "rounded",
             "image_ratio_heading": "aspect-square",
             "description": "<p>Knees don't work in isolation: ankles, calves, quads, hamstrings, and hips all influence how the joint tracks and loads. CastleFlexx lets you improve lower-body flexibility with steady, repeatable tension, helping you address tightness above and below the knee where movement issues often start. Great for runners, lifters, and long desk days. If pain is sharp or persistent, get it checked. Need HEAT for your knee? Check out the Heat Edition.</p>",
@@ -391,11 +391,31 @@
             "video_alt_text": "",
             "enable_video_autoplay": true,
             "subheading": "",
-            "heading": "Knee Pain",
+            "heading": "Tight Calves",
             "image_heading": "shopify://shop_images/tight_calves_icon_3140a72a-51de-459a-b5e3-8bdbb31bc405.svg",
             "image_style_heading": "rounded",
             "image_ratio_heading": "aspect-square",
             "description": "<p>You must treat your calves as part of the posterior chain, a calf stepper wont work because our muscles all connect and shouldn’t be treated in isolation in Dan Castle’s opinion. CastleFlexx elongates the muscles and tendons around, above and below the calf- that’s why so many consider it the best calf stretch they’ve ever experienced.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_L99hUf": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Circulation Issues",
+            "image_heading": "shopify://shop_images/circulation_issues_icon_73477759-d689-4a22-aa85-39ec08bc21c9.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Long periods of sitting can make legs feel heavy and stiff. Gentle stretching and movement can help you feel mobile and refreshed. CastleFlexx makes it easy to work calves, hamstrings, and hips in a seated position, so your body feels better after long days.</p>",
             "button_text": "",
             "button_link": "",
             "open_new_window_button": false,
@@ -410,7 +430,8 @@
         "media_jGQUVT",
         "media_yg3pNw",
         "media_8cJiTY",
-        "media_q7KreN"
+        "media_q7KreN",
+        "media_L99hUf"
       ],
       "custom_css": [
         "h3 {font-size: 20px;}",
