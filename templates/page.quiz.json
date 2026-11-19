@@ -15,6 +15,7 @@
         "slide_ewJma9": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/IMG_5830_1.png",
             "image_link": "",
             "open_new_window_image": false,
             "overlay_opacity": 0,
@@ -101,7 +102,7 @@
         "adapt_corners_desktop": false,
         "rounded_corner_image": false,
         "desktop_ratio": "px",
-        "desktop_height": "450",
+        "desktop_height": "550",
         "padding_top": 0,
         "padding_bottom": 0,
         "full_width_mobile": true,
