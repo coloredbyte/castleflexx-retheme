@@ -1021,6 +1021,9 @@
         "heading_8nMPQf",
         "button_fYQUVB"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px; } .font-medium {font-size: 13px; font-weight: 300;}}"
+      ],
       "settings": {
         "show_hero": false,
         "image": "shopify://shop_images/CFSR-237_1.png",
@@ -1157,7 +1160,8 @@
         "frequently_asked_question_nVWCJ3"
       ],
       "custom_css": [
-        ".pt-3 {background-color: #f7f8f6;}"
+        ".pt-3 {background-color: #f7f8f6;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
@@ -1206,6 +1210,9 @@
       },
       "block_order": [
         "heading_mNbBWq"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
