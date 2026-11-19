@@ -870,7 +870,7 @@
         "heading_tag": "h2",
         "heading_alignment": "center",
         "secondary_background": "none",
-        "border_column": "none",
+        "border_column": "line_vertical",
         "column_content_alignment": "center",
         "icon_position": "next",
         "icon_size": 30,
