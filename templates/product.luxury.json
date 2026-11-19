@@ -974,18 +974,18 @@
         "heading_8nMPQf": {
           "type": "heading",
           "settings": {
-            "subheading": "OUR SUSTAINABILITY PROMISE",
-            "heading": "Your regimen in 4 minutes. Instant hydration.",
+            "subheading": "CASTLEFLEXX QUIZ",
+            "heading": "Find Your Device",
             "highlight_type": "underline",
-            "heading_base_size": 100,
+            "heading_base_size": 120,
             "heading_tag": "h2",
-            "text": "<p>As the world’s leading skin health accreditation body, we want everyone to have access to the best help and advice to care for their skin & more.</p>",
+            "text": "<p>Need help finding which CastleFlexx device is right for you? Take our brief quiz to learn which device is best designed to address your specific wants and needs</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
             "block_scheme": "section",
             "heading_light": "rgba(0,0,0,0)",
-            "text_light": "rgba(0,0,0,0)",
+            "text_light": "#191A1B",
             "color_heading_highlight_light": "rgba(0,0,0,0)",
             "heading_dark": "rgba(0,0,0,0)",
             "text_dark": "rgba(0,0,0,0)",
@@ -995,8 +995,8 @@
         "button_fYQUVB": {
           "type": "button",
           "settings": {
-            "button_label": "Order now",
-            "button_link": "",
+            "button_label": "Take Quiz",
+            "button_link": "shopify://pages/find-your-device",
             "open_new_window": false,
             "show_button_style": "primary",
             "block_scheme": "section",
@@ -1054,366 +1054,112 @@
         "image_alignment": "left",
         "full_width": false,
         "padding_full_width": false,
-        "top_padding": 100,
-        "bottom_padding": 32,
+        "top_padding": 80,
+        "bottom_padding": 80,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
-        "top_padding_mobile": 0,
-        "bottom_padding_mobile": 20,
+        "top_padding_mobile": 40,
+        "bottom_padding_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
-    "image_with_text_ehEUt4": {
-      "type": "image-with-text",
+    "faq_hgd9PK": {
+      "type": "faq",
       "blocks": {
-        "heading_MR8Rqz": {
-          "type": "heading",
+        "category_WF3Wr7": {
+          "type": "category",
           "settings": {
-            "subheading": "OUR SUSTAINABILITY PROMISE",
-            "heading": "Instant and all-day hydration.",
-            "highlight_type": "underline",
-            "heading_base_size": 100,
-            "heading_tag": "h2",
-            "text": "<p>As the world’s leading skin health accreditation body, we want everyone to have access to the best help and advice to care for their skin & more.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "block_scheme": "section",
-            "heading_light": "rgba(0,0,0,0)",
-            "text_light": "rgba(0,0,0,0)",
-            "color_heading_highlight_light": "rgba(0,0,0,0)",
-            "heading_dark": "rgba(0,0,0,0)",
-            "text_dark": "rgba(0,0,0,0)",
-            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "icon_size": 28,
+            "title": "Category"
           }
         },
-        "button_hdzP9L": {
-          "type": "button",
+        "frequently_asked_question_9CdJxg": {
+          "type": "frequently_asked_question",
           "settings": {
-            "button_label": "Order now",
-            "button_link": "",
-            "open_new_window": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "button_light": "rgba(0,0,0,0)",
-            "button_text_light": "rgba(0,0,0,0)",
-            "button_hover_light": "rgba(0,0,0,0)",
-            "button_text_hover_light": "rgba(0,0,0,0)",
-            "secondary_button_light": "rgba(0,0,0,0)",
-            "secondary_button_text_light": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)",
-            "button_dark": "rgba(0,0,0,0)",
-            "button_text_dark": "rgba(0,0,0,0)",
-            "button_hover_dark": "rgba(0,0,0,0)",
-            "button_text_hover_dark": "rgba(0,0,0,0)",
-            "secondary_button_dark": "rgba(0,0,0,0)",
-            "secondary_button_text_dark": "rgba(0,0,0,0)",
-            "colors_text_link_dark": "rgba(0,0,0,0)"
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_K9UR6Q": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_pf8xa9": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_A8cEDq": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
           }
         }
       },
       "block_order": [
-        "heading_MR8Rqz",
-        "button_hdzP9L"
+        "category_WF3Wr7",
+        "frequently_asked_question_9CdJxg",
+        "frequently_asked_question_K9UR6Q",
+        "frequently_asked_question_pf8xa9",
+        "frequently_asked_question_A8cEDq"
       ],
+      "name": "t:sections.question_and_answer.name",
       "settings": {
-        "show_hero": false,
-        "desktop_height": "550px",
-        "mobile_height": "400px",
-        "desktop_image_width": "medium",
-        "image_layout": "normal",
-        "adapt_radius": true,
-        "image_corner_radius": 10,
-        "show_sound_control": false,
-        "video_url": "",
-        "video_alt_text": "",
-        "enable_video_autoplay": false,
-        "content_layout": "no-overlap",
-        "spacing_image": false,
-        "text_position": "center",
-        "text_alignment": "start",
-        "line_border": "dashed",
-        "icon_position": "col",
-        "icon_size": 45,
-        "alignment": "center",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "heading_color_light": "rgba(0,0,0,0)",
-        "text_color_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "icon_color_light": "rgba(0,0,0,0)",
-        "heading_color_dark": "rgba(0,0,0,0)",
-        "text_color_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "icon_color_dark": "rgba(0,0,0,0)",
-        "image_alignment": "right",
-        "full_width": false,
-        "padding_full_width": false,
-        "top_padding": 0,
-        "bottom_padding": 0,
-        "image_alignment_mobile": "left",
-        "full_width_mobile": false,
-        "top_padding_mobile": 0,
-        "bottom_padding_mobile": 48,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "product_comparison_table_jjhwBg": {
-      "type": "product-comparison-table",
-      "blocks": {
-        "product_summary_Q7yB7P": {
-          "type": "product_summary",
-          "settings": {
-            "product_image": true,
-            "product_name": true,
-            "price": true
-          }
-        },
-        "view_detail_QjUDC9": {
-          "type": "view_detail",
-          "settings": {}
-        },
-        "vendor_dGnCwN": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "metafield_NyXVJQ": {
-          "type": "metafield",
-          "settings": {
-            "metafield_key": "custom.price_per_unit",
-            "metafield_name": "Price per unit"
-          }
-        },
-        "metafield_DGi3xM": {
-          "type": "metafield",
-          "settings": {
-            "metafield_key": "custom.sold_by",
-            "metafield_name": "Sold by"
-          }
-        },
-        "metafield_K7bB9i": {
-          "type": "metafield",
-          "settings": {
-            "metafield_key": "custom.skin_type_onevalue",
-            "metafield_name": "Skin type"
-          }
-        },
-        "metafield_QwdNch": {
-          "type": "metafield",
-          "settings": {
-            "metafield_key": "custom.form",
-            "metafield_name": "Form"
-          }
-        },
-        "rating_fPp6xH": {
-          "type": "rating",
-          "settings": {}
-        },
-        "metafield_Fn6A8G": {
-          "type": "metafield",
-          "settings": {
-            "metafield_key": "custom.product_benefit",
-            "metafield_name": "Product benefit"
-          }
-        }
-      },
-      "block_order": [
-        "product_summary_Q7yB7P",
-        "view_detail_QjUDC9",
-        "vendor_dGnCwN",
-        "metafield_NyXVJQ",
-        "metafield_DGi3xM",
-        "metafield_K7bB9i",
-        "metafield_QwdNch",
-        "rating_fPp6xH",
-        "metafield_Fn6A8G"
-      ],
-      "name": "t:sections.product-comparison-table.name",
-      "settings": {
-        "title": "Product [comparison.]",
-        "highlight_type": "font_highlight",
+        "heading": "FAQs",
+        "highlight_type": "underline",
         "heading_size": 100,
+        "heading_tag": "h2",
         "heading_alignment": "center",
-        "text": "<p>Compare Top-Selling Serums Side-By-Side with our Interactive Table.</p>",
-        "view_all": "",
-        "link_view_all": "",
-        "compare_products": [],
-        "auto_product_recommendation": false,
-        "text_to_use_for_empty_fields": "-",
-        "product_image_ratio": "square",
-        "full_width": false,
+        "show_border": false,
+        "row_background": false,
+        "collapsible": true,
+        "show_view_all": true,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
         "show_section_divider": false,
-        "padding_top": 100,
-        "padding_bottom": 100,
+        "make_full_page_width": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 48,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
-        "criteria_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "criteria_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "scrolling_banner_jmrYXf": {
-      "type": "scrolling-banner",
-      "blocks": {
-        "image_JKhDLq": {
-          "type": "image",
-          "settings": {
-            "height_image": 55,
-            "image_style": "rounded",
-            "image_ratio": "aspect-16/9",
-            "image_link": "",
-            "open_new_window": false,
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "text_FqHwrp": {
-          "type": "text",
-          "settings": {
-            "text": "Shopping reels",
-            "highlight_type": "underline",
-            "text_size": 200,
-            "text_color": "primary",
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "image_dTQXwM": {
-          "type": "image",
-          "settings": {
-            "height_image": 55,
-            "image_style": "rounded",
-            "image_ratio": "aspect-16/9",
-            "image_link": "",
-            "open_new_window": false,
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "text_kgTc4j": {
-          "type": "text",
-          "settings": {
-            "text": "Shopping like social",
-            "highlight_type": "underline",
-            "text_size": 200,
-            "text_color": "primary",
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "image_rK8JfE": {
-          "type": "image",
-          "settings": {
-            "height_image": 55,
-            "image_style": "rounded",
-            "image_ratio": "aspect-16/9",
-            "image_link": "",
-            "open_new_window": false,
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "text_MGYWzB": {
-          "type": "text",
-          "settings": {
-            "text": "Bundle & kit",
-            "highlight_type": "underline",
-            "text_size": 200,
-            "text_color": "primary",
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "image_UFVag3": {
-          "type": "image",
-          "settings": {
-            "height_image": 55,
-            "image_style": "rounded",
-            "image_ratio": "aspect-16/9",
-            "image_link": "",
-            "open_new_window": false,
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        },
-        "text_QfMPrf": {
-          "type": "text",
-          "settings": {
-            "text": "Story telling",
-            "highlight_type": "underline",
-            "text_size": 200,
-            "text_color": "primary",
-            "spacing_left": 0,
-            "spacing_right": 0,
-            "spacing_left_mobile": 0,
-            "spacing_right_mobile": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_JKhDLq",
-        "text_FqHwrp",
-        "image_dTQXwM",
-        "text_kgTc4j",
-        "image_rK8JfE",
-        "text_MGYWzB",
-        "image_UFVag3",
-        "text_QfMPrf"
-      ],
-      "name": "t:sections.scrolling_promotion.name",
-      "settings": {
-        "show_border": false,
-        "speed": 20,
-        "direction": "right",
-        "pause_hover": true,
-        "enable_rotating_effect": false,
-        "overlay_opacity": 0,
-        "space_block": 80,
-        "desktop_height": "750px",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "space_block_mobile": 40,
-        "mobile_height": "250px",
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "section_scheme": "store",
-        "bg_light": "rgba(0,0,0,0)",
-        "color_text_light": "rgba(0,0,0,0)",
-        "color_text_light_2": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "bg_dark": "rgba(0,0,0,0)",
-        "color_text_dark": "rgba(0,0,0,0)",
-        "color_text_dark_2": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "featured_collection_aRzKhP": {
@@ -1544,9 +1290,7 @@
     "multicolumn_iF4zjY",
     "rich_text_BcNEkV",
     "image_with_text_RBtGLj",
-    "image_with_text_ehEUt4",
-    "product_comparison_table_jjhwBg",
-    "scrolling_banner_jmrYXf",
+    "faq_hgd9PK",
     "featured_collection_aRzKhP"
   ]
 }
