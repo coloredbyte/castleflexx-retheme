@@ -860,7 +860,8 @@
         "column_DmdyiL"
       ],
       "custom_css": [
-        ".inline-block {margin-right: 8px;}"
+        ".inline-block {margin-right: 8px;}",
+        ".h-full {padding-left: 0px; padding-right: 0px;}"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
