@@ -124,7 +124,7 @@
         "collapsible_tab_MgjKqH": {
           "type": "collapsible_tab",
           "settings": {
-            "open_by_default": false,
+            "open_by_default": true,
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
@@ -142,26 +142,6 @@
             "video_url": "",
             "video_alt_text": "",
             "enable_video_autoplay": false
-          }
-        },
-        "nutrition_fact_tEqfWX": {
-          "type": "nutrition_fact",
-          "settings": {
-            "show_in_tab": true,
-            "open_by_default": false,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Ingredient Count",
-            "enable_background": false,
-            "metafield_key_list": "",
-            "nutrition_details": "<p>Hyaluronic Acid: 5% <br/>Niacinamide: 100% <br/>Aloe Vera Extract: 5%<br/>Jojoba Oil: 5%</p>",
-            "extra_detail": "This kind of \"ingredient bar\" focuses on highlighting the benefits of the active ingredients in a way that's familiar to consumers",
-            "block_scheme": "section",
-            "content_background_color": "rgba(0,0,0,0)",
-            "loading_bar_color": "rgba(0,0,0,0)",
-            "content_background_color_dark": "rgba(0,0,0,0)",
-            "loading_bar_color_dark": "rgba(0,0,0,0)"
           }
         },
         "sticky-atc": {
@@ -184,7 +164,6 @@
         "upsell",
         "buy_buttons",
         "collapsible_tab_MgjKqH",
-        "nutrition_fact_tEqfWX",
         "sticky-atc"
       ],
       "custom_css": [
