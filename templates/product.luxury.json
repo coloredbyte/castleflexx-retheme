@@ -306,7 +306,8 @@
       ],
       "custom_css": [
         "h3 {font-size: 20px;}",
-        ".rte p {font-size: 15px;}"
+        ".rte p {font-size: 15px;}",
+        "[class*=\"heading--template--23520791068863\"] svg,[class*=\"heading--template--23520791068863\"] img {width: 48px; height: auto; max-width: 100%;}"
       ],
       "name": "t:sections.flow.name",
       "settings": {
