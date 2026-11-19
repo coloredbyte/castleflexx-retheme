@@ -966,6 +966,9 @@
         "column_VRtppA",
         "column_t3QJpQ"
       ],
+      "custom_css": [
+        ".flex {border-width: 1px; border-color: #464646;}"
+      ],
       "name": "t:sections.text-column-image.name",
       "settings": {
         "title": "Start Your Recovery Today with CastleFIT",
