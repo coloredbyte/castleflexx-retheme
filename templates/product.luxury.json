@@ -1120,6 +1120,9 @@
         "frequently_asked_question_pf8xa9",
         "frequently_asked_question_A8cEDq"
       ],
+      "custom_css": [
+        ".pt-3 {background-color: #F7F8F6;}"
+      ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
         "heading": "FAQs",
