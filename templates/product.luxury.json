@@ -15,15 +15,9 @@
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
-            "title_size": 100,
+            "title_size": 120,
             "heading_tag": "h1",
             "enable_product_rating": false
-          }
-        },
-        "badges_fCnAXm": {
-          "type": "badges",
-          "settings": {
-            "position_adapt": true
           }
         },
         "rating_AeRdFJ": {
@@ -45,32 +39,6 @@
             "message_incoming": "",
             "message_backorder": "",
             "hide_preorder": false
-          }
-        },
-        "ffacb41b-c15e-41ee-864a-cfbf155d407d": {
-          "type": "estimate_delivery",
-          "settings": {
-            "hide_when_pre_order": false,
-            "box_type": "round",
-            "message": "<p>Estimated delivery between <strong>earliest_delivery_date and latest_delivery_date. </strong>Order within <strong>time_to_cut_off.</strong></p>",
-            "tooltip_text": "",
-            "tooltip_icon": "none",
-            "custom_icon": "",
-            "tooltip_icon_position": "left",
-            "tooltip_message": "",
-            "show_background": false,
-            "show_border": true,
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "message_color_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "message_color_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)",
-            "bg_tooltip_color_light": "rgba(0,0,0,0)",
-            "tooltip_color_light": "rgba(0,0,0,0)",
-            "bg_tooltip_color_dark": "rgba(0,0,0,0)",
-            "tooltip_color_dark": "rgba(0,0,0,0)"
           }
         },
         "gift_wrapping_EK3NQn": {
@@ -105,6 +73,17 @@
           "type": "quantity_selector",
           "settings": {
             "style": "rounded-full"
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "show_image": false,
+            "checked_by_default": false,
+            "show_border": true,
+            "block_scheme": "section"
           }
         },
         "buy_buttons": {
@@ -394,26 +373,13 @@
             "enable_color_swatch": true,
             "swatch_size": "medium"
           }
-        },
-        "upsell": {
-          "type": "upsell",
-          "settings": {
-            "heading": "",
-            "description": "",
-            "show_image": false,
-            "checked_by_default": false,
-            "show_border": true,
-            "block_scheme": "section"
-          }
         }
       },
       "block_order": [
         "product_name_xkPbAa",
-        "badges_fCnAXm",
         "rating_AeRdFJ",
         "price",
         "inventory_status_LrbyC8",
-        "ffacb41b-c15e-41ee-864a-cfbf155d407d",
         "gift_wrapping_EK3NQn",
         "variant_picker",
         "quantity_selector",
@@ -456,9 +422,9 @@
         "show_media_with_variant_selected": true,
         "option_to_classify_variant_media": "Color",
         "enable_microdata": false,
-        "show_breadcrumbs": true,
+        "show_breadcrumbs": false,
         "show_breadcrumbs_border": false,
-        "full_width_breadcrumb": true,
+        "full_width_breadcrumb": false,
         "desktop_content_alignment": "text-center",
         "mobile_content_alignment": "text-center",
         "background_color_light": "rgba(0,0,0,0)",
@@ -617,6 +583,7 @@
     },
     "products_bundle_8bV8CB": {
       "type": "products-bundle",
+      "disabled": true,
       "settings": {
         "heading": "Frequently [bought together.]",
         "highlight_type": "font_highlight",
@@ -681,8 +648,7 @@
         "button_hover_dark": "rgba(0,0,0,0)",
         "button_text_hover_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)"
-      },
-      "disabled": true
+      }
     },
     "text_column_with_image_MUhrhK": {
       "type": "text-column-with-image",
