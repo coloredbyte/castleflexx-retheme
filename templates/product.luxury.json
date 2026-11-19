@@ -593,7 +593,7 @@
         "column_D4NA9Q"
       ],
       "settings": {
-        "title": "",
+        "title": "Why Choose CastleFlexx {{ product.title }}",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
