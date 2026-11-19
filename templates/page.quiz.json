@@ -32,7 +32,7 @@
             "heading_tag": "h2",
             "text": "<p>Answer our quiz and discover which CastleFlexx is the best for you</p>",
             "button_label_1": "Start Now",
-            "button_link_1": "",
+            "button_link_1": "https://castleflexx.com/pages/find-your-device#quiz",
             "open_new_window_button": false,
             "show_button_style_1": "primary",
             "button_label_2": "",
@@ -87,7 +87,7 @@
         "slide_ewJma9"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 32px;}p {font-size: 15px;}}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px; } p {font-size: 15px; }}"
       ],
       "name": "t:sections.slideshow.name",
       "settings": {
@@ -117,6 +117,21 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "section_scheme": "store"
+      }
+    },
+    "custom_liquid_KKEFFi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- assign section_id = 'quiz' -%} <div id=\"{{ section_id }}\" class=\"section-{{ section_id }}\"></div>",
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "quiz_jXWUWM": {
@@ -350,6 +365,7 @@
   },
   "order": [
     "slideshow_nqye7A",
+    "custom_liquid_KKEFFi",
     "quiz_jXWUWM",
     "main"
   ]
