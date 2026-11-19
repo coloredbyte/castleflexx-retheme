@@ -458,7 +458,7 @@
         "h3 {font-size: 20px;}",
         ".rte p {font-size: 15px;}",
         "[class*=\"heading--template--23520791068863\"] svg,[class*=\"heading--template--23520791068863\"] img {width: 48px; height: auto; max-width: 100%;}",
-        "@media screen and (max-width: 1024px) {.w-full {padding-right: 0px; padding-left: 0px; }}"
+        "@media screen and (max-width: 1024px) {.w-full {padding-right: 0px; padding-left: 0px; } h2 {font-size: 30px; } .rte p {font-size: 14px; }}"
       ],
       "name": "t:sections.flow.name",
       "settings": {
