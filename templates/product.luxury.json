@@ -593,6 +593,9 @@
         "column_XbXwkj",
         "column_D4NA9Q"
       ],
+      "custom_css": [
+        ".h-full {align-items: flex-start !important;}"
+      ],
       "settings": {
         "title": "Why Choose CastleFlexx {{ product.title }}",
         "highlight_type": "underline",
