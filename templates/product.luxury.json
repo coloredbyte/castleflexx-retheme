@@ -252,11 +252,111 @@
         "textlink_color_dark": "rgba(0,0,0,0)",
         "full_width": false,
         "spacing_col": "small",
-        "padding_top": 60,
-        "padding_bottom": 100,
+        "padding_top": 32,
+        "padding_bottom": 80,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 48,
         "section_scheme": "store"
+      }
+    },
+    "flow_niqqMc": {
+      "type": "flow",
+      "blocks": {
+        "product_nY7kWa": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "subheading": "",
+            "heading": "Step 1: Skin Care",
+            "image_style_heading": "square",
+            "image_ratio_heading": "aspect-16/9",
+            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "button_text": "View more",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "collection_NBYtxy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "heading": "Step 2: Hair Care",
+            "image_style_heading": "square",
+            "image_ratio_heading": "aspect-16/9",
+            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
+            "button_text": "View more",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_k8GQ3M": {
+          "type": "media",
+          "settings": {
+            "show_sound_control": false,
+            "video_alt_text": "",
+            "enable_video_autoplay": false,
+            "subheading": "",
+            "heading": "Step 3: Make Up",
+            "image_style_heading": "square",
+            "image_ratio_heading": "aspect-16/9",
+            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
+            "button_text": "View more",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "product_nY7kWa",
+        "collection_NBYtxy",
+        "media_k8GQ3M"
+      ],
+      "name": "t:sections.flow.name",
+      "settings": {
+        "heading": "Flow",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "",
+        "content_position": "middle",
+        "content_alignment": "left",
+        "select_motion": "hover",
+        "open_first_tab": true,
+        "adapt_radius": true,
+        "image_corner_radius": 0,
+        "auto_play": false,
+        "change_steps_speed": 5,
+        "pause_hover": true,
+        "image_position": "second",
+        "image_width": "60",
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "desktop_height": "650px",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_position_mobile": "second",
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "mobile_height": "400px",
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
       }
     },
     "product-recommendations": {
@@ -1194,6 +1294,7 @@
   },
   "order": [
     "main",
+    "flow_niqqMc",
     "product-recommendations",
     "331e6fca-2947-4a19-89c5-9396be0d666a",
     "products_bundle_8bV8CB",
