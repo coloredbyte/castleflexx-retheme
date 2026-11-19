@@ -186,7 +186,7 @@
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
-            "desktop_display_type": "full_width",
+            "desktop_display_type": "popup",
             "show_quantity_selector": false,
             "link_to_atc_btn": true
           }
