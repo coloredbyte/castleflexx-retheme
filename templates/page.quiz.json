@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/IMG_5830_1.png",
             "image_link": "",
             "open_new_window_image": false,
-            "overlay_opacity": 0,
+            "overlay_opacity": 20,
             "video_alt_text": "",
             "show_sound_control": false,
             "enable_video_autoplay": false,
