@@ -421,6 +421,26 @@
             "open_new_window_button": false,
             "show_button_style": "primary"
           }
+        },
+        "media_bhbTLx": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Tennis Elbow",
+            "image_heading": "shopify://shop_images/tennis_elbow_icon_7d7277a7-f138-4873-89d1-7972d76f2f07.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Elbow flare-ups are often tied to overloaded forearms and gripping, not just the spot that hurts. CastleFlexx ( insert elbow into hammock) helps you lengthen the forearm-wrist chain and open the shoulders with less strain on your grip, so your body feels looser overall.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
         }
       },
       "block_order": [
@@ -431,7 +451,8 @@
         "media_yg3pNw",
         "media_8cJiTY",
         "media_q7KreN",
-        "media_L99hUf"
+        "media_L99hUf",
+        "media_bhbTLx"
       ],
       "custom_css": [
         "h3 {font-size: 20px;}",
