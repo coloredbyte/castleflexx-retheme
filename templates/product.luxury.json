@@ -611,7 +611,7 @@
         "auto_play": false,
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/3",
-        "section_height_desktop": "md:py-0",
+        "section_height_desktop": "md:py-7",
         "spacing_desktop": 0,
         "full_width": false,
         "padding_full_width": true,
