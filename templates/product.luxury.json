@@ -262,39 +262,6 @@
     "flow_niqqMc": {
       "type": "flow",
       "blocks": {
-        "product_nY7kWa": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "subheading": "",
-            "heading": "Step 1: Skin Care",
-            "image_style_heading": "square",
-            "image_ratio_heading": "aspect-16/9",
-            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "button_text": "View more",
-            "button_link": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary"
-          }
-        },
-        "collection_NBYtxy": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "heading": "Step 2: Hair Care",
-            "image_style_heading": "square",
-            "image_ratio_heading": "aspect-16/9",
-            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
-            "button_text": "View more",
-            "button_link": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary"
-          }
-        },
         "media_k8GQ3M": {
           "type": "media",
           "settings": {
@@ -302,10 +269,29 @@
             "video_alt_text": "",
             "enable_video_autoplay": false,
             "subheading": "",
-            "heading": "Step 3: Make Up",
+            "heading": "Back Pain",
+            "image_heading": "shopify://shop_images/image_90.png",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Back tightness often shows up when hips, hamstrings, and glutes get stiff or weak. Dan Castle went from level 10 pain in his lower back FOR TWO DECADES to being pain free after CastleFlexxing daily for 10-20 minutes (with mri results to prove it). CastleFlexx helps you stretch the entire posterior chain using active and passive stretching so you can build strength and flexibility at the same time.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_CE9FQ9": {
+          "type": "media",
+          "settings": {
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": false,
+            "subheading": "",
+            "heading": "Media Heading",
             "image_style_heading": "square",
             "image_ratio_heading": "aspect-16/9",
-            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
+            "description": "",
             "button_text": "View more",
             "button_link": "",
             "open_new_window_button": false,
@@ -314,9 +300,8 @@
         }
       },
       "block_order": [
-        "product_nY7kWa",
-        "collection_NBYtxy",
-        "media_k8GQ3M"
+        "media_k8GQ3M",
+        "media_CE9FQ9"
       ],
       "name": "t:sections.flow.name",
       "settings": {
