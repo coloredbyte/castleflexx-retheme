@@ -803,7 +803,7 @@
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
-            "heading_size": 90,
+            "heading_size": 80,
             "text": ""
           }
         },
@@ -818,7 +818,7 @@
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
-            "heading_size": 90,
+            "heading_size": 70,
             "text": ""
           }
         },
@@ -833,7 +833,7 @@
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
-            "heading_size": 90,
+            "heading_size": 70,
             "text": ""
           }
         },
@@ -848,7 +848,7 @@
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
-            "heading_size": 90,
+            "heading_size": 70,
             "text": ""
           }
         }
@@ -873,14 +873,14 @@
         "border_column": "none",
         "column_content_alignment": "center",
         "icon_position": "next",
-        "icon_size": 40,
+        "icon_size": 30,
         "enable_desktop_slider": false,
         "pagination_desktop": "dots",
         "swiper_on_mobile": false,
         "pagination_mobile": "dots",
         "auto_play": false,
         "change_bar_every": 5,
-        "column_layout_desktop": "lg:w-1/3",
+        "column_layout_desktop": "lg:w-1/4",
         "section_height_desktop": "md:py-0",
         "spacing_desktop": 0,
         "full_width": false,
