@@ -210,8 +210,7 @@
       "custom_css": [
         ".x-review-product {margin-bottom: 12px;}",
         ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
-        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 20px; }}",
-        ".w-full .x-block-text-icon {padding-bottom: 12px;}"
+        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 16px; margin: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }}"
       ],
       "settings": {
         "enable_sticky_image": true,
