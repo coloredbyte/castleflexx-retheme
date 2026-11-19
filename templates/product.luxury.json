@@ -1080,48 +1080,36 @@
             "open_by_default": false
           }
         },
-        "frequently_asked_question_K9UR6Q": {
+        "frequently_asked_question_TmjQqg": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "I have limited hand strength; will this work better for me than a stretch band?",
+            "row_content": "<p>Many customers find the bar easier and more comfortable to hold than rope-style straps, and the device can also be used in a seated position.</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_pf8xa9": {
+        "frequently_asked_question_dtaNgG": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_A8cEDq": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "Ok, I get that, so can't I just use a towel?",
+            "row_content": "<p>The use of a towel is simply not effective because the anchor point at the heel is poor and the foot (and therefore the leg) is not secured properly. The CastleFlexx has comfortable handles that provide a secure grip for a steady pull; a towel offers nothing more than an inconsistent&nbsp;amount of material which can be difficult to&nbsp;hold and maintain. Try stretching your hips, hamstrings or lats with a towel, and we are sure you will agree that the CastleFlexx is the most fun and effective stretch you’ve ever experienced!</p>",
             "open_by_default": false
           }
         }
       },
       "block_order": [
         "frequently_asked_question_9CdJxg",
-        "frequently_asked_question_K9UR6Q",
-        "frequently_asked_question_pf8xa9",
-        "frequently_asked_question_A8cEDq"
+        "frequently_asked_question_TmjQqg",
+        "frequently_asked_question_dtaNgG"
       ],
       "custom_css": [
-        ".pt-3 {background-color: #F7F8F6;}"
+        ".pt-3 {background-color: #f7f8f6;}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
