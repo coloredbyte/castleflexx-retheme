@@ -341,13 +341,34 @@
             "open_new_window_button": false,
             "show_button_style": "primary"
           }
+        },
+        "media_yg3pNw": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "High Blood Pressure",
+            "image_heading": "shopify://shop_images/high_blood_pressure_icon_2b1c3c95-2208-4dc9-a3af-5676d97dcd4f.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Stretching has been proven to lower blood pressure more effectively that brisk walking according to recent Europe studies published in 2022. A CastleFlexx session pairs well with slow breathing and a nightly wind-down routine, while you follow your clinician's plan daily.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
         }
       },
       "block_order": [
         "media_k8GQ3M",
         "media_QtHrx6",
         "media_jXeEUk",
-        "media_jGQUVT"
+        "media_jGQUVT",
+        "media_yg3pNw"
       ],
       "custom_css": [
         "h3 {font-size: 20px;}",
