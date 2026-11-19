@@ -36,16 +36,21 @@
             "text_size_price": 50
           }
         },
-        "gift_wrapping_EK3NQn": {
-          "type": "gift_wrapping",
+        "icon_text_7EB9Rd": {
+          "type": "icon_text",
           "settings": {
-            "text_gift": "",
-            "show_border": true,
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Full_Body_Icon_de5b48e1-f618-4925-b74c-11c08f9325e4.svg",
+            "custom_icon": "",
+            "icon_size": 40,
+            "text": "<p><strong>Full Body Stretching</strong></p>",
+            "additional_text": "",
             "block_scheme": "section",
-            "color_icon_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "color_icon_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)"
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
           }
         },
         "variant_picker": {
@@ -158,7 +163,7 @@
         "breadcrumb_CXCUEY",
         "product_name_xkPbAa",
         "price",
-        "gift_wrapping_EK3NQn",
+        "icon_text_7EB9Rd",
         "variant_picker",
         "size_chart_N4DErU",
         "upsell",
