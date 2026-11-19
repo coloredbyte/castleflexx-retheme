@@ -628,7 +628,8 @@
         "column_zygjRc"
       ],
       "custom_css": [
-        ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}"
+        ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px;} p {font-size: 15px;}}"
       ],
       "settings": {
         "title": "Why Choose CastleFlexx {{ product.title }}",
