@@ -1022,7 +1022,7 @@
         "button_fYQUVB"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 32px; } .font-medium {font-size: 13px; font-weight: 300; } p {font-size: 15px; }}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px; } .font-medium {font-size: 13px; } p {font-size: 15px; }}"
       ],
       "settings": {
         "show_hero": false,
