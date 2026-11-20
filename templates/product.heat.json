@@ -550,7 +550,8 @@
         "frequently_asked_question_cHfQkG"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.page-width {padding-left: 80px; padding-right: 80px;}.font-medium {font-size: 20px; font-weight: 600;}}"
+        "@media screen and (min-width: 990px) {.page-width {padding-left: 80px; padding-right: 80px; } .font-medium {font-size: 20px; font-weight: 600; }}",
+        "@media screen and (max-width: 749px) {.font-medium {font-size: 18px; font-weight: 600; } .inline-block {margin-right: 24px; } .rte {padding-top: 20px; } .pt-3 {padding-right: 0px; padding-top: 20px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
