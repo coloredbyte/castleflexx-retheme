@@ -471,7 +471,8 @@
       ],
       "custom_css": [
         ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
-        "h2 {font-weight: 600;}"
+        "h2 {font-weight: 700;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 32px; line-height: 110%; } .x-block-text {padding-top: 0px;}}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -483,7 +484,7 @@
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 48,
-        "padding_bottom_mobile": 24,
+        "padding_bottom_mobile": 20,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
