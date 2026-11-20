@@ -358,31 +358,33 @@
             "image_alignment_mobile": "left"
           }
         },
-        "tab_kJC4Kc": {
+        "tab_LameGJ": {
           "type": "tab",
           "settings": {
             "heading": "Designed to Last",
             "page_tab": "",
             "width_content": 100,
-            "subheading": "Example subheading",
-            "headingcontent": "Image with text",
+            "subheading": "",
+            "headingcontent": "Trusted by Customers",
             "highlight_type": "underline",
-            "heading_base_size": 100,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "heading_base_size": 90,
+            "text": "<p>CastleFlexx has been used by customers worldwide since launching in 2021.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "open_new_window": false,
-            "text_alignment": "center",
+            "text_alignment": "left",
             "text_position": "center",
+            "image": "shopify://shop_images/for_athletes_tab_img.png",
+            "image_mobile": "shopify://shop_images/for_athletes_tab_mobile_img.png",
             "show_sound_control": false,
             "video_alt_text": "",
             "enable_video_autoplay": false,
-            "desktop_height": "550px",
+            "desktop_height": "natural",
             "image_alignment": "left",
-            "mobile_height": "400px",
+            "mobile_height": "natural",
             "image_alignment_mobile": "left"
           }
         }
@@ -391,7 +393,7 @@
         "tab_8rDqk4",
         "tab_jPNUmb",
         "tab_bcBqYi",
-        "tab_kJC4Kc"
+        "tab_LameGJ"
       ],
       "custom_css": [
         "@media (min-width: 768px) {.tabs-aligment {padding-right: 60px; padding-left: 60px; } .content-tabs-template--23533158400191__product_tabs_aQA37h {padding-left: 60px; }}"
