@@ -21,12 +21,13 @@
             "see_less_label": "See less"
           }
         },
-        "product_name_xkPbAa": {
-          "type": "product_name",
+        "text_DkFVyF": {
+          "type": "text",
           "settings": {
-            "title_size": 130,
-            "heading_tag": "h1",
-            "enable_product_rating": false
+            "text": "<h2>The Best Stretch Ever.&nbsp;<br/>Now Heated.</h2>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
           }
         },
         "feature_card": {
@@ -154,7 +155,7 @@
       },
       "block_order": [
         "text_Yk76Jg",
-        "product_name_xkPbAa",
+        "text_DkFVyF",
         "feature_card",
         "variant_picker",
         "size_chart_N4DErU",
@@ -164,9 +165,10 @@
         "sticky-atc"
       ],
       "custom_css": [
-        ".x-block-text .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%;}",
+        ".x-block-text .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%; margin-bottom: 0px;}",
         ".product-form__input:first-of-type {padding-top: 32px;}",
         ".heading-feature_card {font-size: 40px; font-weight: 700;}",
+        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700;}",
         "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; }}"
       ],
       "settings": {
