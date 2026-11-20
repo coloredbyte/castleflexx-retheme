@@ -434,70 +434,142 @@
         "padding_bottom_mobile": 48
       }
     },
-    "flow_ekrq94": {
-      "type": "flow",
+    "rich_text_8tWKtQ": {
+      "type": "rich-text",
       "blocks": {
-        "media_nzgtj4": {
-          "type": "media",
+        "caption_eimYig": {
+          "type": "caption",
           "settings": {
-            "image": "shopify://shop_images/heat-map.jpg",
-            "show_sound_control": false,
-            "video_alt_text": "",
-            "enable_video_autoplay": false,
-            "subheading": "",
-            "heading": "Step 3: Make Up",
-            "image_style_heading": "square",
-            "image_ratio_heading": "aspect-16/9",
-            "description": "<p>Use this section to show a list of product or collection features, guide your customers through a process or share customers' reviews and case studies.</p>",
-            "button_text": "View more",
-            "button_link": "",
-            "open_new_window_button": false,
-            "show_button_style": "primary"
+            "caption": "ONE DEVICE, FOUR KEY AREAS",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_8w3d87": {
+          "type": "heading",
+          "settings": {
+            "heading": "Designed for the areas that benefit most from heat.",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
           }
         }
       },
       "block_order": [
-        "media_nzgtj4"
+        "caption_eimYig",
+        "heading_8w3d87"
       ],
-      "name": "t:sections.flow.name",
+      "custom_css": [
+        "p {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "t:sections.rich-text.name",
       "settings": {
-        "heading": "Flow",
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_wBQwyh": {
+      "type": "faq",
+      "blocks": {
+        "frequently_asked_question_chKyHg": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_PhgknC": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_U4xQh4": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_cHfQkG": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "frequently_asked_question_chKyHg",
+        "frequently_asked_question_PhgknC",
+        "frequently_asked_question_U4xQh4",
+        "frequently_asked_question_cHfQkG"
+      ],
+      "name": "t:sections.question_and_answer.name",
+      "settings": {
+        "heading": "",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
         "heading_alignment": "center",
-        "subheading": "",
-        "text": "",
-        "content_position": "middle",
-        "content_alignment": "left",
-        "select_motion": "hover",
-        "open_first_tab": true,
-        "adapt_radius": true,
-        "image_corner_radius": 0,
-        "auto_play": false,
-        "change_steps_speed": 5,
-        "pause_hover": true,
-        "image_position": "second",
-        "image_width": "60",
-        "full_width": false,
-        "padding_full_width": false,
+        "show_border": false,
+        "row_background": false,
+        "collapsible": true,
+        "show_view_all": false,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "image": "shopify://shop_images/heat-map.jpg",
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "auto",
         "show_section_divider": false,
-        "desktop_height": "natural",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "image_position_mobile": "second",
-        "full_width_mobile": false,
+        "make_full_page_width": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
         "show_section_divider_mobile": false,
-        "mobile_height": "400px",
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28,
         "section_scheme": "store",
-        "background_color": "rgba(0,0,0,0)",
-        "heading_color": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_color_dark": "rgba(0,0,0,0)",
-        "text_color_dark": "rgba(0,0,0,0)"
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
       }
     },
     "buy_box": {
@@ -533,7 +605,8 @@
     "image_with_text_gzyJLp",
     "rich_text_NMiNB9",
     "video_UMEgE9",
-    "flow_ekrq94",
+    "rich_text_8tWKtQ",
+    "faq_wBQwyh",
     "buy_box"
   ]
 }
