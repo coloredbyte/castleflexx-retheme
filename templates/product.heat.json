@@ -403,7 +403,8 @@
       "type": "video",
       "custom_css": [
         ".page-width {padding-left: 120px; padding-right: 120px;}",
-        ".x-container-video {background-color: #f7f5f1;}"
+        ".x-container-video {background-color: #f7f5f1;}",
+        " @media screen and (max-width: 749px) {.page-width {padding-left: 16px; padding-right: 16px;}}"
       ],
       "name": "t:sections.video.name",
       "settings": {
