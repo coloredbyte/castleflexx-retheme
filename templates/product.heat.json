@@ -166,7 +166,7 @@
       "custom_css": [
         ".x-block-text .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%;}",
         ".product-form__input:first-of-type {padding-top: 32px;}",
-        ".heading-feature_card {font-size: 32px; font-weight: 700;}",
+        ".heading-feature_card {font-size: 40px; font-weight: 700;}",
         "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; }}"
       ],
       "settings": {
