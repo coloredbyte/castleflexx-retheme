@@ -168,7 +168,7 @@
         ".x-block-text .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%; margin-bottom: 0px;}",
         ".product-form__input:first-of-type {padding-top: 32px;}",
         ".heading-feature_card {font-size: 40px; font-weight: 700;}",
-        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700;}",
+        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px;}",
         "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; }}"
       ],
       "settings": {
