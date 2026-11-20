@@ -288,6 +288,7 @@
             "text_alignment": "left",
             "text_position": "center",
             "image": "shopify://shop_images/why_castleflexx_tab_img.png",
+            "image_mobile": "shopify://shop_images/Why_CastleFlexx_tab_img_mobile.png",
             "show_sound_control": false,
             "video_alt_text": "",
             "enable_video_autoplay": false,
