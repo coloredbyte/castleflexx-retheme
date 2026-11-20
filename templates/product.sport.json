@@ -259,10 +259,121 @@
         "full_width": false,
         "spacing_col": "small",
         "padding_top": 32,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 48,
         "section_scheme": "store"
+      }
+    },
+    "image_hotspot_WmTRAW": {
+      "type": "image-hotspot",
+      "blocks": {
+        "hotspot_hYm7XX": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Plantar_Fasciitis.svg",
+            "top": 29,
+            "left": 59,
+            "title": "Plantar Fasciitis",
+            "pos": "right",
+            "width": 6
+          }
+        },
+        "hotspot_tPEmzx": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/High_Blood_Pressure.svg",
+            "top": 33,
+            "left": 47,
+            "title": "High Blood Pressure",
+            "pos": "left",
+            "width": 11
+          }
+        },
+        "hotspot_WzHqNN": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Circulation_Issues.svg",
+            "top": 47,
+            "left": 43,
+            "title": "Circulation Issues",
+            "pos": "left",
+            "width": 14
+          }
+        },
+        "hotspot_HkLeCW": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Tight_Calves.svg",
+            "top": 49,
+            "left": 57,
+            "title": "Tight Calves",
+            "pos": "right",
+            "width": 14
+          }
+        },
+        "hotspot_8HhAwP": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Shoulder_Impingement.svg",
+            "top": 59,
+            "left": 35,
+            "title": "Shoulder Impingement",
+            "pos": "left",
+            "width": 8
+          }
+        },
+        "hotspot_rPWxFY": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Sciatica_Herniated_Discs.svg",
+            "top": 64,
+            "left": 59,
+            "title": "Sciatica / Herniated Discs",
+            "pos": "right",
+            "width": 8
+          }
+        },
+        "hotspot_KJnQQV": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Tennis_Elbow.svg",
+            "top": 79,
+            "left": 39,
+            "title": "Tennis Elbow",
+            "pos": "left",
+            "width": 18
+          }
+        },
+        "hotspot_N79QK3": {
+          "type": "hotspot",
+          "settings": {
+            "img": "shopify://shop_images/Hip_Pain.svg",
+            "top": 75,
+            "left": 48,
+            "title": "Hip Pain",
+            "pos": "right",
+            "width": 31
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_hYm7XX",
+        "hotspot_tPEmzx",
+        "hotspot_WzHqNN",
+        "hotspot_HkLeCW",
+        "hotspot_8HhAwP",
+        "hotspot_rPWxFY",
+        "hotspot_KJnQQV",
+        "hotspot_N79QK3"
+      ],
+      "name": "Image with hotspots",
+      "settings": {
+        "hide_products": [],
+        "title": "Relieve tension across your body",
+        "subtitle": "CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching.",
+        "img": "shopify://shop_images/Chronic_Pain.png",
+        "speed": 30
       }
     },
     "331e6fca-2947-4a19-89c5-9396be0d666a": {
@@ -400,172 +511,6 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "color_icon_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "product_tabs_aQA37h": {
-      "type": "product-tabs",
-      "blocks": {
-        "tab_8rDqk4": {
-          "type": "tab",
-          "settings": {
-            "heading": "Why CastleFlexx",
-            "page_tab": "",
-            "width_content": 100,
-            "subheading": "",
-            "headingcontent": "Why People Choose CastleFlexx",
-            "highlight_type": "underline",
-            "heading_base_size": 80,
-            "text": "<p>CastleFlexx combines patented design with functional innovation to make stretching more controlled, comfortable, and effective. Its unique foot hammock helps maintain proper foot positioning while the ergonomic handles provide a secure grip, allowing you to target tight muscles and improve your range of motion without the hassle of traditional stretch straps.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "button_label": "",
-            "button_link": "",
-            "open_new_window": false,
-            "text_alignment": "left",
-            "text_position": "center",
-            "image": "shopify://shop_images/why_castleflexx_tab_img.png",
-            "image_mobile": "shopify://shop_images/Why_CastleFlexx_tab_img_mobile.png",
-            "show_sound_control": false,
-            "video_alt_text": "",
-            "enable_video_autoplay": false,
-            "desktop_height": "natural",
-            "image_alignment": "left",
-            "mobile_height": "natural",
-            "image_alignment_mobile": "left"
-          }
-        },
-        "tab_jPNUmb": {
-          "type": "tab",
-          "settings": {
-            "heading": "For Athletes",
-            "page_tab": "",
-            "width_content": 100,
-            "subheading": "",
-            "headingcontent": "For Athletes & Active Adults",
-            "highlight_type": "underline",
-            "heading_base_size": 90,
-            "text": "<p>From competitive athletes to outdoor enthusiasts and everyday fitness lovers, CastleFlexx supports people who make mobility a priority. Whether you're warming up before a workout, recovering after intense activity, or maintaining flexibility as you age, CastleFlexx makes it easier to incorporate purposeful stretching into your routine.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "button_label": "",
-            "button_link": "",
-            "open_new_window": false,
-            "text_alignment": "left",
-            "text_position": "center",
-            "image": "shopify://shop_images/for_athletes_tab_img.png",
-            "image_mobile": "shopify://shop_images/for_athletes_tab_mobile_img.png",
-            "show_sound_control": false,
-            "video_alt_text": "",
-            "enable_video_autoplay": false,
-            "desktop_height": "natural",
-            "image_alignment": "left",
-            "mobile_height": "natural",
-            "image_alignment_mobile": "left"
-          }
-        },
-        "tab_bcBqYi": {
-          "type": "tab",
-          "settings": {
-            "heading": "Trusted by Customers",
-            "page_tab": "",
-            "width_content": 100,
-            "subheading": "",
-            "headingcontent": "Trusted by Customers",
-            "highlight_type": "underline",
-            "heading_base_size": 90,
-            "text": "<p>Since launching in 2021, CastleFlexx has helped customers worldwide make mobility and flexibility part of their everyday lives. With a <strong>4.7-star average </strong>rating and 93% of customers recommending the product, it's become a trusted addition to countless recovery and wellness routines.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "button_label": "",
-            "button_link": "",
-            "open_new_window": false,
-            "text_alignment": "left",
-            "text_position": "center",
-            "image": "shopify://shop_images/trust_tab_img.png",
-            "show_sound_control": false,
-            "video_alt_text": "",
-            "enable_video_autoplay": false,
-            "desktop_height": "natural",
-            "image_alignment": "left",
-            "mobile_height": "natural",
-            "image_alignment_mobile": "left"
-          }
-        },
-        "tab_LameGJ": {
-          "type": "tab",
-          "settings": {
-            "heading": "Designed to Last",
-            "page_tab": "",
-            "width_content": 100,
-            "subheading": "",
-            "headingcontent": "Built for Everyday Use",
-            "highlight_type": "underline",
-            "heading_base_size": 90,
-            "text": "<p>Made with durability and performance in mind, CastleFlexx Sport features a lightweight construction and silicone tactical-grip handles designed for reliable handling. Its compact design makes it easy to take from home to the gym or outdoors, giving you a dependable mobility tool you can return to day after day.</p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "button_label": "",
-            "button_link": "",
-            "open_new_window": false,
-            "text_alignment": "left",
-            "text_position": "center",
-            "image": "shopify://shop_images/designed_to_last_tab.png",
-            "show_sound_control": false,
-            "video_alt_text": "",
-            "enable_video_autoplay": false,
-            "desktop_height": "natural",
-            "image_alignment": "left",
-            "mobile_height": "natural",
-            "image_alignment_mobile": "left"
-          }
-        }
-      },
-      "block_order": [
-        "tab_8rDqk4",
-        "tab_jPNUmb",
-        "tab_bcBqYi",
-        "tab_LameGJ"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.tabs-aligment {padding-right: 60px; padding-left: 60px; } .content-tabs-template--23533158400191__product_tabs_aQA37h {padding-left: 60px; }}"
-      ],
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "heading": "",
-        "highlight_type": "underline",
-        "heading_size": 90,
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "tabs_title_style": "underline",
-        "tabs_desktop_alignment": "center",
-        "tabs_mobile_layout": "horizontal",
-        "review_tab_title": "Reviews",
-        "show_reviews_count": false,
-        "full_width": false,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "full_width_mobile": false,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "button_light": "rgba(0,0,0,0)",
-        "button_text_light": "rgba(0,0,0,0)",
-        "button_hover_light": "rgba(0,0,0,0)",
-        "button_text_hover_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "button_dark": "rgba(0,0,0,0)",
-        "button_text_dark": "rgba(0,0,0,0)",
-        "button_hover_dark": "rgba(0,0,0,0)",
-        "button_text_hover_dark": "rgba(0,0,0,0)"
       }
     },
     "text_column_with_image_QdkzQL": {
@@ -855,117 +800,6 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "image_hotspot_WmTRAW": {
-      "type": "image-hotspot",
-      "blocks": {
-        "hotspot_hYm7XX": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Plantar_Fasciitis.svg",
-            "top": 29,
-            "left": 59,
-            "title": "Plantar Fasciitis",
-            "pos": "right",
-            "width": 6
-          }
-        },
-        "hotspot_tPEmzx": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/High_Blood_Pressure.svg",
-            "top": 33,
-            "left": 47,
-            "title": "High Blood Pressure",
-            "pos": "left",
-            "width": 11
-          }
-        },
-        "hotspot_WzHqNN": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Circulation_Issues.svg",
-            "top": 47,
-            "left": 43,
-            "title": "Circulation Issues",
-            "pos": "left",
-            "width": 14
-          }
-        },
-        "hotspot_HkLeCW": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Tight_Calves.svg",
-            "top": 49,
-            "left": 57,
-            "title": "Tight Calves",
-            "pos": "right",
-            "width": 14
-          }
-        },
-        "hotspot_8HhAwP": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Shoulder_Impingement.svg",
-            "top": 59,
-            "left": 35,
-            "title": "Shoulder Impingement",
-            "pos": "left",
-            "width": 8
-          }
-        },
-        "hotspot_rPWxFY": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Sciatica_Herniated_Discs.svg",
-            "top": 64,
-            "left": 59,
-            "title": "Sciatica / Herniated Discs",
-            "pos": "right",
-            "width": 8
-          }
-        },
-        "hotspot_KJnQQV": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Tennis_Elbow.svg",
-            "top": 79,
-            "left": 39,
-            "title": "Tennis Elbow",
-            "pos": "left",
-            "width": 18
-          }
-        },
-        "hotspot_N79QK3": {
-          "type": "hotspot",
-          "settings": {
-            "img": "shopify://shop_images/Hip_Pain.svg",
-            "top": 75,
-            "left": 48,
-            "title": "Hip Pain",
-            "pos": "right",
-            "width": 31
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_hYm7XX",
-        "hotspot_tPEmzx",
-        "hotspot_WzHqNN",
-        "hotspot_HkLeCW",
-        "hotspot_8HhAwP",
-        "hotspot_rPWxFY",
-        "hotspot_KJnQQV",
-        "hotspot_N79QK3"
-      ],
-      "name": "Image with hotspots",
-      "settings": {
-        "hide_products": [],
-        "title": "Relieve tension across your body",
-        "subtitle": "CastleFlexx® is the first device ever to use a dual purpose mobility bar allowing the user to get a full body workout while also using the bar to create a balanced and stress free experience while stretching.",
-        "img": "shopify://shop_images/Chronic_Pain.png",
-        "speed": 30
       }
     },
     "image_with_text_RBtGLj": {
@@ -1298,12 +1132,11 @@
   },
   "order": [
     "main",
+    "image_hotspot_WmTRAW",
     "331e6fca-2947-4a19-89c5-9396be0d666a",
-    "product_tabs_aQA37h",
     "text_column_with_image_QdkzQL",
     "multicolumn_iF4zjY",
     "rich_text_BcNEkV",
-    "image_hotspot_WmTRAW",
     "image_with_text_RBtGLj",
     "faq_hgd9PK",
     "rich_text_iMMFgV",
