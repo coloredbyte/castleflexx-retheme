@@ -550,8 +550,7 @@
         "frequently_asked_question_cHfQkG"
       ],
       "custom_css": [
-        ".page-width {padding-left: 80px; padding-right: 80px;}",
-        ".font-medium {font-size: 20px; font-weight: 600;}"
+        "@media screen and (min-width: 990px) {.page-width {padding-left: 80px; padding-right: 80px;}.font-medium {font-size: 20px; font-weight: 600;}}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
@@ -574,13 +573,13 @@
         "desktop_height": "auto",
         "show_section_divider": false,
         "make_full_page_width": false,
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "padding_top": 0,
+        "padding_bottom": 80,
         "image_alignment_mobile": "left",
-        "mobile_height": "250px",
+        "mobile_height": "auto",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
         "section_scheme": "scheme2",
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
