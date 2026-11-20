@@ -12,6 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "text_Yk76Jg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CASTLEFLEXX HEAT EDITION</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        },
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
@@ -144,6 +153,7 @@
         }
       },
       "block_order": [
+        "text_Yk76Jg",
         "product_name_xkPbAa",
         "feature_card",
         "variant_picker",
@@ -198,7 +208,7 @@
         "textlink_color_dark": "rgba(0,0,0,0)",
         "full_width": false,
         "spacing_col": "small",
-        "padding_top": 32,
+        "padding_top": 48,
         "padding_bottom": 80,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 48,
