@@ -301,7 +301,7 @@
         "h2 {font-weight: 700;}",
         ".font-medium {color: #e34f2b;}",
         ".x-block-columns {padding-left: 0px; padding-bottom: 0px;}",
-        "@media screen and (max-width: 1024px) {.x-block-columns {padding-top: 8px; padding-right: 0px; } .h3 {font-size: 14px; font-weight: 700; } .iwt-content {padding-left: 0px; padding-right: 0px; padding-top: 20px; }}"
+        "@media screen and (max-width: 1024px) {.x-block-columns {padding-top: 8px; padding-right: 0px; } .h3 {font-size: 14px; font-weight: 600; } .iwt-content {padding-left: 0px; padding-right: 0px; padding-top: 20px; }}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
