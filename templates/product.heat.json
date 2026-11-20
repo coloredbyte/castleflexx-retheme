@@ -12,20 +12,23 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "rating_AeRdFJ": {
-          "type": "rating",
-          "settings": {}
-        },
-        "breadcrumb_CXCUEY": {
-          "type": "breadcrumb",
-          "settings": {}
-        },
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
             "title_size": 130,
             "heading_tag": "h1",
             "enable_product_rating": false
+          }
+        },
+        "feature_card": {
+          "type": "feature_card",
+          "settings": {
+            "heading": "Really tight?\nStart with [HEAT.]",
+            "color_heading_highlight_light": "#e05a36",
+            "text": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>",
+            "tags": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
+            "tag_style": "tinted",
+            "block_scheme": "section"
           }
         },
         "price": {
@@ -66,16 +69,16 @@
           "settings": {
             "heading": "",
             "description": "",
+            "layout": "options",
             "show_image": false,
             "checked_by_default": false,
-            "show_border": true,
-            "block_scheme": "store",
-            "layout": "options",
             "option_device_title": "CastleFlexx HEAT Only",
             "option_device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
             "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
             "option_bundle_details": "Heat Device • 200+ guided classes",
-            "badge": "Best value • Save [savings]"
+            "badge": "Best value • Save [savings]",
+            "show_border": true,
+            "block_scheme": "store"
           }
         },
         "buy_buttons": {
@@ -145,22 +148,9 @@
             "show_quantity_selector": false,
             "link_to_atc_btn": true
           }
-        },
-        "feature_card": {
-          "type": "feature_card",
-          "settings": {
-            "heading": "Really tight?\nStart with [HEAT.]",
-            "color_heading_highlight_light": "#e05a36",
-            "text": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>",
-            "tags": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
-            "tag_style": "tinted",
-            "block_scheme": "section"
-          }
         }
       },
       "block_order": [
-        "rating_AeRdFJ",
-        "breadcrumb_CXCUEY",
         "product_name_xkPbAa",
         "feature_card",
         "price",
@@ -187,13 +177,13 @@
         "link_vendor": false,
         "make_content_center": false,
         "desktop_layout": "left",
-        "desktop_media_layout": "2_columns",
+        "desktop_media_layout": "thumbnail_slider",
         "show_arrow_button": true,
         "mobile_media_size": "full_width",
         "show_thumnail_mobile": false,
         "transition_style": "fade",
         "image_ratio": "natural",
-        "thumbnail_position": "vertical",
+        "thumbnail_position": "horizontal",
         "enable_thumbnail_overlay": true,
         "enable_image_zoom": true,
         "zoom_effect": "gallery",
@@ -225,7 +215,30 @@
     },
     "buy_box": {
       "type": "product-buy-box",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Get your Heat",
+        "heading": "Choose Your Heat Experience",
+        "subheading": "Buy the device alone or add the program designed to keep you using it.",
+        "size_option": "Size",
+        "size_label": "Choose your size",
+        "size_notes": "Standard: 5'0 – 5'8\nLarge: 5'9 – 6'2\nX-Large: 6'3 – 6'9",
+        "size_help": "<p>Between Sizes? <strong>Size Up</strong></p>",
+        "option_label": "Choose your buying option",
+        "device_title": "CastleFlexx HEAT Only",
+        "device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
+        "bundle_title": "CastleFlexx HEAT + CastleFIT",
+        "bundle_details": "Heat Device • 200+ guided classes",
+        "badge": "Best value • Save [savings]",
+        "includes_label": "Your purchase includes:",
+        "device_items": "CastleFlexx Heat device\n30-day worry-free returns",
+        "bundle_items": "CastleFlexx Heat device\n200+ guided classes\n60-day worry-free returns\n12 months of device insurance",
+        "device_cta": "Shop Heat",
+        "bundle_cta": "Shop Bundle",
+        "bundle_note": "CastleFIT renews annually until cancelled.",
+        "section_scheme": "store",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
