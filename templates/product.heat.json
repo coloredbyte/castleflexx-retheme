@@ -31,14 +31,6 @@
             "block_scheme": "section"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "adapt_custom_price_format": false,
-            "show_tax_and_shipping": false,
-            "text_size_price": 50
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -153,7 +145,6 @@
       "block_order": [
         "product_name_xkPbAa",
         "feature_card",
-        "price",
         "variant_picker",
         "size_chart_N4DErU",
         "upsell",
