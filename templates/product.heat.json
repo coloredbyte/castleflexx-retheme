@@ -24,7 +24,8 @@
           "type": "feature_card",
           "settings": {
             "heading": "Really tight?\nStart with [HEAT.]",
-            "color_heading_highlight_light": "#e05a36",
+            "color_heading_highlight_light": "#F04420",
+            "image": "shopify://shop_images/plantar-fascia.jpg",
             "text": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>",
             "tags": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
             "tag_style": "tinted",
