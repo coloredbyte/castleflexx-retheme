@@ -374,7 +374,7 @@
         "heading_axLdQe"
       ],
       "custom_css": [
-        "p {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
         "h2 {font-weight: 600;}"
       ],
       "name": "t:sections.rich-text.name",
@@ -453,14 +453,24 @@
             "heading_size": 120,
             "heading_tag": "h2"
           }
+        },
+        "text_nLd6eV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Move from lower body to upper body with one comfort-first device.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
         }
       },
       "block_order": [
         "caption_eimYig",
-        "heading_8w3d87"
+        "heading_8w3d87",
+        "text_nLd6eV"
       ],
       "custom_css": [
-        "p {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
         "h2 {font-weight: 600;}"
       ],
       "name": "t:sections.rich-text.name",
