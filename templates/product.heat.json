@@ -121,29 +121,6 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
-        "collapsible_tab_MgjKqH": {
-          "type": "collapsible_tab",
-          "settings": {
-            "open_by_default": true,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "use_secondary_background": false,
-            "heading": "Product Details",
-            "tab_content": "{{ product.description }}",
-            "media_type": "none",
-            "image_position": "below",
-            "image_ratio": "natural",
-            "show_sound_control": false,
-            "video_position": "below",
-            "video_ratio": "natural",
-            "is_adapt_to_edges_type": false,
-            "is_rounded_corners": false,
-            "video_url": "",
-            "video_alt_text": "",
-            "enable_video_autoplay": false
-          }
-        },
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
@@ -161,7 +138,6 @@
         "size_chart_N4DErU",
         "upsell",
         "buy_buttons",
-        "collapsible_tab_MgjKqH",
         "sticky-atc"
       ],
       "custom_css": [
