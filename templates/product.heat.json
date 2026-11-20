@@ -348,6 +348,81 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_NMiNB9": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_xAjNkE": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_axLdQe": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Do You Get With CastleFlexx Heat?",
+            "highlight_type": "underline",
+            "heading_size": 110,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "caption_xAjNkE",
+        "heading_axLdQe"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 88,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "video_UMEgE9": {
+      "type": "video",
+      "name": "t:sections.video.name",
+      "settings": {
+        "show_hero": false,
+        "heading": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "sub_heading_video": "",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_alt_text": "",
+        "full_width": false,
+        "adapt_corners_desktop": true,
+        "rounded_corners": false,
+        "video_desktop_ratio": "px",
+        "video_desktop_height": "natural",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "full_width_mobile": false,
+        "adapt_corners_mobile": true,
+        "rounded_corners_mobile": false,
+        "video_mobile_ratio": "px",
+        "video_mobile_height": "natural",
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
     "buy_box": {
       "type": "product-buy-box",
       "settings": {
@@ -379,6 +454,8 @@
   "order": [
     "main",
     "image_with_text_gzyJLp",
+    "rich_text_NMiNB9",
+    "video_UMEgE9",
     "buy_box"
   ]
 }
