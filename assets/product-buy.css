@@ -267,6 +267,14 @@
 .x-buy-card__cta {
   width: 100%;
   margin-top: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.x-buy-card__cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .x-buy-card__note {

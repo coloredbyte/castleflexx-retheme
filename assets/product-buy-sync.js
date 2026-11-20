@@ -15,21 +15,26 @@
 
   const UPSELL_INPUT = 'input[name="properties[_upsell]"]';
 
-  // Main PDP form, e.g. product-form-template--123__main (not sticky/quick view).
-  const mainForm = () => document.querySelector('form[id^="product-form-"][id$="__main"]');
+  // Main PDP form, e.g. product-form-template--123__main. Skips the
+  // Shop Pay installment and sticky forms, which share the prefix.
+  const MAIN_FORM_ID = /^product-form-(?!installment-|sticky-).*__main$/;
+  const mainForm = () => [...document.querySelectorAll('form[id^="product-form-"]')].find((form) => MAIN_FORM_ID.test(form.getAttribute('id')));
 
-  const sectionId = () => mainForm()?.id.replace('product-form-', '');
+  // getAttribute: the form's <input name="id"> shadows form.id.
+  const formId = () => mainForm()?.getAttribute('id');
+
+  const sectionId = () => formId()?.replace('product-form-', '');
 
   const atcButton = () => document.getElementById(`x-atc-button-${sectionId()}`);
 
   // Radios that post with the main form, wherever they sit on the page.
   const formRadios = (selector) => {
-    const form = mainForm();
-    if (!form) {
+    const id = formId();
+    if (!id) {
       return [];
     }
 
-    return [...document.querySelectorAll(`${selector}[form="${form.id}"]`)];
+    return [...document.querySelectorAll(`${selector}[form="${id}"]`)];
   };
 
   const clickRadio = (radio) => {
@@ -76,5 +81,24 @@
     callback(button);
   };
 
-  window.cfBuySync = { selectOption, chooseBundle, isBundle, submit, watchButton };
+  // Buttons follow the main one: disabled with its label ("Sold out",
+  // region message) when it is, their own label otherwise.
+  // "Sold out - $329.00" -> "Sold out".
+  const followButton = (ctas) => {
+    watchButton((button) => {
+      const label = button.innerText.split(' - ')[0].trim();
+
+      ctas.forEach((cta) => {
+        cta.dataset.label ??= cta.textContent.trim();
+        cta.disabled = button.disabled;
+
+        const text = button.disabled && label ? label : cta.dataset.label;
+        if (cta.textContent.trim() !== text) {
+          cta.textContent = text;
+        }
+      });
+    });
+  };
+
+  window.cfBuySync = { selectOption, chooseBundle, isBundle, submit, followButton };
 })();

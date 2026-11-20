@@ -89,8 +89,10 @@
                   assign note = ''
                   assign prefix = value | append: ':'
                   for line in size_notes
+                    # Starts with, not contains: "Large:" is inside "X-Large:".
                     assign clean = line | strip
-                    if clean contains prefix
+                    assign head = clean | slice: 0, prefix.size
+                    if head == prefix
                       assign note = clean | remove_first: prefix | strip
                     endif
                   endfor
@@ -284,12 +286,8 @@
       setText(shown.querySelector('[data-buy-box-compare]'), formatShort(devicePrice + UPSELL_FULL));
     });
 
-    // Sold out or region-blocked: the CTA follows the main button.
-    sync.watchButton((button) => {
-      root.querySelectorAll('[data-buy-box-submit]').forEach((cta) => {
-        cta.disabled = button.disabled;
-      });
-    });
+    // Sold out or region-blocked: buttons follow the main button.
+    sync.followButton(root.querySelectorAll('[data-buy-box-submit]'));
   });
 </script>
 

@@ -62,8 +62,13 @@
     <div class="x-buy-cards__grid">
       {%- for block in section.blocks -%}
         {%- liquid
+          # No upsell product on this product: a bundle card has nothing to sell.
+          if block.settings.choice == 'bundle' and upsell_variant == blank
+            continue
+          endif
+
           assign bundle = false
-          if block.settings.choice == 'bundle' and upsell_variant != blank
+          if block.settings.choice == 'bundle'
             assign bundle = true
           endif
 
@@ -167,11 +172,7 @@
     });
 
     // Sold out or region-blocked: buttons follow the main button.
-    sync.watchButton((button) => {
-      root.querySelectorAll('[data-buy-card-submit]').forEach((cta) => {
-        cta.disabled = button.disabled;
-      });
-    });
+    sync.followButton(root.querySelectorAll('[data-buy-card-submit]'));
   });
 </script>
 

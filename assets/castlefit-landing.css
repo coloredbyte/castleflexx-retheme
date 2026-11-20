@@ -68,6 +68,8 @@ html {
 }
 
 .cf-banner__title {
+  /* Eurus colours h1 with the scheme heading colour; keep it on-image white. */
+  color: var(--cf-text);
   font-size: clamp(2rem, 3.2vw + 1rem, 3.75rem);
   font-weight: 500;
   line-height: 1.1;
