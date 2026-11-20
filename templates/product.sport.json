@@ -265,6 +265,143 @@
         "section_scheme": "store"
       }
     },
+    "331e6fca-2947-4a19-89c5-9396be0d666a": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_y7bRir": {
+          "type": "column",
+          "settings": {
+            "icon": "flower",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/train-icon.svg",
+            "custom_icon": "",
+            "title": "Smaller Sizes Available",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>CastleFlexx Sport is also available in smaller sizes for users under 5 ft.</p>"
+          }
+        },
+        "column_D4NA9Q": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_77f37c9b-2411-42e4-bdfd-4d702a2e24b7.svg",
+            "custom_icon": "",
+            "title": "Lightweight Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>The Sport version is 2x lighter than the Luxury version, making it more convenient for active, on-the-go use.</p>"
+          }
+        },
+        "column_XbXwkj": {
+          "type": "column",
+          "settings": {
+            "icon": "dna",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_8b67edb5-0e4b-461f-8818-66405ea9b534.svg",
+            "custom_icon": "",
+            "title": "Full Body Stretching and Strengthening",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Whether you're looking for stretching exercise equipment or a comprehensive stretch gym equipment, CastleFlexx offers full body stretching and strengthening capabilities. It's an ideal exercise equipment for stretching every part of your body.</p>"
+          }
+        },
+        "column_TaFjdM": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/trophy-icon.svg",
+            "custom_icon": "",
+            "title": "Comfortable, Controlled Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Designed to provide a more comfortable and controlled stretching experience.</p>"
+          }
+        },
+        "column_zygjRc": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/yoga-icon.svg",
+            "custom_icon": "",
+            "title": "Versatile Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Built for full-body stretching and strengthening routines at home or in the gym.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_y7bRir",
+        "column_D4NA9Q",
+        "column_XbXwkj",
+        "column_TaFjdM",
+        "column_zygjRc"
+      ],
+      "custom_css": [
+        ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .h3 {font-size: 20px; } p {font-size: 15px; }}"
+      ],
+      "settings": {
+        "title": "Why Choose CastleFlexx {{ product.title }}",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "secondary_background": "section",
+        "border_column": "none",
+        "column_content_alignment": "start",
+        "icon_position": "next",
+        "icon_size": 40,
+        "enable_desktop_slider": true,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": true,
+        "pagination_mobile": "dots",
+        "auto_play": true,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/3",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 32,
+        "full_width": false,
+        "padding_full_width": true,
+        "show_section_divider": false,
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-5",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "#191a1b",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
     "product_tabs_aQA37h": {
       "type": "product-tabs",
       "blocks": {
@@ -429,143 +566,6 @@
         "button_text_dark": "rgba(0,0,0,0)",
         "button_hover_dark": "rgba(0,0,0,0)",
         "button_text_hover_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "331e6fca-2947-4a19-89c5-9396be0d666a": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_y7bRir": {
-          "type": "column",
-          "settings": {
-            "icon": "flower",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/Icon.svg",
-            "custom_icon": "",
-            "title": "Patented Technology",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>CastleFlexx uses a patented design focused on comfort, control, and durability. Our design is backed by 3 USPTO patents and crafted from eco-friendly materials.</p>"
-          }
-        },
-        "column_XbXwkj": {
-          "type": "column",
-          "settings": {
-            "icon": "dna",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/Icon_8b67edb5-0e4b-461f-8818-66405ea9b534.svg",
-            "custom_icon": "",
-            "title": "Full Body Stretching and Strengthening",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Whether you're looking for stretching exercise equipment or a comprehensive stretch gym equipment, CastleFlexx offers full body stretching and strengthening capabilities. It's an ideal exercise equipment for stretching every part of your body.</p>"
-          }
-        },
-        "column_D4NA9Q": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/Icon_77f37c9b-2411-42e4-bdfd-4d702a2e24b7.svg",
-            "custom_icon": "",
-            "title": "Customized Sizes for Perfect Fit",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Understanding that one size doesn't fit all in stretching aids, we offer CastleFlexx stretching devices in Standard, Large, and XLarge sizes to cater to everyone's needs.</p>"
-          }
-        },
-        "column_TaFjdM": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/trophy-icon.svg",
-            "custom_icon": "",
-            "title": "Comfortable, Controlled Design",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Designed to provide a more comfortable and controlled stretching experience.</p>"
-          }
-        },
-        "column_zygjRc": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/yoga-icon.svg",
-            "custom_icon": "",
-            "title": "Versatile Design",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Built for full-body stretching and strengthening routines at home or in the gym.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_y7bRir",
-        "column_XbXwkj",
-        "column_D4NA9Q",
-        "column_TaFjdM",
-        "column_zygjRc"
-      ],
-      "custom_css": [
-        ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}",
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .h3 {font-size: 20px; } p {font-size: 15px; }}"
-      ],
-      "settings": {
-        "title": "Why Choose CastleFlexx {{ product.title }}",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "heading_alignment": "left",
-        "secondary_background": "none",
-        "border_column": "none",
-        "column_content_alignment": "start",
-        "icon_position": "next",
-        "icon_size": 40,
-        "enable_desktop_slider": true,
-        "pagination_desktop": "dots",
-        "swiper_on_mobile": true,
-        "pagination_mobile": "dots",
-        "auto_play": true,
-        "change_bar_every": 5,
-        "column_layout_desktop": "lg:w-1/3",
-        "section_height_desktop": "md:py-7",
-        "spacing_desktop": 32,
-        "full_width": false,
-        "padding_full_width": true,
-        "show_section_divider": false,
-        "padding_top": 80,
-        "padding_bottom": 60,
-        "column_layout_mobile": "w-full",
-        "section_height_mobile": "py-5",
-        "spacing_mobile": 16,
-        "full_width_mobile": false,
-        "show_section_divider_mobile": false,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "text_light": "#191a1b",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "color_icon_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "text_column_with_image_QdkzQL": {
@@ -1187,8 +1187,8 @@
   },
   "order": [
     "main",
-    "product_tabs_aQA37h",
     "331e6fca-2947-4a19-89c5-9396be0d666a",
+    "product_tabs_aQA37h",
     "text_column_with_image_QdkzQL",
     "multicolumn_iF4zjY",
     "rich_text_BcNEkV",
