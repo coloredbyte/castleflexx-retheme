@@ -354,7 +354,7 @@
         "caption_xAjNkE": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline",
+            "caption": "THE HEAT EXPERIENCE",
             "text_style": "uppercase",
             "text_size": 90
           }
@@ -373,6 +373,10 @@
         "caption_xAjNkE",
         "heading_axLdQe"
       ],
+      "custom_css": [
+        "p {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 600;}"
+      ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "content_alignment": "center",
@@ -384,7 +388,7 @@
         "show_section_divider_mobile": false,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28,
-        "section_scheme": "store",
+        "section_scheme": "scheme2",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "text_light": "rgba(0,0,0,0)",
