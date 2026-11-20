@@ -246,6 +246,9 @@
         "heading_CEbYg3",
         "button_dF97xW"
       ],
+      "custom_css": [
+        "h2 {font-weight: 700;}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
