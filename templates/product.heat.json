@@ -375,7 +375,7 @@
       ],
       "custom_css": [
         ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
-        "h2 {font-weight: 600;}"
+        "h2 {font-weight: 700;}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
