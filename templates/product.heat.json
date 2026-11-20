@@ -504,9 +504,9 @@
             "icon": "heart",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "open_by_default": false
+            "heading": "Feet & Arches",
+            "row_content": "<p>Set your foot into the contoured heel support and use the bar to guide a controlled foot and ankle stretch.</p>",
+            "open_by_default": true
           }
         },
         "frequently_asked_question_PhgknC": {
@@ -577,8 +577,8 @@
         "show_section_divider_mobile": false,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "section_scheme": "scheme2",
+        "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
