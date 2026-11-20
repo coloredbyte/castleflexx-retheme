@@ -389,7 +389,8 @@
         "tab_kJC4Kc"
       ],
       "custom_css": [
-        ".tabs-aligment {padding-right: 60px; padding-left: 60px;}"
+        ".tabs-aligment {padding-right: 40px; padding-left: 60px;}",
+        ".content-tabs-template--23533158400191__product_tabs_aQA37h {padding-left: 60px;}"
       ],
       "name": "t:sections.tabs.name",
       "settings": {
