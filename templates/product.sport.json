@@ -1,0 +1,1271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "rating_AeRdFJ": {
+          "type": "rating",
+          "settings": {}
+        },
+        "breadcrumb_CXCUEY": {
+          "type": "breadcrumb",
+          "settings": {}
+        },
+        "product_name_xkPbAa": {
+          "type": "product_name",
+          "settings": {
+            "title_size": 130,
+            "heading_tag": "h1",
+            "enable_product_rating": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "adapt_custom_price_format": false,
+            "show_tax_and_shipping": false,
+            "text_size_price": 50
+          }
+        },
+        "icon_text_7EB9Rd": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Full_Body_Icon_de5b48e1-f618-4925-b74c-11c08f9325e4.svg",
+            "custom_icon": "",
+            "icon_size": 40,
+            "text": "<p><strong>Full Body Stretching</strong></p>",
+            "additional_text": "",
+            "block_scheme": "section",
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "icon_text_Jk6E4F": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Removable_2lb_Weight_Icon_cad2451a-dafa-4544-9fcc-2249766a08ce.svg",
+            "custom_icon": "",
+            "icon_size": 40,
+            "text": "<p><strong>Removable Weight</strong></p>",
+            "additional_text": "",
+            "block_scheme": "section",
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "icon_text_KJnkfD": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Home_Use_Icon_9cfb664a-c2a4-4272-88e1-2c0f1965d652.svg",
+            "custom_icon": "",
+            "icon_size": 40,
+            "text": "<p><strong>Ideal for Home Use</strong></p>",
+            "additional_text": "",
+            "block_scheme": "section",
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "max_swatch": 20,
+            "show_variant_option": true,
+            "enable_color_swatches": true,
+            "swatch_size": "large",
+            "enable_size_chart": false,
+            "option_to_show_size_chart": "",
+            "heading": "",
+            "select_page": "",
+            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
+            "size_chart_type": "popup"
+          }
+        },
+        "size_chart_N4DErU": {
+          "type": "size_chart",
+          "settings": {
+            "heading": "Size Guide",
+            "select_page": "size-guide",
+            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
+            "size_chart_type": "popup"
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "show_image": false,
+            "checked_by_default": false,
+            "show_border": true,
+            "block_scheme": "store"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_button_style": "primary",
+            "show_dynamic_checkout": false,
+            "dymanic_checkout_style": "primary",
+            "show_atc_quantity": true,
+            "show_add_to_cart": true,
+            "show_price": true,
+            "hide_sale_price": false,
+            "show_gift_card_recipient": false,
+            "pickup_availability": false,
+            "hide_when_pre_order": false,
+            "preorder_button_label": "Pre-order",
+            "preorder_message": "<p>This product will be available for sale in 2 weeks, but you can pre-order now to receive 10% discount!</p>",
+            "preorder_show_dynamic_button": false,
+            "show_background": false,
+            "box_type": "square",
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "collapsible_tab_MgjKqH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": true,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "use_secondary_background": false,
+            "heading": "Product Details",
+            "tab_content": "{{ product.description }}",
+            "media_type": "none",
+            "image_position": "below",
+            "image_ratio": "natural",
+            "show_sound_control": false,
+            "video_position": "below",
+            "video_ratio": "natural",
+            "is_adapt_to_edges_type": false,
+            "is_rounded_corners": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": false
+          }
+        },
+        "sticky-atc": {
+          "type": "sticky_add_to_cart",
+          "settings": {
+            "desktop_display_type": "popup",
+            "show_quantity_selector": false,
+            "link_to_atc_btn": true
+          }
+        }
+      },
+      "block_order": [
+        "rating_AeRdFJ",
+        "breadcrumb_CXCUEY",
+        "product_name_xkPbAa",
+        "price",
+        "icon_text_7EB9Rd",
+        "icon_text_Jk6E4F",
+        "icon_text_KJnkfD",
+        "variant_picker",
+        "size_chart_N4DErU",
+        "upsell",
+        "buy_buttons",
+        "collapsible_tab_MgjKqH",
+        "sticky-atc"
+      ],
+      "custom_css": [
+        ".x-review-product {margin-bottom: 12px;}",
+        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
+        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 16px; margin: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }}",
+        ".product-form__input:first-of-type {padding-top: 32px;}",
+        "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; } .w-full .x-block-text-icon {padding-bottom: 12px; }}"
+      ],
+      "settings": {
+        "enable_sticky_image": true,
+        "show_product_name": false,
+        "title_size": 100,
+        "heading_tag": "h1",
+        "show_vendor": false,
+        "link_vendor": false,
+        "make_content_center": false,
+        "desktop_layout": "left",
+        "desktop_media_layout": "2_columns",
+        "show_arrow_button": true,
+        "mobile_media_size": "full_width",
+        "show_thumnail_mobile": false,
+        "transition_style": "fade",
+        "image_ratio": "natural",
+        "thumbnail_position": "vertical",
+        "enable_thumbnail_overlay": true,
+        "enable_image_zoom": true,
+        "zoom_effect": "gallery",
+        "enable_video_autoplay": false,
+        "enable_video_loop": false,
+        "show_first_image_avaiable": true,
+        "show_media_with_variant_selected": true,
+        "option_to_classify_variant_media": "Color",
+        "enable_microdata": false,
+        "show_breadcrumbs": false,
+        "show_breadcrumbs_border": false,
+        "full_width_breadcrumb": false,
+        "desktop_content_alignment": "text-center",
+        "mobile_content_alignment": "text-center",
+        "background_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "textlink_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "textlink_color_dark": "rgba(0,0,0,0)",
+        "full_width": false,
+        "spacing_col": "small",
+        "padding_top": 32,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "store"
+      }
+    },
+    "flow_niqqMc": {
+      "type": "flow",
+      "blocks": {
+        "media_k8GQ3M": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Back Pain",
+            "image_heading": "shopify://shop_images/back_pain_icon_c912bfa0-7aa4-4320-a30c-99044ddf543b.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Back tightness often shows up when hips, hamstrings, and glutes get stiff or weak. Dan Castle went from level 10 pain in his lower back FOR TWO DECADES to being pain free after CastleFlexxing daily for 10-20 minutes (with mri results to prove it). CastleFlexx helps you stretch the entire posterior chain using active and passive stretching so you can build strength and flexibility at the same time.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_QtHrx6": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Hip Pain",
+            "image_heading": "shopify://shop_images/hip_pain_icon_d3900275-b010-48c7-a130-56406c43aef2.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Sitting can leave hip flexors and tissue feeling shortened and stuck. CastleFlexx gives you a stable way to work hip flexors, hamstrings, and glutes without cranking on your back or hands, making it easier to stay consistent and feel looser again.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_jXeEUk": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Plantar Fasciitis",
+            "image_heading": "shopify://shop_images/plantar_fasciitis_icon_2.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Some CastleFlexx users reported online that this device fixed their PF in days to weeks. While results will vary, CastleFlexx's foot hammock lets you pull into a controlled dorsiflexion and toe-extension stretch comfortably, without awkward straps or slipping, building flexibility and resilience with short, consistent sessions. Strengthening that tight band under your foot can make all the difference.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_jGQUVT": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Shoulder Pain",
+            "image_heading": "shopify://shop_images/shoulder_pain.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>CastleFlexx helps open the chest and train shoulder mobility with controlled tension, so reaching overhead and moving through workouts feels more comfortable. Place your elbow into the hammock design. Subscribe to CastleFIT classes to learn upper body recovery and pain relief routines.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_yg3pNw": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "High Blood Pressure",
+            "image_heading": "shopify://shop_images/high_blood_pressure_icon_2b1c3c95-2208-4dc9-a3af-5676d97dcd4f.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Stretching has been proven to lower blood pressure more effectively that brisk walking according to recent Europe studies published in 2022. A CastleFlexx session pairs well with slow breathing and a nightly wind-down routine, while you follow your clinician's plan daily.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_8cJiTY": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Knee Pain",
+            "image_heading": "shopify://shop_images/back_pain_icon_c912bfa0-7aa4-4320-a30c-99044ddf543b.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Knees don't work in isolation: ankles, calves, quads, hamstrings, and hips all influence how the joint tracks and loads. CastleFlexx lets you improve lower-body flexibility with steady, repeatable tension, helping you address tightness above and below the knee where movement issues often start. Great for runners, lifters, and long desk days. If pain is sharp or persistent, get it checked. Need HEAT for your knee? Check out the Heat Edition.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_q7KreN": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Tight Calves",
+            "image_heading": "shopify://shop_images/tight_calves_icon_3140a72a-51de-459a-b5e3-8bdbb31bc405.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>You must treat your calves as part of the posterior chain, a calf stepper wont work because our muscles all connect and shouldn’t be treated in isolation in Dan Castle’s opinion. CastleFlexx elongates the muscles and tendons around, above and below the calf- that’s why so many consider it the best calf stretch they’ve ever experienced.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_L99hUf": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Circulation Issues",
+            "image_heading": "shopify://shop_images/circulation_issues_icon_73477759-d689-4a22-aa85-39ec08bc21c9.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Long periods of sitting can make legs feel heavy and stiff. Gentle stretching and movement can help you feel mobile and refreshed. CastleFlexx makes it easy to work calves, hamstrings, and hips in a seated position, so your body feels better after long days.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        },
+        "media_bhbTLx": {
+          "type": "media",
+          "settings": {
+            "video": "shopify://files/videos/Amazon video_98a02cdd-aff5-408d-b624-135ad3a78762.mp4",
+            "show_sound_control": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": true,
+            "subheading": "",
+            "heading": "Tennis Elbow",
+            "image_heading": "shopify://shop_images/tennis_elbow_icon_7d7277a7-f138-4873-89d1-7972d76f2f07.svg",
+            "image_style_heading": "rounded",
+            "image_ratio_heading": "aspect-square",
+            "description": "<p>Elbow flare-ups are often tied to overloaded forearms and gripping, not just the spot that hurts. CastleFlexx ( insert elbow into hammock) helps you lengthen the forearm-wrist chain and open the shoulders with less strain on your grip, so your body feels looser overall.</p>",
+            "button_text": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "media_k8GQ3M",
+        "media_QtHrx6",
+        "media_jXeEUk",
+        "media_jGQUVT",
+        "media_yg3pNw",
+        "media_8cJiTY",
+        "media_q7KreN",
+        "media_L99hUf",
+        "media_bhbTLx"
+      ],
+      "custom_css": [
+        "h3 {font-size: 20px;}",
+        ".rte p {font-size: 15px;}",
+        "[class*=\"heading--template--23520791068863\"] svg,[class*=\"heading--template--23520791068863\"] img {width: 48px; height: auto; max-width: 100%;}",
+        "@media screen and (max-width: 1024px) {.w-full {padding-right: 0px; padding-left: 0px; } h2 {font-size: 30px; } .rte p {font-size: 14px; }}"
+      ],
+      "name": "t:sections.flow.name",
+      "settings": {
+        "heading": "10 Minutes Daily. Move Better.",
+        "highlight_type": "underline",
+        "heading_size": 110,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "",
+        "content_position": "middle",
+        "content_alignment": "left",
+        "select_motion": "click",
+        "open_first_tab": false,
+        "adapt_radius": true,
+        "image_corner_radius": 0,
+        "auto_play": false,
+        "change_steps_speed": 5,
+        "pause_hover": false,
+        "image_position": "first",
+        "image_width": "60",
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "desktop_height": "natural",
+        "padding_top": 80,
+        "padding_bottom": 100,
+        "image_position_mobile": "first",
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "mobile_height": "250px",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "scheme3",
+        "background_color": "#191a1b",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "331e6fca-2947-4a19-89c5-9396be0d666a": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_y7bRir": {
+          "type": "column",
+          "settings": {
+            "icon": "flower",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon.svg",
+            "custom_icon": "",
+            "title": "Patented Technology",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>CastleFlexx uses a patented design focused on comfort, control, and durability. Our design is backed by 3 USPTO patents and crafted from eco-friendly materials.</p>"
+          }
+        },
+        "column_XbXwkj": {
+          "type": "column",
+          "settings": {
+            "icon": "dna",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_8b67edb5-0e4b-461f-8818-66405ea9b534.svg",
+            "custom_icon": "",
+            "title": "Full Body Stretching and Strengthening",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Whether you're looking for stretching exercise equipment or a comprehensive stretch gym equipment, CastleFlexx offers full body stretching and strengthening capabilities. It's an ideal exercise equipment for stretching every part of your body.</p>"
+          }
+        },
+        "column_D4NA9Q": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/Icon_77f37c9b-2411-42e4-bdfd-4d702a2e24b7.svg",
+            "custom_icon": "",
+            "title": "Customized Sizes for Perfect Fit",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Understanding that one size doesn't fit all in stretching aids, we offer CastleFlexx stretching devices in Standard, Large, and XLarge sizes to cater to everyone's needs.</p>"
+          }
+        },
+        "column_TaFjdM": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/trophy-icon.svg",
+            "custom_icon": "",
+            "title": "Comfortable, Controlled Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Designed to provide a more comfortable and controlled stretching experience.</p>"
+          }
+        },
+        "column_zygjRc": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/yoga-icon.svg",
+            "custom_icon": "",
+            "title": "Versatile Design",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Built for full-body stretching and strengthening routines at home or in the gym.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_y7bRir",
+        "column_XbXwkj",
+        "column_D4NA9Q",
+        "column_TaFjdM",
+        "column_zygjRc"
+      ],
+      "custom_css": [
+        ".h-full {align-items: flex-start !important; padding-left: 0px; padding-right: 0px;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .h3 {font-size: 20px; } p {font-size: 15px; }}"
+      ],
+      "settings": {
+        "title": "Why Choose CastleFlexx {{ product.title }}",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "secondary_background": "none",
+        "border_column": "none",
+        "column_content_alignment": "start",
+        "icon_position": "next",
+        "icon_size": 40,
+        "enable_desktop_slider": true,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": true,
+        "pagination_mobile": "dots",
+        "auto_play": true,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/3",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 32,
+        "full_width": false,
+        "padding_full_width": true,
+        "show_section_divider": false,
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-5",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "#191a1b",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "text_column_with_image_QdkzQL": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "column_MmxPYh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_1_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "1",
+            "title": "Start with the routine that fits you",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Choose classes by pain area, age 65+, or flexibility level so you can begin with a plan that feels right from day one.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_VRtppA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_2_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "2",
+            "title": "Classes for the pain areas people actually need help with",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Targeted routines for back pain, tight calves, and plantar fasciitis — so you can choose the area that matters most and start with the right class.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_t3QJpQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_3_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "3",
+            "title": "Built for beginners, 65+, and real life",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>From gentle seated flows to targeted routines, CastleFIT helps more people feel comfortable using their CastleFlexx.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "column_MmxPYh",
+        "column_VRtppA",
+        "column_t3QJpQ"
+      ],
+      "custom_css": [
+        ".flex {border-width: 1px; border-color: #464646;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.text-column-image.name",
+      "settings": {
+        "title": "Start Your Recovery Today with CastleFIT",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "CASTLEFIT MEMBERSHIP",
+        "text": "<p>Guided classes by pain area, age, and flexibility level help you know exactly where to start and keep you using your device consistently.</p>",
+        "secondary_background": "column",
+        "image_ratio": "75%",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
+        "column_content_alignment": "start",
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/3",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-full",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme3",
+        "background_color_light": "#27292a",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "#b5b5b5",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "multicolumn_iF4zjY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nWqFeC": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/star_icon_2.svg",
+            "custom_icon": "",
+            "title": "200+ Guided Classes",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_FpxrGD": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/person_icon_c9554cc2-9487-44bf-b2a8-e8aeec8cd96d.svg",
+            "custom_icon": "",
+            "title": "All Mobility Levels Welcome",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_jwwFaF": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/target_icon_327f8d81-c2cc-499e-a3ad-17b5525901b7.svg",
+            "custom_icon": "",
+            "title": "Targeted by Pain Area",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_DmdyiL": {
+          "type": "column",
+          "settings": {
+            "icon": "check-mark",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/check_mark_icon_72f49fbe-612a-46b3-bce7-54a2683d8fb3.svg",
+            "custom_icon": "",
+            "title": "60 Day Full Refund",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nWqFeC",
+        "column_FpxrGD",
+        "column_jwwFaF",
+        "column_DmdyiL"
+      ],
+      "custom_css": [
+        ".inline-block {margin-right: 8px;}",
+        ".h-full {padding-left: 0px; padding-right: 0px;}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "secondary_background": "none",
+        "border_column": "line_vertical",
+        "column_content_alignment": "center",
+        "icon_position": "next",
+        "icon_size": 30,
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-0",
+        "spacing_desktop": 0,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 12,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme3",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_BcNEkV": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Ca9Jdx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Add CastleFit to Your Order",
+            "button_link": "shopify://products/castlefit",
+            "open_new_window_button": false,
+            "show_button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "open_new_window_button_2": false,
+            "show_button_style_2": "primary",
+            "block_scheme": "section",
+            "color_button": "#b9cbdd",
+            "color_text_button": "#191a1b",
+            "color_button_hover": "rgba(0,0,0,0)",
+            "color_text_button_hover": "#191a1b",
+            "color_button_secondary": "rgba(0,0,0,0)",
+            "secondary_button_text": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "color_button_dark": "rgba(0,0,0,0)",
+            "color_text_button_dark": "rgba(0,0,0,0)",
+            "color_button_hover_dark": "rgba(0,0,0,0)",
+            "color_text_button_hover_dark": "rgba(0,0,0,0)",
+            "color_button_secondary_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "button_Ca9Jdx"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "scheme3",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_RBtGLj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8nMPQf": {
+          "type": "heading",
+          "settings": {
+            "subheading": "CASTLEFLEXX QUIZ",
+            "heading": "Find Your Device",
+            "highlight_type": "underline",
+            "heading_base_size": 120,
+            "heading_tag": "h2",
+            "text": "<p>Need help finding which CastleFlexx device is right for you? Take our brief quiz to learn which device is best designed to address your specific wants and needs</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "block_scheme": "section",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "#191a1b",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "button_fYQUVB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Take Quiz",
+            "button_link": "shopify://pages/find-your-device",
+            "open_new_window": false,
+            "show_button_style": "primary",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8nMPQf",
+        "button_fYQUVB"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 32px; } .font-medium {font-size: 13px; } p {font-size: 15px; }}"
+      ],
+      "settings": {
+        "show_hero": false,
+        "image": "shopify://shop_images/CFSR-237_1.png",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_width": "medium",
+        "image_layout": "normal",
+        "adapt_radius": true,
+        "image_corner_radius": 10,
+        "show_sound_control": false,
+        "video_url": "",
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "content_layout": "no-overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "line_border": "dashed",
+        "icon_position": "col",
+        "icon_size": 45,
+        "alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 80,
+        "bottom_padding": 60,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 40,
+        "bottom_padding_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_hgd9PK": {
+      "type": "faq",
+      "blocks": {
+        "frequently_asked_question_9CdJxg": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "How is this better than typical stretch straps?",
+            "row_content": "<p>CastleFlexx combines a patented foot hammock with a weighted mobility bar for a more comfortable, controlled stretching experience.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_TmjQqg": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "I have limited hand strength; will this work better for me than a stretch band?",
+            "row_content": "<p>Many customers find the bar easier and more comfortable to hold than rope-style straps, and the device can also be used in a seated position.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_dtaNgG": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Ok, I get that, so can't I just use a towel?",
+            "row_content": "<p>The use of a towel is simply not effective because the anchor point at the heel is poor and the foot (and therefore the leg) is not secured properly. The CastleFlexx has comfortable handles that provide a secure grip for a steady pull; a towel offers nothing more than an inconsistent&nbsp;amount of material which can be difficult to&nbsp;hold and maintain. Try stretching your hips, hamstrings or lats with a towel, and we are sure you will agree that the CastleFlexx is the most fun and effective stretch you’ve ever experienced!</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_bwV7AK": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Will I like CastleFlexx and if not, can I send it back?",
+            "row_content": "<p>Yes (USA) and No: UK, EU and Canada) You have 30 days to notify us that you would like return your device. With Redo insurance included in your purchase you are allowed free returns and size exchanges with instant refunds.<br/><br/>If you used hsa/fsa funds , refunds take slightly longer (approx 7 business days). With a less than half percent return rate.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_Q4pAqV": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "What is the difference between the Luxury Vs Sport?",
+            "row_content": "<p>Both are globally patented and allow for full body passive stretching. The Sport is lighter and more durable.<br/><br/>The Luxury allows for passive and active stretching and has cork handles with a removable 2lb magnetic weight system which allows you to not have to pull at all.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_Wc6mFE": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Why is the CastleFlexx better than traditional red and black colored stretching devices that use velcro strap enclosures?",
+            "row_content": "<p>CastleFlexx is velcro-free and does not require any strapping in or out.<br/><br/>CastleFlexx has a patented handlebar with optional magnetic weights that provides a controlled comfortable stretch and it wont slip out of your hands like rope straps can. CastleFlexx can be used sitting, standing, or laying down. CastleFlexx is designed to focus on BOTH mobility and flexibility AND you will ALSO get a natural bicep workout while using the device while gripping the bar on both sides.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_nVWCJ3": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Why is CastleFlexx used by pro athletes and what makes it so unique?",
+            "row_content": "<p>CastleFlexx is used by athletes across many sports because it supports consistent mobility and flexibility work.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "frequently_asked_question_9CdJxg",
+        "frequently_asked_question_TmjQqg",
+        "frequently_asked_question_dtaNgG",
+        "frequently_asked_question_bwV7AK",
+        "frequently_asked_question_Q4pAqV",
+        "frequently_asked_question_Wc6mFE",
+        "frequently_asked_question_nVWCJ3"
+      ],
+      "custom_css": [
+        ".pt-3 {background-color: #f7f8f6;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.question_and_answer.name",
+      "settings": {
+        "heading": "FAQs",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "show_border": false,
+        "row_background": true,
+        "collapsible": true,
+        "show_view_all": false,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_iMMFgV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mNbBWq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Reviews",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mNbBWq"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 0,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "1795131199bdc934dd": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_yQ3BUr": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_yQ3BUr"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You May Also Like...",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "products_to_show": 5,
+        "show_recently_viewed_tab": false,
+        "enable_clear_history": true,
+        "tabs_desktop_alignment": "center",
+        "title_size": 120,
+        "title_style": "none",
+        "tab_button_style": "label",
+        "show_vendor": false,
+        "show_rating": true,
+        "show_highlighted_features": true,
+        "show_highlighted_attributes": true,
+        "show_quickview": true,
+        "enable_carousel_desktop": false,
+        "pagination_desktop": "dots",
+        "enable_swiper_mobile": true,
+        "pagination_mobile": "dots",
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_section_divider": false,
+        "spacing": 28,
+        "padding_top": 56,
+        "padding_bottom": 88,
+        "columns_mobile": "1",
+        "show_section_divider_mobile": false,
+        "spacing_mobile": 16,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "flow_niqqMc",
+    "331e6fca-2947-4a19-89c5-9396be0d666a",
+    "text_column_with_image_QdkzQL",
+    "multicolumn_iF4zjY",
+    "rich_text_BcNEkV",
+    "image_with_text_RBtGLj",
+    "faq_hgd9PK",
+    "rich_text_iMMFgV",
+    "1795131199bdc934dd",
+    "product-recommendations"
+  ]
+}
