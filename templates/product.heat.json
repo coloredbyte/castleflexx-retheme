@@ -401,6 +401,9 @@
     },
     "video_UMEgE9": {
       "type": "video",
+      "custom_css": [
+        ".section-padding-template--23531200905407__video_UMEgE9 {padding-right: 120px; padding-left: 120px;}"
+      ],
       "name": "t:sections.video.name",
       "settings": {
         "show_hero": false,
