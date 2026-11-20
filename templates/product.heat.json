@@ -299,7 +299,8 @@
       ],
       "custom_css": [
         "h2 {font-weight: 700;}",
-        ".font-medium {color: #e34f2b;}"
+        ".font-medium {color: #e34f2b;}",
+        ".x-block-columns {padding-left: 0px; padding-bottom: 0px;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
