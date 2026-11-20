@@ -300,7 +300,8 @@
       "custom_css": [
         "h2 {font-weight: 700;}",
         ".font-medium {color: #e34f2b;}",
-        ".x-block-columns {padding-left: 0px; padding-bottom: 0px;}"
+        ".x-block-columns {padding-left: 0px; padding-bottom: 0px;}",
+        "@media screen and (max-width: 1024px) {.x-block-columns {padding-left: 0px; padding-bottom: 0px; padding-top: 8px; }}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
