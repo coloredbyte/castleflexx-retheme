@@ -306,7 +306,8 @@
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
-        "desktop_height": "natural",
+        "image": "shopify://shop_images/heat-control.gif",
+        "desktop_height": "450px",
         "mobile_height": "natural",
         "desktop_image_width": "medium",
         "image_layout": "normal",
@@ -340,8 +341,8 @@
         "bottom_padding": 88,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
-        "top_padding_mobile": 0,
-        "bottom_padding_mobile": 0,
+        "top_padding_mobile": 48,
+        "bottom_padding_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
