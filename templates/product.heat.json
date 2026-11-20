@@ -217,6 +217,54 @@
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
           }
         },
+        "columns_qp3Dpa": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/checkmark_orange.svg",
+            "custom_icon": "",
+            "title": "One-button on/off control",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 4,
+            "wide_mobile": "2"
+          }
+        },
+        "columns_UL7Fq4": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/checkmark_orange.svg",
+            "custom_icon": "",
+            "title": "Press three times to check battery level",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 4,
+            "wide_mobile": "2"
+          }
+        },
+        "columns_B9VfC7": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/checkmark_orange.svg",
+            "custom_icon": "",
+            "title": "Automatically shuts off after 30 minutes",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 4,
+            "wide_mobile": "2"
+          }
+        },
         "button_dF97xW": {
           "type": "button",
           "settings": {
@@ -244,10 +292,14 @@
       },
       "block_order": [
         "heading_CEbYg3",
+        "columns_qp3Dpa",
+        "columns_UL7Fq4",
+        "columns_B9VfC7",
         "button_dF97xW"
       ],
       "custom_css": [
-        "h2 {font-weight: 700;}"
+        "h2 {font-weight: 700;}",
+        ".font-medium {color: #e34f2b;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
@@ -265,12 +317,12 @@
         "spacing_image": false,
         "text_position": "center",
         "text_alignment": "start",
-        "line_border": "dashed",
-        "icon_position": "col",
-        "icon_size": 45,
-        "alignment": "center",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
+        "line_border": "none",
+        "icon_position": "row",
+        "icon_size": 24,
+        "alignment": "left",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
         "heading_color_light": "rgba(0,0,0,0)",
         "text_color_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
