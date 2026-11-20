@@ -1,0 +1,81 @@
+{%- comment -%}
+  PDP feature card (Heat / CastleAir "Description Box").
+
+  A rounded card under the product title:
+
+    +--------------------------------------+
+    | Really tight?            +--------+  |
+    | Start with [HEAT.]       | image  |  |
+    |                          +--------+  |
+    | Use targeted warmth to ...           |
+    | (Plantar Fasciitis) (Tight Calves)   |
+    +--------------------------------------+
+
+  Words in [brackets] take the highlight colour, the same syntax as
+  Eurus headings. Tags come one per line from a textarea so the editor
+  can add or drop pain areas without code. Eurus ships only the utility
+  classes it uses, so styles live in assets/product-feature-card.css.
+
+  Accepts:
+  - block: {Object} Feature card block (required)
+{%- endcomment -%}
+{%- liquid
+  assign card_class = 'x-feature-card-' | append: block.id
+  assign heading = block.settings.heading | escape | newline_to_br
+  assign tags = block.settings.tags | newline_to_br | split: '<br />'
+  assign highlight = block.settings.color_heading_highlight_light
+-%}
+
+{{ 'product-feature-card.css' | asset_url | stylesheet_tag }}
+
+{%- if highlight != blank and highlight.alpha != 0 -%}
+  {%- style -%}
+    .{{ card_class }} {
+      --feature-card-accent: {{ highlight.red }}, {{ highlight.green }}, {{ highlight.blue }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+<div
+  class="{% render 'scheme-class', scheme: block.settings.block_scheme, is_block: true %} {{ card_class }} x-feature-card{% if settings.edges_type == 'rounded_corners' %} x-feature-card--rounded{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  <div class="x-feature-card__head">
+    {%- if block.settings.heading != blank -%}
+      {% render 'heading-highlight',
+        headingId: block.id,
+        heading: heading,
+        highlight_type: 'font_highlight',
+        color_heading_highlight_light: block.settings.color_heading_highlight_light,
+        disable_liquid_escape: true,
+        class: 'x-feature-card__heading h3',
+        heading_tag: 'h2'
+      %}
+    {%- endif -%}
+
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 300
+        | image_tag: loading: 'lazy', width: 150, height: 150, class: 'x-feature-card__image'
+      }}
+    {%- endif -%}
+  </div>
+
+  {%- if block.settings.text != blank -%}
+    <div class="x-feature-card__text rte">{{ block.settings.text }}</div>
+  {%- endif -%}
+
+  {%- if block.settings.tags != blank -%}
+    <ul class="x-feature-card__tags">
+      {%- for line in tags -%}
+        {%- assign tag = line | strip -%}
+        {%- if tag == blank -%}
+          {%- continue -%}
+        {%- endif -%}
+
+        <li class="x-feature-card__tag x-feature-card__tag--{{ block.settings.tag_style }}">{{ tag | escape }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>

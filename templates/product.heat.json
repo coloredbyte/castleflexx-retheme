@@ -1,0 +1,226 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "rating_AeRdFJ": {
+          "type": "rating",
+          "settings": {}
+        },
+        "breadcrumb_CXCUEY": {
+          "type": "breadcrumb",
+          "settings": {}
+        },
+        "product_name_xkPbAa": {
+          "type": "product_name",
+          "settings": {
+            "title_size": 130,
+            "heading_tag": "h1",
+            "enable_product_rating": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "adapt_custom_price_format": false,
+            "show_tax_and_shipping": false,
+            "text_size_price": 50
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "max_swatch": 20,
+            "show_variant_option": true,
+            "enable_color_swatches": true,
+            "swatch_size": "large",
+            "enable_size_chart": false,
+            "option_to_show_size_chart": "",
+            "heading": "",
+            "select_page": "",
+            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
+            "size_chart_type": "popup"
+          }
+        },
+        "size_chart_N4DErU": {
+          "type": "size_chart",
+          "settings": {
+            "heading": "Size Guide",
+            "select_page": "size-guide",
+            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
+            "size_chart_type": "popup"
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "show_image": false,
+            "checked_by_default": false,
+            "show_border": true,
+            "block_scheme": "store",
+            "layout": "options",
+            "option_device_title": "CastleFlexx HEAT Only",
+            "option_device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
+            "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
+            "option_bundle_details": "Heat Device • 200+ guided classes",
+            "badge": "Best value • Save [savings]"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_button_style": "primary",
+            "show_dynamic_checkout": false,
+            "dymanic_checkout_style": "primary",
+            "show_atc_quantity": true,
+            "show_add_to_cart": true,
+            "show_price": true,
+            "hide_sale_price": false,
+            "show_gift_card_recipient": false,
+            "pickup_availability": false,
+            "hide_when_pre_order": false,
+            "preorder_button_label": "Pre-order",
+            "preorder_message": "<p>This product will be available for sale in 2 weeks, but you can pre-order now to receive 10% discount!</p>",
+            "preorder_show_dynamic_button": false,
+            "show_background": false,
+            "box_type": "square",
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "collapsible_tab_MgjKqH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": true,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "use_secondary_background": false,
+            "heading": "Product Details",
+            "tab_content": "{{ product.description }}",
+            "media_type": "none",
+            "image_position": "below",
+            "image_ratio": "natural",
+            "show_sound_control": false,
+            "video_position": "below",
+            "video_ratio": "natural",
+            "is_adapt_to_edges_type": false,
+            "is_rounded_corners": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": false
+          }
+        },
+        "sticky-atc": {
+          "type": "sticky_add_to_cart",
+          "settings": {
+            "desktop_display_type": "popup",
+            "show_quantity_selector": false,
+            "link_to_atc_btn": true
+          }
+        },
+        "feature_card": {
+          "type": "feature_card",
+          "settings": {
+            "heading": "Really tight?\nStart with [HEAT.]",
+            "color_heading_highlight_light": "#e05a36",
+            "text": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>",
+            "tags": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
+            "tag_style": "tinted",
+            "block_scheme": "section"
+          }
+        }
+      },
+      "block_order": [
+        "rating_AeRdFJ",
+        "breadcrumb_CXCUEY",
+        "product_name_xkPbAa",
+        "feature_card",
+        "price",
+        "variant_picker",
+        "size_chart_N4DErU",
+        "upsell",
+        "buy_buttons",
+        "collapsible_tab_MgjKqH",
+        "sticky-atc"
+      ],
+      "custom_css": [
+        ".x-review-product {margin-bottom: 12px;}",
+        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
+        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 16px; margin: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }}",
+        ".product-form__input:first-of-type {padding-top: 32px;}",
+        "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; } .w-full .x-block-text-icon {padding-bottom: 12px; }}"
+      ],
+      "settings": {
+        "enable_sticky_image": true,
+        "show_product_name": false,
+        "title_size": 100,
+        "heading_tag": "h1",
+        "show_vendor": false,
+        "link_vendor": false,
+        "make_content_center": false,
+        "desktop_layout": "left",
+        "desktop_media_layout": "2_columns",
+        "show_arrow_button": true,
+        "mobile_media_size": "full_width",
+        "show_thumnail_mobile": false,
+        "transition_style": "fade",
+        "image_ratio": "natural",
+        "thumbnail_position": "vertical",
+        "enable_thumbnail_overlay": true,
+        "enable_image_zoom": true,
+        "zoom_effect": "gallery",
+        "enable_video_autoplay": false,
+        "enable_video_loop": false,
+        "show_first_image_avaiable": true,
+        "show_media_with_variant_selected": true,
+        "option_to_classify_variant_media": "Color",
+        "enable_microdata": false,
+        "show_breadcrumbs": false,
+        "show_breadcrumbs_border": false,
+        "full_width_breadcrumb": false,
+        "desktop_content_alignment": "text-center",
+        "mobile_content_alignment": "text-center",
+        "background_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "textlink_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "textlink_color_dark": "rgba(0,0,0,0)",
+        "full_width": false,
+        "spacing_col": "small",
+        "padding_top": 32,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "store"
+      }
+    },
+    "buy_box": {
+      "type": "product-buy-box",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "buy_box"
+  ]
+}

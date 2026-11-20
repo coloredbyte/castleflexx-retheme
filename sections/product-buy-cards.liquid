@@ -1,0 +1,323 @@
+{%- comment -%}
+  Bottom-of-page buy cards (CastleAir "Buy Section").
+
+               CHOOSE YOUR CASTLEAIR
+          Relief now or support for what comes next.
+    +------------------------+  +------------------------+
+    | | CASTLEAIR ONLY       |  | | CASTLEAIR + CASTLEFIT|
+    | $329                   |  | $478 $428              |
+    | ✓ ...                  |  | ✓ ...                  |
+    | [ Choose CastleAIR ]   |  | [  Choose Bundle  ]    |
+    +------------------------+  +------------------------+
+
+  Each card's button picks its option on the main product form (device
+  only or device + upsell) and presses the main add to cart, through
+  product-buy-sync.js. Sold out or region-blocked products disable the
+  buttons the same way the main button is disabled. Needs an Upsell
+  block set to "Two options" for the bundle card.
+{%- endcomment -%}
+{%- liquid
+  assign section_class = 'x-buy-cards-' | append: section.id
+  assign current = product.selected_or_first_available_variant
+
+  # Upsell (CastleFit) prices: full price is the bundle's strikethrough.
+  assign upsell_variant = product.metafields.custom.upsell_product.value
+  assign upsell_full = 0
+  assign upsell_price = 0
+  if upsell_variant != blank
+    assign upsell_full = upsell_variant.price
+    assign upsell_price = upsell_variant.price
+    assign upsell_allocation = upsell_variant.selling_plan_allocations.first
+    if upsell_allocation != blank
+      assign upsell_price = upsell_allocation.price
+    endif
+  endif
+  assign savings = upsell_full | minus: upsell_price | money_without_trailing_zeros
+-%}
+
+{{ 'product-buy.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-buy-sync.js' | asset_url }}" defer></script>
+
+{%- style -%}
+  .{{ section_class }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<div class="{% render 'scheme-class', scheme: section.settings.section_scheme %} {{ section_class }}{% if settings.edges_type == 'rounded_corners' %} x-buy--rounded{% endif %}">
+  <div class="page-width">
+    <div class="x-buy-header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="x-buy-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="h2">{{ section.settings.heading | escape | newline_to_br }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="x-buy-subheading">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="x-buy-cards__grid">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign bundle = false
+          if block.settings.choice == 'bundle' and upsell_variant != blank
+            assign bundle = true
+          endif
+
+          assign price = current.price
+          assign compare = blank
+          if bundle
+            assign price = current.price | plus: upsell_price
+            assign compare = current.price | plus: upsell_full
+          endif
+
+          assign features = block.settings.features | newline_to_br | split: '<br />'
+        -%}
+        <article class="x-buy-card" data-buy-card="{% if bundle %}bundle{% else %}device{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.badge != blank -%}
+            <span class="x-buy-badge">{{ block.settings.badge | replace: '[savings]', savings | escape }}</span>
+          {%- endif -%}
+
+          <div class="x-buy-card__body">
+            {%- if block.settings.eyebrow != blank -%}
+              <p class="x-buy-card__eyebrow">{{ block.settings.eyebrow | escape }}</p>
+            {%- endif -%}
+
+            <p class="x-buy-card__price">
+              {%- if compare != blank and compare > price -%}
+                <s class="x-buy-card__compare" data-buy-card-compare>{{ compare | money_without_trailing_zeros }}</s>
+              {%- endif -%}
+              <span class="x-buy-card__amount" data-buy-card-total>{{ price | money_without_trailing_zeros }}</span>
+            </p>
+
+            {%- if block.settings.intro != blank -%}
+              <p class="x-buy-card__intro">{{ block.settings.intro | escape }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.features != blank -%}
+              <ul class="x-buy-card__items">
+                {%- for line in features -%}
+                  {%- assign feature = line | strip -%}
+                  {%- if feature == blank -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
+                  <li class="x-buy-card__item">
+                    <span class="x-buy-card__check" aria-hidden="true">✓</span>
+                    {{ feature | escape }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            {%- if block.settings.cta_label != blank -%}
+              <button type="button" class="button button-solid x-buy-card__cta" data-buy-card-submit>
+                {{- block.settings.cta_label | escape -}}
+              </button>
+            {%- endif -%}
+
+            {%- if block.settings.note != blank -%}
+              <p class="x-buy-card__note">{{ block.settings.note | escape }}</p>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const root = document.querySelector('.{{ section_class }}');
+    const sync = window.cfBuySync;
+    if (!root || !sync) {
+      return;
+    }
+
+    const UPSELL_FULL = {{ upsell_full }};
+    const moneyFormat = window.Eurus.{% if settings.currency_code_enable %}money_with_currency_format{% else %}money_format{% endif %};
+    const formatShort = (cents) => Alpine.store('xHelper').formatMoney(cents, moneyFormat).replace(/[.,]00(?=\D*$)/, '');
+
+    const setText = (el, text) => {
+      if (el && el.textContent.trim() !== text) {
+        el.textContent = text;
+      }
+    };
+
+    // Card button: pick its option on the main form, then add to cart.
+    root.querySelectorAll('[data-buy-card]').forEach((card) => {
+      card.querySelector('[data-buy-card-submit]')?.addEventListener('click', () => {
+        sync.chooseBundle(card.dataset.buyCard === 'bundle');
+        sync.submit();
+      });
+    });
+
+    // Prices follow the main form (variant price can change).
+    document.addEventListener('cf:upsell:change', (event) => {
+      const { devicePrice, upsellPrice } = event.detail;
+
+      root.querySelectorAll('[data-buy-card]').forEach((card) => {
+        const bundle = card.dataset.buyCard === 'bundle';
+        setText(card.querySelector('[data-buy-card-total]'), formatShort(devicePrice + (bundle ? upsellPrice : 0)));
+        setText(card.querySelector('[data-buy-card-compare]'), formatShort(devicePrice + UPSELL_FULL));
+      });
+    });
+
+    // Sold out or region-blocked: buttons follow the main button.
+    sync.watchButton((button) => {
+      root.querySelectorAll('[data-buy-card-submit]').forEach((cta) => {
+        cta.disabled = button.disabled;
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product buy cards",
+  "tag": "section",
+  "class": "section-product-buy-cards",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Each card's button picks its option on the main product form and adds to cart. The bundle card needs an Upsell block set to \"Two options\" in Product information."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Choose your CastleAIR"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Relief now or support\nfor what comes next."
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "select",
+      "id": "section_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "info": "t:sections.all.color_scheme.info",
+      "default": "store",
+      "options": [
+        { "value": "store", "label": "t:sections.all.color_scheme.store" },
+        { "value": "scheme2", "label": "t:sections.all.color_scheme.soft" },
+        { "value": "scheme3", "label": "t:sections.all.color_scheme.bold" },
+        { "value": "scheme4", "label": "t:sections.all.color_scheme.accent" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "select",
+          "id": "choice",
+          "label": "Adds to cart",
+          "default": "device",
+          "options": [
+            { "value": "device", "label": "Device only" },
+            { "value": "bundle", "label": "Device + upsell" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "info": "[savings] shows the upsell discount, e.g. $50."
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "intro",
+          "label": "Intro"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features",
+          "info": "One per line."
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Button label"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Note"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product buy cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "choice": "device",
+            "eyebrow": "CastleAIR Only",
+            "intro": "Everything you need to find your level of support.",
+            "features": "CastleAIR Support\nReversible Cover\nUSB-C Inflator\nCork Stability Base",
+            "cta_label": "Choose CastleAIR"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "choice": "bundle",
+            "badge": "Best value • Save [savings]",
+            "eyebrow": "CastleAIR + CastleFIT",
+            "intro": "Add guided movement for the hours beyond your session.",
+            "features": "Complete CastleAIR System\n200+ Guided Classes\nAnnual CastleFIT Membership\nStrength + Mobility Guidance",
+            "cta_label": "Choose Bundle",
+            "note": "CastleFIT renews annually until cancelled."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -2328,6 +2328,8 @@
                       show_content_center: show_content_center
                     %}
                   {% endif %}
+                {%- when 'feature_card' -%}
+                  {% render 'product-feature-card', block: block %}
                 {%- when 'upsell' -%}
                   {% render 'product-upsell', product: product, block: block, product_form_id: product_form_id, section_id: section.id %}
                 {%- when 'back_in_stock_alert'-%}

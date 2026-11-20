@@ -1,0 +1,22 @@
+{% doc %}
+  Renders a Shopify file/image picker drop as a plain img.
+  Avoids `image_tag` named-argument issues that can swallow the output.
+{% enddoc %}
+
+{%- if image != blank -%}
+  {%- liquid
+    assign img_width = max_width | default: 1600
+    assign img_loading = loading | default: 'lazy'
+    assign img_alt = alt | default: image.alt | default: ''
+  -%}
+  <img
+    class="{{ class }}"
+    src="{{ image | image_url: width: img_width }}"
+    alt="{{ img_alt | escape }}"
+    width="{{ image.width }}"
+    height="{{ image.height }}"
+    loading="{{ img_loading }}"
+    {% if sizes != blank %}sizes="{{ sizes }}"{% endif %}
+    {% if fetchpriority != blank %}fetchpriority="{{ fetchpriority }}"{% endif %}
+  >
+{%- endif -%}

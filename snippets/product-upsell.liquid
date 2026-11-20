@@ -51,6 +51,19 @@
   if upsell_description == blank
     assign upsell_description = product.metafields.custom.upsell_description
   endif
+
+  # Options layout (Heat / CastleAir): two radio cards instead of a checkbox.
+  #   ( ) HEAT Only            $399
+  #   ( ) HEAT + CastleFIT     $498   [Best value - Save $50]
+  # "Save" is the upsell's plan discount, e.g. CastleFit $149 -> $99.
+  assign layout = block.settings.layout | default: 'checkbox'
+  if layout == 'options'
+    # The metafield title is checkbox copy ("Add ... and get 34% off").
+    assign upsell_title = block.settings.heading
+  endif
+  assign device_price = product.selected_or_first_available_variant.price
+  assign upsell_savings = upsell_variant.price | minus: upsell_price | money_without_trailing_zeros
+  assign upsell_badge = block.settings.badge | replace: '[savings]', upsell_savings
 -%}
 {%- if upsell_ok -%}
 <div class="{% render 'scheme-class', scheme: block.settings.block_scheme, is_block: true %} x-product-upsell w-full mb-4 md:mb-6" {{ block.shopify_attributes }}>
@@ -58,6 +71,51 @@
     <div class="x-product-upsell__title mb-2 font-medium">{{ upsell_title }}</div>
   {%- endif -%}
 
+  {%- if layout == 'options' -%}
+    {{ 'product-buy.css' | asset_url | stylesheet_tag }}
+    <div class="x-buy-options{% if settings.edges_type == 'rounded_corners' %} x-buy--rounded{% endif %}" role="radiogroup">
+      {%- comment -%} Empty value: product-cart.js drops it, so only the device is added. {%- endcomment -%}
+      <label class="x-buy-option">
+        <input
+          type="radio"
+          form="{{ product_form_id }}"
+          name="properties[_upsell]"
+          value=""
+          class="x-buy-option__radio"
+          {% unless block.settings.checked_by_default %}checked{% endunless %}
+        >
+        <span class="x-buy-option__text">
+          <span class="x-buy-option__title">{{ block.settings.option_device_title | escape }}</span>
+          {%- if block.settings.option_device_details != blank -%}
+            <span class="x-buy-option__details">{{ block.settings.option_device_details | escape }}</span>
+          {%- endif -%}
+        </span>
+        <span class="x-buy-option__price" data-upsell-price="device">{{ device_price | money_without_trailing_zeros }}</span>
+      </label>
+
+      <label class="x-buy-option">
+        {%- if upsell_badge != blank -%}
+          <span class="x-buy-badge">{{ upsell_badge | escape }}</span>
+        {%- endif -%}
+        <input
+          id="{{ upsell_input_id }}"
+          type="radio"
+          form="{{ product_form_id }}"
+          name="properties[_upsell]"
+          value="{{ upsell_variant.id }}|{{ upsell_plan_id }}"
+          class="x-buy-option__radio"
+          {% if block.settings.checked_by_default %}checked{% endif %}
+        >
+        <span class="x-buy-option__text">
+          <span class="x-buy-option__title">{{ block.settings.option_bundle_title | escape }}</span>
+          {%- if block.settings.option_bundle_details != blank -%}
+            <span class="x-buy-option__details">{{ block.settings.option_bundle_details | escape }}</span>
+          {%- endif -%}
+        </span>
+        <span class="x-buy-option__price" data-upsell-price="bundle">{{ device_price | plus: upsell_price | money_without_trailing_zeros }}</span>
+      </label>
+    </div>
+  {%- else -%}
   <label
     for="{{ upsell_input_id }}"
     class="flex items-start gap-3 cursor-pointer{% if block.settings.show_border %} p-4 border border-solid border-[rgba(var(--colors-line-and-border))]{% if settings.edges_type == 'rounded_corners' %} rounded-md{% endif %}{% endif %}"
@@ -96,18 +154,26 @@
       </span>
     </span>
   </label>
+  {%- endif -%}
 
   <script>
-    // Add the upsell to the add to cart total while ticked, e.g. $239 -> $338.
+    // Add the upsell to the add to cart total while chosen, e.g. $239 -> $338.
     // Variant changes re-render the button from the server, so re-apply then.
     // Runs after load: the button sits below this block in the page.
+    //
+    // Options layout also shows each option's total, and announces the
+    // choice with "cf:upsell:change" so buy sections lower on the page
+    // (product-buy-box, product-buy-cards) stay in sync.
     document.addEventListener('DOMContentLoaded', () => {
       const UPSELL_PRICE = {{ upsell_price }};
-      const input = document.getElementById('{{ upsell_input_id }}');
+      const block = document.getElementById('{{ upsell_input_id }}')?.closest('.x-product-upsell');
       const button = document.getElementById('x-atc-button-{{ section_id }}');
-      if (!input || !button) {
+      if (!block || !button) {
         return;
       }
+
+      const inputs = block.querySelectorAll('input[name="properties[_upsell]"]');
+      const isBundle = () => [...inputs].some((input) => input.checked && input.value !== '');
 
       const moneyFormat = () => {
         {%- if settings.currency_code_enable %}
@@ -117,23 +183,35 @@
         {%- endif %}
       };
 
-      const sync = () => {
-        const base = button.querySelector('.target-price');
-        const shown = button.querySelector('[id^="atc-price-"]');
-        if (!base || !shown || !window.Alpine) {
-          return;
-        }
+      // "$399.00" -> "$399", matching money_without_trailing_zeros.
+      const format = (cents) => Alpine.store('xHelper').formatMoney(cents, moneyFormat());
+      const formatShort = (cents) => format(cents).replace(/[.,]00(?=\D*$)/, '');
 
-        const total = Number(base.textContent) + (input.checked ? UPSELL_PRICE : 0);
-        const text = Alpine.store('xHelper').formatMoney(total, moneyFormat());
-
+      const setText = (el, text) => {
         // Writing the text triggers the observer again; equal text ends it.
-        if (shown.textContent.trim() !== text) {
-          shown.textContent = text;
+        if (el && el.textContent.trim() !== text) {
+          el.textContent = text;
         }
       };
 
-      input.addEventListener('change', sync);
+      const sync = () => {
+        const base = button.querySelector('.target-price');
+        if (!base || !window.Alpine) {
+          return;
+        }
+
+        const devicePrice = Number(base.textContent);
+        const bundle = isBundle();
+        setText(button.querySelector('[id^="atc-price-"]'), format(devicePrice + (bundle ? UPSELL_PRICE : 0)));
+        setText(block.querySelector('[data-upsell-price="device"]'), formatShort(devicePrice));
+        setText(block.querySelector('[data-upsell-price="bundle"]'), formatShort(devicePrice + UPSELL_PRICE));
+
+        document.dispatchEvent(new CustomEvent('cf:upsell:change', {
+          detail: { bundle, devicePrice, upsellPrice: UPSELL_PRICE }
+        }));
+      };
+
+      inputs.forEach((input) => input.addEventListener('change', sync));
       new MutationObserver(sync).observe(button, { childList: true, subtree: true });
       document.addEventListener('alpine:initialized', sync);
       sync();
