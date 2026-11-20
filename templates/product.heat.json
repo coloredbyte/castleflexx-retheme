@@ -164,7 +164,8 @@
         "sticky-atc"
       ],
       "custom_css": [
-        ".w-full .rte p {color: #E34F2B; font-size: 13px; font-weight: 600; letter-spacing: 12%;}",
+        ".w-full .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%;}",
+        " .pl-2 .rte p {font-weight: 300; font-size: 14px; color: #2b2b2a; letter-spacing: 0px;}",
         ".product-form__input:first-of-type {padding-top: 32px;}",
         "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; }}"
       ],
