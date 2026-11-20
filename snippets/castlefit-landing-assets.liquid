@@ -1,0 +1,7 @@
+{% doc %}
+  Shared CastleFit landing stylesheet, loaded once per section render
+  (the browser caches the file). Ported from the live theme, where
+  theme.liquid also loads it on castle-fit templates.
+{% enddoc %}
+
+{{ 'castlefit-landing.css' | asset_url | stylesheet_tag }}

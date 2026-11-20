@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "banner": {
+      "type": "castlefit-banner",
+      "blocks": {
+        "highlight_star": {
+          "type": "highlight",
+          "settings": {
+            "icon": "star",
+            "heading": "200+",
+            "text": "Guided Classes"
+          }
+        },
+        "highlight_person": {
+          "type": "highlight",
+          "settings": {
+            "icon": "person",
+            "heading": "Age 65+",
+            "text": "Flows by pain area"
+          }
+        },
+        "highlight_protection": {
+          "type": "highlight",
+          "settings": {
+            "icon": "protection",
+            "heading": "60-day",
+            "text": "Full Refund"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_star",
+        "highlight_person",
+        "highlight_protection"
+      ],
+      "settings": {
+        "background_color": "#e36a3a",
+        "mobile_background_color": "#f7f8f6",
+        "eyebrow": "CastleFit Online Membership",
+        "title": "Unlimited\nClass Access",
+        "description": "Unlimited access to guided mobility, flexibility, and strength classes - choose based on pain area, age, or flexibility level.",
+        "cta_primary_label": "Start Membership",
+        "cta_primary_url": "shopify://products/castlefit",
+        "cta_secondary_label": "Explore by Pain Area",
+        "cta_secondary_url": "/blogs/castlefit/tagged/upper-body",
+        "image": "shopify://shop_images/Banner_114dcc9b-9d01-4b57-9ae9-5084048d64de.png",
+        "image_mobile": "shopify://shop_images/img.png"
+      }
+    },
+    "access": {
+      "type": "castlefit-access",
+      "blocks": {
+        "annual": {
+          "type": "plan",
+          "settings": {
+            "style": "recommended",
+            "purchase_type": "subscription",
+            "variant_option": "12",
+            "selling_plan_id": "",
+            "badge": "Recommended",
+            "eyebrow": "| ANNUAL SUBSCRIPTION",
+            "heading": "CastleFIT Membership",
+            "compare_price": "$149",
+            "price": "$99",
+            "intro": "Includes All Training Classes, plus:",
+            "features": "Includes approx **200 classes** and flows for all ages\n**60 Day Satisfaction Guarantee** - If you dont love CastleFIT, ask for a FULL refund within 60 days\nYour classes will be available to save on the **CastleFIT app**\nUpgrade option for **CastleFIT After Dark** program",
+            "cta_label": "Subscribe Now",
+            "cta_url": "shopify://products/castlefit"
+          }
+        },
+        "onetime": {
+          "type": "plan",
+          "settings": {
+            "style": "secondary",
+            "purchase_type": "one_time",
+            "variant_option": "12",
+            "selling_plan_id": "",
+            "badge": "",
+            "eyebrow": "| ONE TIME PURCHASE",
+            "heading": "1 Year Access",
+            "compare_price": "",
+            "price": "$149",
+            "intro": "Includes All Training Classes, plus:",
+            "features": "30 Day Satisfaction Guarantee or a full refund\n12 months of access to CastleFIT\nCancel anytime with no hidden fees\nUpgrade option for **CastleFIT After Dark** program",
+            "cta_label": "Start Now",
+            "cta_url": "shopify://products/castlefit"
+          }
+        }
+      },
+      "block_order": [
+        "annual",
+        "onetime"
+      ],
+      "settings": {
+        "title": "Get Your Access Now",
+        "subtitle": "For the cost of a single PT or chiropractic session, you get full access to a complete recovery program.",
+        "product": "castlefit"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "access"
+  ]
+}

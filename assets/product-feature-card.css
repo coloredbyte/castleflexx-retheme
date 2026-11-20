@@ -1,0 +1,77 @@
+/* PDP feature card (snippets/product-feature-card.liquid). */
+
+.x-feature-card {
+  --feature-card-accent: var(--colors-text);
+  --feature-card-radius: 0;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--feature-card-radius);
+  background: rgb(var(--colors-background));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.x-feature-card--rounded {
+  --feature-card-radius: 1.5rem;
+}
+
+.x-feature-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.x-feature-card__heading {
+  line-height: 1.15;
+}
+
+.x-feature-card__image {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: calc(var(--feature-card-radius) / 2);
+}
+
+.x-feature-card__text {
+  margin-top: 1rem;
+}
+
+.x-feature-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.x-feature-card__tag {
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.x-feature-card__tag--tinted {
+  background: rgba(var(--feature-card-accent), 0.1);
+  color: rgb(var(--feature-card-accent));
+}
+
+.x-feature-card__tag--outline {
+  border: 1px solid rgba(var(--colors-line-and-border));
+  background: rgb(var(--colors-background));
+  color: rgb(var(--colors-heading));
+}
+
+@media (min-width: 768px) {
+  .x-feature-card {
+    padding: 2.5rem;
+  }
+
+  .x-feature-card__image {
+    width: 9rem;
+    height: 9rem;
+  }
+}

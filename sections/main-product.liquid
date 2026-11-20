@@ -3739,22 +3739,145 @@
           "info": "Leave empty to use the product's Upsell description metafield."
         },
         {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "default": "checkbox",
+          "options": [
+            { "value": "checkbox", "label": "Checkbox" },
+            { "value": "options", "label": "Two options (device only / with upsell)" }
+          ]
+        },
+        {
           "type": "checkbox",
           "id": "show_image",
           "label": "Show image",
-          "default": false
+          "default": false,
+          "info": "Checkbox layout only."
         },
         {
           "type": "checkbox",
           "id": "checked_by_default",
           "label": "Checked by default",
-          "default": false
+          "default": false,
+          "info": "Two options layout: selects the upsell option."
+        },
+        {
+          "type": "header",
+          "content": "Two options layout"
+        },
+        {
+          "type": "text",
+          "id": "option_device_title",
+          "label": "Device option title",
+          "default": "CastleFlexx HEAT Only"
+        },
+        {
+          "type": "text",
+          "id": "option_device_details",
+          "label": "Device option details",
+          "default": "Built-in Heat • USB-C Rechargeable • 30-Day Returns"
+        },
+        {
+          "type": "text",
+          "id": "option_bundle_title",
+          "label": "Upsell option title",
+          "default": "CastleFlexx HEAT + CastleFIT"
+        },
+        {
+          "type": "text",
+          "id": "option_bundle_details",
+          "label": "Upsell option details",
+          "default": "Heat Device • 200+ guided classes"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Upsell option badge",
+          "default": "Best value • Save [savings]",
+          "info": "[savings] shows the upsell discount, e.g. $50."
         },
         {
           "type": "checkbox",
           "id": "show_border",
           "label": "t:sections.question_and_answer.settings.show_border.label",
           "default": true
+        },
+        {
+          "type": "select",
+          "id": "block_scheme",
+          "label": "t:sections.all.color_scheme.label",
+          "info": "t:sections.all.color_scheme.info",
+          "default": "section",
+          "options": [
+            {
+              "value": "section",
+              "label": "t:sections.highlight-text-with-image.blocks.image.settings.image_ratio.option__1.label"
+            },
+            {
+              "value": "store",
+              "label": "t:sections.all.color_scheme.store"
+            },
+            {
+              "value": "scheme2",
+              "label": "t:sections.all.color_scheme.soft"
+            },
+            {
+              "value": "scheme3",
+              "label": "t:sections.all.color_scheme.bold"
+            },
+            {
+              "value": "scheme4",
+              "label": "t:sections.all.color_scheme.accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "feature_card",
+      "name": "Feature card",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Really tight?\nStart with [HEAT.]",
+          "info": "Put words in [brackets] to give them the highlight colour."
+        },
+        {
+          "type": "color",
+          "id": "color_heading_highlight_light",
+          "label": "t:sections.all.text.color_heading_highlight_light",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>"
+        },
+        {
+          "type": "textarea",
+          "id": "tags",
+          "label": "Tags",
+          "default": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
+          "info": "One per line."
+        },
+        {
+          "type": "select",
+          "id": "tag_style",
+          "label": "Tag style",
+          "default": "tinted",
+          "options": [
+            { "value": "tinted", "label": "Tinted (highlight colour)" },
+            { "value": "outline", "label": "Outline" }
+          ]
         },
         {
           "type": "select",

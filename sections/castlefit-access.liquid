@@ -1,0 +1,458 @@
+{% comment %}
+  CastleFit access / pricing
+  Two subscription cards under a centered heading. Stacks on mobile.
+{% endcomment %}
+
+{% render 'castlefit-landing-assets' %}
+
+{%- liquid
+  if template.name == 'product' and product != blank
+    assign buy_product = product
+  elsif section.settings.product != blank
+    assign buy_product = section.settings.product
+  else
+    assign buy_product = all_products['castlefit']
+  endif
+
+  # Membership decides who may buy a 'members only' card (e.g. the After
+  # Dark add-on). Logged-out visitors get a sign-in link that returns here.
+  assign member_tag = 'Active Subscriber'
+  assign is_member = false
+  if customer and customer.tags contains member_tag
+    assign is_member = true
+  endif
+  assign return_path = request.path | url_encode
+  assign login_url = '/customer_authentication/login?return_to=' | append: return_path
+-%}
+
+<section id="castlefit-access" class="cf-access">
+  <div class="cf-access__inner">
+    {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+      <header class="cf-access__header">
+        {%- if section.settings.title != blank -%}
+          <h2 class="cf-access__title">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subtitle != blank -%}
+          <p class="cf-access__subtitle">{{ section.settings.subtitle | escape }}</p>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="cf-access__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'plan' -%}
+          {%- liquid
+            assign card_style = block.settings.style | default: 'recommended'
+            if card_style == 'secondary'
+              assign icon_file = 'castlefit-icon-check-blue.svg'
+            else
+              assign icon_file = 'castlefit-icon-check-yellow.svg'
+            endif
+            assign features = block.settings.features | newline_to_br | split: '<br />'
+            assign buy_variant = blank
+            assign selling_plan_id = block.settings.selling_plan_id
+
+            # A card may sell its own product, e.g. After Dark Add-on vs
+            # Standalone on one page. Falls back to the section's product.
+            assign card_product = buy_product
+            if block.settings.product != blank
+              assign card_product = block.settings.product
+            endif
+
+            if card_product != blank
+              assign buy_variant = card_product.selected_or_first_available_variant
+              if block.settings.variant_option != blank
+                for variant in card_product.variants
+                  if variant.option1 == block.settings.variant_option or variant.title == block.settings.variant_option
+                    assign buy_variant = variant
+                    break
+                  endif
+                endfor
+              endif
+              if block.settings.purchase_type == 'subscription' and selling_plan_id == blank and buy_variant != blank
+                assign first_alloc = buy_variant.selling_plan_allocations | first
+                if first_alloc
+                  assign selling_plan_id = first_alloc.selling_plan.id
+                endif
+              endif
+            endif
+
+            # Live price, shown when the Price text is left blank. Uses the
+            # selling plan's price for subscriptions, e.g. $5.99 + '/mo'.
+            assign live_price = blank
+            if buy_variant != blank
+              assign live_price = buy_variant.price
+              assign plan_key = selling_plan_id | append: ''
+              if block.settings.purchase_type == 'subscription' and plan_key != ''
+                for alloc in buy_variant.selling_plan_allocations
+                  assign alloc_key = alloc.selling_plan.id | append: ''
+                  if alloc_key == plan_key
+                    assign live_price = alloc.price
+                    break
+                  endif
+                endfor
+              endif
+            endif
+
+            # Who may buy this card.
+            #   buy    -> normal add-to-cart button
+            #   signin -> members-only card, visitor logged out
+            #   join   -> members-only card, signed in without membership
+            assign card_gate = 'buy'
+            if block.settings.eligibility == 'members' and is_member == false
+              if customer
+                assign card_gate = 'join'
+              else
+                assign card_gate = 'signin'
+              endif
+            endif
+          -%}
+          <article class="cf-access__card cf-access__card--{{ card_style }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.badge != blank -%}
+              <span class="cf-access__badge">{{ block.settings.badge | escape }}</span>
+            {%- endif -%}
+
+            {%- if block.settings.eyebrow != blank -%}
+              <p class="cf-access__eyebrow">{{ block.settings.eyebrow | escape }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.heading != blank -%}
+              <h3 class="cf-access__heading">{{ block.settings.heading | escape }}</h3>
+            {%- endif -%}
+
+            {%- if block.settings.compare_price != blank or block.settings.price != blank or live_price != blank -%}
+              <p class="cf-access__price">
+                {%- if block.settings.compare_price != blank -%}
+                  <span class="cf-access__compare">{{ block.settings.compare_price | escape }}</span>
+                {%- endif -%}
+                {%- if block.settings.price != blank -%}
+                  <span class="cf-access__amount">{{ block.settings.price | escape }}</span>
+                {%- elsif live_price != blank -%}
+                  <span class="cf-access__amount">
+                    {{- live_price | money_without_trailing_zeros -}}
+                    {{- block.settings.price_suffix | escape -}}
+                  </span>
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+
+            {%- if block.settings.intro != blank -%}
+              <p class="cf-access__intro">{{ block.settings.intro | escape }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.features != blank -%}
+              <ul class="cf-access__features">
+                {%- for line in features -%}
+                  {%- assign feature = line | strip -%}
+                  {%- if feature != blank -%}
+                    <li class="cf-access__feature">
+                      <img
+                        class="cf-access__check"
+                        src="{{ icon_file | asset_url }}"
+                        width="16"
+                        height="16"
+                        alt=""
+                      >
+                      <span>
+                        {%- assign chunks = feature | split: '**' -%}
+                        {%- for chunk in chunks -%}
+                          {%- assign odd = forloop.index | modulo: 2 -%}
+                          {%- if odd == 0 -%}
+                            <strong>{{ chunk | escape }}</strong>
+                          {%- else -%}
+                            {{ chunk | escape }}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </span>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            {%- if block.settings.cta_label != blank -%}
+              {%- if card_gate == 'signin' -%}
+                <a class="cf-access__btn cf-access__btn--{{ card_style }}" href="{{ login_url }}">
+                  {{ block.settings.signin_label | default: 'Member? Sign in' | escape }}
+                </a>
+              {%- elsif card_gate == 'join' -%}
+                <a
+                  class="cf-access__btn cf-access__btn--{{ card_style }}"
+                  href="{{ block.settings.join_url | default: '/products/castlefit' }}"
+                >
+                  {{ block.settings.join_label | default: 'Join CastleFIT' | escape }}
+                </a>
+              {%- elsif buy_variant != blank -%}
+                <button
+                  type="button"
+                  class="cf-access__btn cf-access__btn--{{ card_style }}"
+                  data-cf-access-buy
+                  data-variant-id="{{ buy_variant.id }}"
+                  {% if block.settings.purchase_type == 'subscription' and selling_plan_id != blank %}
+                    data-selling-plan="{{ selling_plan_id }}"
+                  {% endif %}
+                  {% unless buy_variant.available %}disabled{% endunless %}
+                >
+                  {{ block.settings.cta_label | escape }}
+                </button>
+              {%- else -%}
+                <a
+                  class="cf-access__btn cf-access__btn--{{ card_style }}"
+                  href="{{ block.settings.cta_url | default: '#castlefit-access' }}"
+                >
+                  {{ block.settings.cta_label | escape }}
+                </a>
+              {%- endif -%}
+            {%- endif -%}
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<script>
+  if (!window.__cfAccessBuyBound) {
+    window.__cfAccessBuyBound = true;
+    document.addEventListener('click', function (event) {
+      var btn = event.target.closest('[data-cf-access-buy]');
+      if (!btn || btn.disabled) return;
+
+      var variantId = btn.getAttribute('data-variant-id');
+      if (!variantId) return;
+
+      var item = { id: Number(variantId), quantity: 1 };
+      var sellingPlan = btn.getAttribute('data-selling-plan');
+      if (sellingPlan) item.selling_plan = Number(sellingPlan);
+
+      var original = btn.textContent;
+      btn.disabled = true;
+
+      var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+      fetch(root + 'cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: [item] })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('cart/add failed');
+
+          // Eurus mini cart: refresh its contents, then slide it open.
+          var miniCart = window.Alpine && Alpine.store('xMiniCart');
+          if (!miniCart) {
+            window.location.href = root + 'cart';
+            return;
+          }
+          miniCart.reLoad();
+          document.dispatchEvent(new CustomEvent('eurus:cart:items-changed'));
+          miniCart.openCart();
+        })
+        .catch(function (err) {
+          console.error('CastleFit access add-to-cart error:', err);
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = original;
+        });
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "CastleFit access",
+  "tag": "section",
+  "class": "section-castlefit-access",
+  "enabled_on": {
+    "templates": ["page", "product"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Get Your Access Now"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "For the cost of a single PT or chiropractic session, you get full access to a complete recovery program."
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Used when this section is not on the CastleFit product page. Defaults to the castlefit product."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "plan",
+      "name": "Plan",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Optional. Sells this product instead of the section's product."
+        },
+        {
+          "type": "select",
+          "id": "eligibility",
+          "label": "Who can buy",
+          "options": [
+            { "value": "anyone", "label": "Anyone" },
+            { "value": "members", "label": "CastleFIT members only" }
+          ],
+          "default": "anyone",
+          "info": "Members = customers tagged Active Subscriber. Others see a sign-in or join button instead."
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Card style",
+          "options": [
+            { "value": "recommended", "label": "Recommended (white + yellow checks)" },
+            { "value": "secondary", "label": "Secondary (off-white + blue checks)" }
+          ],
+          "default": "recommended"
+        },
+        {
+          "type": "select",
+          "id": "purchase_type",
+          "label": "Purchase type",
+          "options": [
+            { "value": "subscription", "label": "Subscription" },
+            { "value": "one_time", "label": "One-time purchase" }
+          ],
+          "default": "one_time"
+        },
+        {
+          "type": "text",
+          "id": "variant_option",
+          "label": "Variant option",
+          "info": "Matches the Months option, e.g. 12. Leave blank to use the first available variant."
+        },
+        {
+          "type": "text",
+          "id": "selling_plan_id",
+          "label": "Selling plan ID",
+          "info": "Only for subscription. Leave blank to use the product's first selling plan."
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Compare-at price"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "info": "Leave blank to show the live Shopify price."
+        },
+        {
+          "type": "text",
+          "id": "price_suffix",
+          "label": "Live price suffix",
+          "info": "e.g. /mo"
+        },
+        {
+          "type": "text",
+          "id": "intro",
+          "label": "Intro"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features",
+          "info": "One per line. Wrap bold words in **double asterisks**."
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "text",
+          "id": "signin_label",
+          "label": "Sign-in button label",
+          "default": "CastleFIT member? Sign in",
+          "info": "Members-only cards, logged-out visitors."
+        },
+        {
+          "type": "text",
+          "id": "join_label",
+          "label": "Join button label",
+          "default": "Join CastleFIT",
+          "info": "Members-only cards, signed-in non-members."
+        },
+        {
+          "type": "url",
+          "id": "join_url",
+          "label": "Join button URL",
+          "info": "Defaults to /products/castlefit."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CastleFit access",
+      "blocks": [
+        {
+          "type": "plan",
+          "settings": {
+            "style": "recommended",
+            "purchase_type": "subscription",
+            "variant_option": "12",
+            "badge": "Recommended",
+            "eyebrow": "| ANNUAL SUBSCRIPTION",
+            "heading": "CastleFIT Membership",
+            "compare_price": "$149",
+            "price": "$99",
+            "intro": "Includes All Training Classes, plus:",
+            "features": "Includes approx **200 classes** and flows for all ages\n**60 Day Satisfaction Guarantee** - If you dont love CastleFIT, ask for a FULL refund within 60 days\nYour classes will be available to save on the **CastleFIT app**\nUpgrade option for **CastleFIT After Dark** program",
+            "cta_label": "Subscribe Now"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "style": "secondary",
+            "purchase_type": "one_time",
+            "variant_option": "12",
+            "eyebrow": "| ONE TIME PURCHASE",
+            "heading": "1 Year Access",
+            "price": "$149",
+            "intro": "Includes All Training Classes, plus:",
+            "features": "30 Day Satisfaction Guarantee or a full refund\n12 months of access to CastleFIT\nCancel anytime with no hidden fees\nUpgrade option for **CastleFIT After Dark** program",
+            "cta_label": "Start Now"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

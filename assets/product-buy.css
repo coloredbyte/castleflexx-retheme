@@ -1,0 +1,324 @@
+/*
+  PDP buy UI: upsell "Two options" radios (snippets/product-upsell.liquid),
+  bottom buy box (sections/product-buy-box.liquid) and buy cards
+  (sections/product-buy-cards.liquid). Accent = the scheme's link colour.
+  Eurus ships only the utility classes it uses, so these are scoped here.
+*/
+
+.x-buy--rounded {
+  --buy-radius: 1rem;
+}
+
+/* --- Radio option cards --- */
+
+.x-buy-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.x-buy-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(var(--colors-line-and-border));
+  border-radius: var(--buy-radius, 0);
+  background: rgb(var(--colors-background));
+  cursor: pointer;
+}
+
+.x-buy-option:has(:checked) {
+  border-color: rgb(var(--colors-text-link));
+}
+
+.x-buy-option__radio {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: rgb(var(--colors-text-link));
+}
+
+.x-buy-option__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.x-buy-option__title,
+.x-buy-option__price {
+  font-weight: 600;
+  color: rgb(var(--colors-heading));
+}
+
+.x-buy-option__details {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.x-buy-badge {
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgb(var(--colors-text-link));
+  color: rgb(var(--colors-background));
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Shared section header --- */
+
+.x-buy-header {
+  max-width: 48rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.x-buy-eyebrow {
+  margin-bottom: 0.75rem;
+  color: rgb(var(--colors-text-link));
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.x-buy-subheading {
+  margin-top: 0.75rem;
+}
+
+/* --- Buy box (Heat) --- */
+
+.x-buy-box__grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.x-buy-box__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.x-buy-box__step {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.x-buy-box__legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 0;
+}
+
+.x-buy-box__number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(var(--colors-text-link), 0.1);
+  color: rgb(var(--colors-text-link));
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.x-buy-box__sizes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.x-buy-box__size {
+  position: relative;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid rgba(var(--colors-line-and-border));
+  border-radius: calc(var(--buy-radius, 0) / 2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.x-buy-box__size:has(:checked) {
+  border-color: rgb(var(--colors-text-link));
+}
+
+.x-buy-box__size input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.x-buy-box__size:has(:focus-visible) {
+  outline: 2px solid rgb(var(--colors-text-link));
+  outline-offset: 2px;
+}
+
+.x-buy-box__size-name {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(var(--colors-heading));
+}
+
+.x-buy-box__size-note {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.x-buy-box__help {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* --- Summary / plan cards --- */
+
+.x-buy-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--buy-radius, 0);
+  background: rgb(var(--colors-background));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.x-buy-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.x-buy-card__body {
+  padding: 1.5rem;
+}
+
+.x-buy-card__eyebrow {
+  padding-left: 0.75rem;
+  border-left: 2px solid currentColor;
+  color: rgb(var(--colors-text-link));
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.x-buy-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.x-buy-card__compare {
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
+.x-buy-card__amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(var(--colors-heading));
+}
+
+.x-buy-card__intro {
+  margin: 1rem 0 0.75rem;
+}
+
+.x-buy-card__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.x-buy-card__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.x-buy-card__check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  background: rgb(var(--colors-text-link));
+  color: rgb(var(--colors-background));
+  font-size: 0.7rem;
+}
+
+.x-buy-card__cta {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.x-buy-card__cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.x-buy-card__note {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.x-buy-card .x-buy-badge {
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 calc(var(--buy-radius, 0) / 2);
+}
+
+/* --- Buy cards (CastleAir) --- */
+
+.x-buy-cards__grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .x-buy-option {
+    padding: 1.25rem 2rem;
+  }
+
+  .x-buy-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .x-buy-box__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+
+  .x-buy-card__body {
+    padding: 2rem;
+  }
+
+  .x-buy-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
