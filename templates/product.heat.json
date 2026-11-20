@@ -550,7 +550,8 @@
         "frequently_asked_question_cHfQkG"
       ],
       "custom_css": [
-        ".page-width {padding-left: 80px; padding-right: 80px;}"
+        ".page-width {padding-left: 80px; padding-right: 80px;}",
+        ".font-medium {font-size: 20px; font-weight: 600;}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
