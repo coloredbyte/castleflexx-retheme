@@ -293,7 +293,7 @@
             "enable_video_autoplay": false,
             "desktop_height": "natural",
             "image_alignment": "left",
-            "mobile_height": "400px",
+            "mobile_height": "natural",
             "image_alignment_mobile": "left"
           }
         },
