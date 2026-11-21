@@ -142,6 +142,9 @@
     {%- endif -%}
 
     <span class="flex flex-col gap-1">
+      {%- if upsell_badge != blank -%}
+        <span class="x-product-upsell__badge self-start">{{ upsell_badge | escape }}</span>
+      {%- endif -%}
       <a href="{{ upsell_variant.product.url }}" class="underline" @click.stop>{{ upsell_variant.product.title }}</a>
       {%- if upsell_description != blank -%}
         <span class="text-sm opacity-80">{{ upsell_description }}</span>
@@ -154,6 +157,29 @@
       </span>
     </span>
   </label>
+
+  {%- comment -%}
+    Policy row under the box, as on the live theme:
+    "30 Day Return Policy | USA Owned"; ticking the upsell swaps in the
+    bundle text, e.g. "60 Day Return Policy".
+  {%- endcomment -%}
+  {%- if block.settings.return_text != blank or block.settings.origin_text != blank -%}
+    <div class="x-product-upsell__policy flex flex-wrap gap-2 mt-2 text-sm">
+      {%- if block.settings.return_text != blank -%}
+        <span
+          class="x-product-upsell__return"
+          data-upsell-return
+          data-text="{{ block.settings.return_text | escape }}"
+          data-text-bundle="{{ block.settings.return_text_bundle | default: block.settings.return_text | escape }}"
+        >
+          {{- block.settings.return_text | escape -}}
+        </span>
+      {%- endif -%}
+      {%- if block.settings.origin_text != blank -%}
+        <span class="x-product-upsell__origin">{{ block.settings.origin_text | escape }}</span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
   {%- endif -%}
 
   <script>
@@ -205,6 +231,11 @@
         setText(button.querySelector('[id^="atc-price-"]'), format(devicePrice + (bundle ? UPSELL_PRICE : 0)));
         setText(block.querySelector('[data-upsell-price="device"]'), formatShort(devicePrice));
         setText(block.querySelector('[data-upsell-price="bundle"]'), formatShort(devicePrice + UPSELL_PRICE));
+
+        const returnText = block.querySelector('[data-upsell-return]');
+        if (returnText) {
+          setText(returnText, bundle ? returnText.dataset.textBundle : returnText.dataset.text);
+        }
 
         document.dispatchEvent(new CustomEvent('cf:upsell:change', {
           detail: { bundle, devicePrice, upsellPrice: UPSELL_PRICE }
