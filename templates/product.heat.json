@@ -868,46 +868,18 @@
         "criterion_RtpgHW": {
           "type": "criterion",
           "settings": {
-            "heading": "Where to use it",
-            "criterion_detail_product": "Gym, PT, Outdoors",
+            "heading": "Best For",
+            "criterion_detail_product": "Portability",
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
-            "criterion_detail_externals": "Home / Indoors\nHome / Indoors",
+            "criterion_detail_externals": "Maximum Versatility\nWarmth + Comfort",
             "icon_external_item": "none",
             "another_icon_external_item": "",
             "custom_icon_external_item": ""
           }
         },
         "criterion_Aigenw": {
-          "type": "criterion",
-          "settings": {
-            "heading": "Includes",
-            "criterion_detail_product": "Super-grip handles",
-            "icon_store_item": "none",
-            "another_icon_store_item": "",
-            "custom_icon_store_item": "",
-            "criterion_detail_externals": "2lb weight\nLG lithium battery",
-            "icon_external_item": "none",
-            "another_icon_external_item": "",
-            "custom_icon_external_item": ""
-          }
-        },
-        "criterion_L8Bt7g": {
-          "type": "criterion",
-          "settings": {
-            "heading": "Weighted Mobility Bar",
-            "criterion_detail_product": "No",
-            "icon_store_item": "none",
-            "another_icon_store_item": "",
-            "custom_icon_store_item": "",
-            "criterion_detail_externals": "Yes\nNo",
-            "icon_external_item": "none",
-            "another_icon_external_item": "",
-            "custom_icon_external_item": ""
-          }
-        },
-        "criterion_gQKKxa": {
           "type": "criterion",
           "settings": {
             "heading": "Built-in Heat",
@@ -921,15 +893,43 @@
             "custom_icon_external_item": ""
           }
         },
-        "criterion_pjxh8N": {
+        "criterion_L8Bt7g": {
           "type": "criterion",
           "settings": {
-            "heading": "Handles",
-            "criterion_detail_product": "Super-grip silicone",
+            "heading": "Rechargeable",
+            "criterion_detail_product": "No",
             "icon_store_item": "none",
             "another_icon_store_item": "",
             "custom_icon_store_item": "",
-            "criterion_detail_externals": "Premium cork\nPremium cork",
+            "criterion_detail_externals": "No\nYes",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_gQKKxa": {
+          "type": "criterion",
+          "settings": {
+            "heading": "2lb Weight",
+            "criterion_detail_product": "No",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "Yes\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_pjxh8N": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Stretch Style",
+            "criterion_detail_product": "Active + Passive",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "Active + Passive\nActive + Passive",
             "icon_external_item": "none",
             "another_icon_external_item": "",
             "custom_icon_external_item": ""
@@ -965,10 +965,10 @@
         "full_width": false,
         "show_section_divider": false,
         "padding_top": 0,
-        "padding_bottom": 20,
+        "padding_bottom": 80,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 28,
+        "padding_bottom_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
