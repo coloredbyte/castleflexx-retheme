@@ -135,7 +135,8 @@
       "custom_css": [
         ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}",
         ".x-block-text {font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4f7f86;}",
-        ".x-feature-card-feature_card {border-width: 1.5px; background-color: #edf4f4;}"
+        ".x-feature-card-feature_card {border-width: 1.5px; background-color: #edf4f4;}",
+        ".heading-feature_card {font-size: 32px; font-weight: 700;}"
       ],
       "settings": {
         "enable_sticky_image": true,
