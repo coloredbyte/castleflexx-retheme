@@ -213,13 +213,7 @@
         "collapsible_tab_MgjKqH",
         "sticky-atc"
       ],
-      "custom_css": [
-        ".x-review-product {margin-bottom: 12px;}",
-        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
-        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 16px; margin: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }}",
-        ".product-form__input:first-of-type {padding-top: 32px;}",
-        "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; } .w-full .x-block-text-icon {padding-bottom: 12px; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
