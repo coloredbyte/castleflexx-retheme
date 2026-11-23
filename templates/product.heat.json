@@ -1199,11 +1199,11 @@
         "frequently_asked_question_QkVEKz": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "What makes the Heat Edition different?",
+            "row_content": "<p>Heat is the CastleFlexx edition with built-in warmth. It also has an updated contoured heel support that is thicker and wider than the Luxury and Sport designs.</p>",
             "open_by_default": false
           }
         },
@@ -1274,8 +1274,8 @@
         "show_section_divider_mobile": false,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 28,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "section_scheme": "scheme2",
+        "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     }
