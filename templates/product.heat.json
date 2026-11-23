@@ -1091,7 +1091,8 @@
       ],
       "custom_css": [
         "h2 {font-weight: 700;}",
-        " .x-block-columns {padding-bottom: 0px; padding-top: 0px;}"
+        ".x-block-columns {padding-bottom: 0px; padding-top: 0px;}",
+        " .iwt-content {padding-left: 90px; padding-right: 90px;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
