@@ -135,7 +135,7 @@
       "custom_css": [
         ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}",
         ".x-block-text {font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4f7f86;}",
-        ".scheme4 {background-color: #edf4f4; border-width: 1.5px; border-color: #d9e2e1;}"
+        ".scheme4 {background-color: #edf4f4;}"
       ],
       "settings": {
         "enable_sticky_image": true,
