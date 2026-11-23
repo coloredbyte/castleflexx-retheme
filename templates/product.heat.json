@@ -1228,12 +1228,72 @@
             "row_content": "<p>The indicator lights circle while the device is warming. It should reach operating warmth in less than 45 seconds.</p>",
             "open_by_default": false
           }
+        },
+        "frequently_asked_question_7Mkj3i": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Does Heat shut off automatically?",
+            "row_content": "<p>Yes. Heat automatically shuts off after 30 minutes.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_ycKCbw": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Should I wear socks?",
+            "row_content": "<p>Wear thin socks if you have sensitive skin or sensitive feet. If the warmth still feels too intense, use thicker socks or turn the heat off.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_Qe6r4j": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "How do I check the battery level?",
+            "row_content": "<p>Press the power button three times to display the current battery level.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_YccXJx": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Does Heat include the Luxury Edition’s removable weight?",
+            "row_content": "<p>No. The Heat Edition does not include the Luxury Edition’s 2 lb interchangeable weight system.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_gjtP6z": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Is Heat HSA/FSA eligible?",
+            "row_content": "<p>Qualified customers can select the HSA/FSA payment option at checkout and complete the required health assessment.</p>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
         "frequently_asked_question_QkVEKz",
         "frequently_asked_question_X4EVAQ",
-        "frequently_asked_question_FC8UNh"
+        "frequently_asked_question_FC8UNh",
+        "frequently_asked_question_7Mkj3i",
+        "frequently_asked_question_ycKCbw",
+        "frequently_asked_question_Qe6r4j",
+        "frequently_asked_question_YccXJx",
+        "frequently_asked_question_gjtP6z"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
