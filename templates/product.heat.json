@@ -748,9 +748,9 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "section_scheme": "scheme2",
-        "background_color_light": "#FFFFFF",
-        "heading_light": "#191A1B",
-        "text_light": "#2B2C2E",
+        "background_color_light": "#ffffff",
+        "heading_light": "#191a1b",
+        "text_light": "#2b2c2e",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
         "heading_dark": "rgba(0,0,0,0)",
@@ -800,6 +800,130 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "comparison_table_8FPUUz": {
+      "type": "comparison-table",
+      "blocks": {
+        "criterion_RtpgHW": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Where to use it",
+            "criterion_detail_product": "Gym, PT, Outdoors",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "Home / Indoors\nHome / Indoors",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_Aigenw": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Includes",
+            "criterion_detail_product": "Super-grip handles",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "2lb weight\nLG lithium battery",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_L8Bt7g": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Weighted Mobility Bar",
+            "criterion_detail_product": "No",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "Yes\nNo",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_gQKKxa": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Built-in Heat",
+            "criterion_detail_product": "No",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "No\nYes",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        },
+        "criterion_pjxh8N": {
+          "type": "criterion",
+          "settings": {
+            "heading": "Handles",
+            "criterion_detail_product": "Super-grip silicone",
+            "icon_store_item": "none",
+            "another_icon_store_item": "",
+            "custom_icon_store_item": "",
+            "criterion_detail_externals": "Premium cork\nPremium cork",
+            "icon_external_item": "none",
+            "another_icon_external_item": "",
+            "custom_icon_external_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "criterion_RtpgHW",
+        "criterion_Aigenw",
+        "criterion_L8Bt7g",
+        "criterion_gQKKxa",
+        "criterion_pjxh8N"
+      ],
+      "custom_css": [
+        ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
+        ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
+        ".inline-block rect {fill: #F04420;}",
+        "@media screen and (max-width: 1024px) {.criterion-detail-heading, .table-header {font-size: 11px; } .criterion-detail-product, .criterion-detail-external {font-size: 12px; }}"
+      ],
+      "name": "t:sections.comparision-table.name",
+      "settings": {
+        "heading": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "description": "",
+        "product": "",
+        "alternative_text": "Sport",
+        "external_item_labels": "Luxury\nHeat",
+        "icon_position": "next",
+        "icon_size": 40,
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "column_highlight_light": "rgba(0,0,0,0)",
+        "line_border": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "column_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_box": {
       "type": "product-buy-box",
       "settings": {
@@ -838,6 +962,7 @@
     "rich_text_bxFNVM",
     "text_column_with_image_7gejeQ",
     "rich_text_Dp774n",
+    "comparison_table_8FPUUz",
     "buy_box"
   ]
 }
