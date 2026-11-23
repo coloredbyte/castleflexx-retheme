@@ -708,7 +708,8 @@
         "column_QYATnq"
       ],
       "custom_css": [
-        ".x-block-twm-item-subheading {color: #e34f2b; font-weight: 600; letter-spacing: 12%; font-size: 11px; padding-bottom: 12px;}"
+        ".x-block-twm-item-subheading {color: #e34f2b; font-weight: 600; letter-spacing: 12%; font-size: 11px; padding-bottom: 12px;}",
+        " .page-width{padding-left: 90px; padding-right: 90px;}"
       ],
       "name": "t:sections.text-column-image.name",
       "settings": {
