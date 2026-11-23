@@ -176,7 +176,7 @@
         "spacing_col": "small",
         "padding_top": 48,
         "padding_bottom": 80,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 32,
         "padding_bottom_mobile": 48,
         "section_scheme": "scheme4"
       }
