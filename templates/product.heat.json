@@ -34,7 +34,7 @@
           "type": "feature_card",
           "settings": {
             "heading": "Really tight?\nStart with [HEAT.]",
-            "color_heading_highlight_light": "#F04420",
+            "color_heading_highlight_light": "#f04420",
             "image": "shopify://shop_images/plantar-fascia.jpg",
             "text": "<p>Use <strong>targeted warmth</strong> to help loosen up your foot, calf, knee, or elbow as you move into a controlled stretch.</p>",
             "tags": "Plantar Fasciitis\nTight Calves\nTennis Elbow\nKnee / ACL Rehab Support\nDaily Recovery",
@@ -80,6 +80,9 @@
             "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
             "option_bundle_details": "Heat Device • 200+ guided classes",
             "badge": "Best value • Save [savings]",
+            "return_text": "30 Day Return Policy",
+            "return_text_bundle": "60 Day Return Policy",
+            "origin_text": "USA Owned",
             "show_border": true,
             "block_scheme": "scheme2"
           }
@@ -209,9 +212,9 @@
             "read_more_label": "Read more",
             "see_less_label": "See less",
             "block_scheme": "section",
-            "heading_light": "#191A1B",
-            "text_light": "#2B2C2E",
-            "color_heading_highlight_light": "#F04420",
+            "heading_light": "#191a1b",
+            "text_light": "#2b2c2e",
+            "color_heading_highlight_light": "#f04420",
             "heading_dark": "rgba(0,0,0,0)",
             "text_dark": "rgba(0,0,0,0)",
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
@@ -273,13 +276,13 @@
             "open_new_window": false,
             "show_button_style": "primary",
             "block_scheme": "section",
-            "button_light": "#FEC627",
-            "button_text_light": "#191A1B",
-            "button_hover_light": "#FFD55F",
-            "button_text_hover_light": "#191A1B",
+            "button_light": "#fec627",
+            "button_text_light": "#191a1b",
+            "button_hover_light": "#ffd55f",
+            "button_text_hover_light": "#191a1b",
             "secondary_button_light": "rgba(0,0,0,0)",
             "secondary_button_text_light": "rgba(0,0,0,0)",
-            "colors_text_link": "#F04420",
+            "colors_text_link": "#f04420",
             "button_dark": "rgba(0,0,0,0)",
             "button_text_dark": "rgba(0,0,0,0)",
             "button_hover_dark": "rgba(0,0,0,0)",
@@ -314,6 +317,7 @@
         "adapt_radius": true,
         "image_corner_radius": 0,
         "show_sound_control": false,
+        "video_url": "",
         "video_alt_text": "",
         "enable_video_autoplay": false,
         "content_layout": "no-overlap",
@@ -344,7 +348,7 @@
         "top_padding_mobile": 48,
         "bottom_padding_mobile": 48,
         "section_scheme": "store",
-        "background_color_light": "#FFFFFF",
+        "background_color_light": "#ffffff",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
@@ -418,6 +422,7 @@
         "video": "shopify://files/videos/susana-heat.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_alt_text": "",
+        "mobile_video_url": "",
         "full_width": false,
         "adapt_corners_desktop": true,
         "rounded_corners": false,
@@ -583,8 +588,184 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 48,
         "section_scheme": "scheme2",
-        "background_color_light": "#FFFFFF",
+        "background_color_light": "#ffffff",
         "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_bxFNVM": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_PJ9GfC": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE RESEARCH BEHIND HEAT",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_Xwemk9": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Human Studies Suggest.",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        },
+        "text_9yAeKE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Research on local and superficial heat supports a few practical reasons people pair warmth with movement and recovery.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "caption_PJ9GfC",
+        "heading_Xwemk9",
+        "text_9yAeKE"
+      ],
+      "custom_css": [
+        ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 700;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 32px; line-height: 110%; } .x-block-text {padding-top: 0px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 32,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme2",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "multicolumn_nGB8NJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BpqnhV": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+          }
+        },
+        "column_XaYkHA": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+          }
+        },
+        "column_UDXEeB": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+          }
+        },
+        "column_NzN3LY": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_BpqnhV",
+        "column_XaYkHA",
+        "column_UDXEeB",
+        "column_NzN3LY"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "secondary_background": "none",
+        "border_column": "column",
+        "column_content_alignment": "center",
+        "icon_position": "above",
+        "icon_size": 45,
+        "enable_desktop_slider": true,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": true,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-5",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme2",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "buy_box": {
@@ -622,6 +803,8 @@
     "video_UMEgE9",
     "rich_text_8tWKtQ",
     "faq_wBQwyh",
+    "rich_text_bxFNVM",
+    "multicolumn_nGB8NJ",
     "buy_box"
   ]
 }
