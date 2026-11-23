@@ -989,7 +989,9 @@
     "buy_box": {
       "type": "product-buy-box",
       "custom_css": [
-        ".x-buy-option {background: #ffffff;}"
+        ".x-buy-option {background: #ffffff;}",
+        "h2 {font-weight: 700; font-size: 48px;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 32px; line-height: 110%; }}"
       ],
       "settings": {
         "eyebrow": "Get your Heat",
