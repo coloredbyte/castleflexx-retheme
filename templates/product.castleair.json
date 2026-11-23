@@ -12,28 +12,33 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "rating_AeRdFJ": {
-          "type": "rating",
-          "settings": {}
-        },
-        "breadcrumb_CXCUEY": {
-          "type": "breadcrumb",
-          "settings": {}
-        },
-        "product_name_xkPbAa": {
-          "type": "product_name",
+        "text_8yMraa": {
+          "type": "text",
           "settings": {
-            "title_size": 130,
-            "heading_tag": "h1",
-            "enable_product_rating": false
+            "text": "<p>CASTLEFLEXX HEAT EDITION</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
           }
         },
-        "price": {
-          "type": "price",
+        "text_UkPNP4": {
+          "type": "text",
           "settings": {
-            "adapt_custom_price_format": false,
-            "show_tax_and_shipping": false,
-            "text_size_price": 50
+            "text": "<h2>The Best Stretch Ever.&nbsp;Now Heated.</h2>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        },
+        "feature_card": {
+          "type": "feature_card",
+          "settings": {
+            "heading": "Float your head.\nReset your neck.",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "text": "<p><strong>15 minutes a day.</strong> Add heat for neck pain—or a cold pack at the first sign of a headache.</p>",
+            "tags": "Tech Neck\nTight Shoulders\nHeadache Comfort\nMigraines\nCluster Headaches\nMeditation\nStretching / CastleFlexxing",
+            "tag_style": "outline",
+            "block_scheme": "section"
           }
         },
         "variant_picker": {
@@ -57,16 +62,19 @@
           "settings": {
             "heading": "",
             "description": "",
+            "layout": "options",
             "show_image": false,
             "checked_by_default": false,
-            "show_border": true,
-            "block_scheme": "store",
-            "layout": "options",
             "option_device_title": "CastleAIR Only",
             "option_device_details": "CastleAIR • Reversible Cover • USB-C inflator • Cork Stability Base",
             "option_bundle_title": "CastleAIR + CastleFIT",
             "option_bundle_details": "200+ guided classes",
-            "badge": "Best value • Save [savings]"
+            "badge": "Best value • Save [savings]",
+            "return_text": "30 Day Return Policy",
+            "return_text_bundle": "60 Day Return Policy",
+            "origin_text": "USA Owned",
+            "show_border": true,
+            "block_scheme": "store"
           }
         },
         "buy_buttons": {
@@ -106,29 +114,6 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
-        "collapsible_tab_MgjKqH": {
-          "type": "collapsible_tab",
-          "settings": {
-            "open_by_default": true,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "use_secondary_background": false,
-            "heading": "Product Details",
-            "tab_content": "{{ product.description }}",
-            "media_type": "none",
-            "image_position": "below",
-            "image_ratio": "natural",
-            "show_sound_control": false,
-            "video_position": "below",
-            "video_ratio": "natural",
-            "is_adapt_to_edges_type": false,
-            "is_rounded_corners": false,
-            "video_url": "",
-            "video_alt_text": "",
-            "enable_video_autoplay": false
-          }
-        },
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
@@ -136,37 +121,19 @@
             "show_quantity_selector": false,
             "link_to_atc_btn": true
           }
-        },
-        "feature_card": {
-          "type": "feature_card",
-          "settings": {
-            "heading": "Float your head.\nReset your neck.",
-            "color_heading_highlight_light": "rgba(0,0,0,0)",
-            "text": "<p><strong>15 minutes a day.</strong> Add heat for neck pain—or a cold pack at the first sign of a headache.</p>",
-            "tags": "Tech Neck\nTight Shoulders\nHeadache Comfort\nMigraines\nCluster Headaches\nMeditation\nStretching / CastleFlexxing",
-            "tag_style": "outline",
-            "block_scheme": "section"
-          }
         }
       },
       "block_order": [
-        "rating_AeRdFJ",
-        "breadcrumb_CXCUEY",
-        "product_name_xkPbAa",
+        "text_8yMraa",
+        "text_UkPNP4",
         "feature_card",
-        "price",
         "variant_picker",
         "upsell",
         "buy_buttons",
-        "collapsible_tab_MgjKqH",
         "sticky-atc"
       ],
       "custom_css": [
-        ".x-review-product {margin-bottom: 12px;}",
-        ".w-full .x-block-breadcrumb {margin-bottom: 12px;}",
-        "@media (min-width: 768px) {.w-full .x-block-text-icon {width: auto; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 16px; margin: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }}",
-        ".product-form__input:first-of-type {padding-top: 32px;}",
-        "@media screen and (max-width: 1024px) {.product-form__input:first-of-type {padding-top: 2px; } .w-full .x-block-text-icon {padding-bottom: 12px; }}"
+        ".rte h2{font-size: 48px; font-weight: 700;}"
       ],
       "settings": {
         "enable_sticky_image": true,
@@ -220,10 +187,12 @@
           "type": "card",
           "settings": {
             "choice": "device",
+            "badge": "",
             "eyebrow": "CastleAIR Only",
             "intro": "Everything you need to find your level of support.",
             "features": "CastleAIR Support\nReversible Cover\nUSB-C Inflator\nCork Stability Base",
-            "cta_label": "Choose CastleAIR"
+            "cta_label": "Choose CastleAIR",
+            "note": ""
           }
         },
         "card_bundle": {
@@ -243,7 +212,14 @@
         "card_device",
         "card_bundle"
       ],
-      "settings": {}
+      "settings": {
+        "eyebrow": "Choose your CastleAIR",
+        "heading": "Relief now or support\nfor what comes next.",
+        "subheading": "",
+        "section_scheme": "store",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
