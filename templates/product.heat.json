@@ -1326,6 +1326,67 @@
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
+    },
+    "rich_text_EMPjhp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xWEwPG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Reviews",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xWEwPG"
+      ],
+      "custom_css": [
+        ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 700;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 32px; line-height: 110%; } .x-block-text {padding-top: 0px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 60,
+        "padding_bottom": 28,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme2",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "1795466769a754480c": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_kkYedX": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_kkYedX"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -1343,6 +1404,8 @@
     "buy_box",
     "image_with_text_H6X6JH",
     "rich_text_MRCG33",
-    "faq_WpfEXX"
+    "faq_WpfEXX",
+    "rich_text_EMPjhp",
+    "1795466769a754480c"
   ]
 }
