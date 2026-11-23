@@ -24,7 +24,7 @@
         "text_UkPNP4": {
           "type": "text",
           "settings": {
-            "text": "<h2>The Best Stretch Ever.&nbsp;Now Heated.</h2>",
+            "text": "<h2>Your Neck&nbsp;<br/>Deserves Better.</h2>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
@@ -133,7 +133,7 @@
         "sticky-atc"
       ],
       "custom_css": [
-        ".rte h2 {font-size: 48px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}"
+        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}"
       ],
       "settings": {
         "enable_sticky_image": true,
