@@ -1003,14 +1003,14 @@
         "bundle_details": "Heat Device • 200+ guided classes",
         "badge": "Best value • Save [savings]",
         "includes_label": "Your purchase includes:",
-        "device_items": "CastleFlexx Heat device\n30-day worry-free returns",
+        "device_items": "CastleFlexx Heat device\n200+ guided classes\n60-day worry-free returns\n12 months of device insurance",
         "bundle_items": "CastleFlexx Heat device\n200+ guided classes\n60-day worry-free returns\n12 months of device insurance",
         "device_cta": "Shop Heat",
         "bundle_cta": "Shop Bundle",
         "bundle_note": "CastleFIT renews annually until cancelled.",
         "section_scheme": "scheme2",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
