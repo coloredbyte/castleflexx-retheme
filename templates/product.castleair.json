@@ -133,7 +133,8 @@
         "sticky-atc"
       ],
       "custom_css": [
-        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}"
+        ".rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 0px; margin-bottom: 28px;}",
+        ".x-block-text {font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4F7F86;}"
       ],
       "settings": {
         "enable_sticky_image": true,
