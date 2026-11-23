@@ -745,7 +745,7 @@
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
+        "padding_bottom_mobile": 0,
         "section_scheme": "scheme2",
         "background_color_light": "#FFFFFF",
         "heading_light": "#191A1B",
