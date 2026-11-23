@@ -1207,45 +1207,33 @@
             "open_by_default": false
           }
         },
-        "frequently_asked_question_LcVU6L": {
+        "frequently_asked_question_X4EVAQ": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "How do I turn the Heat on and off?",
+            "row_content": "<p>Press and hold the power button for three seconds to turn Heat on. Press and hold it again for three seconds to turn it off.</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_xy8mrJ": {
+        "frequently_asked_question_FC8UNh": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_MdhD4F": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "How long does it take to warm up?",
+            "row_content": "<p>The indicator lights circle while the device is warming. It should reach operating warmth in less than 45 seconds.</p>",
             "open_by_default": false
           }
         }
       },
       "block_order": [
         "frequently_asked_question_QkVEKz",
-        "frequently_asked_question_LcVU6L",
-        "frequently_asked_question_xy8mrJ",
-        "frequently_asked_question_MdhD4F"
+        "frequently_asked_question_X4EVAQ",
+        "frequently_asked_question_FC8UNh"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
