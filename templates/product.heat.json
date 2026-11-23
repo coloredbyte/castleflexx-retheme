@@ -673,11 +673,11 @@
             "image": "shopify://shop_images/number_01_test_3.svg",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "RANDOMIZED CONTROLLED TRIAL • 40 ADULTS",
-            "title": "Local Heat and Plantar Discomfort",
+            "sub_title": "HUMAN CONTROLLED STUDY • 11 ADULTS",
+            "title": "Local Heat After Strenuous Exercise",
             "highlight_type": "underline",
             "heading_size": 110,
-            "text": "<p>In a small sham-controlled trial, local heat applied at trigger points was associated with greater pain reduction for plantar and neck pain than sham treatment.</p>",
+            "text": "<p>Following eccentric exercise, the heated thigh showed better fatigue resistance, though overall peak-torque recovery did not differ from the control thigh.</p>",
             "button_label": "Read More",
             "button_link": "",
             "open_new_window": true,
@@ -690,11 +690,11 @@
             "image": "shopify://shop_images/number_01_test_3.svg",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "RANDOMIZED CONTROLLED TRIAL • 40 ADULTS",
-            "title": "Local Heat and Plantar Discomfort",
+            "sub_title": "RANDOMIZED CONTROLLED TRIAL • 100 ADULTS",
+            "title": "Heat Paired With Movement",
             "highlight_type": "underline",
             "heading_size": 110,
-            "text": "<p>In a small sham-controlled trial, local heat applied at trigger points was associated with greater pain reduction for plantar and neck pain than sham treatment.</p>",
+            "text": "<p>In adults with acute low-back pain, continuous low-level heat paired with exercise improved function more than heat, exercise, or an education booklet alone.</p>",
             "button_label": "Read More",
             "button_link": "",
             "open_new_window": true,
@@ -709,7 +709,7 @@
       ],
       "custom_css": [
         ".x-block-twm-item-subheading {color: #e34f2b; font-weight: 600; letter-spacing: 12%; font-size: 11px; padding-bottom: 12px;}",
-        "@media screen and (min-width: 990px) {.page-width {padding-left: 90px; padding-right: 90px;}}"
+        "@media screen and (min-width: 990px) {.page-width {padding-left: 90px; padding-right: 90px; }}"
       ],
       "name": "t:sections.text-column-image.name",
       "settings": {
