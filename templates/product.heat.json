@@ -1044,7 +1044,7 @@
             "subheading": "",
             "heading": "“It Hits the Difficult Stretch Areas.”",
             "highlight_type": "underline",
-            "heading_base_size": 120,
+            "heading_base_size": 130,
             "heading_tag": "h2",
             "text": "<p><strong>- Pamela H.</strong><br/>Real feedback from a verified CastleFlexx Heat buyer.</p>",
             "number_of_lines_shown": "none",
@@ -1088,6 +1088,9 @@
         "columns_Ky8XMc",
         "heading_WXxmXG",
         "button_pAiQ3g"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 700;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
