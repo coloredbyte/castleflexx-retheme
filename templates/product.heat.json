@@ -647,6 +647,110 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "text_column_with_image_7gejeQ": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "column_tBqr6Y": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/number_01_test_3.svg",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_NWRrkP": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_aDmJGC": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "column_tBqr6Y",
+        "column_NWRrkP",
+        "column_aDmJGC"
+      ],
+      "name": "t:sections.text-column-image.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "",
+        "secondary_background": "column",
+        "image_ratio": "natural",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
+        "column_content_alignment": "start",
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/3",
+        "spacing_desktop": 40,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-full",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme2",
+        "background_color_light": "#FFFFFF",
+        "heading_light": "#191A1B",
+        "text_light": "#2B2C2E",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
     "multicolumn_nGB8NJ": {
       "type": "multicolumn",
       "blocks": {
@@ -656,12 +760,12 @@
             "icon": "truck",
             "another_icon": "",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Local Heat and Plantar Discomfort",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>In a small sham-controlled trial, local heat applied at trigger points was associated with greater pain reduction for plantar and neck pain than sham treatment.</p>"
           }
         },
         "column_XaYkHA": {
@@ -698,6 +802,7 @@
         "column_XaYkHA",
         "column_NzN3LY"
       ],
+      "disabled": true,
       "custom_css": [
         ".x-block-columns {padding-left: 90px; padding-right: 90px;}"
       ],
@@ -827,6 +932,7 @@
     "rich_text_8tWKtQ",
     "faq_wBQwyh",
     "rich_text_bxFNVM",
+    "text_column_with_image_7gejeQ",
     "multicolumn_nGB8NJ",
     "rich_text_Dp774n",
     "buy_box"
