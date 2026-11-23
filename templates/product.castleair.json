@@ -35,6 +35,7 @@
           "settings": {
             "heading": "Float your head.\nReset your neck.",
             "color_heading_highlight_light": "#4F7F86",
+            "image": "shopify://shop_images/img_castleair_resized.png",
             "text": "<p><strong>15 minutes a day.</strong> Add heat for neck pain—or a cold pack at the first sign of a headache.</p>",
             "tags": "Tech Neck\nTight Shoulders\nHeadache Comfort\nMigraines\nCluster Headaches\nMeditation\nStretching / CastleFlexxing",
             "tag_style": "tinted",
