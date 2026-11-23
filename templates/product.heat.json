@@ -1133,7 +1133,7 @@
         "bottom_padding": 0,
         "image_alignment_mobile": "right",
         "full_width_mobile": false,
-        "top_padding_mobile": 0,
+        "top_padding_mobile": 48,
         "bottom_padding_mobile": 0,
         "section_scheme": "scheme2",
         "background_color_light": "#F7F5F1",
