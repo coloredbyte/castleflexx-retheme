@@ -1018,6 +1018,96 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "image_with_text_H6X6JH": {
+      "type": "image-with-text",
+      "blocks": {
+        "columns_Ky8XMc": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/stars.svg",
+            "custom_icon": "",
+            "title": "",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 70,
+            "text": "<p><strong>5.0 out of 5</strong></p>",
+            "wide_desktop": 1,
+            "wide_mobile": "2"
+          }
+        },
+        "heading_WXxmXG": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "“It Hits the Difficult Stretch Areas.”",
+            "highlight_type": "underline",
+            "heading_base_size": 120,
+            "heading_tag": "h2",
+            "text": "<p><strong>Pamela H.</strong><br/>Real feedback from a verified CastleFlexx Heat buyer.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "block_scheme": "section",
+            "heading_light": "#191A1B",
+            "text_light": "#2B2C2E",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "columns_Ky8XMc",
+        "heading_WXxmXG"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "show_hero": false,
+        "image": "shopify://shop_images/heat-lifestyle.jpg",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_width": "medium",
+        "image_layout": "normal",
+        "adapt_radius": false,
+        "image_corner_radius": 0,
+        "show_sound_control": false,
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "content_layout": "no-overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "line_border": "none",
+        "icon_position": "row",
+        "icon_size": 30,
+        "alignment": "left",
+        "columns_desktop": 1,
+        "columns_mobile": "1",
+        "heading_color_light": "#191A1B",
+        "text_color_light": "#2B2C2E",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": true,
+        "padding_full_width": false,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "image_alignment_mobile": "right",
+        "full_width_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 0,
+        "section_scheme": "scheme2",
+        "background_color_light": "#F7F5F1",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -1032,6 +1122,7 @@
     "rich_text_Dp774n",
     "rich_text_jCQxMh",
     "comparison_table_8FPUUz",
-    "buy_box"
+    "buy_box",
+    "image_with_text_H6X6JH"
   ]
 }
