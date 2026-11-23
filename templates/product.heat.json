@@ -995,7 +995,7 @@
         "size_option": "Size",
         "size_label": "Choose your size",
         "size_notes": "Standard: 5'0 – 5'8\nLarge: 5'9 – 6'2\nX-Large: 6'3 – 6'9",
-        "size_help": "<p>Between Sizes? <strong>Size Up</strong></p>",
+        "size_help": "<p>Between Sizes? <a href=\"/pages/size-guide\" title=\"Size Guide\"><strong>Size Up</strong></a></p>",
         "option_label": "Choose your buying option",
         "device_title": "CastleFlexx HEAT Only",
         "device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
@@ -1008,7 +1008,7 @@
         "device_cta": "Shop Heat",
         "bundle_cta": "Shop Bundle",
         "bundle_note": "CastleFIT renews annually until cancelled.",
-        "section_scheme": "store",
+        "section_scheme": "scheme2",
         "padding_top": 64,
         "padding_bottom": 64
       }
