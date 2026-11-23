@@ -1092,7 +1092,9 @@
       "custom_css": [
         "h2 {font-weight: 700;}",
         ".x-block-columns {padding-bottom: 0px; padding-top: 0px;}",
-        " .iwt-content {padding-left: 90px; padding-right: 90px;}"
+        ".iwt-content {padding-left: 90px; padding-right: 90px;}",
+        "img[src*=\"stars\"] {width: 148px !important; height: 28px !important; max-width: none !important; max-height: none !important; object-fit: contain !important; aspect-ratio: 148 / 28;}",
+        " *:has(> img[src*=\"stars\"]) {width: auto !important; height: auto !important; max-width: none !important; aspect-ratio: auto !important; overflow: visible !important; flex-shrink: 0;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
