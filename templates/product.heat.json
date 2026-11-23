@@ -988,6 +988,9 @@
     },
     "buy_box": {
       "type": "product-buy-box",
+      "custom_css": [
+        ".x-buy-option {background: #ffffff;}"
+      ],
       "settings": {
         "eyebrow": "Get your Heat",
         "heading": "Choose Your Heat Experience",
