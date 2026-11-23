@@ -806,7 +806,7 @@
         "caption_yrEEHH": {
           "type": "caption",
           "settings": {
-            "caption": "THE RESEARCH BEHIND HEAT",
+            "caption": "CHOOSE YOUR EDITION",
             "text_style": "uppercase",
             "text_size": 90
           }
@@ -814,7 +814,7 @@
         "heading_YBzhbP": {
           "type": "heading",
           "settings": {
-            "heading": "What Human Studies Suggest.",
+            "heading": "Which CastleFlexx Is Right for You",
             "highlight_type": "underline",
             "heading_size": 120,
             "heading_tag": "h2"
@@ -823,7 +823,7 @@
         "text_6yf9yp": {
           "type": "text",
           "settings": {
-            "text": "<p>Research on local and superficial heat supports a few practical reasons people pair warmth with movement and recovery.</p>",
+            "text": "<p>Three different priorities. One patented CastleFlexx system.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
