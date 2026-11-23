@@ -1046,7 +1046,7 @@
             "highlight_type": "underline",
             "heading_base_size": 120,
             "heading_tag": "h2",
-            "text": "<p><strong>Pamela H.</strong><br/>Real feedback from a verified CastleFlexx Heat buyer.</p>",
+            "text": "<p><strong>- Pamela H.</strong><br/>Real feedback from a verified CastleFlexx Heat buyer.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
@@ -1058,11 +1058,36 @@
             "text_dark": "rgba(0,0,0,0)",
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
           }
+        },
+        "button_pAiQ3g": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read All Heat Reviews",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
         }
       },
       "block_order": [
         "columns_Ky8XMc",
-        "heading_WXxmXG"
+        "heading_WXxmXG",
+        "button_pAiQ3g"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
