@@ -656,15 +656,15 @@
             "image": "shopify://shop_images/number_01_test_3.svg",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "",
-            "title": "Column",
+            "sub_title": "RANDOMIZED CONTROLLED TRIAL • 40 ADULTS",
+            "title": "Local Heat and Plantar Discomfort",
             "highlight_type": "underline",
             "heading_size": 100,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
-            "button_label": "",
+            "text": "<p>In a small sham-controlled trial, local heat applied at trigger points was associated with greater pain reduction for plantar and neck pain than sham treatment.</p>",
+            "button_label": "Read More",
             "button_link": "",
-            "open_new_window": false,
-            "show_button_style": "primary"
+            "open_new_window": true,
+            "show_button_style": "text-link"
           }
         },
         "column_NWRrkP": {
