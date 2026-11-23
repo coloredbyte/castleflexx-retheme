@@ -1,0 +1,16 @@
+/*
+  Section CSS moved out of the theme editor's Custom CSS boxes (500-char cap).
+  Scoped like Shopify scopes those boxes: template suffix + section.
+*/
+
+/* Heat PDP: main product section */
+#MainContent.theme-template-suffix-heat [id$="__main"] .x-block-text .rte p {color: #e34f2b; font-size: 13px; font-weight: 600; letter-spacing: 12%; margin-bottom: 0px;}
+#MainContent.theme-template-suffix-heat [id$="__main"] .heading-feature_card {font-size: 40px; font-weight: 700;}
+#MainContent.theme-template-suffix-heat [id$="__main"] .x-feature-card-feature_card {background-color: #ffffff;}
+#MainContent.theme-template-suffix-heat [id$="__main"] .rte h2 {font-size: 56px; line-height: 105%; font-weight: 700; margin-top: 10px;}
+#MainContent.theme-template-suffix-heat [id$="__main"] .x-buy-option {background: #ffffff;}
+
+@media screen and (max-width: 1024px) {
+  #MainContent.theme-template-suffix-heat [id$="__main"] .heading-feature_card {font-size: 28px; font-weight: 700;}
+  #MainContent.theme-template-suffix-heat [id$="__main"] .rte h2 {font-size: 36px; line-height: 105%; font-weight: 700; margin-top: 6px;}
+}

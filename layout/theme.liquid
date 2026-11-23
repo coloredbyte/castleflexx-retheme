@@ -115,6 +115,7 @@
     {% if template.name == "article" %}
       {{ 'toc.css' | asset_url | stylesheet_tag }}
     {% endif %}
+    {{ 'section-custom.css' | asset_url | stylesheet_tag }}
     {% if template.suffix contains 'castle-fit' %}
       {{ 'castlefit.css' | asset_url | stylesheet_tag }}
     {% endif %}
