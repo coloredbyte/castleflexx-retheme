@@ -800,6 +800,68 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_jCQxMh": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_yrEEHH": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE RESEARCH BEHIND HEAT",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_YBzhbP": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Human Studies Suggest.",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        },
+        "text_6yf9yp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Research on local and superficial heat supports a few practical reasons people pair warmth with movement and recovery.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "caption_yrEEHH",
+        "heading_YBzhbP",
+        "text_6yf9yp"
+      ],
+      "custom_css": [
+        ".uppercase {color: #e34f2b; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 700;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 32px; line-height: 110%; } .x-block-text {padding-top: 0px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 32,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme2",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "comparison_table_8FPUUz": {
       "type": "comparison-table",
       "blocks": {
@@ -884,7 +946,7 @@
       "custom_css": [
         ".table-header,.criterion-detail-product {background: transparent !important; background-color: transparent !important; border-bottom-width: 1px;}",
         ".table-header::before,.table-header::after,.criterion-detail-product::before,.criterion-detail-product::after {background: transparent !important; box-shadow: none !important;}",
-        ".inline-block rect {fill: #F04420;}",
+        ".inline-block rect {fill: #f04420;}",
         "@media screen and (max-width: 1024px) {.criterion-detail-heading, .table-header {font-size: 11px; } .criterion-detail-product, .criterion-detail-external {font-size: 12px; }}"
       ],
       "name": "t:sections.comparision-table.name",
@@ -962,6 +1024,7 @@
     "rich_text_bxFNVM",
     "text_column_with_image_7gejeQ",
     "rich_text_Dp774n",
+    "rich_text_jCQxMh",
     "comparison_table_8FPUUz",
     "buy_box"
   ]
