@@ -1090,7 +1090,8 @@
         "button_pAiQ3g"
       ],
       "custom_css": [
-        "h2 {font-weight: 700;}"
+        "h2 {font-weight: 700;}",
+        " .x-block-columns {padding-bottom: 0px; padding-top: 0px;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
