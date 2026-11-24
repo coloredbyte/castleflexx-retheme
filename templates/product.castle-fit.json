@@ -174,7 +174,7 @@
           "settings": {
             "icon": "star",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/star_icon_2.svg",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Star.svg",
             "custom_icon": "",
             "title": "200+ Guided Classes",
             "highlight_type": "underline",
@@ -189,7 +189,7 @@
           "settings": {
             "icon": "star",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/person_icon_c9554cc2-9487-44bf-b2a8-e8aeec8cd96d.svg",
+            "custom_image": "shopify://shop_images/castlefit_icon_person.svg",
             "custom_icon": "",
             "title": "All Mobility Levels Welcome",
             "highlight_type": "underline",
@@ -204,7 +204,7 @@
           "settings": {
             "icon": "star",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/target_icon_327f8d81-c2cc-499e-a3ad-17b5525901b7.svg",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Target.svg",
             "custom_icon": "",
             "title": "Targeted by Pain Area",
             "highlight_type": "underline",
@@ -219,7 +219,7 @@
           "settings": {
             "icon": "check-mark",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/check_mark_icon_72f49fbe-612a-46b3-bce7-54a2683d8fb3.svg",
+            "custom_image": "shopify://shop_images/iconstack.io_-_Check.svg",
             "custom_icon": "",
             "title": "60 Day Full Refund",
             "highlight_type": "underline",
@@ -275,7 +275,7 @@
         "padding_bottom_mobile": 24,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
+        "heading_light": "#3E4044",
         "text_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
