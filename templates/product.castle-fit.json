@@ -59,30 +59,13 @@
     "text_column_with_image_m4tMqC": {
       "type": "text-column-with-image",
       "blocks": {
-        "column_f8bpiG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/castlefit_img_1_landscape.png",
-            "image_link": "",
-            "open_new_window_image": false,
-            "sub_title": "1",
-            "title": "Start with the routine that fits you",
-            "highlight_type": "underline",
-            "heading_size": 100,
-            "text": "<p>Choose classes by pain area, age 65+, or flexibility level so you can begin with a plan that feels right from day one.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_new_window": false,
-            "show_button_style": "primary"
-          }
-        },
         "column_dhGGBN": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/castlefit_img_2_landscape.png",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "2",
+            "sub_title": "1",
             "title": "Classes for the pain areas people actually need help with",
             "highlight_type": "underline",
             "heading_size": 100,
@@ -93,10 +76,27 @@
             "show_button_style": "primary"
           }
         },
+        "column_ahLEjd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/36d1db8c014ab55ec284cb1c762361faf5dabdf6.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "2",
+            "title": "Built for beginners, 65+, and real life",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>From gentle seated flows to targeted routines, CastleFIT helps more people feel comfortable using their CastleFlexx.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
         "column_EKUyrU": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/castlefit_img_3_landscape.png",
+            "image": "shopify://shop_images/topic-3.png",
             "image_link": "",
             "open_new_window_image": false,
             "sub_title": "3",
@@ -112,8 +112,8 @@
         }
       },
       "block_order": [
-        "column_f8bpiG",
         "column_dhGGBN",
+        "column_ahLEjd",
         "column_EKUyrU"
       ],
       "custom_css": [
@@ -128,7 +128,7 @@
         "heading_alignment": "center",
         "subheading": "CASTLEFIT MEMBERSHIP",
         "text": "<p>Guided classes by pain area, age, and flexibility level help you know exactly where to start and keep you using your device consistently.</p>",
-        "secondary_background": "column",
+        "secondary_background": "none",
         "image_ratio": "75%",
         "adapt_corners": true,
         "rounded_corner_image": false,
