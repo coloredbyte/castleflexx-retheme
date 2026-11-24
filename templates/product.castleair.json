@@ -1088,6 +1088,9 @@
         "frequently_asked_question_BNrFzF",
         "frequently_asked_question_MVRRTe"
       ],
+      "custom_css": [
+        ".font-medium {color: #20343C;}"
+      ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
         "heading": "",
