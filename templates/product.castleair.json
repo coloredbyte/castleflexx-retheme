@@ -68,7 +68,7 @@
             "show_button_style": "primary",
             "show_dynamic_checkout": false,
             "dymanic_checkout_style": "primary",
-            "show_atc_quantity": true,
+            "show_atc_quantity": false,
             "show_add_to_cart": true,
             "show_price": true,
             "hide_sale_price": false,
