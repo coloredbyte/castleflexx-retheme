@@ -1010,6 +1010,9 @@
         "frequently_asked_question_8BePgA",
         "frequently_asked_question_r6rFNk"
       ],
+      "custom_css": [
+        ".x-block-faq-item-1 {background-color: #F9F9F9;}"
+      ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
         "heading": "Frequently Asked Questions",
