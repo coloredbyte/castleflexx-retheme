@@ -979,39 +979,28 @@
             "custom_icon": "",
             "heading": "Whats the difference between the one time purchase VS. the subscription purchase aside from the price?",
             "row_content": "<p>The annual subscription includes the benefit of 60 days satisfaction guarantee AND 1 year of product insurance. If your device breaks or gets damaged just email us and we will replace it for you.</p>",
-            "open_by_default": false
+            "open_by_default": true
           }
         },
         "frequently_asked_question_8BePgA": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "How many classes are in CastleFIT and how often do you add new classes?",
+            "row_content": "<p>There are over 200 classes on CastleFIT including dozens more on the adult only After Dark Series. We upload new classes every year consistently and we love feedback so please email us with your suggestions!</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_UwUNbU": {
+        "frequently_asked_question_r6rFNk": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_4q7r3f": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "What is the best way to watch the classes, can I airplay as an Apple user or mirror to my big screen?",
+            "row_content": "<p>Log in on your phone using the CastleFIT app or sign in from any computer and mirror to your big screen.</p>",
             "open_by_default": false
           }
         }
@@ -1019,8 +1008,7 @@
       "block_order": [
         "frequently_asked_question_zgntQa",
         "frequently_asked_question_8BePgA",
-        "frequently_asked_question_UwUNbU",
-        "frequently_asked_question_4q7r3f"
+        "frequently_asked_question_r6rFNk"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
