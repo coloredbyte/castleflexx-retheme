@@ -231,7 +231,7 @@
             "title": "CastleAIR",
             "highlight_type": "underline",
             "heading_size": 110,
-            "text": "<p>Adjustable head + neck support.</p>",
+            "text": "<p>Adjustable head + neck support</p>",
             "button_label": "",
             "button_link": "",
             "open_new_window": false,
@@ -296,6 +296,7 @@
       "custom_css": [
         ".scheme4 {background-color: #dce9eb; padding-left: 120px; padding-right: 120px;}",
         ".splide__track {border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;}",
+        ".x-block-twm-item-subheading {font-weight: 600; letter-spacing: 0.05em;}",
         "@media screen and (max-width: 749px) {.scheme4 {padding-left: 0px; padding-right: 0px; }}"
       ],
       "name": "t:sections.text-column-image.name",
