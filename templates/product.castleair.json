@@ -298,7 +298,7 @@
       ],
       "custom_css": [
         ".scheme4 {background-color: #dce9eb; padding-left: 150px; padding-right: 150px;}",
-        ".splide__track {border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;}",
+        ".splide__track {border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}",
         ".gap-column-template--23531200872639__text_column_with_image_DGbz4h {border-left-width: 1px; border-bottom-width: 1px;}",
         ".x-block-twm-item-subheading {font-weight: 600; font-size: 12px;}",
         ".h3 {font-weight: 600;}",
