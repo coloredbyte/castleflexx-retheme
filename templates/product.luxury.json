@@ -218,7 +218,7 @@
       ],
       "custom_css": [
         ".x-product-upsell .metafield-rich_text_field {display: inline-flex; align-items: center; vertical-align: middle; margin-left: 8px; padding: 5px 12px; border-radius: 999px; background: #dec9b0; color: #1a1a1a; font-size: 13px; font-weight: 400; white-space: nowrap;}",
-        ".x-product-upsell__return {display: flex; justify-content: space-between; align-items: center; margin: 16px 0 22px; display: inline-flex; padding: 10px 20px; border: 1px solid #3d7d65; border-radius: 999px; color: #3d7d65; font-size: 14px;}"
+        ".x-product-upsell__return {display: flex; justify-content: space-between; align-items: center; margin: 16px 0 22px; display: inline-flex; padding: 6px 16px; border: 1px solid #3d7d65; border-radius: 999px; color: #3d7d65; font-size: 14px; font-weight: 400;}"
       ],
       "settings": {
         "enable_sticky_image": true,
