@@ -56,12 +56,123 @@
         "image_mobile": "shopify://shop_images/img.png"
       }
     },
+    "text_column_with_image_m4tMqC": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "column_f8bpiG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_1_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "1",
+            "title": "Start with the routine that fits you",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Choose classes by pain area, age 65+, or flexibility level so you can begin with a plan that feels right from day one.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_dhGGBN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_2_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "2",
+            "title": "Classes for the pain areas people actually need help with",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Targeted routines for back pain, tight calves, and plantar fasciitis — so you can choose the area that matters most and start with the right class.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_EKUyrU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/castlefit_img_3_landscape.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "3",
+            "title": "Built for beginners, 65+, and real life",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>From gentle seated flows to targeted routines, CastleFIT helps more people feel comfortable using their CastleFlexx.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "column_f8bpiG",
+        "column_dhGGBN",
+        "column_EKUyrU"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.text-column-image.name",
+      "settings": {
+        "title": "Start Your Recovery Today with CastleFIT",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "CASTLEFIT MEMBERSHIP",
+        "text": "<p>Guided classes by pain area, age, and flexibility level help you know exactly where to start and keep you using your device consistently.</p>",
+        "secondary_background": "column",
+        "image_ratio": "75%",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
+        "column_content_alignment": "start",
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/3",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-full",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "#FFFFFF",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "#666768",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
     "access": {
       "type": "castlefit-access",
       "blocks": {
         "annual": {
           "type": "plan",
           "settings": {
+            "product": "",
+            "eligibility": "anyone",
             "style": "recommended",
             "purchase_type": "subscription",
             "variant_option": "12",
@@ -71,15 +182,21 @@
             "heading": "CastleFIT Membership",
             "compare_price": "$149",
             "price": "$99",
+            "price_suffix": "",
             "intro": "Includes All Training Classes, plus:",
             "features": "Includes approx **200 classes** and flows for all ages\n**60 Day Satisfaction Guarantee** - If you dont love CastleFIT, ask for a FULL refund within 60 days\nYour classes will be available to save on the **CastleFIT app**\nUpgrade option for **CastleFIT After Dark** program",
             "cta_label": "Subscribe Now",
-            "cta_url": "shopify://products/castlefit"
+            "cta_url": "shopify://products/castlefit",
+            "signin_label": "CastleFIT member? Sign in",
+            "join_label": "Join CastleFIT",
+            "join_url": ""
           }
         },
         "onetime": {
           "type": "plan",
           "settings": {
+            "product": "",
+            "eligibility": "anyone",
             "style": "secondary",
             "purchase_type": "one_time",
             "variant_option": "12",
@@ -89,10 +206,14 @@
             "heading": "1 Year Access",
             "compare_price": "",
             "price": "$149",
+            "price_suffix": "",
             "intro": "Includes All Training Classes, plus:",
             "features": "30 Day Satisfaction Guarantee or a full refund\n12 months of access to CastleFIT\nCancel anytime with no hidden fees\nUpgrade option for **CastleFIT After Dark** program",
             "cta_label": "Start Now",
-            "cta_url": "shopify://products/castlefit"
+            "cta_url": "shopify://products/castlefit",
+            "signin_label": "CastleFIT member? Sign in",
+            "join_label": "Join CastleFIT",
+            "join_url": ""
           }
         }
       },
@@ -109,6 +230,7 @@
   },
   "order": [
     "banner",
+    "text_column_with_image_m4tMqC",
     "access"
   ]
 }
