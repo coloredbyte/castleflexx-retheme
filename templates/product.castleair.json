@@ -44,6 +44,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "max_swatch": 20,
@@ -58,18 +59,18 @@
             "size_chart_type": "popup"
           }
         },
-        "upsell": {
+        "upsell_cQEEcK": {
           "type": "upsell",
           "settings": {
             "heading": "",
             "description": "",
             "layout": "options",
             "show_image": false,
-            "checked_by_default": true,
-            "option_device_title": "CastleAIR Only",
-            "option_device_details": "CastleAIR • Reversible Cover • USB-C inflator • Cork Stability Base",
-            "option_bundle_title": "CastleAIR + CastleFIT",
-            "option_bundle_details": "200+ guided classes",
+            "checked_by_default": false,
+            "option_device_title": "CastleFlexx HEAT Only",
+            "option_device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
+            "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
+            "option_bundle_details": "Heat Device • 200+ guided classes",
             "badge": "Best value • Save [savings]",
             "return_text": "30 Day Return Policy",
             "return_text_bundle": "60 Day Return Policy",
@@ -129,7 +130,7 @@
         "text_UkPNP4",
         "feature_card",
         "variant_picker",
-        "upsell",
+        "upsell_cQEEcK",
         "buy_buttons",
         "sticky-atc"
       ],
