@@ -165,6 +165,128 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)"
       }
     },
+    "multicolumn_wT8hh3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_XUrFdV": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/star_icon_2.svg",
+            "custom_icon": "",
+            "title": "200+ Guided Classes",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_ADMhEb": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/person_icon_c9554cc2-9487-44bf-b2a8-e8aeec8cd96d.svg",
+            "custom_icon": "",
+            "title": "All Mobility Levels Welcome",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_TgJa9a": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/target_icon_327f8d81-c2cc-499e-a3ad-17b5525901b7.svg",
+            "custom_icon": "",
+            "title": "Targeted by Pain Area",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        },
+        "column_CYTLDm": {
+          "type": "column",
+          "settings": {
+            "icon": "check-mark",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/check_mark_icon_72f49fbe-612a-46b3-bce7-54a2683d8fb3.svg",
+            "custom_icon": "",
+            "title": "60 Day Full Refund",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XUrFdV",
+        "column_ADMhEb",
+        "column_TgJa9a",
+        "column_CYTLDm"
+      ],
+      "custom_css": [
+        ".inline-block {margin-right: 8px;}",
+        ".h-full {padding-left: 0px; padding-right: 0px;}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "secondary_background": "none",
+        "border_column": "line_vertical",
+        "column_content_alignment": "center",
+        "icon_position": "next",
+        "icon_size": 30,
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-0",
+        "spacing_desktop": 0,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 12,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    },
     "access": {
       "type": "castlefit-access",
       "blocks": {
@@ -231,6 +353,7 @@
   "order": [
     "banner",
     "text_column_with_image_m4tMqC",
+    "multicolumn_wT8hh3",
     "access"
   ]
 }
