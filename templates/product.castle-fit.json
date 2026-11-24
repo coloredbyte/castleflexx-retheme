@@ -967,6 +967,92 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
       }
+    },
+    "faq_czNdmY": {
+      "type": "faq",
+      "blocks": {
+        "frequently_asked_question_zgntQa": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Whats the difference between the one time purchase VS. the subscription purchase aside from the price?",
+            "row_content": "<p>The annual subscription includes the benefit of 60 days satisfaction guarantee AND 1 year of product insurance. If your device breaks or gets damaged just email us and we will replace it for you.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_8BePgA": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_UwUNbU": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_4q7r3f": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "frequently_asked_question_zgntQa",
+        "frequently_asked_question_8BePgA",
+        "frequently_asked_question_UwUNbU",
+        "frequently_asked_question_4q7r3f"
+      ],
+      "name": "t:sections.question_and_answer.name",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "show_border": false,
+        "row_background": true,
+        "collapsible": true,
+        "show_view_all": false,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -982,6 +1068,7 @@
     "access",
     "slideshow_PtCe4a",
     "testimonials_with_card_PjVcDX",
-    "video_drecgj"
+    "video_drecgj",
+    "faq_czNdmY"
   ]
 }
