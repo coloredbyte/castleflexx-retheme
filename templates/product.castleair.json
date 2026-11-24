@@ -1139,6 +1139,9 @@
       "block_order": [
         "text_mqTEQj"
       ],
+      "custom_css": [
+        "p {font-size: 12px;}"
+      ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "content_alignment": "center",
