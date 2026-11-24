@@ -42,23 +42,6 @@
             "block_scheme": "scheme4"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button",
-            "max_swatch": 20,
-            "show_variant_option": true,
-            "enable_color_swatches": true,
-            "swatch_size": "large",
-            "enable_size_chart": false,
-            "option_to_show_size_chart": "",
-            "heading": "",
-            "select_page": "",
-            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
-            "size_chart_type": "popup"
-          }
-        },
         "upsell_FmxBWD": {
           "type": "upsell",
           "settings": {
@@ -129,7 +112,6 @@
         "text_8yMraa",
         "text_UkPNP4",
         "feature_card",
-        "variant_picker",
         "upsell_FmxBWD",
         "buy_buttons",
         "sticky-atc"
