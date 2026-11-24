@@ -174,7 +174,7 @@
         "caption_PVC6NJ": {
           "type": "caption",
           "settings": {
-            "caption": "THE HEAT EXPERIENCE",
+            "caption": "WHAT'S INCLUDED",
             "text_style": "uppercase",
             "text_size": 90
           }
@@ -182,7 +182,7 @@
         "heading_LMELhn": {
           "type": "heading",
           "settings": {
-            "heading": "What Do You Get With CastleFlexx Heat?",
+            "heading": "Everything You Need to Find Your Fit.",
             "highlight_type": "underline",
             "heading_size": 120,
             "heading_tag": "h2"
@@ -194,14 +194,13 @@
         "heading_LMELhn"
       ],
       "custom_css": [
-        ".uppercase {color: #4F7F86; font-weight: 600; letter-spacing: 12%;}",
-        "h2 {font-weight: 700;}"
+        ".uppercase {color: #4f7f86; font-weight: 600; letter-spacing: 12%;}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "content_alignment": "center",
         "show_section_divider": false,
-        "make_full_page_width": true,
+        "make_full_page_width": false,
         "padding_top": 80,
         "padding_bottom": 40,
         "content_alignment_mobile": "center",
