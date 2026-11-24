@@ -211,7 +211,7 @@
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "text_light": "rgba(0,0,0,0)",
-        "background_color_light": "#DCE9EB",
+        "background_color_light": "#dce9eb",
         "heading_dark": "rgba(0,0,0,0)",
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
@@ -340,9 +340,9 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 48,
         "section_scheme": "scheme4",
-        "background_color_light": "#FFFFFF",
-        "heading_light": "#20343C",
-        "text_light": "#4F7F86",
+        "background_color_light": "#ffffff",
+        "heading_light": "#20343c",
+        "text_light": "#4f7f86",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
         "heading_dark": "rgba(0,0,0,0)",
@@ -358,6 +358,7 @@
           "settings": {
             "video": "shopify://files/videos/bye-tech-neck-shopify.mp4",
             "show_sound_control": false,
+            "video_url": "",
             "video_alt_text": "",
             "integrated_social_media": "none",
             "account_username": "",
@@ -394,6 +395,9 @@
       "block_order": [
         "shoppable_video_rxxUVa"
       ],
+      "custom_css": [
+        "@media (min-width: 768px) {.slider-template--23531200872639__video_looping_MzVtcL {height: calc(min(760px, 60vw) * 9 / 16) !important; } .slider-item-template--23531200872639__video_looping_MzVtcL {width: min(760px, 60vw) !important; left: calc(50% - min(760px, 60vw) / 2) !important; height: auto !important; aspect-ratio: 16 / 9 !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); } .desktop-video-container video {height: auto !important; aspect-ratio: 404 / 720; top: 50% !important; transform: translateY(-50%) scale(1.02); }}"
+      ],
       "name": "t:sections.video-looping.name",
       "settings": {
         "heading": "",
@@ -422,7 +426,7 @@
         "padding_top_mobile": 48,
         "padding_bottom_mobile": 48,
         "section_scheme": "scheme4",
-        "background_color_light": "#EDF4F3",
+        "background_color_light": "#edf4f3",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "hotspot_color_light": "rgba(0,0,0,0)",
