@@ -28,3 +28,68 @@
   #MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"] .product-form__input:first-of-type {padding-top: 2px;}
   #MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"] .w-full .x-block-text-icon {padding-bottom: 12px;}
 }
+
+/*
+  Luxury + Sport PDPs: CastleFit subscription box.
+  :where() adds no specificity, so the editor's Custom CSS box still wins.
+*/
+:where(#MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"]) .x-product-upsell .metafield-rich_text_field {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #dec9b0;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+:where(#MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"]) .x-product-upsell__return {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 22px;
+  display: inline-flex;
+  padding: 6px 16px;
+  border: 1px solid #3d7d65;
+  border-radius: 999px;
+  color: #3d7d65;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+:where(#MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"]) .x-product-upsell__origin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 22px;
+  display: inline-flex;
+  padding: 6px 16px;
+  border: 1px solid #191A1B;
+  border-radius: 999px;
+  color: #191A1B;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+:where(#MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"]) .bfcm-design {
+  display: inline-flex;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #f5c84c;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+:where(#MainContent:is(.theme-template-suffix-luxury, .theme-template-suffix-sport) [id$="__main"]) .x-product-upsell .border {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 20px;
+  border: 1px solid #191919;
+  border-radius: 8px;
+}
