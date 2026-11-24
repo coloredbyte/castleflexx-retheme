@@ -434,6 +434,66 @@
         "hotspot_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_QC6Hkq": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_Wm676m": {
+          "type": "caption",
+          "settings": {
+            "caption": "WHAT IT’S FOR",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_9bifwe": {
+          "type": "heading",
+          "settings": {
+            "heading": "15 minutes. Feel lighter.",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        },
+        "text_eRAYQG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Choose the kind of comfort your neck needs today.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "caption_Wm676m",
+        "heading_9bifwe",
+        "text_eRAYQG"
+      ],
+      "custom_css": [
+        ".uppercase {color: #4f7f86; font-weight: 600; letter-spacing: 12%;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_cards": {
       "type": "product-buy-cards",
       "blocks": {
@@ -481,6 +541,7 @@
     "rich_text_ELgFir",
     "text_column_with_image_DGbz4h",
     "video_looping_MzVtcL",
+    "rich_text_QC6Hkq",
     "buy_cards"
   ]
 }
