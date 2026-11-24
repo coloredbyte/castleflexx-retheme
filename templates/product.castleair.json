@@ -973,9 +973,9 @@
         "eyebrow": "Choose your CastleAIR",
         "heading": "Relief now or support\nfor what comes next.",
         "subheading": "",
-        "section_scheme": "store",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "section_scheme": "scheme4",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
