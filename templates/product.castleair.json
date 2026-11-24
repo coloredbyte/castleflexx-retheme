@@ -740,6 +740,7 @@
         "image_layout": "normal",
         "adapt_radius": true,
         "image_corner_radius": 0,
+        "video": "shopify://files/videos/castleair-intro-shopify.mp4",
         "show_sound_control": false,
         "video_alt_text": "",
         "enable_video_autoplay": false,
