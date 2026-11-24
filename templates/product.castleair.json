@@ -750,8 +750,8 @@
         "bottom_padding": 80,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
-        "top_padding_mobile": 0,
-        "bottom_padding_mobile": 0,
+        "top_padding_mobile": 48,
+        "bottom_padding_mobile": 48,
         "section_scheme": "scheme4",
         "background_color_light": "#EDF4F3",
         "background_color_dark": "rgba(0,0,0,0)"
