@@ -757,6 +757,56 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_AQbyqz": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_jrCPkW": {
+          "type": "caption",
+          "settings": {
+            "caption": "WHAT'S INCLUDED",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_KLgfbC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step by Step Guidance for a Frictionless Head and Neck Rest.",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "caption_jrCPkW",
+        "heading_KLgfbC"
+      ],
+      "custom_css": [
+        ".uppercase {color: #4f7f86; font-weight: 600; letter-spacing: 12%;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#dce9eb",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_cards": {
       "type": "product-buy-cards",
       "blocks": {
@@ -808,6 +858,7 @@
     "text_column_with_image_74XFcr",
     "rich_text_KaQPKG",
     "image_with_text_WBXBrY",
+    "rich_text_AQbyqz",
     "buy_cards"
   ]
 }
