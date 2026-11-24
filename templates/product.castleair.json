@@ -969,6 +969,9 @@
         "card_device",
         "card_bundle"
       ],
+      "custom_css": [
+        ".scheme4 {background-color: #EDF4F3;}"
+      ],
       "settings": {
         "eyebrow": "Choose your CastleAIR",
         "heading": "Relief now or support\nfor what comes next.",
