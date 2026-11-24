@@ -307,7 +307,7 @@
         "text": "",
         "secondary_background": "column",
         "image_ratio": "75%",
-        "adapt_corners": true,
+        "adapt_corners": false,
         "rounded_corner_image": false,
         "column_content_alignment": "start",
         "enable_desktop_slider": false,
