@@ -293,7 +293,7 @@
         "column_qwmpbm"
       ],
       "custom_css": [
-        ".scheme4 {background-color: #dce9eb;}"
+        ".scheme4 {background-color: #dce9eb; padding-left: 120px; padding-right: 120px;}"
       ],
       "name": "t:sections.text-column-image.name",
       "settings": {
