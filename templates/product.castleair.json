@@ -807,6 +807,136 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "text_column_with_image_LeptQn": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "column_PmGYeQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/CastleAIR_Device.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "01",
+            "title": "Cover while deflated.",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_wLrGc3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/CastleAIR_Cover_Sheet.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "02",
+            "title": "Slide in the base.",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_nLPfCn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/USB-C_Air_Inflator.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "03",
+            "title": "Hold power for 2 seconds.",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_i6P9TL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/CastleAir_Cork_Base.png",
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "04",
+            "title": "Lie back. Let your head sink.",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "column_PmGYeQ",
+        "column_wLrGc3",
+        "column_nLPfCn",
+        "column_i6P9TL"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.scheme4 {background-color: #dce9eb; padding-left: 150px; padding-right: 150px; }}",
+        ".x-block-twm-item-subheading {font-weight: 600; font-size: 12px;}",
+        ".h3 {font-weight: 600;}",
+        "@media screen and (max-width: 749px) {.scheme4 {background-color: #dce9eb; }}"
+      ],
+      "name": "t:sections.text-column-image.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "",
+        "secondary_background": "column",
+        "image_ratio": "75%",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
+        "column_content_alignment": "start",
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/2",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-1/2",
+        "spacing_mobile": 0,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "scheme4",
+        "background_color_light": "#ffffff",
+        "heading_light": "#20343c",
+        "text_light": "#4f7f86",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_cards": {
       "type": "product-buy-cards",
       "blocks": {
@@ -859,6 +989,7 @@
     "rich_text_KaQPKG",
     "image_with_text_WBXBrY",
     "rich_text_AQbyqz",
+    "text_column_with_image_LeptQn",
     "buy_cards"
   ]
 }
