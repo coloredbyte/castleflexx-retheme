@@ -748,7 +748,7 @@
         "padding_full_width": false,
         "top_padding": 80,
         "bottom_padding": 80,
-        "image_alignment_mobile": "left",
+        "image_alignment_mobile": "right",
         "full_width_mobile": false,
         "top_padding_mobile": 48,
         "bottom_padding_mobile": 48,
