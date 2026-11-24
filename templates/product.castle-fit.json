@@ -952,20 +952,20 @@
         "image": "shopify://shop_images/video-frame.png",
         "video_url": "https://www.youtube.com/watch?v=stpPDwFQthM",
         "video_alt_text": "",
-        "full_width": false,
-        "adapt_corners_desktop": true,
+        "full_width": true,
+        "adapt_corners_desktop": false,
         "rounded_corners": false,
-        "video_desktop_ratio": "16/9",
+        "video_desktop_ratio": "px",
         "video_desktop_height": "natural",
         "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_bottom": 0,
         "full_width_mobile": true,
         "adapt_corners_mobile": false,
         "rounded_corners_mobile": false,
         "video_mobile_ratio": "px",
         "video_mobile_height": "natural",
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 48
+        "padding_bottom_mobile": 0
       }
     }
   },
