@@ -218,7 +218,8 @@
       ],
       "custom_css": [
         ".x-product-upsell .border {display: flex; align-items: flex-start; gap: 20px; padding: 20px 20px; border: 1px solid #191919; border-radius: 8px;}",
-        " .underline{font-size: 16px; font-weight: 600;}"
+        ".underline {font-size: 16px; font-weight: 600;}",
+        ".x-product-upsell__badge {display: flex; justify-content: space-between; align-items: center; display: inline-flex; padding: 6px 16px; margin-bottom: 16px; border-radius: 999px; background-color: #FEC627; color: #FFFFFF; font-size: 14px; font-weight: 400;}"
       ],
       "settings": {
         "enable_sticky_image": true,
