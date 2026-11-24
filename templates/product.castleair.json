@@ -983,6 +983,153 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "rich_text_rQTaWU": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_PL7TaJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "SIMPLE SETUP",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_qbaUU3": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Important Stuff",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "caption_PL7TaJ",
+        "heading_qbaUU3"
+      ],
+      "custom_css": [
+        ".uppercase {color: #4f7f86; font-weight: 600; letter-spacing: 12%;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#dce9eb",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_bx6Qcz": {
+      "type": "faq",
+      "blocks": {
+        "category_6WUKFQ": {
+          "type": "category",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "icon_size": 28,
+            "title": "Category"
+          }
+        },
+        "frequently_asked_question_w4NCzB": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_hrNKBi": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_BNrFzF": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_MVRRTe": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "category_6WUKFQ",
+        "frequently_asked_question_w4NCzB",
+        "frequently_asked_question_hrNKBi",
+        "frequently_asked_question_BNrFzF",
+        "frequently_asked_question_MVRRTe"
+      ],
+      "name": "t:sections.question_and_answer.name",
+      "settings": {
+        "heading": "FAQs",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "show_border": false,
+        "row_background": false,
+        "collapsible": true,
+        "show_view_all": true,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -996,6 +1143,8 @@
     "image_with_text_WBXBrY",
     "rich_text_AQbyqz",
     "text_column_with_image_LeptQn",
-    "buy_cards"
+    "buy_cards",
+    "rich_text_rQTaWU",
+    "faq_bx6Qcz"
   ]
 }
