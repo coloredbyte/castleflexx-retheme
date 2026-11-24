@@ -732,7 +732,8 @@
         "button_renm7F"
       ],
       "custom_css": [
-        ".scheme4 {background-color: #edf4f3; padding-left: 120px; padding-right: 120px;}"
+        ".scheme4 {background-color: #edf4f3; padding-left: 120px; padding-right: 120px;}",
+        " @media screen and (max-width: 749px) {.scheme4 {padding-left:20px; padding-right:20px; }}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
