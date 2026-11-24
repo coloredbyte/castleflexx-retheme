@@ -128,7 +128,7 @@
         "heading_alignment": "center",
         "subheading": "CASTLEFIT MEMBERSHIP",
         "text": "<p>Guided classes by pain area, age, and flexibility level help you know exactly where to start and keep you using your device consistently.</p>",
-        "secondary_background": "none",
+        "secondary_background": "column",
         "image_ratio": "75%",
         "adapt_corners": true,
         "rounded_corner_image": false,
