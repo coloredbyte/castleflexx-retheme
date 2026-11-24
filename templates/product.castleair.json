@@ -1164,6 +1164,45 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_HPTFmL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UtXJRf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Reviews",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UtXJRf"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 0,
+        "padding_bottom": 28,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "#4F7F86",
+        "background_color_light": "#FFFFFF",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "17955443043969fdb8": {
       "type": "apps",
       "blocks": {
@@ -1198,6 +1237,7 @@
     "rich_text_rQTaWU",
     "faq_bx6Qcz",
     "rich_text_byq8BW",
+    "rich_text_HPTFmL",
     "17955443043969fdb8"
   ]
 }
