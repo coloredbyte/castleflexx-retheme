@@ -1163,6 +1163,24 @@
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
       }
+    },
+    "17955443043969fdb8": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_rdaxEE": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_rdaxEE"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -1179,6 +1197,7 @@
     "buy_cards",
     "rich_text_rQTaWU",
     "faq_bx6Qcz",
-    "rich_text_byq8BW"
+    "rich_text_byq8BW",
+    "17955443043969fdb8"
   ]
 }
