@@ -356,9 +356,10 @@
         "shoppable_video_rxxUVa": {
           "type": "shoppable_video",
           "settings": {
+            "video": "shopify://files/videos/bye-tech-neck-shopify.mp4",
             "show_sound_control": false,
             "video_alt_text": "",
-            "integrated_social_media": "icon-instagram",
+            "integrated_social_media": "none",
             "account_username": "",
             "social_account_url": "",
             "social_post": "",
