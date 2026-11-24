@@ -395,9 +395,7 @@
       "block_order": [
         "shoppable_video_rxxUVa"
       ],
-      "custom_css": [
-        "@media (min-width: 768px) {.slider-template--23531200872639__video_looping_MzVtcL {height: calc(min(420px, 30vw) * 16 / 9) !important; } .slider-item-template--23531200872639__video_looping_MzVtcL {width: min(420px, 30vw) !important; left: calc(50% - min(420px, 30vw) / 2) !important; height: auto !important; aspect-ratio: 9 / 16 !important; }}"
-      ],
+      "custom_css": [],
       "name": "t:sections.video-looping.name",
       "settings": {
         "heading": "",
