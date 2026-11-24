@@ -396,7 +396,7 @@
         "shoppable_video_rxxUVa"
       ],
       "custom_css": [
-        "@media (min-width: 768px) {.slider-template--23531200872639__video_looping_MzVtcL {height: calc(min(760px, 60vw) * 9 / 16) !important; } .slider-item-template--23531200872639__video_looping_MzVtcL {width: min(760px, 60vw) !important; left: calc(50% - min(760px, 60vw) / 2) !important; height: auto !important; aspect-ratio: 16 / 9 !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); } .desktop-video-container video {height: auto !important; aspect-ratio: 404 / 720; top: 50% !important; transform: translateY(-50%) scale(1.02); }}"
+        "@media (min-width: 768px) {.slider-template--23531200872639__video_looping_MzVtcL {height: calc(min(420px, 30vw) * 16 / 9) !important; } .slider-item-template--23531200872639__video_looping_MzVtcL {width: min(420px, 30vw) !important; left: calc(50% - min(420px, 30vw) / 2) !important; height: auto !important; aspect-ratio: 9 / 16 !important; }}"
       ],
       "name": "t:sections.video-looping.name",
       "settings": {
