@@ -224,13 +224,14 @@
         "column_EXdmAt": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/CastleAIR_Device.png",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "",
-            "title": "Column",
+            "sub_title": "01",
+            "title": "CastleAIR",
             "highlight_type": "underline",
-            "heading_size": 100,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "heading_size": 110,
+            "text": "<p>Adjustable head + neck support.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_window": false,
