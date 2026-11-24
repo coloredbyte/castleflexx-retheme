@@ -65,7 +65,7 @@
             "description": "",
             "layout": "options",
             "show_image": false,
-            "checked_by_default": false,
+            "checked_by_default": true,
             "option_device_title": "CastleAIR Only",
             "option_device_details": "CastleAIR • Reversible Cover • USB-C inflator • Cork Stability Base",
             "option_bundle_title": "CastleAIR + CastleFIT",
@@ -75,7 +75,7 @@
             "return_text_bundle": "60 Day Return Policy",
             "origin_text": "USA Owned",
             "show_border": true,
-            "block_scheme": "store"
+            "block_scheme": "scheme4"
           }
         },
         "buy_buttons": {
