@@ -1037,23 +1037,13 @@
     "faq_bx6Qcz": {
       "type": "faq",
       "blocks": {
-        "category_6WUKFQ": {
-          "type": "category",
+        "frequently_asked_question_w4NCzB": {
+          "type": "frequently_asked_question",
           "settings": {
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "icon_size": 28,
-            "title": "Category"
-          }
-        },
-        "frequently_asked_question_w4NCzB": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Frequently asked question",
+            "heading": "How does CastleAIR work better than foam headrests and other neck-support solutions?",
             "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "open_by_default": false
           }
@@ -1093,7 +1083,6 @@
         }
       },
       "block_order": [
-        "category_6WUKFQ",
         "frequently_asked_question_w4NCzB",
         "frequently_asked_question_hrNKBi",
         "frequently_asked_question_BNrFzF",
@@ -1101,7 +1090,7 @@
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
-        "heading": "FAQs",
+        "heading": "",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
@@ -1109,7 +1098,7 @@
         "show_border": false,
         "row_background": false,
         "collapsible": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_position": "top",
         "button_link": "",
         "open_new_window": false,
@@ -1119,15 +1108,15 @@
         "desktop_height": "400px",
         "show_section_divider": false,
         "make_full_page_width": false,
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "padding_top": 0,
+        "padding_bottom": 80,
         "image_alignment_mobile": "left",
         "mobile_height": "250px",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "scheme4",
+        "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     }
