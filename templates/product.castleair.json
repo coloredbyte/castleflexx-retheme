@@ -732,7 +732,7 @@
         "button_renm7F"
       ],
       "custom_css": [
-        ".scheme4 {background-color: #edf4f3; padding-left: 120px; padding-right: 120px;}",
+        ".scheme4 {background-color: #edf4f3; padding-left: 300px; padding-right: 230px;}",
         "@media (min-width: 768px) {.iwt-image {height: calc(min(410px, 30vw) * 16 / 9) !important; } .iwt-image {width: min(420px, 30vw) !important; left: calc(50% - min(410px, 30vw) / 2) !important; height: auto !important; aspect-ratio: 9 / 16 !important; }}",
         "@media screen and (max-width: 749px) {.scheme4 {padding-left: 20px; padding-right: 20px; }}"
       ],
@@ -770,8 +770,8 @@
         "image_alignment": "left",
         "full_width": false,
         "padding_full_width": false,
-        "top_padding": 0,
-        "bottom_padding": 0,
+        "top_padding": 80,
+        "bottom_padding": 80,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
         "top_padding_mobile": 0,
