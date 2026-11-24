@@ -415,7 +415,7 @@
         "spacing": 0,
         "full_width": true,
         "show_section_divider": false,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 60,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
