@@ -971,7 +971,9 @@
       ],
       "custom_css": [
         ".scheme4 {background-color: #edf4f3;}",
-        " .x-buy-card{background-color: #FFFFFF;}"
+        ".x-buy-card {background-color: #ffffff;}",
+        ".x-buy-card__intro {font-weight: 400; padding-bottom: 12px;}",
+        ".x-buy-card__item {color: #20343c; padding-bottom: 10px;}"
       ],
       "settings": {
         "eyebrow": "Choose your CastleAIR",
