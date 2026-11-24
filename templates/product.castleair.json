@@ -990,7 +990,7 @@
         "caption_PL7TaJ": {
           "type": "caption",
           "settings": {
-            "caption": "SIMPLE SETUP",
+            "caption": "FAQ",
             "text_style": "uppercase",
             "text_size": 90
           }
@@ -1027,7 +1027,7 @@
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "text_light": "rgba(0,0,0,0)",
-        "background_color_light": "#dce9eb",
+        "background_color_light": "#FFFFFF",
         "heading_dark": "rgba(0,0,0,0)",
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
