@@ -168,6 +168,57 @@
         "section_scheme": "scheme4"
       }
     },
+    "rich_text_ELgFir": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_PVC6NJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE HEAT EXPERIENCE",
+            "text_style": "uppercase",
+            "text_size": 90
+          }
+        },
+        "heading_LMELhn": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Do You Get With CastleFlexx Heat?",
+            "highlight_type": "underline",
+            "heading_size": 120,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "caption_PVC6NJ",
+        "heading_LMELhn"
+      ],
+      "custom_css": [
+        ".uppercase {color: #4F7F86; font-weight: 600; letter-spacing: 12%;}",
+        "h2 {font-weight: 700;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": true,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#DCE9EB",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_cards": {
       "type": "product-buy-cards",
       "blocks": {
@@ -212,6 +263,7 @@
   },
   "order": [
     "main",
+    "rich_text_ELgFir",
     "buy_cards"
   ]
 }
