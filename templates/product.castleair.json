@@ -59,14 +59,14 @@
             "size_chart_type": "popup"
           }
         },
-        "upsell_cQEEcK": {
+        "upsell_FmxBWD": {
           "type": "upsell",
           "settings": {
             "heading": "",
             "description": "",
             "layout": "options",
             "show_image": false,
-            "checked_by_default": true,
+            "checked_by_default": false,
             "option_device_title": "CastleFlexx HEAT Only",
             "option_device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
             "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
@@ -76,7 +76,7 @@
             "return_text_bundle": "60 Day Return Policy",
             "origin_text": "USA Owned",
             "show_border": true,
-            "block_scheme": "scheme4"
+            "block_scheme": "scheme2"
           }
         },
         "buy_buttons": {
@@ -130,7 +130,7 @@
         "text_UkPNP4",
         "feature_card",
         "variant_picker",
-        "upsell_cQEEcK",
+        "upsell_FmxBWD",
         "buy_buttons",
         "sticky-atc"
       ],
