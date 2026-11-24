@@ -353,12 +353,12 @@
             "another_icon": "",
             "custom_image": "shopify://shop_images/castlefit_icon_1.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Pain-Specific Programs",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Target the areas that need attention most — from tight hips to aching backs.</p>"
           }
         },
         "column_EmJeAw": {
@@ -368,12 +368,12 @@
             "another_icon": "",
             "custom_image": "shopify://shop_images/castlefit_icon_2.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Recovery Anywhere",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Download the CastleFIT app and stream to your TV anywhere in the world.</p>"
           }
         },
         "column_t8qGe7": {
@@ -383,12 +383,12 @@
             "another_icon": "",
             "custom_image": "shopify://shop_images/castlefit_icon_3.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Learn at Your Pace",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Pause, replay, bookmark, and revisit every class whenever you need it.</p>"
           }
         },
         "column_dYkatb": {
@@ -398,12 +398,12 @@
             "another_icon": "",
             "custom_image": "shopify://shop_images/castlefit_icon_4.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Pain-Specific Programs",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": ""
           }
         }
       },
@@ -433,7 +433,7 @@
         "change_bar_every": 5,
         "column_layout_desktop": "lg:w-1/4",
         "section_height_desktop": "md:py-7",
-        "spacing_desktop": 28,
+        "spacing_desktop": 12,
         "full_width": false,
         "padding_full_width": false,
         "show_section_divider": false,
@@ -449,7 +449,7 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
+        "text_light": "#191A1B",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
         "color_icon_light": "rgba(0,0,0,0)",
