@@ -467,8 +467,8 @@
         "button_hMC8EJ": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Start Now",
+            "button_link": "https://castleflexx.com/products/castlefit#castlefit-access",
             "open_new_window_button": false,
             "show_button_style_1": "primary",
             "button_label_2": "",
@@ -500,7 +500,7 @@
       "settings": {
         "content_alignment": "center",
         "show_section_divider": false,
-        "make_full_page_width": true,
+        "make_full_page_width": false,
         "padding_top": 0,
         "padding_bottom": 80,
         "content_alignment_mobile": "center",
@@ -516,6 +516,21 @@
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
         "text_dark": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_liquid_6BFBpa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- assign section_id = 'get-access' -%} <div id=\"{{ section_id }}\" class=\"section-{{ section_id }}\"></div>",
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "access": {
@@ -588,6 +603,7 @@
     "video_with_text_PXCUr9",
     "multicolumn_MdpRhA",
     "rich_text_emzpVB",
+    "custom_liquid_6BFBpa",
     "access"
   ]
 }
