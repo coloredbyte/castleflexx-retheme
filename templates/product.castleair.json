@@ -218,6 +218,126 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "text_column_with_image_DGbz4h": {
+      "type": "text-column-with-image",
+      "blocks": {
+        "column_EXdmAt": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_8XwgAL": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_MpCJpr": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        },
+        "column_qwmpbm": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "open_new_window_image": false,
+            "sub_title": "",
+            "title": "Column",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "column_EXdmAt",
+        "column_8XwgAL",
+        "column_MpCJpr",
+        "column_qwmpbm"
+      ],
+      "name": "t:sections.text-column-image.name",
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "subheading": "",
+        "text": "",
+        "secondary_background": "column",
+        "image_ratio": "75%",
+        "adapt_corners": true,
+        "rounded_corner_image": false,
+        "column_content_alignment": "center",
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "image_position_desktop": "top",
+        "column_layout_desktop": "lg:w-1/2",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "image_position_mobile": "top",
+        "column_layout_mobile": "w-full",
+        "spacing_mobile": 16,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "scheme4",
+        "background_color_light": "#FFFFFF",
+        "heading_light": "#20343C",
+        "text_light": "#4F7F86",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)"
+      }
+    },
     "buy_cards": {
       "type": "product-buy-cards",
       "blocks": {
@@ -263,6 +383,7 @@
   "order": [
     "main",
     "rich_text_ELgFir",
+    "text_column_with_image_DGbz4h",
     "buy_cards"
   ]
 }
