@@ -292,6 +292,9 @@
         "column_MpCJpr",
         "column_qwmpbm"
       ],
+      "custom_css": [
+        ".scheme4 {background-color: #dce9eb;}"
+      ],
       "name": "t:sections.text-column-image.name",
       "settings": {
         "title": "",
