@@ -411,7 +411,7 @@
         "show_arrow": false,
         "swiper_on_mobile": false,
         "pagination_mobile": "none",
-        "auto_play": true,
+        "auto_play": false,
         "spacing": 0,
         "full_width": true,
         "show_section_divider": false,
