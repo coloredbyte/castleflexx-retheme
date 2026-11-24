@@ -45,7 +45,7 @@
         "upsell_FmxBWD": {
           "type": "upsell",
           "settings": {
-            "heading": "",
+            "heading": "<p>Lorem ipsum</p>",
             "description": "",
             "layout": "options",
             "show_image": false,
@@ -59,7 +59,7 @@
             "return_text_bundle": "60 Day Return Policy",
             "origin_text": "USA Owned",
             "show_border": true,
-            "block_scheme": "scheme2"
+            "block_scheme": "section"
           }
         },
         "buy_buttons": {
