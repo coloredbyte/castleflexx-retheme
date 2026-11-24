@@ -1044,52 +1044,52 @@
             "another_icon": "",
             "custom_icon": "",
             "heading": "How does CastleAIR work better than foam headrests and other neck-support solutions?",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "row_content": "<p>Foam has a fixed shape. CastleAIR lets you adjust the air to your comfort, then redistributes that air as your head and neck reposition—so the support responds to you instead of making you adapt to it.</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_hrNKBi": {
+        "frequently_asked_question_BxP3jn": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "Does CastleAIR have dust mites the way typical pillows do?",
+            "row_content": "<p>Dust mites can collect on any fabric surface, so we will not claim zero. Unlike a traditional pillow, CastleAIR has no deep foam, feather or batting fill where buildup can hide. Its surface wipes clean and its fitted cover is removable and machine washable.</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_BNrFzF": {
+        "frequently_asked_question_BL6GTN": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "How do I clean CastleAIR?",
+            "row_content": "<p>You have two options. Wipe the CastleAIR surface with any non-toxic cleaning spray, and/or remove the fitted cover and machine wash it cold on delicate. Tumble dry using low, delicate heat.</p>",
             "open_by_default": false
           }
         },
-        "frequently_asked_question_MVRRTe": {
+        "frequently_asked_question_GC9RYf": {
           "type": "frequently_asked_question",
           "settings": {
-            "icon": "heart",
+            "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Frequently asked question",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "heading": "Is CastleAIR frictionless for my neck?",
+            "row_content": "<p>We cannot honestly call any headrest frictionless. CastleAIR is designed to create less friction than a typical fixed-foam headrest because the air redistributes as your head and neck reposition, helping the support stay balanced beneath you. It is about as close as we can get outside of floating in the ocean.</p>",
             "open_by_default": false
           }
         }
       },
       "block_order": [
         "frequently_asked_question_w4NCzB",
-        "frequently_asked_question_hrNKBi",
-        "frequently_asked_question_BNrFzF",
-        "frequently_asked_question_MVRRTe"
+        "frequently_asked_question_BxP3jn",
+        "frequently_asked_question_BL6GTN",
+        "frequently_asked_question_GC9RYf"
       ],
       "custom_css": [
-        ".font-medium {color: #20343C;}"
+        ".font-medium {color: #20343c;}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
@@ -1122,6 +1122,44 @@
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
+    },
+    "rich_text_byq8BW": {
+      "type": "rich-text",
+      "blocks": {
+        "text_mqTEQj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Awake use only · Firm, flat, dry surface&nbsp;<br/>CastlePack sold separately.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "text_mqTEQj"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "section_scheme": "scheme4",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -1137,6 +1175,7 @@
     "text_column_with_image_LeptQn",
     "buy_cards",
     "rich_text_rQTaWU",
-    "faq_bx6Qcz"
+    "faq_bx6Qcz",
+    "rich_text_byq8BW"
   ]
 }
