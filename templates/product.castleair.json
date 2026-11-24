@@ -294,7 +294,7 @@
       ],
       "custom_css": [
         ".scheme4 {background-color: #dce9eb; padding-left: 120px; padding-right: 120px;}",
-        " @media screen and (max-width: 749px) {.scheme4{padding-left: 0px; padding-right: 0px;}}"
+        "@media screen and (max-width: 749px) {.scheme4 {padding-left: 0px; padding-right: 0px; }}"
       ],
       "name": "t:sections.text-column-image.name",
       "settings": {
@@ -309,7 +309,7 @@
         "image_ratio": "75%",
         "adapt_corners": true,
         "rounded_corner_image": false,
-        "column_content_alignment": "center",
+        "column_content_alignment": "start",
         "enable_desktop_slider": false,
         "pagination_desktop": "dots",
         "swiper_on_mobile": false,
