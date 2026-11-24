@@ -753,6 +753,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/after_dark-full.jpg",
+            "image_mobile": "shopify://shop_images/after_dark_banner_mobile.png",
             "image_link": "shopify://products/after-dark-standalone",
             "open_new_window_image": false,
             "overlay_opacity": 0,
