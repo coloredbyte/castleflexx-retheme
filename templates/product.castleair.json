@@ -1112,7 +1112,7 @@
         "show_section_divider": false,
         "make_full_page_width": false,
         "padding_top": 0,
-        "padding_bottom": 80,
+        "padding_bottom": 32,
         "image_alignment_mobile": "left",
         "mobile_height": "250px",
         "show_section_divider_mobile": false,
@@ -1129,7 +1129,7 @@
         "text_mqTEQj": {
           "type": "text",
           "settings": {
-            "text": "<p>Awake use only · Firm, flat, dry surface&nbsp;<br/>CastlePack sold separately.</p>",
+            "text": "<p><strong>Awake use only · Firm, flat, dry surface&nbsp;<br/>CastlePack sold separately.</strong></p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
@@ -1148,12 +1148,12 @@
         "padding_bottom": 80,
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 28,
         "section_scheme": "scheme4",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
+        "text_light": "#4F7F86",
         "background_color_light": "#FFFFFF",
         "heading_dark": "rgba(0,0,0,0)",
         "color_heading_highlight_dark": "rgba(0,0,0,0)",
