@@ -731,6 +731,9 @@
         "heading_P8fXKX",
         "button_renm7F"
       ],
+      "custom_css": [
+        ".scheme4 {background-color: #edf4f3; padding-left: 120px; padding-right: 120px;}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
