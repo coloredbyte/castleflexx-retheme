@@ -500,6 +500,7 @@
         "column_xqKTYF": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/use-tech-neck.jpg",
             "image_link": "",
             "open_new_window_image": false,
             "sub_title": "",
@@ -516,6 +517,7 @@
         "column_6qNBkF": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/use-tight-neck.jpg",
             "image_link": "",
             "open_new_window_image": false,
             "sub_title": "",
@@ -532,6 +534,7 @@
         "column_peiUmd": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/use-headache.jpg",
             "image_link": "",
             "open_new_window_image": false,
             "sub_title": "",
@@ -548,6 +551,7 @@
         "column_phhEeV": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/use-c-spine.jpg",
             "image_link": "",
             "open_new_window_image": false,
             "sub_title": "",
