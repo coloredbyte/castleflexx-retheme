@@ -1011,7 +1011,7 @@
         "frequently_asked_question_r6rFNk"
       ],
       "custom_css": [
-        ".x-block-faq-item-1 {background-color: #F9F9F9;}"
+        ".x-block-faq-item-1 {background-color: #F7F8F6;}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
