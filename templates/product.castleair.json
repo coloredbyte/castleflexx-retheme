@@ -258,13 +258,14 @@
         "column_MpCJpr": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/USB-C_Air_Inflator.png",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "",
-            "title": "Column",
+            "sub_title": "03",
+            "title": "USB-C Air Inflator",
             "highlight_type": "underline",
             "heading_size": 100,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "text": "<p>Automatic 18-second timer.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_window": false,
@@ -274,13 +275,14 @@
         "column_qwmpbm": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/CastleAir_Cork_Base.png",
             "image_link": "",
             "open_new_window_image": false,
-            "sub_title": "",
-            "title": "Column",
+            "sub_title": "04",
+            "title": "Cork Stability Base",
             "highlight_type": "underline",
             "heading_size": 100,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "text": "<p>A firm, non-slip foundation.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_window": false,
@@ -297,7 +299,7 @@
       "custom_css": [
         ".scheme4 {background-color: #dce9eb; padding-left: 120px; padding-right: 120px;}",
         ".splide__track {border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;}",
-        ".x-block-twm-item-subheading {font-weight: 600; letter-spacing: 0.05em;}",
+        ".x-block-twm-item-subheading {font-weight: 600; letter-spacing: 0.05em; font-size: 12px;}",
         ".h3 {font-weight: 600;}",
         "@media screen and (max-width: 749px) {.scheme4 {padding-left: 0px; padding-right: 0px; }}"
       ],
