@@ -702,8 +702,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Whats the difference between the one time purchase VS. the subscription purchase aside from the price?",
-            "row_content": "<p>The annual subscription includes the benefit of 60 days satisfaction guarantee AND 1 year of product insurance. If your device breaks or gets damaged just email us and we will replace it for you.</p>",
+            "heading": "What is CastleFIT After Dark?",
+            "row_content": "<p>Your stretching routine, brought to bed. After Dark is an adults-only series of guided CastleFlexx classes with a more intimate setting than our regular CastleFIT sessions.</p>",
             "open_by_default": true
           }
         },
@@ -713,8 +713,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "How many classes are in CastleFIT and how often do you add new classes?",
-            "row_content": "<p>There are over 200 classes on CastleFIT including dozens more on the adult only After Dark Series. We upload new classes every year consistently and we love feedback so please email us with your suggestions!</p>",
+            "heading": "Is After Dark included in my CastleFIT membership?",
+            "row_content": "<p>No. After Dark is a separate monthly subscription. CastleFIT members can add it for $6.99/mo, and anyone can get it on its own for $9.99/mo.</p>",
             "open_by_default": false
           }
         },
@@ -724,8 +724,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "What is the best way to watch the classes, can I airplay as an Apple user or mirror to my big screen?",
-            "row_content": "<p>Log in on your phone using the CastleFIT app or sign in from any computer and mirror to your big screen.</p>",
+            "heading": "Do I need a CastleFlexx?",
+            "row_content": "<p>Yes, the classes are designed around your CastleFlexx. The After Dark upgrade provides access to the classes; the device is sold separately.</p>",
             "open_by_default": false
           }
         }
