@@ -721,7 +721,7 @@
         "show_section_divider": false,
         "padding_top": 80,
         "padding_bottom": 60,
-        "mobile_height": "250px",
+        "mobile_height": "300px",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 48,
