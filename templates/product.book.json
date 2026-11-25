@@ -439,11 +439,11 @@
         "full_width": false,
         "padding_full_width": false,
         "top_padding": 80,
-        "bottom_padding": 80,
+        "bottom_padding": 40,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
         "top_padding_mobile": 40,
-        "bottom_padding_mobile": 48,
+        "bottom_padding_mobile": 24,
         "section_scheme": "store",
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
@@ -457,6 +457,7 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_1.svg",
             "custom_icon": "",
             "title": "150 GSM paper",
             "highlight_type": "underline",
@@ -466,39 +467,41 @@
             "text": "<p>Substantial paper. Full-color photography. Gloss-coated interior pages give the photography a polished finish, with room to study each position<br/>and its instructions.</p>"
           }
         },
-        "column_BATw7W": {
+        "column_XwXk3a": {
           "type": "column",
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_1.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "Matte + Gloss Cover",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>A finish that deserves a closer look. A matte hardcover with selective gloss accents brings contrast to the cover artwork. Choose Light Cover or Dark Cover.</p>"
           }
         },
-        "column_6B77jC": {
+        "column_r8bqDC": {
           "type": "column",
           "settings": {
             "icon": "truck",
             "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_1.svg",
             "custom_icon": "",
-            "title": "Column",
+            "title": "150 GSM paper",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Add details on availability, style, or even provide a review.</p>"
+            "text": "<p>Substantial paper. Full-color photography. Gloss-coated interior pages give the photography a polished finish, with room to study each position<br/>and its instructions.</p>"
           }
         }
       },
       "block_order": [
         "column_UFNN7G",
-        "column_BATw7W",
-        "column_6B77jC"
+        "column_XwXk3a",
+        "column_r8bqDC"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
@@ -511,7 +514,7 @@
         "border_column": "none",
         "column_content_alignment": "center",
         "icon_position": "above",
-        "icon_size": 45,
+        "icon_size": 72,
         "enable_desktop_slider": false,
         "pagination_desktop": "dots",
         "swiper_on_mobile": false,
@@ -524,15 +527,15 @@
         "full_width": false,
         "padding_full_width": false,
         "show_section_divider": false,
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "column_layout_mobile": "w-full",
         "section_height_mobile": "py-0",
-        "spacing_mobile": 16,
+        "spacing_mobile": 0,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
