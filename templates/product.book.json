@@ -207,7 +207,7 @@
         "desktop_media_layout": "thumbnail_slider",
         "show_arrow_button": true,
         "mobile_media_size": "full_width",
-        "show_thumnail_mobile": false,
+        "show_thumnail_mobile": true,
         "transition_style": "fade",
         "image_ratio": "natural",
         "thumbnail_position": "horizontal",
