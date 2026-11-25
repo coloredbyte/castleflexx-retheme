@@ -281,34 +281,60 @@
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
           }
         },
-        "button_7HTNnd": {
-          "type": "button",
+        "columns_X6Pg4U": {
+          "type": "columns",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_2.svg",
+            "custom_icon": "",
+            "title": "25 stretches, including position variations",
+            "title_link": "",
             "open_new_window": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "button_light": "rgba(0,0,0,0)",
-            "button_text_light": "rgba(0,0,0,0)",
-            "button_hover_light": "rgba(0,0,0,0)",
-            "button_text_hover_light": "rgba(0,0,0,0)",
-            "secondary_button_light": "rgba(0,0,0,0)",
-            "secondary_button_text_light": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)",
-            "button_dark": "rgba(0,0,0,0)",
-            "button_text_dark": "rgba(0,0,0,0)",
-            "button_hover_dark": "rgba(0,0,0,0)",
-            "button_text_hover_dark": "rgba(0,0,0,0)",
-            "secondary_button_dark": "rgba(0,0,0,0)",
-            "secondary_button_text_dark": "rgba(0,0,0,0)",
-            "colors_text_link_dark": "rgba(0,0,0,0)"
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 1,
+            "wide_mobile": "2"
+          }
+        },
+        "columns_yRKeQg": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_1.svg",
+            "custom_icon": "",
+            "title": "Photographed instructions and full-color pages",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 1,
+            "wide_mobile": "2"
+          }
+        },
+        "columns_wwrnfp": {
+          "type": "columns",
+          "settings": {
+            "icon": "another_icon",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/book_icon_1.svg",
+            "custom_icon": "",
+            "title": "Dedicated journal pages",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 80,
+            "text": "",
+            "wide_desktop": 1,
+            "wide_mobile": "2"
           }
         }
       },
       "block_order": [
         "heading_pJKRgM",
-        "button_7HTNnd"
+        "columns_X6Pg4U",
+        "columns_yRKeQg",
+        "columns_wwrnfp"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
@@ -326,16 +352,16 @@
         "spacing_image": false,
         "text_position": "center",
         "text_alignment": "start",
-        "line_border": "dashed",
+        "line_border": "none",
         "icon_position": "col",
-        "icon_size": 45,
+        "icon_size": 50,
         "alignment": "center",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
         "heading_color_light": "rgba(0,0,0,0)",
         "text_color_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
-        "icon_color_light": "rgba(0,0,0,0)",
+        "icon_color_light": "#191A1B",
         "heading_color_dark": "rgba(0,0,0,0)",
         "text_color_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
