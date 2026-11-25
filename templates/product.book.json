@@ -233,7 +233,7 @@
         "enable_video_autoplay": false,
         "enable_video_loop": false,
         "show_first_image_avaiable": true,
-        "show_media_with_variant_selected": true,
+        "show_media_with_variant_selected": false,
         "option_to_classify_variant_media": "Color",
         "enable_microdata": false,
         "show_breadcrumbs": false,
