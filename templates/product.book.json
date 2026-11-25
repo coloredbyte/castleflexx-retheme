@@ -929,8 +929,8 @@
       ],
       "custom_css": [
         ".pt-3 {background-color: #f7f8f6;}",
-        " .faq-container {padding-left: 80px; padding-right: 80px;}",
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+        ".faq-container {padding-left: 80px; padding-right: 80px;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .faq-container {padding-left: 16px; padding-right: 16px;}}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
