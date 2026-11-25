@@ -264,8 +264,84 @@
             "text_dark": "rgba(0,0,0,0)",
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
           }
+        }
+      },
+      "block_order": [
+        "heading_pJKRgM"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; } .x-block-columns {padding-left: 0px; padding-right: 0px; column-gap: 16px; }}"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "show_hero": false,
+        "image": "shopify://shop_images/v2insunlighgtonsidetab_e.png",
+        "desktop_height": "550px",
+        "mobile_height": "400px",
+        "desktop_image_width": "medium",
+        "image_layout": "normal",
+        "adapt_radius": true,
+        "image_corner_radius": 0,
+        "show_sound_control": false,
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "content_layout": "no-overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "line_border": "none",
+        "icon_position": "col",
+        "icon_size": 60,
+        "alignment": "center",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "#191A1B",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 20,
+        "bottom_padding_mobile": 48,
+        "section_scheme": "store",
+        "background_color_light": "#FFFFFF",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_xzBJaf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YVGDHh": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "A coffee-table book with a daily purpose.",
+            "highlight_type": "underline",
+            "heading_base_size": 110,
+            "heading_tag": "h2",
+            "text": "<p>Large-format photography. Substantial paper. A carefully finished hardcover.<br/></p><p>Volume 1 gives your CastleFlexx practice a permanent place in your home - with 25 photographed stretches across 100 full-color pages.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "block_scheme": "section",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "#3E4044",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
         },
-        "columns_X6Pg4U": {
+        "columns_9zmxBB": {
           "type": "columns",
           "settings": {
             "icon": "another_icon",
@@ -281,7 +357,7 @@
             "wide_mobile": "1"
           }
         },
-        "columns_yRKeQg": {
+        "columns_qRAiki": {
           "type": "columns",
           "settings": {
             "icon": "another_icon",
@@ -297,7 +373,7 @@
             "wide_mobile": "1"
           }
         },
-        "columns_wwrnfp": {
+        "columns_U6jTcE": {
           "type": "columns",
           "settings": {
             "icon": "another_icon",
@@ -315,10 +391,10 @@
         }
       },
       "block_order": [
-        "heading_pJKRgM",
-        "columns_X6Pg4U",
-        "columns_yRKeQg",
-        "columns_wwrnfp"
+        "heading_YVGDHh",
+        "columns_9zmxBB",
+        "columns_qRAiki",
+        "columns_U6jTcE"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; } .x-block-columns {padding-left: 0px; padding-right: 0px; column-gap: 16px; }}"
@@ -1125,6 +1201,7 @@
   "order": [
     "main",
     "image_with_text_caBbhe",
+    "image_with_text_xzBJaf",
     "331e6fca-2947-4a19-89c5-9396be0d666a",
     "text_column_with_image_QdkzQL",
     "multicolumn_iF4zjY",
