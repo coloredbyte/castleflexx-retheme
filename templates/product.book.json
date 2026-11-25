@@ -261,7 +261,9 @@
       "block_order": [
         "content_DV3Nxb"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".section-img-scrolling-text .pagination-dots button::after {background: #ffffff !important;}"
+      ],
       "name": "t:sections.image-with-scrolling-text.name",
       "settings": {
         "img_position": "right",
