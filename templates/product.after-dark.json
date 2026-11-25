@@ -686,9 +686,9 @@
         "full_width_mobile": true,
         "adapt_corners_mobile": false,
         "rounded_corners_mobile": false,
-        "video_mobile_ratio": "px",
+        "video_mobile_ratio": "4/3",
         "video_mobile_height": "natural",
-        "padding_top_mobile": 20,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 0
       }
     }
