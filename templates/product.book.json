@@ -225,7 +225,7 @@
         "mobile_media_size": "full_width",
         "show_thumnail_mobile": false,
         "transition_style": "fade",
-        "image_ratio": "natural",
+        "image_ratio": "square",
         "thumbnail_position": "vertical",
         "enable_thumbnail_overlay": true,
         "enable_image_zoom": true,
