@@ -47,7 +47,7 @@
             "text": "<p><strong>25 stretches. 100 full-color pages.<br/>Photographed instructions for your CastleFlexx practice.</strong></p>",
             "additional_text": "",
             "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
+            "background_color_light": "#F7F8F6",
             "text_light": "rgba(0,0,0,0)",
             "background_color_dark": "rgba(0,0,0,0)",
             "text_dark": "rgba(0,0,0,0)"
@@ -170,11 +170,7 @@
         "collapsible_tab_MgjKqH",
         "sticky-atc"
       ],
-      "custom_css": [
-        ".x-product-upsell .border {display: flex; align-items: flex-start; gap: 20px; padding: 20px 20px; border: 1px solid #dedede; border-radius: 12px;}",
-        ".underline {font-size: 16px; font-weight: 600;}",
-        ".x-product-upsell__badge {display: flex; justify-content: space-between; align-items: center; display: inline-flex; padding: 4px 12px; border: 1px solid #d42200; border-radius: 999px; margin-bottom: 10px; color: #d42200; font-size: 14px; font-weight: 400;}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
