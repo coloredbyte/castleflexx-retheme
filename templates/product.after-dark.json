@@ -756,7 +756,7 @@
         "desktop_height": "400px",
         "show_section_divider": false,
         "make_full_page_width": false,
-        "padding_top": 100,
+        "padding_top": 88,
         "padding_bottom": 100,
         "image_alignment_mobile": "left",
         "mobile_height": "250px",
