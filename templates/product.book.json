@@ -296,84 +296,6 @@
         "colors_text_link_dark": "rgba(0,0,0,0)"
       }
     },
-    "image_with_text_caBbhe": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_pJKRgM": {
-          "type": "heading",
-          "settings": {
-            "subheading": "",
-            "heading": "\"You can judge this book by its cover. It's gorgeous, educational, and luxurious.\"",
-            "highlight_type": "underline",
-            "heading_base_size": 100,
-            "heading_tag": "h2",
-            "text": "<p><strong>- Dan Castle</strong></p>",
-            "number_of_lines_shown": "none",
-            "read_more_label": "Read more",
-            "see_less_label": "See less",
-            "block_scheme": "section",
-            "heading_light": "rgba(0,0,0,0)",
-            "text_light": "#3e4044",
-            "color_heading_highlight_light": "rgba(0,0,0,0)",
-            "heading_dark": "rgba(0,0,0,0)",
-            "text_dark": "rgba(0,0,0,0)",
-            "color_heading_highlight_dark": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "heading_pJKRgM"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; }}",
-        ".ltr {background-color: #f4f3ef;}"
-      ],
-      "name": "t:sections.image-with-text.name",
-      "settings": {
-        "show_hero": false,
-        "image": "shopify://shop_images/Coffee_Table_Visual_1.png",
-        "desktop_height": "450px",
-        "mobile_height": "400px",
-        "desktop_image_width": "medium",
-        "image_layout": "normal",
-        "adapt_radius": false,
-        "image_corner_radius": 0,
-        "show_sound_control": false,
-        "video_url": "",
-        "video_alt_text": "",
-        "enable_video_autoplay": false,
-        "content_layout": "no-overlap",
-        "spacing_image": false,
-        "text_position": "center",
-        "text_alignment": "start",
-        "line_border": "none",
-        "icon_position": "col",
-        "icon_size": 60,
-        "alignment": "center",
-        "columns_desktop": 3,
-        "columns_mobile": "2",
-        "heading_color_light": "rgba(0,0,0,0)",
-        "text_color_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "icon_color_light": "#191a1b",
-        "heading_color_dark": "rgba(0,0,0,0)",
-        "text_color_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "icon_color_dark": "rgba(0,0,0,0)",
-        "image_alignment": "right",
-        "full_width": false,
-        "padding_full_width": false,
-        "top_padding": 80,
-        "bottom_padding": 80,
-        "image_alignment_mobile": "left",
-        "full_width_mobile": false,
-        "top_padding_mobile": 48,
-        "bottom_padding_mobile": 48,
-        "section_scheme": "store",
-        "background_color_light": "#f4f3ef",
-        "background_color_dark": "rgba(0,0,0,0)"
-      }
-    },
     "image_with_text_xzBJaf": {
       "type": "image-with-text",
       "blocks": {
@@ -455,10 +377,6 @@
         "columns_9zmxBB",
         "columns_qRAiki",
         "columns_U6jTcE"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; } .x-block-columns {padding-left: 0px; padding-right: 0px; column-gap: 16px; }}",
-        ".font-medium {letter-spacing: 0.12em; font-weight: 600; font-size: 12px; color: #a4a4a4;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
@@ -838,7 +756,6 @@
   "order": [
     "main",
     "image_with_scrolling_text_3fANQm",
-    "image_with_text_caBbhe",
     "image_with_text_xzBJaf",
     "multicolumn_qEyh98",
     "faq_hgd9PK",
