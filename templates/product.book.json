@@ -39,11 +39,10 @@
         "icon_text_7EB9Rd": {
           "type": "icon_text",
           "settings": {
-            "icon": "truck",
+            "icon": "box",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/Full_Body_Icon_de5b48e1-f618-4925-b74c-11c08f9325e4.svg",
             "custom_icon": "",
-            "icon_size": 40,
+            "icon_size": 30,
             "text": "<p><strong>25 stretches. 100 full-color pages.<br/>Photographed instructions for your CastleFlexx practice.</strong></p>",
             "additional_text": "",
             "block_scheme": "section",
