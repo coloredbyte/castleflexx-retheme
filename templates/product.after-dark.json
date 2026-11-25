@@ -332,12 +332,131 @@
         "line_border_dark": "rgba(0,0,0,0)",
         "color_icon_dark": "rgba(0,0,0,0)"
       }
+    },
+    "multicolumn_dNeVPt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AAxWzH": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit_icon_1.svg",
+            "custom_icon": "",
+            "title": "Bedroom-based Classes",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Stretch in bed with guided flows designed for late-night use.</p>"
+          }
+        },
+        "column_86wYVJ": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit_icon_2.svg",
+            "custom_icon": "",
+            "title": "Guided Movement",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Follow along at your own pace.</p>"
+          }
+        },
+        "column_xPdf6M": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit_icon_3.svg",
+            "custom_icon": "",
+            "title": "Learn at Your Pace",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Pause, replay, bookmark and revisit.</p>"
+          }
+        },
+        "column_xG9iQK": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_image": "shopify://shop_images/castlefit_icon_4.svg",
+            "custom_icon": "",
+            "title": "English & Spanish + Captions",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": "<p>Classes are led in English or Spanish, and captions are always available.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_AAxWzH",
+        "column_86wYVJ",
+        "column_xPdf6M",
+        "column_xG9iQK"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "title": "What do you get with After Dark",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "secondary_background": "none",
+        "border_column": "none",
+        "column_content_alignment": "center",
+        "icon_position": "above",
+        "icon_size": 100,
+        "enable_desktop_slider": false,
+        "pagination_desktop": "dots",
+        "swiper_on_mobile": false,
+        "pagination_mobile": "dots",
+        "auto_play": false,
+        "change_bar_every": 5,
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 12,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 80,
+        "padding_bottom": 32,
+        "column_layout_mobile": "w-1/2",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 0,
+        "full_width_mobile": true,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 32,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_light": "rgba(0,0,0,0)",
+        "text_light": "#191a1b",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
     "banner",
     "castlefit_access_ABhFbd",
     "text_column_with_image_AFTUTM",
-    "multicolumn_K3xNHB"
+    "multicolumn_K3xNHB",
+    "multicolumn_dNeVPt"
   ]
 }
