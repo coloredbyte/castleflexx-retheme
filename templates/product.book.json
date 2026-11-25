@@ -262,7 +262,7 @@
         "content_DV3Nxb"
       ],
       "custom_css": [
-        ".section-img-scrolling-text .pagination-dots button::after {background: #ffffff !important;}"
+        ".section-img-scrolling-text .pagination-dots button::after {background: #F4F3EF !important;}"
       ],
       "name": "t:sections.image-with-scrolling-text.name",
       "settings": {
@@ -283,7 +283,7 @@
         "button_text_light": "rgba(0,0,0,0)",
         "button_hover_light": "rgba(0,0,0,0)",
         "button_text_hover_light": "rgba(0,0,0,0)",
-        "secondary_button_light": "#F4F3EF",
+        "secondary_button_light": "rgba(0,0,0,0)",
         "secondary_button_text_light": "rgba(0,0,0,0)",
         "colors_text_link": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
