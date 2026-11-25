@@ -661,6 +661,36 @@
         "background_color_light": "#ffffff",
         "background_color_dark": "rgba(0,0,0,0)"
       }
+    },
+    "video_GkyziA": {
+      "type": "video",
+      "name": "t:sections.video.name",
+      "settings": {
+        "show_hero": false,
+        "heading": "Watch a sample video of CastleFIT",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "sub_heading_video": "",
+        "image": "shopify://shop_images/video-frame.png",
+        "video_url": "https://www.youtube.com/watch?v=stpPDwFQthM",
+        "video_alt_text": "",
+        "mobile_video_url": "",
+        "full_width": true,
+        "adapt_corners_desktop": false,
+        "rounded_corners": false,
+        "video_desktop_ratio": "px",
+        "video_desktop_height": "natural",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "full_width_mobile": true,
+        "adapt_corners_mobile": false,
+        "rounded_corners_mobile": false,
+        "video_mobile_ratio": "px",
+        "video_mobile_height": "natural",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0
+      }
     }
   },
   "order": [
@@ -672,6 +702,7 @@
     "multicolumn_dNeVPt",
     "rich_text_eVRabH",
     "rich_text_3eA7MY",
-    "faq_eTij9t"
+    "faq_eTij9t",
+    "video_GkyziA"
   ]
 }
