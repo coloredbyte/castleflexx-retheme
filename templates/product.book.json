@@ -987,8 +987,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "How is this better than typical stretch straps?",
-            "row_content": "<p>CastleFlexx combines a patented foot hammock with a weighted mobility bar for a more comfortable, controlled stretching experience.</p>",
+            "heading": "What's inside Volume 1?",
+            "row_content": "<p>25 CastleFlexx-assisted stretches, with photographed setup and movement instructions, timing and technique cues, plus a recovery journal.</p>",
             "open_by_default": false
           }
         },
@@ -998,8 +998,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "I have limited hand strength; will this work better for me than a stretch band?",
-            "row_content": "<p>Many customers find the bar easier and more comfortable to hold than rope-style straps, and the device can also be used in a seated position.</p>",
+            "heading": "Which positions does it cover?",
+            "row_content": "<p>Bed, seated, and wall-supported variations. See the complete list above to find the routine and page you want.</p>",
             "open_by_default": false
           }
         },
@@ -1009,8 +1009,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Ok, I get that, so can't I just use a towel?",
-            "row_content": "<p>The use of a towel is simply not effective because the anchor point at the heel is poor and the foot (and therefore the leg) is not secured properly. The CastleFlexx has comfortable handles that provide a secure grip for a steady pull; a towel offers nothing more than an inconsistent&nbsp;amount of material which can be difficult to&nbsp;hold and maintain. Try stretching your hips, hamstrings or lats with a towel, and we are sure you will agree that the CastleFlexx is the most fun and effective stretch you’ve ever experienced!</p>",
+            "heading": "Is a CastleFlexx device included?",
+            "row_content": "<p>This is the book-only offer. The routines use a CastleFlexx device, sold separately.</p>",
             "open_by_default": false
           }
         },
@@ -1020,41 +1020,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Will I like CastleFlexx and if not, can I send it back?",
-            "row_content": "<p>Yes (USA) and No: UK, EU and Canada) You have 30 days to notify us that you would like return your device. With Redo insurance included in your purchase you are allowed free returns and size exchanges with instant refunds.<br/><br/>If you used hsa/fsa funds , refunds take slightly longer (approx 7 business days). With a less than half percent return rate.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_WjMVFP": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "What is the difference between the Luxury Vs Sport?",
-            "row_content": "<p>Both are globally patented and allow for full body passive stretching. The Sport is lighter and more durable.<br/><br/>The Luxury allows for passive and active stretching and has cork handles with a removable 2lb magnetic weight system which allows you to not have to pull at all.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_3xWhEt": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Why is the CastleFlexx better than traditional red and black colored stretching devices that use velcro strap enclosures?",
-            "row_content": "<p>CastleFlexx is velcro-free and does not require any strapping in or out.<br/><br/>CastleFlexx has a patented handlebar with optional magnetic weights that provides a controlled comfortable stretch and it wont slip out of your hands like rope straps can. CastleFlexx can be used sitting, standing, or laying down. CastleFlexx is designed to focus on BOTH mobility and flexibility AND you will ALSO get a natural bicep workout while using the device while gripping the bar on both sides.</p>",
-            "open_by_default": false
-          }
-        },
-        "frequently_asked_question_FNkpWb": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Why is CastleFlexx used by pro athletes and what makes it so unique?",
-            "row_content": "<p>CastleFlexx is used by athletes across many sports because it supports consistent mobility and flexibility work.</p>",
+            "heading": "Does it include CastleFit?",
+            "row_content": "<p>No, CastleFit membership is sold separately.</p>",
             "open_by_default": false
           }
         }
@@ -1063,10 +1030,7 @@
         "frequently_asked_question_7fycyG",
         "frequently_asked_question_LepBrn",
         "frequently_asked_question_M7XDqn",
-        "frequently_asked_question_QPQkXq",
-        "frequently_asked_question_WjMVFP",
-        "frequently_asked_question_3xWhEt",
-        "frequently_asked_question_FNkpWb"
+        "frequently_asked_question_QPQkXq"
       ],
       "custom_css": [
         "h2 {padding-bottom: 24px;}",
