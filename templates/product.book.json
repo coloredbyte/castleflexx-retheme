@@ -916,6 +916,17 @@
             "row_content": "<p><strong>21.</strong> Calf Stretch - Bed · p. 67<br/><strong>22. </strong>Calf Stretch - Seated · p. 69<br/><strong>23. </strong>Calf Stretch - Wall · p. 71</p>",
             "open_by_default": false
           }
+        },
+        "frequently_asked_question_4tbgLb": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Hips & Quadriceps",
+            "row_content": "<p><strong>24.</strong> Hip Extended - Single Quad Stretch · p. 73<br/><strong>25. </strong>Hip Extended - Double Quad Stretch · p. 75</p>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
@@ -925,7 +936,8 @@
         "frequently_asked_question_bwV7AK",
         "frequently_asked_question_Q4pAqV",
         "frequently_asked_question_Wc6mFE",
-        "frequently_asked_question_nVWCJ3"
+        "frequently_asked_question_nVWCJ3",
+        "frequently_asked_question_4tbgLb"
       ],
       "custom_css": [
         ".pt-3 {background-color: #f7f8f6;}",
