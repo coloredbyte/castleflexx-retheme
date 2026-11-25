@@ -125,24 +125,9 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
-        "icon_text_ycqC4L": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "award",
-            "another_icon": "",
-            "custom_icon": "",
-            "icon_size": 30,
-            "text": "<p><strong>“You can judge this book by its cover. It’s gorgeous, educational, and luxurious.”</strong><br/>- Dan Castle</p>",
-            "additional_text": "",
-            "block_scheme": "section",
-            "background_color_light": "#F7F8F6",
-            "text_light": "#3E4044",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "text_dark": "rgba(0,0,0,0)"
-          }
-        },
         "collapsible_tab_MgjKqH": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "open_by_default": false,
             "icon": "none",
@@ -166,6 +151,7 @@
         },
         "collapsible_tab_mkPyEa": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "open_by_default": false,
             "icon": "none",
@@ -205,7 +191,6 @@
         "variant_picker",
         "upsell_aH7axd",
         "buy_buttons",
-        "icon_text_ycqC4L",
         "collapsible_tab_MgjKqH",
         "collapsible_tab_mkPyEa",
         "sticky-atc"
