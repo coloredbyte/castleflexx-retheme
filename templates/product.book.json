@@ -344,6 +344,7 @@
         },
         "columns_9zmxBB": {
           "type": "columns",
+          "disabled": true,
           "settings": {
             "icon": "another_icon",
             "another_icon": "",
@@ -360,6 +361,7 @@
         },
         "columns_qRAiki": {
           "type": "columns",
+          "disabled": true,
           "settings": {
             "icon": "another_icon",
             "another_icon": "",
@@ -376,6 +378,7 @@
         },
         "columns_U6jTcE": {
           "type": "columns",
+          "disabled": true,
           "settings": {
             "icon": "another_icon",
             "another_icon": "",
