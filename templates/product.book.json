@@ -336,6 +336,9 @@
         "columns_yRKeQg",
         "columns_wwrnfp"
       ],
+      "custom_css": [
+        ".iwt-content {padding-right: 0px; padding-left: 0px;}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
