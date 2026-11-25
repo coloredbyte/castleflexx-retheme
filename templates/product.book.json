@@ -487,14 +487,14 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/book_icon_1.svg",
+            "custom_image": "shopify://shop_images/book_icon_3.svg",
             "custom_icon": "",
-            "title": "150 GSM paper",
+            "title": "Sewn Biding",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
             "heading_size": 100,
-            "text": "<p>Substantial paper. Full-color photography. Gloss-coated interior pages give the photography a polished finish, with room to study each position<br/>and its instructions.</p>"
+            "text": "<p>Considered down to the binding. The pages are sewn together and reinforced with adhesive, completing a hardcover made for your personal collection.</p>"
           }
         }
       },
