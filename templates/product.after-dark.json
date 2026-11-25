@@ -523,6 +523,54 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_3eA7MY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_k7i4pE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Choose classes based on your BODY area",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "heading_tag": "h2"
+          }
+        },
+        "text_jUP7Bd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Choose from guided classes tailored to specific body areas and a slower night time pace.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k7i4pE",
+        "text_jUP7Bd"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 40,
+        "padding_bottom": 28,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "faq_eTij9t": {
       "type": "faq",
       "blocks": {
@@ -635,6 +683,7 @@
     "multicolumn_K3xNHB",
     "multicolumn_dNeVPt",
     "rich_text_eVRabH",
+    "rich_text_3eA7MY",
     "faq_eTij9t"
   ]
 }
