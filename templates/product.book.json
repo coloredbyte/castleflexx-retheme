@@ -942,7 +942,7 @@
       "custom_css": [
         ".pt-3 {background-color: #faf8f3;}",
         ".faq-container {padding-left: 120px; padding-right: 120px;}",
-        ".flex {column-gap: 40px;}",
+        ".flex {column-gap: 60px;}",
         ".pt-3 {padding-top: 16px; padding-bottom: 16px; background-color: #f4f3ef;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .faq-container {padding-left: 20px; padding-right: 20px; }}"
       ],
