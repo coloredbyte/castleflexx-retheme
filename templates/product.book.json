@@ -44,41 +44,7 @@
             "custom_image": "shopify://shop_images/Full_Body_Icon_de5b48e1-f618-4925-b74c-11c08f9325e4.svg",
             "custom_icon": "",
             "icon_size": 40,
-            "text": "<p><strong>Full Body Stretching</strong></p>",
-            "additional_text": "",
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "text_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "text_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "icon_text_Jk6E4F": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "truck",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/Removable_2lb_Weight_Icon_cad2451a-dafa-4544-9fcc-2249766a08ce.svg",
-            "custom_icon": "",
-            "icon_size": 40,
-            "text": "<p><strong>Removable Weight</strong></p>",
-            "additional_text": "",
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "text_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "text_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "icon_text_KJnkfD": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "truck",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/Home_Use_Icon_9cfb664a-c2a4-4272-88e1-2c0f1965d652.svg",
-            "custom_icon": "",
-            "icon_size": 40,
-            "text": "<p><strong>Ideal for Home Use</strong></p>",
+            "text": "<p><strong>25 stretches. 100 full-color pages.<br/>Photographed instructions for your CastleFlexx practice.</strong></p>",
             "additional_text": "",
             "block_scheme": "section",
             "background_color_light": "rgba(0,0,0,0)",
@@ -198,8 +164,6 @@
         "product_name_xkPbAa",
         "price",
         "icon_text_7EB9Rd",
-        "icon_text_Jk6E4F",
-        "icon_text_KJnkfD",
         "variant_picker",
         "upsell_aH7axd",
         "buy_buttons",
