@@ -940,10 +940,10 @@
         "frequently_asked_question_4tbgLb"
       ],
       "custom_css": [
-        ".pt-3 {background-color: #f7f8f6;}",
+        ".pt-3 {background-color: #faf8f3;}",
         ".faq-container {padding-left: 120px; padding-right: 120px;}",
         ".flex {column-gap: 40px;}",
-        " .pt-3 {padding-top: 16px; padding-bottom: 16px;}",
+        ".pt-3 {padding-top: 16px; padding-bottom: 16px; background-color: #f4f3ef;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .faq-container {padding-left: 20px; padding-right: 20px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
