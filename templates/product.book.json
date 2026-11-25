@@ -275,7 +275,7 @@
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
-        "image": "shopify://shop_images/v2insunlighgtonsidetab_e.png",
+        "image": "shopify://shop_images/V2_WITH_MODEL_09e8aa50-e4fe-4a40-aea0-70acda033fbe.png",
         "desktop_height": "550px",
         "mobile_height": "400px",
         "desktop_image_width": "medium",
@@ -303,7 +303,7 @@
         "text_color_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "icon_color_dark": "rgba(0,0,0,0)",
-        "image_alignment": "left",
+        "image_alignment": "right",
         "full_width": false,
         "padding_full_width": false,
         "top_padding": 80,
