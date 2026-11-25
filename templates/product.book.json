@@ -276,7 +276,7 @@
       "settings": {
         "show_hero": false,
         "image": "shopify://shop_images/Coffee_Table_Visual_1.png",
-        "desktop_height": "550px",
+        "desktop_height": "450px",
         "mobile_height": "400px",
         "desktop_image_width": "medium",
         "image_layout": "normal",
