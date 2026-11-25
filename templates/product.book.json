@@ -1096,7 +1096,7 @@
         "padding_bottom": 0,
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
+        "padding_top_mobile": 48,
         "padding_bottom_mobile": 0,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
