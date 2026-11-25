@@ -1070,18 +1070,17 @@
         "frequently_asked_question_FNkpWb"
       ],
       "custom_css": [
-        ".pt-3 {background-color: #f7f8f6;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
-        "heading": "FAQs",
+        "heading": "Frequently Asked Questions",
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
         "heading_alignment": "center",
         "show_border": false,
-        "row_background": true,
+        "row_background": false,
         "collapsible": true,
         "show_view_all": false,
         "view_all_position": "top",
