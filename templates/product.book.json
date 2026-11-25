@@ -263,12 +263,12 @@
         "heading_pJKRgM": {
           "type": "heading",
           "settings": {
-            "subheading": "Example subheading",
-            "heading": "Image with text",
+            "subheading": "",
+            "heading": "The Stretching Guide Made for CastleFlexx Users",
             "highlight_type": "underline",
             "heading_base_size": 100,
             "heading_tag": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>A coffee-table book with a daily purpose. Large-format photography. Substantial paper. A carefully finished hardcover.<br/></p><p>Volume 1 gives your CastleFlexx practice a permanent place in your home - with 25 photographed stretches across 100 full-color pages.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
