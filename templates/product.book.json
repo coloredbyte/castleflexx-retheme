@@ -247,6 +247,7 @@
         "content_DV3Nxb": {
           "type": "content",
           "settings": {
+            "image": "shopify://shop_images/STACKED.jpg",
             "subheading": "",
             "heading": "\"You can judge this book by its cover. It's gorgeous, educational, and luxurious.\"",
             "text": "<p><strong>- Dan Castle</strong></p>",
@@ -262,7 +263,7 @@
       ],
       "name": "t:sections.image-with-scrolling-text.name",
       "settings": {
-        "img_position": "left",
+        "img_position": "right",
         "img_size": "ratio",
         "img_ratio": "natural",
         "content_alignment": "left",
@@ -271,7 +272,7 @@
         "heading_size": 100,
         "overlay_opacity": 0,
         "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_light": "#F4F3EF",
         "heading_color_light": "rgba(0,0,0,0)",
         "heading_highlight_color_light": "rgba(0,0,0,0)",
         "text_light": "rgba(0,0,0,0)",
