@@ -813,7 +813,8 @@
         "heading_k4ppn7"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}",
+        ".faq-container {padding-left: 120px; padding-right: 120px;}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
