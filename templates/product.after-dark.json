@@ -704,7 +704,7 @@
             "custom_icon": "",
             "heading": "What is CastleFIT After Dark?",
             "row_content": "<p>Your stretching routine, brought to bed. After Dark is an adults-only series of guided CastleFlexx classes with a more intimate setting than our regular CastleFIT sessions.</p>",
-            "open_by_default": true
+            "open_by_default": false
           }
         },
         "frequently_asked_question_ktJ9NX": {
@@ -780,7 +780,7 @@
             "another_icon": "",
             "custom_icon": "",
             "heading": "What is the cancellation and refund policy?",
-            "row_content": "<p>After Dark is a monthly subscription. Payments are non-refundable, but you can cancel anytime and you won't be charged for the next month. You keep access until the end of the month you've paid for.<br/><br/>To cancel, email info@castleflexx.com with the email address associated with your membership.</p>",
+            "row_content": "<p>After Dark is a monthly subscription. Payments are non-refundable, but you can cancel anytime and you won't be charged for the next month. You keep access until the end of the month you've paid for.<br/><br/>To cancel, email <a href=\"mailto:info@castleflexx.com \" target=\"_blank\" title=\"mailto:info@castleflexx.com \"><strong>info@castleflexx.com </strong></a>with the email address associated with your membership.</p>",
             "open_by_default": false
           }
         }
