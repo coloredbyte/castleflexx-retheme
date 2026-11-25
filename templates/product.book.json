@@ -103,15 +103,6 @@
             "size_chart_type": "popup"
           }
         },
-        "size_chart_N4DErU": {
-          "type": "size_chart",
-          "settings": {
-            "heading": "Size Guide",
-            "select_page": "size-guide",
-            "additional_info": "Add extra details for the image, such as measuring guide or important notes.",
-            "size_chart_type": "popup"
-          }
-        },
         "upsell_aH7axd": {
           "type": "upsell",
           "settings": {
@@ -210,7 +201,6 @@
         "icon_text_Jk6E4F",
         "icon_text_KJnkfD",
         "variant_picker",
-        "size_chart_N4DErU",
         "upsell_aH7axd",
         "buy_buttons",
         "collapsible_tab_MgjKqH",
