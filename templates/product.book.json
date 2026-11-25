@@ -579,7 +579,7 @@
       ],
       "custom_css": [
         ".font-medium {font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #a4a4a4;}",
-        ".x-block-columns {padding-left: 0px; padding-right: 0px; padding-top: 28px;}"
+        ".x-block-columns {padding-left: 0px; padding-right: 0px; padding-top: 28px; column-gap: 12px;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
