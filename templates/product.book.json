@@ -129,13 +129,36 @@
         "collapsible_tab_MgjKqH": {
           "type": "collapsible_tab",
           "settings": {
-            "open_by_default": true,
+            "open_by_default": false,
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
             "use_secondary_background": false,
-            "heading": "Product Details",
+            "heading": "Description",
             "tab_content": "{{ product.description }}",
+            "media_type": "none",
+            "image_position": "below",
+            "image_ratio": "natural",
+            "show_sound_control": false,
+            "video_position": "below",
+            "video_ratio": "natural",
+            "is_adapt_to_edges_type": false,
+            "is_rounded_corners": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": false
+          }
+        },
+        "collapsible_tab_mkPyEa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": false,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "use_secondary_background": false,
+            "heading": "Details",
+            "tab_content": "<p><strong>- Finished size:&nbsp;</strong>Approximately 8.5” × 11” | 21.5 × 28 cm<br/><strong>- Page count:</strong>&nbsp;104 pages<br/><strong>- Interior:</strong>&nbsp;Full-color printing on substantial 150 gsm gloss-coated paper<br/><strong>-&nbsp;Cover:&nbsp;</strong>Hardcover with matte lamination and selective spot-UV gloss accents<br/><strong>- Binding:</strong>&nbsp;Sewn and adhesive-reinforced for lasting durability<br/><strong>- &nbsp;Finished weight:</strong>&nbsp;4lbs</p>",
             "media_type": "none",
             "image_position": "below",
             "image_ratio": "natural",
@@ -168,6 +191,7 @@
         "upsell_aH7axd",
         "buy_buttons",
         "collapsible_tab_MgjKqH",
+        "collapsible_tab_mkPyEa",
         "sticky-atc"
       ],
       "custom_css": [],
