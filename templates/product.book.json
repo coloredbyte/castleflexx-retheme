@@ -270,7 +270,8 @@
         "heading_pJKRgM"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; }}"
+        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; }}",
+        ".ltr {background-color: #F4F3EF;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
@@ -310,7 +311,7 @@
         "bottom_padding": 80,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
-        "top_padding_mobile": 20,
+        "top_padding_mobile": 48,
         "bottom_padding_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "#F4F3EF",
