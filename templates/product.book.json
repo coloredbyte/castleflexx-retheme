@@ -813,8 +813,7 @@
         "heading_k4ppn7"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}",
-        ".faq-container {padding-left: 120px; padding-right: 120px;}"
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -930,6 +929,7 @@
       ],
       "custom_css": [
         ".pt-3 {background-color: #f7f8f6;}",
+        " .faq-container {padding-left: 80px; padding-right: 80px;}",
         "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
