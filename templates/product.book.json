@@ -728,6 +728,16 @@
             "heading": "Cover options",
             "row_content": "<p>Light Cover and Dark Cover</p>"
           }
+        },
+        "specs_KkKXGz": {
+          "type": "specs",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Source-backed manuscript facts",
+            "row_content": "<p>Title: CastleFlexx Stretching Guide. Volume 1. By Dan Castle, with Susana Rentería. 25 routine entries, 100 interior pages, photographed instructions and a recovery journal. ISBN 979-8-234-16240-3.</p>"
+          }
         }
       },
       "block_order": [
@@ -740,7 +750,8 @@
         "specs_bbgRLy",
         "specs_rxzUrq",
         "specs_R7hNNh",
-        "specs_c88btV"
+        "specs_c88btV",
+        "specs_KkKXGz"
       ],
       "name": "t:sections.product-specifications.name",
       "settings": {
