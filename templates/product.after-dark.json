@@ -341,7 +341,7 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/castlefit_icon_1.svg",
+            "custom_image": "shopify://shop_images/after_dark_icon_1.svg",
             "custom_icon": "",
             "title": "Bedroom-based Classes",
             "highlight_type": "underline",
@@ -386,7 +386,7 @@
           "settings": {
             "icon": "truck",
             "another_icon": "",
-            "custom_image": "shopify://shop_images/castlefit_icon_4.svg",
+            "custom_image": "shopify://shop_images/after_dark_icon_4.svg",
             "custom_icon": "",
             "title": "English & Spanish + Captions",
             "highlight_type": "underline",
