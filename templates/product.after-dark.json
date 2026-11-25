@@ -559,7 +559,7 @@
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 48,
+        "padding_bottom_mobile": 12,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
