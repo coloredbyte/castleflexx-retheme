@@ -294,7 +294,7 @@
             "heading_size": 80,
             "text": "",
             "wide_desktop": 1,
-            "wide_mobile": "2"
+            "wide_mobile": "1"
           }
         },
         "columns_yRKeQg": {
@@ -310,7 +310,7 @@
             "heading_size": 80,
             "text": "",
             "wide_desktop": 1,
-            "wide_mobile": "2"
+            "wide_mobile": "1"
           }
         },
         "columns_wwrnfp": {
@@ -326,7 +326,7 @@
             "heading_size": 80,
             "text": "",
             "wide_desktop": 1,
-            "wide_mobile": "2"
+            "wide_mobile": "1"
           }
         }
       },
@@ -358,7 +358,7 @@
         "icon_size": 50,
         "alignment": "center",
         "columns_desktop": 3,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "heading_color_light": "rgba(0,0,0,0)",
         "text_color_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
@@ -374,7 +374,7 @@
         "bottom_padding": 80,
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
-        "top_padding_mobile": 48,
+        "top_padding_mobile": 20,
         "bottom_padding_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "#FFFFFF",
