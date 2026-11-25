@@ -261,6 +261,7 @@
       "block_order": [
         "content_DV3Nxb"
       ],
+      "custom_css": [],
       "name": "t:sections.image-with-scrolling-text.name",
       "settings": {
         "img_position": "right",
@@ -280,7 +281,7 @@
         "button_text_light": "rgba(0,0,0,0)",
         "button_hover_light": "rgba(0,0,0,0)",
         "button_text_hover_light": "rgba(0,0,0,0)",
-        "secondary_button_light": "rgba(0,0,0,0)",
+        "secondary_button_light": "#F4F3EF",
         "secondary_button_text_light": "rgba(0,0,0,0)",
         "colors_text_link": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
@@ -378,6 +379,7 @@
         "columns_qRAiki",
         "columns_U6jTcE"
       ],
+      "custom_css": [],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
