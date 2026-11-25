@@ -241,6 +241,60 @@
         "section_scheme": "store"
       }
     },
+    "image_with_scrolling_text_3fANQm": {
+      "type": "image-with-scrolling-text",
+      "blocks": {
+        "content_DV3Nxb": {
+          "type": "content",
+          "settings": {
+            "subheading": "",
+            "heading": "\"You can judge this book by its cover. It's gorgeous, educational, and luxurious.\"",
+            "text": "<p><strong>- Dan Castle</strong></p>",
+            "button_label": "",
+            "button_style": "primary",
+            "button_link": "",
+            "open_new_window": false
+          }
+        }
+      },
+      "block_order": [
+        "content_DV3Nxb"
+      ],
+      "name": "t:sections.image-with-scrolling-text.name",
+      "settings": {
+        "img_position": "left",
+        "img_size": "ratio",
+        "img_ratio": "natural",
+        "content_alignment": "left",
+        "block_heading_tag": "h2",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "overlay_opacity": 0,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "heading_highlight_color_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "button_light": "rgba(0,0,0,0)",
+        "button_text_light": "rgba(0,0,0,0)",
+        "button_hover_light": "rgba(0,0,0,0)",
+        "button_text_hover_light": "rgba(0,0,0,0)",
+        "secondary_button_light": "rgba(0,0,0,0)",
+        "secondary_button_text_light": "rgba(0,0,0,0)",
+        "colors_text_link": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "heading_highlight_color_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "button_dark": "rgba(0,0,0,0)",
+        "button_text_dark": "rgba(0,0,0,0)",
+        "button_hover_dark": "rgba(0,0,0,0)",
+        "button_text_hover_dark": "rgba(0,0,0,0)",
+        "secondary_button_dark": "rgba(0,0,0,0)",
+        "secondary_button_text_dark": "rgba(0,0,0,0)",
+        "colors_text_link_dark": "rgba(0,0,0,0)"
+      }
+    },
     "image_with_text_caBbhe": {
       "type": "image-with-text",
       "blocks": {
@@ -408,8 +462,8 @@
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
-        "image": "shopify://shop_images/v2insunlighgtonsidetab_e.png",
-        "desktop_height": "550px",
+        "image": "shopify://shop_images/Coffee_Table_Visual_1.png",
+        "desktop_height": "450px",
         "mobile_height": "400px",
         "desktop_image_width": "medium",
         "image_layout": "normal",
@@ -782,6 +836,7 @@
   },
   "order": [
     "main",
+    "image_with_scrolling_text_3fANQm",
     "image_with_text_caBbhe",
     "image_with_text_xzBJaf",
     "multicolumn_qEyh98",
