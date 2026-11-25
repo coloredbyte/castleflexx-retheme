@@ -56,6 +56,21 @@
         "image_mobile": "shopify://shop_images/banner-after-dark-mobile.png"
       }
     },
+    "custom_liquid_L7MDBQ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "",
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "castlefit_access_ABhFbd": {
       "type": "castlefit-access",
       "blocks": {
@@ -458,7 +473,7 @@
           "type": "button",
           "settings": {
             "button_label": "Start Now",
-            "button_link": "https://castleflexx.com/products/castlefit#castlefit-access",
+            "button_link": "https://castleflexx.com/products/after-dark-standalone#castlefit-access",
             "open_new_window_button": false,
             "show_button_style_1": "primary",
             "button_label_2": "",
@@ -511,6 +526,7 @@
   },
   "order": [
     "banner",
+    "custom_liquid_L7MDBQ",
     "castlefit_access_ABhFbd",
     "text_column_with_image_AFTUTM",
     "multicolumn_K3xNHB",
