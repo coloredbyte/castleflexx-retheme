@@ -237,7 +237,7 @@
             "another_icon": "",
             "custom_image": "shopify://shop_images/iconstack.io_-_Star.svg",
             "custom_icon": "",
-            "title": "200+ Guided Classes",
+            "title": "50+ Guided Classes",
             "highlight_type": "underline",
             "title_link": "",
             "open_new_window": false,
@@ -274,28 +274,12 @@
             "heading_size": 80,
             "text": ""
           }
-        },
-        "column_wBeA7U": {
-          "type": "column",
-          "settings": {
-            "icon": "check-mark",
-            "another_icon": "",
-            "custom_image": "shopify://shop_images/iconstack.io_-_Check.svg",
-            "custom_icon": "",
-            "title": "60 Day Full Refund",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 80,
-            "text": ""
-          }
         }
       },
       "block_order": [
         "column_QJydMr",
         "column_qBqgBn",
-        "column_qgLhqD",
-        "column_wBeA7U"
+        "column_qgLhqD"
       ],
       "custom_css": [
         ".inline-block {margin-right: 8px;}",
