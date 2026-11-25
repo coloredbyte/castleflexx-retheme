@@ -117,73 +117,10 @@
         "subtitle": "Join After Dark",
         "product": "after-dark-standalone"
       }
-    },
-    "access": {
-      "type": "castlefit-access",
-      "blocks": {
-        "standalone": {
-          "type": "plan",
-          "settings": {
-            "product": "after-dark-standalone",
-            "eligibility": "anyone",
-            "style": "recommended",
-            "purchase_type": "subscription",
-            "variant_option": "",
-            "selling_plan_id": "",
-            "badge": "",
-            "eyebrow": "| MONTHLY SUBSCRIPTION",
-            "heading": "After Dark",
-            "compare_price": "",
-            "price": "",
-            "price_suffix": "/mo",
-            "intro": "Open to everyone",
-            "features": "Adult only. No nudity.\nBedroom-based late night flows\nEnglish and Spanish led classes\nCaptions always available\nBack, foot, hips and shoulder focus",
-            "cta_label": "Start Now",
-            "cta_url": "",
-            "signin_label": "CastleFIT member? Sign in",
-            "join_label": "Join CastleFIT",
-            "join_url": ""
-          }
-        },
-        "addon": {
-          "type": "plan",
-          "settings": {
-            "product": "after-dark-add-on",
-            "eligibility": "members",
-            "style": "secondary",
-            "purchase_type": "subscription",
-            "variant_option": "",
-            "selling_plan_id": "",
-            "badge": "",
-            "eyebrow": "| MEMBER UPGRADE",
-            "heading": "After Dark Add-on",
-            "compare_price": "",
-            "price": "",
-            "price_suffix": "/mo",
-            "intro": "For CastleFIT Members",
-            "features": "Adult only. No nudity.\nBedroom-based late night flows\nEnglish and Spanish led classes\nCaptions always available\nBack, foot, hips and shoulder focus",
-            "cta_label": "Add to My Membership",
-            "cta_url": "",
-            "signin_label": "CastleFIT member? Sign in",
-            "join_label": "Join CastleFIT",
-            "join_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "standalone",
-        "addon"
-      ],
-      "settings": {
-        "title": "Get Your Access Now",
-        "subtitle": "Join After Dark",
-        "product": "after-dark-standalone"
-      }
     }
   },
   "order": [
     "banner",
-    "castlefit_access_ABhFbd",
-    "access"
+    "castlefit_access_ABhFbd"
   ]
 }
