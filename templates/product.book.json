@@ -796,6 +796,47 @@
         "line_border_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_jAKJmg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_k4ppn7": {
+          "type": "heading",
+          "settings": {
+            "heading": "What 25 stretches are inside Volume 1?",
+            "highlight_type": "underline",
+            "heading_size": 100,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k4ppn7"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 80,
+        "padding_bottom": 48,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 20,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "faq_hgd9PK": {
       "type": "faq",
       "blocks": {
@@ -885,6 +926,133 @@
         "frequently_asked_question_Q4pAqV",
         "frequently_asked_question_Wc6mFE",
         "frequently_asked_question_nVWCJ3"
+      ],
+      "custom_css": [
+        ".pt-3 {background-color: #f7f8f6;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+      ],
+      "name": "t:sections.question_and_answer.name",
+      "settings": {
+        "heading": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "show_border": false,
+        "row_background": true,
+        "collapsible": true,
+        "show_view_all": false,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "image": "shopify://shop_images/V2_WITH_MODEL_09e8aa50-e4fe-4a40-aea0-70acda033fbe.png",
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "right",
+        "desktop_height": "auto",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "image_alignment_mobile": "left",
+        "mobile_height": "auto",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "faq_7AYzrk": {
+      "type": "faq",
+      "blocks": {
+        "frequently_asked_question_7fycyG": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "How is this better than typical stretch straps?",
+            "row_content": "<p>CastleFlexx combines a patented foot hammock with a weighted mobility bar for a more comfortable, controlled stretching experience.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_LepBrn": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "I have limited hand strength; will this work better for me than a stretch band?",
+            "row_content": "<p>Many customers find the bar easier and more comfortable to hold than rope-style straps, and the device can also be used in a seated position.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_M7XDqn": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Ok, I get that, so can't I just use a towel?",
+            "row_content": "<p>The use of a towel is simply not effective because the anchor point at the heel is poor and the foot (and therefore the leg) is not secured properly. The CastleFlexx has comfortable handles that provide a secure grip for a steady pull; a towel offers nothing more than an inconsistent&nbsp;amount of material which can be difficult to&nbsp;hold and maintain. Try stretching your hips, hamstrings or lats with a towel, and we are sure you will agree that the CastleFlexx is the most fun and effective stretch you’ve ever experienced!</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_QPQkXq": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Will I like CastleFlexx and if not, can I send it back?",
+            "row_content": "<p>Yes (USA) and No: UK, EU and Canada) You have 30 days to notify us that you would like return your device. With Redo insurance included in your purchase you are allowed free returns and size exchanges with instant refunds.<br/><br/>If you used hsa/fsa funds , refunds take slightly longer (approx 7 business days). With a less than half percent return rate.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_WjMVFP": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "What is the difference between the Luxury Vs Sport?",
+            "row_content": "<p>Both are globally patented and allow for full body passive stretching. The Sport is lighter and more durable.<br/><br/>The Luxury allows for passive and active stretching and has cork handles with a removable 2lb magnetic weight system which allows you to not have to pull at all.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_3xWhEt": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Why is the CastleFlexx better than traditional red and black colored stretching devices that use velcro strap enclosures?",
+            "row_content": "<p>CastleFlexx is velcro-free and does not require any strapping in or out.<br/><br/>CastleFlexx has a patented handlebar with optional magnetic weights that provides a controlled comfortable stretch and it wont slip out of your hands like rope straps can. CastleFlexx can be used sitting, standing, or laying down. CastleFlexx is designed to focus on BOTH mobility and flexibility AND you will ALSO get a natural bicep workout while using the device while gripping the bar on both sides.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_FNkpWb": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Why is CastleFlexx used by pro athletes and what makes it so unique?",
+            "row_content": "<p>CastleFlexx is used by athletes across many sports because it supports consistent mobility and flexibility work.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "frequently_asked_question_7fycyG",
+        "frequently_asked_question_LepBrn",
+        "frequently_asked_question_M7XDqn",
+        "frequently_asked_question_QPQkXq",
+        "frequently_asked_question_WjMVFP",
+        "frequently_asked_question_3xWhEt",
+        "frequently_asked_question_FNkpWb"
       ],
       "custom_css": [
         ".pt-3 {background-color: #f7f8f6;}",
@@ -1030,7 +1198,9 @@
     "multicolumn_qEyh98",
     "image_with_text_Xh6wM3",
     "product_specifications_xrB8PD",
+    "rich_text_jAKJmg",
     "faq_hgd9PK",
+    "faq_7AYzrk",
     "rich_text_iMMFgV",
     "1795131199bdc934dd",
     "product-recommendations"
