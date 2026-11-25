@@ -52,7 +52,7 @@
         "cta_primary_url": "",
         "cta_secondary_label": "Watch a Sample",
         "cta_secondary_url": "",
-        "image": "shopify://shop_images/Banner-after-dark.png",
+        "image": "shopify://shop_images/Banner-after-dark-overlay.png",
         "image_mobile": "shopify://shop_images/banner-after-dark-mobile.png"
       }
     },
