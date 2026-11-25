@@ -337,7 +337,8 @@
         "columns_wwrnfp"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px;}}"
+        "@media screen and (max-width: 749px) {.iwt-content {padding-right: 0px; padding-left: 0px; padding-top: 24px; }}",
+        " .x-block-columns {padding-left: 0px; padding-right: 0px;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
