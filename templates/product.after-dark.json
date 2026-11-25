@@ -728,12 +728,72 @@
             "row_content": "<p>Yes, the classes are designed around your CastleFlexx. The After Dark upgrade provides access to the classes; the device is sold separately.</p>",
             "open_by_default": false
           }
+        },
+        "frequently_asked_question_JkK8g6": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Are the classes in English or Spanish?",
+            "row_content": "<p>Classes are taught in both English and Spanish. Captions are available to help you follow along.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_LAazEE": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Why is After Dark for adults only?",
+            "row_content": "<p>The bedroom setting and more intimate presentation are intended for an adult audience. These are guided stretching classes, presented differently from our main CastleFIT series.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_VjfLDe": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Where do I watch the classes?",
+            "row_content": "<p>Sign in to your CastleFlexx account on the website or in the CastleFIT app. Your After Dark subscription unlocks the classes.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_mCahNJ": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Is there any nudity?",
+            "row_content": "<p>No, there is no nudity. After Dark is an adults-only series of guided CastleFlexx stretching classes. The bedroom setting and presentation are more intimate, but the focus is still stretching.</p>",
+            "open_by_default": false
+          }
+        },
+        "frequently_asked_question_8xEpgC": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "What is the cancellation and refund policy?",
+            "row_content": "<p>After Dark is a monthly subscription. Payments are non-refundable, but you can cancel anytime and you won't be charged for the next month. You keep access until the end of the month you've paid for.<br/><br/>To cancel, email info@castleflexx.com with the email address associated with your membership.</p>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
         "frequently_asked_question_4ine74",
         "frequently_asked_question_ktJ9NX",
-        "frequently_asked_question_HcLcLW"
+        "frequently_asked_question_HcLcLW",
+        "frequently_asked_question_JkK8g6",
+        "frequently_asked_question_LAazEE",
+        "frequently_asked_question_VjfLDe",
+        "frequently_asked_question_mCahNJ",
+        "frequently_asked_question_8xEpgC"
       ],
       "custom_css": [],
       "name": "t:sections.question_and_answer.name",
