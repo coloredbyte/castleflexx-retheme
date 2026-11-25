@@ -381,7 +381,8 @@
         "columns_U6jTcE"
       ],
       "custom_css": [
-        ".font-medium {font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #a4a4a4;}"
+        ".font-medium {font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #a4a4a4;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; padding-bottom: 12px; padding-top: 8px; } .iwt-content {padding-right: 8px; padding-left: 8px;} p {font-size: 15px; }}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
@@ -813,7 +814,7 @@
         "heading_k4ppn7"
       ],
       "custom_css": [
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; }}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -943,7 +944,7 @@
         ".faq-container {padding-left: 120px; padding-right: 120px;}",
         ".flex {column-gap: 50px;}",
         ".pt-3 {padding-top: 16px; padding-bottom: 16px; background-color: #f4f3ef;}",
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; } .faq-container {padding-left: 20px; padding-right: 20px; }}"
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; } .faq-container {padding-left: 20px; padding-right: 20px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
