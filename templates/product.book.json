@@ -127,7 +127,6 @@
         },
         "collapsible_tab_MgjKqH": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "open_by_default": false,
             "icon": "none",
