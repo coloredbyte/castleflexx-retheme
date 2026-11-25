@@ -379,7 +379,9 @@
         "columns_qRAiki",
         "columns_U6jTcE"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".font-medium {font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #a4a4a4;}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
