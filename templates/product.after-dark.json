@@ -60,7 +60,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "{%- assign section_id = 'afterdark-access' -%} <div id=\"{{ section_id }}\" class=\"section-{{ section_id }}\"></div>",
         "full_width": false,
         "show_section_divider": false,
         "padding_top": 0,
