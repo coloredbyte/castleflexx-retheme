@@ -1070,8 +1070,8 @@
         "frequently_asked_question_FNkpWb"
       ],
       "custom_css": [
-        "h2 {padding-bottom: 24px; }",
-        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; }}"
+        "h2 {padding-bottom: 24px;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 30px; padding-bottom: 12px; }}"
       ],
       "name": "t:sections.question_and_answer.name",
       "settings": {
