@@ -339,6 +339,7 @@
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
+        "image": "shopify://shop_images/v2insunlighgtonsidetab_e.png",
         "desktop_height": "550px",
         "mobile_height": "400px",
         "desktop_image_width": "medium",
