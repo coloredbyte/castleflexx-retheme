@@ -717,7 +717,7 @@
         "view_more_button": "See more",
         "view_less_button": "See less",
         "columns_desktop": "1",
-        "desktop_height": "400px",
+        "desktop_height": "auto",
         "show_section_divider": false,
         "padding_top": 60,
         "padding_bottom": 80,
