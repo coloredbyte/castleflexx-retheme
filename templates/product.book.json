@@ -355,7 +355,7 @@
         "text_alignment": "start",
         "line_border": "none",
         "icon_position": "col",
-        "icon_size": 50,
+        "icon_size": 60,
         "alignment": "center",
         "columns_desktop": 3,
         "columns_mobile": "2",
