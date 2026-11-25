@@ -767,7 +767,7 @@
         "image_alignment": "left",
         "hide_empty_rows": true,
         "text_empty_fields": "-",
-        "row_shown_by_default": 12,
+        "row_shown_by_default": 8,
         "view_more_button": "See more",
         "view_less_button": "See less",
         "columns_desktop": "1",
