@@ -646,8 +646,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Material",
-            "row_content": "<p>Gold</p>"
+            "heading": "Format",
+            "row_content": "<p>Hardcover</p>"
           }
         },
         "specs_fKqCAh": {
@@ -656,8 +656,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Material",
-            "row_content": "<p>Gold</p>"
+            "heading": "Contents",
+            "row_content": "<p>25 stretches, including position variations</p>"
           }
         },
         "specs_QdHbjY": {
@@ -666,8 +666,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Material",
-            "row_content": "<p>Gold</p>"
+            "heading": "Page count",
+            "row_content": "<p>100 interior pages</p>"
           }
         },
         "specs_WqKdQf": {
@@ -676,8 +676,8 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Material",
-            "row_content": "<p>Gold</p>"
+            "heading": "Finished size",
+            "row_content": "<p>21.5 × 28 cm / approximately 8.5 × 11 inches</p>"
           }
         },
         "specs_nAkDqU": {
@@ -686,8 +686,48 @@
             "icon": "none",
             "another_icon": "",
             "custom_icon": "",
-            "heading": "Material",
-            "row_content": "<p>Gold</p>"
+            "heading": "Interior paper",
+            "row_content": "<p>150 GSM gloss-coated paper</p>"
+          }
+        },
+        "specs_bbgRLy": {
+          "type": "specs",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Interior printing",
+            "row_content": "<p>Full-color throughout</p>"
+          }
+        },
+        "specs_rxzUrq": {
+          "type": "specs",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Cover finish",
+            "row_content": "<p>Matte finish with selective spot-gloss accents</p>"
+          }
+        },
+        "specs_R7hNNh": {
+          "type": "specs",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Binding",
+            "row_content": "<p>Sewn and reinforced with hot-melt adhesive</p>"
+          }
+        },
+        "specs_c88btV": {
+          "type": "specs",
+          "settings": {
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Cover options",
+            "row_content": "<p>Light Cover and Dark Cover</p>"
           }
         }
       },
@@ -697,7 +737,11 @@
         "specs_fKqCAh",
         "specs_QdHbjY",
         "specs_WqKdQf",
-        "specs_nAkDqU"
+        "specs_nAkDqU",
+        "specs_bbgRLy",
+        "specs_rxzUrq",
+        "specs_R7hNNh",
+        "specs_c88btV"
       ],
       "name": "t:sections.product-specifications.name",
       "settings": {
@@ -713,7 +757,7 @@
         "image_alignment": "left",
         "hide_empty_rows": true,
         "text_empty_fields": "-",
-        "row_shown_by_default": 5,
+        "row_shown_by_default": 12,
         "view_more_button": "See more",
         "view_less_button": "See less",
         "columns_desktop": "1",
