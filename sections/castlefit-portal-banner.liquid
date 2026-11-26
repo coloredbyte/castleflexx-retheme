@@ -1,0 +1,138 @@
+{%- comment -%}
+  Portal image banner for one audience. For the CastleFit portal:
+  - "CastleFit without After Dark": links to the After Dark purchase page.
+  - "After Dark members": links to their next After Dark class.
+  Web is gated here; the app by appbrew-portal-gate.liquid.
+{%- endcomment -%}
+
+{% render 'castlefit-landing-assets' %}
+
+{%- liquid
+  assign audience = section.settings.audience
+
+  # Array, not string: whole-tag match, so 'inactive subscriber' never
+  # satisfies 'active subscriber'.
+  assign audience_tags_dc = customer.tags | join: ',' | downcase | split: ','
+  assign hidden_web = false
+  if audience == 'castlefit_only'
+    assign hidden_web = true
+    if audience_tags_dc contains 'active subscriber'
+      unless audience_tags_dc contains 'after dark subscriber'
+        assign hidden_web = false
+      endunless
+    endif
+  elsif audience == 'ad_members'
+    unless audience_tags_dc contains 'after dark subscriber'
+      assign hidden_web = true
+    endunless
+  endif
+  if request.design_mode
+    assign hidden_web = false
+  endif
+
+  assign mobile_image = section.settings.image_mobile | default: section.settings.image
+  assign banner_alt = section.settings.alt
+-%}
+
+{%- comment -%}
+  Next-class mode: the server links the first class (the app gate spots
+  After Dark sections by that path); after-dark-next.js repoints it.
+{%- endcomment -%}
+{%- assign next_class_urls = '' -%}
+{%- if section.settings.link_next_class -%}
+  {%- paginate blogs['afterdark'].articles by 1000 -%}
+    {%- assign next_class_urls = blogs['afterdark'].articles | map: 'url' | join: ',' -%}
+  {%- endpaginate -%}
+{%- endif -%}
+
+{%- style -%}
+  {%- if hidden_web -%}
+    html:not(.appbrew-in-app) #shopify-section-{{ section.id }} { display: none; }
+  {%- endif -%}
+  #shopify-section-{{ section.id }} .cf-portal-banner {
+    background: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
+  }
+  #shopify-section-{{ section.id }} .cf-portal-banner__inner { max-width: {{ section.settings.max_width }}px; margin: 0 auto; }
+  #shopify-section-{{ section.id }} .cf-portal-banner img { display: block; width: 100%; height: auto; }
+  #shopify-section-{{ section.id }} .cf-portal-banner__desktop { display: none; }
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .cf-portal-banner { padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+    #shopify-section-{{ section.id }} .cf-portal-banner__desktop { display: block; }
+    #shopify-section-{{ section.id }} .cf-portal-banner__mobile { display: none; }
+  }
+{%- endstyle -%}
+
+<div class="cf-portal-banner" data-portal-audience="{{ audience }}">
+  <div class="cf-portal-banner__inner">
+    {%- if next_class_urls != blank -%}
+      <a href="{{ next_class_urls | split: ',' | first }}" data-ad-next-banner data-ad-classes="{{ next_class_urls }}">
+    {%- elsif section.settings.link != blank -%}
+      <a href="{{ section.settings.link }}">
+    {%- endif -%}
+
+    {%- if section.settings.image != blank -%}
+      <div class="cf-portal-banner__desktop">
+        {% render 'castlefit-image', image: section.settings.image, class: 'cf-portal-banner__img', max_width: 2880, sizes: '100vw', alt: banner_alt %}
+      </div>
+    {%- endif -%}
+
+    {%- if mobile_image != blank -%}
+      <div class="cf-portal-banner__mobile">
+        {% render 'castlefit-image', image: mobile_image, class: 'cf-portal-banner__img', max_width: 1500, sizes: '100vw', alt: banner_alt %}
+      </div>
+    {%- endif -%}
+
+    {%- if next_class_urls != blank or section.settings.link != blank -%}
+      </a>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- if next_class_urls != blank -%}
+  <script src="{{ 'after-dark-next.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CastleFit portal banner",
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "audience",
+      "label": "Audience",
+      "options": [
+        { "value": "everyone", "label": "Everyone" },
+        { "value": "castlefit_only", "label": "CastleFit without After Dark" },
+        { "value": "ad_members", "label": "After Dark members" }
+      ],
+      "default": "everyone"
+    },
+    { "type": "image_picker", "id": "image", "label": "Desktop image" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Mobile image", "info": "Uses the desktop image if empty." },
+    { "type": "text", "id": "alt", "label": "Image alt text" },
+    { "type": "url", "id": "link", "label": "Link" },
+    {
+      "type": "checkbox",
+      "id": "link_next_class",
+      "label": "Link to the member's next After Dark class",
+      "info": "Replaces the link. Random class if none is saved.",
+      "default": false
+    },
+    { "type": "header", "content": "Layout" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#000000" },
+    { "type": "range", "id": "max_width", "label": "Max width", "min": 600, "max": 3000, "step": 100, "unit": "px", "default": 3000 },
+    { "type": "range", "id": "padding_top", "label": "Top padding (desktop)", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding (desktop)", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_top_mobile", "label": "Top padding (mobile)", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom_mobile", "label": "Bottom padding (mobile)", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "presets": [
+    { "name": "CastleFit portal banner" }
+  ]
+}
+{% endschema %}

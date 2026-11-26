@@ -20,6 +20,7 @@
 -%}
 
 {% render 'castlefit-tokens', id: section.id, settings: section.settings %}
+{% render 'after-dark-next-marker', article: article, blog: blog %}
 
 <div
   class="cf-root {% render 'scheme-class', scheme: section.settings.section_scheme %} main-article-castlefit--wrapper main-article-castlefit--rail-{{ section.settings.class_list_position }}{% if show_rail %} menu-container--open{% endif %}{% if is_after_dark %} castlefit--after-dark{% endif %}"

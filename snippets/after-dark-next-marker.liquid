@@ -1,0 +1,35 @@
+{%- comment -%}
+  On After Dark class pages, names the class after this one in its series
+  (same category, oldest first) for assets/after-dark-next.js to save on
+  play. Empty on the last one.
+  e.g. {% render 'after-dark-next-marker', article: article, blog: blog %}
+{%- endcomment -%}
+
+{%- if blog.handle == 'afterdark' -%}
+  {%- liquid
+    assign series = article.metafields.custom.category.value.first
+    assign next_url = ''
+    assign passed_current = false
+  -%}
+
+  {%- paginate blog.articles by 1000 -%}
+    {%- assign sorted_articles = blog.articles | sort: 'published_at' -%}
+    {%- for candidate in sorted_articles -%}
+      {%- unless candidate.metafields.custom.category.value contains series -%}
+        {%- continue -%}
+      {%- endunless -%}
+
+      {%- if passed_current -%}
+        {%- assign next_url = candidate.url -%}
+        {%- break -%}
+      {%- endif -%}
+
+      {%- if candidate.id == article.id -%}
+        {%- assign passed_current = true -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endpaginate -%}
+
+  <div data-ad-next="{{ next_url }}" hidden></div>
+  <script src="{{ 'after-dark-next.js' | asset_url }}" defer></script>
+{%- endif -%}
