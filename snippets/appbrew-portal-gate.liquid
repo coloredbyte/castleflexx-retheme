@@ -128,6 +128,13 @@
       visibility: visible !important;
     }
 
+    /* The After Dark purchase banner is for CastleFit members without After
+       Dark: hide it once the tag is confirmed. Targets the banner inside its
+       section, so the section rules above can't override it. */
+    html.appbrew-in-app.appbrew-after-dark [data-portal-audience="castlefit_only"] {
+      display: none !important;
+    }
+
     html.appbrew-in-app body.klaviyo-prevent-body-scrolling {
       overflow: visible !important;
     }
