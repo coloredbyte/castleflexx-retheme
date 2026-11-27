@@ -118,6 +118,29 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
+        "collapsible_tab_7iGByz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": false,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "use_secondary_background": false,
+            "heading": "Additional Information",
+            "tab_content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "media_type": "none",
+            "image_position": "below",
+            "image_ratio": "natural",
+            "show_sound_control": false,
+            "video_position": "below",
+            "video_ratio": "natural",
+            "is_adapt_to_edges_type": false,
+            "is_rounded_corners": false,
+            "video_url": "",
+            "video_alt_text": "",
+            "enable_video_autoplay": false
+          }
+        },
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
@@ -136,6 +159,7 @@
         "variant_picker",
         "upsell",
         "buy_buttons",
+        "collapsible_tab_7iGByz",
         "sticky-atc"
       ],
       "settings": {
