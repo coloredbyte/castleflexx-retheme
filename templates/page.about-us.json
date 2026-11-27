@@ -171,11 +171,11 @@
           "type": "heading",
           "settings": {
             "subheading": "",
-            "heading": "Our Story",
+            "heading": "Our Mission",
             "highlight_type": "underline",
             "heading_base_size": 110,
             "heading_tag": "h2",
-            "text": "<p>CastleFlexx began with a simple idea born from a very real problem. After years of living with debilitating back pain and finding that traditional stretching tools never reached the areas he needed most, founder Dan Castle set out to create something better.<br/><br/>The result was CastleFlexx—a patented mobility device designed to help people stretch more effectively, move more freely, and feel better in their bodies. What started as one personal solution has grown into a collection of innovative health and recovery products used by everyday customers, professional athletes, and people of all ages around the world. Through every product we create, our mission remains the same: make better movement easier, more accessible, and part of everyday life.</p>",
+            "text": "<p>Our mission is to <strong>help people move with greater freedom, confidence, and comfort.</strong> We believe mobility isn't reserved for elite athletes — it's something everyone deserves.</p><p>Whether you're recovering after a workout, staying active as you age, or simply trying to feel better throughout the day, we're committed to creating tools that support long-term movement and healthy living. Because when your body moves well, everything else becomes easier.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
