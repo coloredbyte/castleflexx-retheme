@@ -552,7 +552,7 @@
         "top_padding_mobile": 40,
         "bottom_padding_mobile": 40,
         "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
