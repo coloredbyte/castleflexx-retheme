@@ -661,6 +661,9 @@
       "block_order": [
         "testimonial_mk6GEE"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.x-testimonial-main-content {margin-left: 0px; margin-right: 0px; } .x-testimonial-author-container {margin-left: 0px; margin-right: 0px; }}"
+      ],
       "name": "t:sections.testimonials-with-card.name",
       "settings": {
         "heading": "",
