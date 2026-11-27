@@ -149,7 +149,7 @@
         "desktop_layout": "left",
         "desktop_media_layout": "thumbnail_slider",
         "show_arrow_button": true,
-        "mobile_media_size": "full_width",
+        "mobile_media_size": "75%",
         "show_thumnail_mobile": true,
         "transition_style": "fade",
         "image_ratio": "natural",
@@ -176,9 +176,9 @@
         "textlink_color_dark": "rgba(0,0,0,0)",
         "full_width": false,
         "spacing_col": "small",
-        "padding_top": 60,
-        "padding_bottom": 100,
-        "padding_top_mobile": 0,
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "padding_top_mobile": 12,
         "padding_bottom_mobile": 48,
         "section_scheme": "store"
       }
