@@ -454,6 +454,108 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "image_with_text_JAnKij": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tDDYbx": {
+          "type": "heading",
+          "settings": {
+            "subheading": "CASTLEFLEXX QUIZ",
+            "heading": "Find Your Device",
+            "highlight_type": "underline",
+            "heading_base_size": 110,
+            "heading_tag": "h2",
+            "text": "<p>Guided classes by pain area, age and flexibility level to help you know exactly where to start and keep you using your device consistently.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "block_scheme": "section",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "#3E4044",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "button_PpP9rG": {
+          "type": "button",
+          "settings": {
+            "button_label": "Take Quiz",
+            "button_link": "shopify://pages/find-your-device",
+            "open_new_window": false,
+            "show_button_style": "primary",
+            "block_scheme": "section",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tDDYbx",
+        "button_PpP9rG"
+      ],
+      "custom_css": [
+        "h2 {line-height: 120%;}",
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 10px; margin-bottom: 10px; } .font-medium {padding-top: 10px; font-size: 13px; letter-spacing: 0.1em; }}"
+      ],
+      "settings": {
+        "show_hero": false,
+        "image": "shopify://shop_images/FINAL_CTA.png",
+        "desktop_height": "550px",
+        "mobile_height": "natural",
+        "desktop_image_width": "medium",
+        "image_layout": "normal",
+        "adapt_radius": true,
+        "image_corner_radius": 10,
+        "show_sound_control": false,
+        "video_url": "",
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "content_layout": "no-overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "line_border": "dashed",
+        "icon_position": "col",
+        "icon_size": 45,
+        "alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "right",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 0,
+        "bottom_padding": 80,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 40,
+        "bottom_padding_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -499,6 +601,7 @@
     "main",
     "scrolling_banner_8FxYEh",
     "image_with_text_RBtGLj",
+    "image_with_text_JAnKij",
     "product-recommendations"
   ]
 }
