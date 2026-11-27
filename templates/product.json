@@ -41,7 +41,7 @@
         "text_JiX7zw": {
           "type": "text",
           "settings": {
-            "text": "<p>The perfect mat for CastleFlexxing.</p>",
+            "text": "{{ product.metafields.product.description_list | metafield_tag }}",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less"
