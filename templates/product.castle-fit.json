@@ -929,7 +929,7 @@
         "bottom_padding": 80,
         "show_section_divider_mobile": false,
         "top_padding_mobile": 48,
-        "bottom_padding_mobile": 20,
+        "bottom_padding_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "item_background_color_light": "rgba(0,0,0,0)",
