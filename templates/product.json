@@ -16,6 +16,10 @@
           "type": "rating",
           "settings": {}
         },
+        "breadcrumb_Gn76cF": {
+          "type": "breadcrumb",
+          "settings": {}
+        },
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
@@ -125,6 +129,7 @@
       },
       "block_order": [
         "rating_AeRdFJ",
+        "breadcrumb_Gn76cF",
         "product_name_xkPbAa",
         "price",
         "text_JiX7zw",
