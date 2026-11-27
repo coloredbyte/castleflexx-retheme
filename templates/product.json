@@ -86,14 +86,14 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_button_style": "secondary",
-            "show_dynamic_checkout": true,
+            "show_button_style": "primary",
+            "show_dynamic_checkout": false,
             "dymanic_checkout_style": "primary",
             "show_atc_quantity": false,
             "show_add_to_cart": true,
             "show_price": true,
             "hide_sale_price": true,
-            "show_gift_card_recipient": true,
+            "show_gift_card_recipient": false,
             "pickup_availability": true,
             "hide_when_pre_order": false,
             "preorder_button_label": "Pre-order",
