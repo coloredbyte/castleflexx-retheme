@@ -141,6 +141,28 @@
             "enable_video_autoplay": false
           }
         },
+        "complementary_aBm93n": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs well with",
+            "show_tab": false,
+            "show_background": false,
+            "show_border": false,
+            "layout": "vertical",
+            "max_product_show": 2,
+            "enable_carousel_desktop": true,
+            "enable_swiper_mobile": true,
+            "number_product_per_page": 1,
+            "image_ratio": "square",
+            "show_vendor": false,
+            "show_product_rating": true,
+            "show_highlighted_features": false,
+            "add_as_bundle": true,
+            "block_scheme": "section",
+            "border_color_light": "rgba(0,0,0,0)",
+            "border_color_dark": "rgba(0,0,0,0)"
+          }
+        },
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
@@ -160,6 +182,7 @@
         "upsell",
         "buy_buttons",
         "collapsible_tab_7iGByz",
+        "complementary_aBm93n",
         "sticky-atc"
       ],
       "custom_css": [
@@ -251,104 +274,6 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
-      }
-    },
-    "331e6fca-2947-4a19-89c5-9396be0d666a": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_y7bRir": {
-          "type": "column",
-          "settings": {
-            "icon": "flower",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "Safe to use",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>EWG VERIFIED™, made with 99.9%+ natural origin ingredients* including phytoglycogen.</p>"
-          }
-        },
-        "column_XbXwkj": {
-          "type": "column",
-          "settings": {
-            "icon": "dna",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "Non-allergen",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>The SHA accreditation is an instant way to recognise a product meets the highest standards of skin safety.</p>"
-          }
-        },
-        "column_D4NA9Q": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "Confidence by trust",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": "<p>Businesses must prioritize ethical practices and customer-centric strategies to ensure long-term success.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_y7bRir",
-        "column_XbXwkj",
-        "column_D4NA9Q"
-      ],
-      "settings": {
-        "title": "",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "secondary_background": "none",
-        "border_column": "full_border",
-        "column_content_alignment": "center",
-        "icon_position": "above",
-        "icon_size": 45,
-        "enable_desktop_slider": false,
-        "pagination_desktop": "dots",
-        "swiper_on_mobile": true,
-        "pagination_mobile": "dots",
-        "auto_play": true,
-        "change_bar_every": 5,
-        "column_layout_desktop": "lg:w-1/3",
-        "section_height_desktop": "md:py-7",
-        "spacing_desktop": 28,
-        "full_width": false,
-        "padding_full_width": false,
-        "show_section_divider": false,
-        "padding_top": 100,
-        "padding_bottom": 0,
-        "column_layout_mobile": "w-full",
-        "section_height_mobile": "py-5",
-        "spacing_mobile": 16,
-        "full_width_mobile": false,
-        "show_section_divider_mobile": false,
-        "padding_top_mobile": 16,
-        "padding_bottom_mobile": 48,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "color_icon_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "color_icon_dark": "rgba(0,0,0,0)"
       }
     },
     "products_bundle_8bV8CB": {
@@ -1148,7 +1073,6 @@
   "order": [
     "main",
     "product-recommendations",
-    "331e6fca-2947-4a19-89c5-9396be0d666a",
     "products_bundle_8bV8CB",
     "text_column_with_image_MUhrhK",
     "rich_text_erqjzG",
