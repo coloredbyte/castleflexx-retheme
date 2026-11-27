@@ -19,7 +19,7 @@
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
-            "title_size": 130,
+            "title_size": 150,
             "heading_tag": "h1",
             "enable_product_rating": false
           }
