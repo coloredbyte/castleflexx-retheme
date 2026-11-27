@@ -163,9 +163,9 @@
         "sticky-atc"
       ],
       "custom_css": [
-        ".x-product-upsell .metafield-rich_text_field {display: inline-flex; align-items: center; vertical-align: middle; padding: 5px 12px; border-radius: 999px; background: #dccbb4; color: #1a1a1a; font-size: 14px; margin-bottom: 10px;}",
         ".x-product-upsell__return {display: inline-flex; padding: 6px 12px; border: 1px solid #3d7d65; border-radius: 999px; color: #3d7d65;}",
-        ".x-product-upsell__origin {display: inline-flex; padding: 6px 12px; border: 1px solid #1a1a1a; border-radius: 999px; color: #1a1a1a;}"
+        ".x-product-upsell__origin {display: inline-flex; padding: 6px 12px; border: 1px solid #1a1a1a; border-radius: 999px; color: #1a1a1a;}",
+        ".x-product-upsell .items-start {display: flex; align-items: flex-start; gap: 20px; padding: 18px 18px; border: 1px solid #cfcfcf;; border-radius: 8px;}"
       ],
       "settings": {
         "enable_sticky_image": true,
