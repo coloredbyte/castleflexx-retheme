@@ -410,6 +410,7 @@
       ],
       "settings": {
         "show_hero": false,
+        "image": "shopify://shop_images/FINAL_CTA.png",
         "desktop_height": "550px",
         "mobile_height": "400px",
         "desktop_image_width": "medium",
