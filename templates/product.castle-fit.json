@@ -968,7 +968,7 @@
         "video_mobile_ratio": "px",
         "video_mobile_height": "natural",
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 40
       }
     },
     "faq_czNdmY": {
@@ -1039,8 +1039,8 @@
         "image_alignment_mobile": "left",
         "mobile_height": "250px",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
