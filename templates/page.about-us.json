@@ -575,7 +575,7 @@
       ],
       "custom_css": [
         ".iwc__inner {padding-top: 60px; padding-bottom: 20px;}",
-        "@media screen and (max-width: 1024px) {.iwc__title {font-size: 16px; } .iwc__inner {padding-top: 40px; padding-bottom: 28px; }}"
+        "@media screen and (max-width: 768px) {.iwc__title {font-size: 16px; } .iwc__inner {padding-top: 40px; padding-bottom: 28px; }}"
       ],
       "name": "Image with chart",
       "settings": {
