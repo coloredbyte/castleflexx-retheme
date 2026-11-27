@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating_AeRdFJ": {
+          "type": "rating",
+          "settings": {}
+        },
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
@@ -25,10 +29,6 @@
           "settings": {
             "position_adapt": true
           }
-        },
-        "rating_AeRdFJ": {
-          "type": "rating",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -130,9 +130,9 @@
         }
       },
       "block_order": [
+        "rating_AeRdFJ",
         "product_name_xkPbAa",
         "badges_fCnAXm",
-        "rating_AeRdFJ",
         "price",
         "text_JiX7zw",
         "variant_picker",
