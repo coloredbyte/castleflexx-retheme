@@ -85,7 +85,7 @@
         "columns_desktop": 4,
         "columns_mobile": "2",
         "heading_color_light": "rgba(0,0,0,0)",
-        "text_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "#3E4044",
         "line_border_light": "rgba(0,0,0,0)",
         "icon_color_light": "rgba(0,0,0,0)",
         "heading_color_dark": "rgba(0,0,0,0)",
@@ -102,7 +102,7 @@
         "top_padding_mobile": 20,
         "bottom_padding_mobile": 48,
         "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_light": "#F7F8F6",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
