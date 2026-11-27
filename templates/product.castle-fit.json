@@ -857,91 +857,6 @@
         "section_scheme": "store"
       }
     },
-    "testimonials_with_card_PjVcDX": {
-      "type": "testimonials-with-card",
-      "blocks": {
-        "testimonial_bQG8Kr": {
-          "type": "testimonial",
-          "settings": {
-            "cards_image": "shopify://shop_images/castlefit_testimonial_img.png",
-            "icon_star": "5_star",
-            "custom_icon": "",
-            "title": "I strongly recommend this to be a part of anyone’s health routine.",
-            "text": "<p>“As a part of my health journey, improving my mobility and flexibility is paramount. CastleFit has become a critical component of that journey. Providing terrific instruction and being a consistent reminder of the importance of a strong posterior chain.”</p>",
-            "show_author_image": false,
-            "author": "Gregg F.",
-            "author_note": "<p>Verified Customer</p>",
-            "product": ""
-          }
-        },
-        "testimonial_pwkgyG": {
-          "type": "testimonial",
-          "settings": {
-            "cards_image": "shopify://shop_images/CastleFlexx_HEAT_6-20-24_386.jpg",
-            "icon_star": "5_star",
-            "custom_icon": "",
-            "title": "Never felt this loose and mobile before.",
-            "text": "<p>“It's addicting. Never felt this loose and mobile before. My hamstrings are no longer an issue for me.”</p>",
-            "show_author_image": false,
-            "author": "Erik L.",
-            "author_note": "<p>Verified Customer</p>",
-            "product": ""
-          }
-        },
-        "testimonial_zEhKwf": {
-          "type": "testimonial",
-          "settings": {
-            "cards_image": "shopify://shop_images/lite-3-square.jpg",
-            "icon_star": "5_star",
-            "custom_icon": "",
-            "title": "My plantar pain is literally gone!",
-            "text": "<p>“I've made more progress with this in 8 days than over years with other recovery tools. Unreal. No more morning foot pain management.”</p>",
-            "show_author_image": false,
-            "author": "Dave",
-            "author_note": "<p>Verified Customer</p>",
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_bQG8Kr",
-        "testimonial_pwkgyG",
-        "testimonial_zEhKwf"
-      ],
-      "name": "t:sections.testimonials-with-card.name",
-      "settings": {
-        "heading": "CastleFIT Reviews Say it Best",
-        "highlight_type": "underline",
-        "subheading": "",
-        "text": "<p>Real proof that CastleFIT can be a life-changing program</p>",
-        "heading_alignment": "center",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "auto_play": true,
-        "change_slides_speed": 6,
-        "image_ratio": "round",
-        "full_width": false,
-        "padding_full_width": false,
-        "show_section_divider": false,
-        "top_padding": 80,
-        "bottom_padding": 80,
-        "full_width_mobile": false,
-        "show_section_divider_mobile": false,
-        "top_padding_mobile": 48,
-        "bottom_padding_mobile": 48,
-        "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
-        "item_background_color_light": "rgba(0,0,0,0)",
-        "item_border_color_light": "rgba(0,0,0,0)",
-        "heading_and_title_light": "rgba(0,0,0,0)",
-        "item_text_color_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "item_background_color_dark": "rgba(0,0,0,0)",
-        "item_border_color_dark": "rgba(0,0,0,0)",
-        "heading_and_title_dark": "rgba(0,0,0,0)",
-        "item_text_color_dark": "rgba(0,0,0,0)"
-      }
-    },
     "testimonials_Vebw8E": {
       "type": "testimonials",
       "blocks": {
@@ -1144,7 +1059,6 @@
     "custom_liquid_6BFBpa",
     "access",
     "slideshow_PtCe4a",
-    "testimonials_with_card_PjVcDX",
     "testimonials_Vebw8E",
     "video_drecgj",
     "faq_czNdmY"
