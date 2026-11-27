@@ -957,10 +957,24 @@
             "author_note": "<p>Verified Customer</p>",
             "product": ""
           }
+        },
+        "testimonial_QxzgK6": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "Never felt this loose and mobile before.",
+            "text": "<p>“It's addicting. Never felt this loose and mobile before. My hamstrings are no longer an issue for me.”</p>",
+            "author_image": "shopify://shop_images/CastleFlexx_HEAT_6-20-24_206.jpg",
+            "author": "Gregg F.",
+            "author_note": "<p>Verified Customer</p>",
+            "product": ""
+          }
         }
       },
       "block_order": [
-        "testimonial_xUaTwE"
+        "testimonial_xUaTwE",
+        "testimonial_QxzgK6"
       ],
       "settings": {
         "heading": "CastleFIT Reviews Say it Best",
