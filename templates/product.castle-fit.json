@@ -155,7 +155,7 @@
         "padding_top_mobile": 48,
         "padding_bottom_mobile": 20,
         "section_scheme": "store",
-        "background_color_light": "#FFFFFF",
+        "background_color_light": "#ffffff",
         "heading_light": "rgba(0,0,0,0)",
         "text_light": "#666768",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
@@ -274,7 +274,7 @@
         "padding_bottom_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "#3E4044",
+        "heading_light": "#3e4044",
         "text_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
@@ -312,6 +312,7 @@
         "show_sound_control": false,
         "video_url": "",
         "video_alt_text": "",
+        "mobile_video_url": "",
         "full_width": true,
         "adapt_corners_desktop": false,
         "rounded_corners": false,
@@ -449,7 +450,7 @@
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "heading_light": "rgba(0,0,0,0)",
-        "text_light": "#191A1B",
+        "text_light": "#191a1b",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
         "line_border_light": "rgba(0,0,0,0)",
         "color_icon_light": "rgba(0,0,0,0)",
@@ -757,9 +758,11 @@
             "image_link": "shopify://products/after-dark-standalone",
             "open_new_window_image": false,
             "overlay_opacity": 0,
+            "video_url": "",
             "video_alt_text": "",
             "show_sound_control": false,
             "enable_video_autoplay": false,
+            "mobile_video_url": "",
             "subheading": "",
             "subheading_mobile": "",
             "subheading_size": 100,
@@ -939,6 +942,62 @@
         "item_text_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "testimonials_Vebw8E": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_xUaTwE": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "I strongly recommend this to be a part of anyone’s health routine.",
+            "text": "<p>“As a part of my health journey, improving my mobility and flexibility is paramount. CastleFit has become a critical component of that journey. Providing terrific instruction and being a consistent reminder of the importance of a strong posterior chain.”</p>",
+            "author_image": "shopify://shop_images/castlefit_testimonial_img.png",
+            "author": "Gregg F.",
+            "author_note": "<p>Verified Customer</p>",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_xUaTwE"
+      ],
+      "settings": {
+        "heading": "CastleFIT Reviews Say it Best",
+        "subheading": "",
+        "text": "<p>Real proof that CastleFIT can be a life-changing program</p>",
+        "heading_alignment": "center",
+        "highlight_type": "underline",
+        "heading_size": 110,
+        "heading_tag": "h2",
+        "text_alignment": "start",
+        "testimonial_items_view": "single",
+        "pagination_desktop": "dots",
+        "pagination_mobile": "dots",
+        "show_arrow": true,
+        "auto_play": true,
+        "change_slides_speed": 6,
+        "show_author_image": true,
+        "author_image": "top",
+        "image_ratio": "100",
+        "desktop_height": 400,
+        "show_section_divider": false,
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "show_section_divider_mobile": false,
+        "top_padding_mobile": 48,
+        "bottom_padding_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "item_background_color_light": "rgba(0,0,0,0)",
+        "heading_and_title_light": "rgba(0,0,0,0)",
+        "item_text_color_light": "#3E4044",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "item_background_color_dark": "rgba(0,0,0,0)",
+        "heading_and_title_dark": "rgba(0,0,0,0)",
+        "item_text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "video_drecgj": {
       "type": "video",
       "name": "t:sections.video.name",
@@ -952,6 +1011,7 @@
         "image": "shopify://shop_images/video-frame.png",
         "video_url": "https://www.youtube.com/watch?v=stpPDwFQthM",
         "video_alt_text": "",
+        "mobile_video_url": "",
         "full_width": true,
         "adapt_corners_desktop": false,
         "rounded_corners": false,
@@ -1057,6 +1117,7 @@
     "access",
     "slideshow_PtCe4a",
     "testimonials_with_card_PjVcDX",
+    "testimonials_Vebw8E",
     "video_drecgj",
     "faq_czNdmY"
   ]
