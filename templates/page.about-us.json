@@ -15,61 +15,37 @@
         "heading_mhXJMX": {
           "type": "heading",
           "settings": {
-            "subheading": "Example subheading",
-            "heading": "Image with text",
+            "subheading": "",
+            "heading": "Meet the Founder",
             "highlight_type": "underline",
-            "heading_base_size": 100,
+            "heading_base_size": 110,
             "heading_tag": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>After suffering a sports injury in 2007, I began to develop lower back pain and the MRI showed L4 and L5 herniated discs in my lower spine. I tried every remedy available, but every year I would throw my back out doing the most basic activities. My back pain went on for over ten years. During that time, I tried everything from acupuncture, heavy pain medications, PT, sports massages, and finally chiropractors.<br/><br/>As the Managing Director of Martha Stewart brand, i found myself missing meetings as my chronic back pain got worse.<br/><br/>After a few months of using CastleFlexx for 8 to 16 minutes a day, I began to feel better, move better and even look better. My wife Carly, who had also begun using CastleFlexx, experienced significant improvement and no longer complains about her hip pain and sciatica.<br/><br/><strong>Dan Castle&nbsp;<br/></strong>CASTLEFLEXX FOUNDER & CREATOR</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
             "block_scheme": "section",
             "heading_light": "rgba(0,0,0,0)",
-            "text_light": "rgba(0,0,0,0)",
+            "text_light": "#3E4044",
             "color_heading_highlight_light": "rgba(0,0,0,0)",
             "heading_dark": "rgba(0,0,0,0)",
             "text_dark": "rgba(0,0,0,0)",
             "color_heading_highlight_dark": "rgba(0,0,0,0)"
           }
-        },
-        "button_XxURFd": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "open_new_window": false,
-            "show_button_style": "primary",
-            "block_scheme": "section",
-            "button_light": "rgba(0,0,0,0)",
-            "button_text_light": "rgba(0,0,0,0)",
-            "button_hover_light": "rgba(0,0,0,0)",
-            "button_text_hover_light": "rgba(0,0,0,0)",
-            "secondary_button_light": "rgba(0,0,0,0)",
-            "secondary_button_text_light": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)",
-            "button_dark": "rgba(0,0,0,0)",
-            "button_text_dark": "rgba(0,0,0,0)",
-            "button_hover_dark": "rgba(0,0,0,0)",
-            "button_text_hover_dark": "rgba(0,0,0,0)",
-            "secondary_button_dark": "rgba(0,0,0,0)",
-            "secondary_button_text_dark": "rgba(0,0,0,0)",
-            "colors_text_link_dark": "rgba(0,0,0,0)"
-          }
         }
       },
       "block_order": [
-        "heading_mhXJMX",
-        "button_XxURFd"
+        "heading_mhXJMX"
       ],
       "custom_css": [
-        ".ltr {background-color: #F7F8F6;}"
+        ".ltr {background-color: #f7f8f6;}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
-        "desktop_height": "550px",
-        "mobile_height": "400px",
+        "image": "shopify://shop_images/img_5_d76d2e57-b962-4882-a20c-0497d365d783.png",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
         "desktop_image_width": "medium",
         "image_layout": "normal",
         "adapt_radius": true,
