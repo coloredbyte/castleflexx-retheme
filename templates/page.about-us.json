@@ -628,7 +628,7 @@
         "bottom_padding": 0,
         "show_section_divider_mobile": false,
         "top_padding_mobile": 20,
-        "bottom_padding_mobile": 20,
+        "bottom_padding_mobile": 0,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "item_background_color_light": "#FFFFFF",
