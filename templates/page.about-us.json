@@ -319,6 +319,9 @@
         "column_TCXH7F",
         "column_hqjtpj"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {h2 {font-size: 30px; }}"
+      ],
       "name": "t:sections.text-column-image.name",
       "settings": {
         "title": "Dan Castle's Award Winning Inventions",
