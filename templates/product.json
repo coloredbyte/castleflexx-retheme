@@ -162,6 +162,9 @@
         "collapsible_tab_7iGByz",
         "sticky-atc"
       ],
+      "custom_css": [
+        ".x-product-upsell__title {display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 12px; font-size: 16px;}"
+      ],
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
