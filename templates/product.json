@@ -556,6 +556,62 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_KQzpii": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nMHQfi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Reviews",
+            "highlight_type": "underline",
+            "heading_size": 110,
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nMHQfi"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "content_alignment": "center",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "content_alignment_mobile": "center",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 0,
+        "section_scheme": "store",
+        "heading_light": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "text_light": "rgba(0,0,0,0)",
+        "background_color_light": "rgba(0,0,0,0)",
+        "heading_dark": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "text_dark": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "17958011126e74f5d5": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_YxzWHU": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_YxzWHU"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -602,6 +658,8 @@
     "scrolling_banner_8FxYEh",
     "image_with_text_RBtGLj",
     "image_with_text_JAnKij",
+    "rich_text_KQzpii",
+    "17958011126e74f5d5",
     "product-recommendations"
   ]
 }
