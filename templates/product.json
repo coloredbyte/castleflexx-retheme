@@ -38,51 +38,13 @@
             "text_size_price": 70
           }
         },
-        "inventory_status_LrbyC8": {
-          "type": "inventory_status",
+        "text_JiX7zw": {
+          "type": "text",
           "settings": {
-            "incoming": false,
-            "message_incoming": "",
-            "message_backorder": "",
-            "hide_preorder": false
-          }
-        },
-        "ffacb41b-c15e-41ee-864a-cfbf155d407d": {
-          "type": "estimate_delivery",
-          "settings": {
-            "hide_when_pre_order": false,
-            "box_type": "round",
-            "message": "<p>Estimated delivery between <strong>earliest_delivery_date and latest_delivery_date. </strong>Order within <strong>time_to_cut_off.</strong></p>",
-            "tooltip_text": "",
-            "tooltip_icon": "none",
-            "custom_icon": "",
-            "tooltip_icon_position": "left",
-            "tooltip_message": "",
-            "show_background": false,
-            "show_border": true,
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "message_color_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "message_color_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)",
-            "bg_tooltip_color_light": "rgba(0,0,0,0)",
-            "tooltip_color_light": "rgba(0,0,0,0)",
-            "bg_tooltip_color_dark": "rgba(0,0,0,0)",
-            "tooltip_color_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "gift_wrapping_EK3NQn": {
-          "type": "gift_wrapping",
-          "settings": {
-            "text_gift": "",
-            "show_border": true,
-            "block_scheme": "section",
-            "color_icon_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "color_icon_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)"
+            "text": "<p>The perfect mat for CastleFlexxing.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
           }
         },
         "variant_picker": {
@@ -101,10 +63,24 @@
             "size_chart_type": "popup"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "upsell": {
+          "type": "upsell",
           "settings": {
-            "style": "rounded-full"
+            "heading": "",
+            "description": "",
+            "layout": "checkbox",
+            "show_image": false,
+            "checked_by_default": false,
+            "option_device_title": "CastleFlexx HEAT Only",
+            "option_device_details": "Built-in Heat • USB-C Rechargeable • 30-Day Returns",
+            "option_bundle_title": "CastleFlexx HEAT + CastleFIT",
+            "option_bundle_details": "Heat Device • 200+ guided classes",
+            "badge": "Best value • Save [savings]",
+            "return_text": "30 Day Return Policy",
+            "return_text_bundle": "60 Day Return Policy",
+            "origin_text": "USA Owned",
+            "show_border": true,
+            "block_scheme": "section"
           }
         },
         "buy_buttons": {
@@ -144,266 +120,12 @@
             "secondary_button_text_dark": "rgba(0,0,0,0)"
           }
         },
-        "coupon_code_d4T8zk": {
-          "type": "coupon_code",
-          "settings": {
-            "block_edges": "rounded_corners",
-            "show_border": false,
-            "show_background": true,
-            "coupon_box_edges": "rounded_corners",
-            "icon": "hot-sale",
-            "another_icon": "",
-            "custom_icon": "",
-            "icon_size": 28,
-            "heading_text": "Best offers",
-            "coupon_text_1": "Flat discount of $30 on every order!",
-            "coupon_code_1": "SALEM30",
-            "coupon_text_2": "Flat 10% discount on every single order!",
-            "coupon_code_2": "SALEP10",
-            "apply_button_label": "Apply",
-            "show_button_style": "primary",
-            "applied_button_label": "Applied",
-            "countdown_type": "none",
-            "timezone": "-4",
-            "end_year": 2024,
-            "end_month": "1",
-            "end_day": "1",
-            "end_hour": "0",
-            "end_minute": "0",
-            "end_behavior": "show_zero",
-            "expiration_message": "<p>This offer is no longer available.</p>",
-            "countdown_interval": 7,
-            "interval_unit": "day",
-            "start_year": 2024,
-            "start_month": "1",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "text_position": "below",
-            "timer_style": "square",
-            "border_style": "none",
-            "block_scheme": "section",
-            "button_light": "rgba(0,0,0,0)",
-            "button_text_light": "rgba(0,0,0,0)",
-            "button_hover_light": "rgba(0,0,0,0)",
-            "button_text_hover_light": "rgba(0,0,0,0)",
-            "secondary_button_light": "rgba(0,0,0,0)",
-            "secondary_button_text_light": "rgba(0,0,0,0)",
-            "colors_text_link": "rgba(0,0,0,0)",
-            "background_color_light": "rgba(0,0,0,0)",
-            "heading_color_light": "rgba(0,0,0,0)",
-            "coupon_box_color_light": "rgba(0,0,0,0)",
-            "text_color_light": "rgba(0,0,0,0)",
-            "timer_color_light": "rgba(0,0,0,0)",
-            "line_border_color_light": "rgba(0,0,0,0)",
-            "coupon_color_light": "rgba(0,0,0,0)",
-            "button_dark": "rgba(0,0,0,0)",
-            "button_text_dark": "rgba(0,0,0,0)",
-            "button_hover_dark": "rgba(0,0,0,0)",
-            "button_text_hover_dark": "rgba(0,0,0,0)",
-            "secondary_button_dark": "rgba(0,0,0,0)",
-            "secondary_button_text_dark": "rgba(0,0,0,0)",
-            "colors_text_link_dark": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "heading_color_dark": "rgba(0,0,0,0)",
-            "coupon_box_color_dark": "rgba(0,0,0,0)",
-            "text_color_dark": "rgba(0,0,0,0)",
-            "timer_color_dark": "rgba(0,0,0,0)",
-            "line_border_color_dark": "rgba(0,0,0,0)",
-            "coupon_color_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "frequently_bought_pGGTM8": {
-          "type": "frequently_bought",
-          "disabled": true,
-          "settings": {
-            "icon": "hot-sale",
-            "another_icon": "",
-            "custom_icon": "",
-            "icon_size": 40,
-            "text": "More Deals From Puff!",
-            "show_background": false,
-            "show_border": true,
-            "product_source": "list_products",
-            "list_products": [],
-            "collection": "",
-            "show_vendor": false,
-            "show_rating": false,
-            "show_highlighted_features": false,
-            "variant_type": "button",
-            "show_button_style": "secondary",
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "nutrition_fact_tEqfWX": {
-          "type": "nutrition_fact",
-          "settings": {
-            "show_in_tab": true,
-            "open_by_default": false,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Ingredient Count",
-            "enable_background": false,
-            "metafield_key_list": "",
-            "nutrition_details": "<p>Hyaluronic Acid: 5% <br/>Niacinamide: 100% <br/>Aloe Vera Extract: 5%<br/>Jojoba Oil: 5%</p>",
-            "extra_detail": "This kind of \"ingredient bar\" focuses on highlighting the benefits of the active ingredients in a way that's familiar to consumers",
-            "block_scheme": "section",
-            "content_background_color": "rgba(0,0,0,0)",
-            "loading_bar_color": "rgba(0,0,0,0)",
-            "content_background_color_dark": "rgba(0,0,0,0)",
-            "loading_bar_color_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "collapsible_tab_MgjKqH": {
-          "type": "collapsible_tab",
-          "settings": {
-            "open_by_default": false,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "use_secondary_background": false,
-            "heading": "Testing Shows",
-            "tab_content": "<p><strong>Instantly<br/></strong>Skin is hydrated, barrier is supported.</p><p><strong>After 1 week<br/></strong>Skin feels smoother and softer. Hydration levels increase continually week over week.</p><p><strong>After 2 weeks<br/></strong>Lines and wrinkles look smoothed, nasolabial folds look plumper. Skin's elasticity and suppleness are improved.*<br/><br/>*Clinical testing in 32 people, 2 x per day.</p>",
-            "media_type": "none",
-            "image_position": "below",
-            "image_ratio": "natural",
-            "show_sound_control": false,
-            "video_position": "below",
-            "video_ratio": "natural",
-            "is_adapt_to_edges_type": false,
-            "is_rounded_corners": false,
-            "video_url": "",
-            "video_alt_text": "",
-            "enable_video_autoplay": false
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "open_by_default": false,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "use_secondary_background": false,
-            "heading": "Returns + Exchanges",
-            "tab_content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "media_type": "none",
-            "image_position": "below",
-            "image_ratio": "natural",
-            "show_sound_control": false,
-            "video_position": "below",
-            "video_ratio": "natural",
-            "is_adapt_to_edges_type": false,
-            "is_rounded_corners": false,
-            "video_url": "",
-            "video_alt_text": "",
-            "enable_video_autoplay": false
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "open_by_default": false,
-            "icon": "none",
-            "another_icon": "",
-            "custom_icon": "",
-            "use_secondary_background": false,
-            "heading": "Giving Back",
-            "tab_content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "media_type": "none",
-            "image_position": "below",
-            "image_ratio": "natural",
-            "show_sound_control": false,
-            "video_position": "below",
-            "video_ratio": "natural",
-            "is_adapt_to_edges_type": false,
-            "is_rounded_corners": false,
-            "video_url": "",
-            "video_alt_text": "",
-            "enable_video_autoplay": false
-          }
-        },
-        "payment_methods_kHWDBf": {
-          "type": "payment_methods",
-          "settings": {
-            "heading": "Pay with",
-            "text": "Your transaction is protected with advanced security measures to keep your information confidential",
-            "custom_payment": "",
-            "show_secondary_background": false,
-            "show_border": false,
-            "block_scheme": "section",
-            "background_color_light": "rgba(0,0,0,0)",
-            "heading_color_light": "rgba(0,0,0,0)",
-            "text_color_light": "rgba(0,0,0,0)",
-            "border_color_light": "rgba(0,0,0,0)",
-            "background_color_dark": "rgba(0,0,0,0)",
-            "heading_color_dark": "rgba(0,0,0,0)",
-            "text_color_dark": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)"
-          }
-        },
-        "social-sharing": {
-          "type": "social_sharing",
-          "settings": {}
-        },
-        "complementary_XCwmDV": {
-          "type": "complementary",
-          "disabled": true,
-          "settings": {
-            "heading": "Buy It With",
-            "show_tab": false,
-            "show_background": true,
-            "show_border": true,
-            "layout": "vertical",
-            "max_product_show": 4,
-            "enable_carousel_desktop": true,
-            "enable_swiper_mobile": true,
-            "number_product_per_page": 2,
-            "image_ratio": "square",
-            "show_vendor": false,
-            "show_product_rating": false,
-            "show_highlighted_features": false,
-            "add_as_bundle": false,
-            "block_scheme": "section",
-            "border_color_light": "rgba(0,0,0,0)",
-            "border_color_dark": "rgba(0,0,0,0)"
-          }
-        },
         "sticky-atc": {
           "type": "sticky_add_to_cart",
           "settings": {
             "desktop_display_type": "full_width",
             "show_quantity_selector": false,
             "link_to_atc_btn": false
-          }
-        },
-        "product_sibling_9zde9d": {
-          "type": "product_sibling",
-          "disabled": true,
-          "settings": {
-            "link_option": "load",
-            "option_name": "Color",
-            "collection_handle_metafield": "custom.sibling_collection_handle",
-            "option_value_metafield": "custom.sibling_color",
-            "variant_type": "button",
-            "enable_color_swatch": true,
-            "swatch_size": "medium"
-          }
-        },
-        "upsell": {
-          "type": "upsell",
-          "settings": {
-            "heading": "",
-            "description": "",
-            "show_image": false,
-            "checked_by_default": false,
-            "show_border": true,
-            "block_scheme": "section"
           }
         }
       },
@@ -412,24 +134,11 @@
         "badges_fCnAXm",
         "rating_AeRdFJ",
         "price",
-        "inventory_status_LrbyC8",
-        "ffacb41b-c15e-41ee-864a-cfbf155d407d",
-        "gift_wrapping_EK3NQn",
+        "text_JiX7zw",
         "variant_picker",
-        "quantity_selector",
         "upsell",
         "buy_buttons",
-        "coupon_code_d4T8zk",
-        "frequently_bought_pGGTM8",
-        "nutrition_fact_tEqfWX",
-        "collapsible_tab_MgjKqH",
-        "collapsible-row-1",
-        "collapsible-row-0",
-        "payment_methods_kHWDBf",
-        "social-sharing",
-        "complementary_XCwmDV",
-        "sticky-atc",
-        "product_sibling_9zde9d"
+        "sticky-atc"
       ],
       "settings": {
         "enable_sticky_image": true,
@@ -617,6 +326,7 @@
     },
     "products_bundle_8bV8CB": {
       "type": "products-bundle",
+      "disabled": true,
       "settings": {
         "heading": "Frequently [bought together.]",
         "highlight_type": "font_highlight",
@@ -681,8 +391,7 @@
         "button_hover_dark": "rgba(0,0,0,0)",
         "button_text_hover_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)"
-      },
-      "disabled": true
+      }
     },
     "text_column_with_image_MUhrhK": {
       "type": "text-column-with-image",
