@@ -970,11 +970,25 @@
             "author_note": "<p>Verified Customer</p>",
             "product": ""
           }
+        },
+        "testimonial_QXrieV": {
+          "type": "testimonial",
+          "settings": {
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "My plantar pain is literally gone!",
+            "text": "<p>“I've made more progress with this in 8 days than over years with other recovery tools. Unreal. No more morning foot pain management.”</p>",
+            "author_image": "shopify://shop_images/lite-3-square.jpg",
+            "author": "Dave",
+            "author_note": "<p>Verified Customer</p>",
+            "product": ""
+          }
         }
       },
       "block_order": [
         "testimonial_xUaTwE",
-        "testimonial_QxzgK6"
+        "testimonial_QxzgK6",
+        "testimonial_QXrieV"
       ],
       "settings": {
         "heading": "CastleFIT Reviews Say it Best",
