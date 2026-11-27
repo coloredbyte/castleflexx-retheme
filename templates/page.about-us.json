@@ -148,7 +148,7 @@
         "text_color_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "icon_color_dark": "rgba(0,0,0,0)",
-        "image_alignment": "right",
+        "image_alignment": "left",
         "full_width": false,
         "padding_full_width": false,
         "top_padding": 60,
@@ -158,7 +158,7 @@
         "top_padding_mobile": 20,
         "bottom_padding_mobile": 48,
         "section_scheme": "store",
-        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
