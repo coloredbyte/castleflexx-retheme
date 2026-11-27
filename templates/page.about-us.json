@@ -413,7 +413,7 @@
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40,
+        "padding_bottom_mobile": 48,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
@@ -533,6 +533,56 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "section_scheme": "store"
+      }
+    },
+    "image_with_chart_DfBHUG": {
+      "type": "image-with-chart",
+      "blocks": {
+        "chart_item_VqQR3w": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Natural Stress-Free Grip",
+            "cross_item_text": "Causes Rope Burn 🔥"
+          }
+        },
+        "chart_item_H8wb7t": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "100% Toe Dorsiflexion",
+            "cross_item_text": "0% Toe Dosiflexion"
+          }
+        },
+        "chart_item_h4B7Rx": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Active & Passive Stretching",
+            "cross_item_text": "Passive Only"
+          }
+        },
+        "chart_item_c3Umky": {
+          "type": "chart_item",
+          "settings": {
+            "check_item_text": "Neutral Spine",
+            "cross_item_text": "Awkward Positions"
+          }
+        }
+      },
+      "block_order": [
+        "chart_item_VqQR3w",
+        "chart_item_H8wb7t",
+        "chart_item_h4B7Rx",
+        "chart_item_c3Umky"
+      ],
+      "custom_css": [
+        ".iwc__inner {padding-top: 60px; padding-bottom: 20px;}",
+        "@media screen and (max-width: 1024px) {.iwc__title {font-size: 16px; } .iwc__inner {padding-top: 40px; padding-bottom: 28px; }}"
+      ],
+      "name": "Image with chart",
+      "settings": {
+        "background_colour": "#f8f8f8",
+        "image": "shopify://shop_images/6303abd84f383481af5c0b0188965a59.gif",
+        "chart_logo": "shopify://shop_images/castleflexx-logo.png",
+        "chart_title": "VS Straps/Bands"
       }
     },
     "e32885d8-0a8f-4c4f-8801-377d01cb7656": {
@@ -1368,6 +1418,7 @@
     "text_column_with_image_iTLfnH",
     "rich_text_BW4Nbz",
     "slideshow_rc6dDN",
+    "image_with_chart_DfBHUG",
     "e32885d8-0a8f-4c4f-8801-377d01cb7656",
     "4352d226-8e70-4b9d-94d5-8f8b0e27084b",
     "54f7b6ce-e4ba-42b3-9550-cde9eb5ab2b4",
