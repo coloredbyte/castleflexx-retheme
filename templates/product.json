@@ -407,7 +407,7 @@
       ],
       "custom_css": [
         "h2 {line-height: 120%;}",
-        "@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 10px; margin-bottom: 10px; } .font-medium {padding-top: 10px; font-size: 13px; letter-spacing: 0.1em;}}"
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 10px; margin-bottom: 10px; } .font-medium {padding-top: 10px; font-size: 13px; letter-spacing: 0.1em; }}"
       ],
       "settings": {
         "show_hero": false,
@@ -457,9 +457,9 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You May Also Like...",
+        "heading": "You May Also Like",
         "highlight_type": "underline",
-        "heading_size": 100,
+        "heading_size": 110,
         "heading_tag": "h2",
         "heading_alignment": "center",
         "products_to_show": 5,
@@ -478,17 +478,17 @@
         "pagination_desktop": "dots",
         "enable_swiper_mobile": true,
         "pagination_mobile": "dots",
-        "columns_desktop": 5,
-        "full_width": true,
+        "columns_desktop": 4,
+        "full_width": false,
         "show_section_divider": false,
         "spacing": 28,
-        "padding_top": 56,
-        "padding_bottom": 88,
-        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "columns_mobile": "2",
         "show_section_divider_mobile": false,
         "spacing_mobile": 16,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 48,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)"
