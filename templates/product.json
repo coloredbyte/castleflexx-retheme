@@ -405,6 +405,9 @@
         "heading_8nMPQf",
         "button_fYQUVB"
       ],
+      "custom_css": [
+        "h2 {line-height: 120%;}"
+      ],
       "settings": {
         "show_hero": false,
         "desktop_height": "550px",
