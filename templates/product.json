@@ -19,7 +19,7 @@
         "product_name_xkPbAa": {
           "type": "product_name",
           "settings": {
-            "title_size": 100,
+            "title_size": 130,
             "heading_tag": "h1",
             "enable_product_rating": false
           }
@@ -143,19 +143,19 @@
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
-        "title_size": 100,
+        "title_size": 130,
         "heading_tag": "h1",
         "show_vendor": false,
         "link_vendor": false,
         "make_content_center": false,
         "desktop_layout": "left",
-        "desktop_media_layout": "stacked",
+        "desktop_media_layout": "thumbnail_slider",
         "show_arrow_button": true,
         "mobile_media_size": "full_width",
-        "show_thumnail_mobile": false,
+        "show_thumnail_mobile": true,
         "transition_style": "fade",
         "image_ratio": "natural",
-        "thumbnail_position": "vertical",
+        "thumbnail_position": "horizontal",
         "enable_thumbnail_overlay": true,
         "enable_image_zoom": true,
         "zoom_effect": "gallery",
@@ -165,7 +165,7 @@
         "show_media_with_variant_selected": true,
         "option_to_classify_variant_media": "Color",
         "enable_microdata": false,
-        "show_breadcrumbs": true,
+        "show_breadcrumbs": false,
         "show_breadcrumbs_border": false,
         "full_width_breadcrumb": true,
         "desktop_content_alignment": "text-center",
