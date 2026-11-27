@@ -148,7 +148,7 @@
             "show_tab": false,
             "show_background": false,
             "show_border": false,
-            "layout": "horizontal",
+            "layout": "vertical",
             "max_product_show": 3,
             "enable_carousel_desktop": true,
             "enable_swiper_mobile": true,
