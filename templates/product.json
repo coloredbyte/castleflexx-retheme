@@ -572,6 +572,9 @@
       "block_order": [
         "heading_nMHQfi"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; }}"
+      ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "content_alignment": "center",
@@ -581,7 +584,7 @@
         "padding_bottom": 0,
         "content_alignment_mobile": "center",
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 0,
         "section_scheme": "store",
         "heading_light": "rgba(0,0,0,0)",
