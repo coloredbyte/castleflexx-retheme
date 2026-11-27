@@ -869,6 +869,9 @@
       "block_order": [
         "collection_TrCGBY"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {h2 {font-size: 28px; padding-bottom: 28px; }}"
+      ],
       "name": "t:sections.featured-collection.name",
       "settings": {
         "title": "Start Your Journey Today",
