@@ -259,7 +259,7 @@
         "show_highlighted_features": false,
         "each_product_can_added_to_bundle_once": true,
         "show_qty": false,
-        "minimum_items": 3,
+        "minimum_items": 2,
         "discount_type": "percentage",
         "discount_value": "",
         "apply_discount_once_per_order": true,
