@@ -698,6 +698,110 @@
         "item_text_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "testimonials_with_card_HXYpxN": {
+      "type": "testimonials-with-card",
+      "blocks": {
+        "testimonial_4bHijg": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/5dd916a59ffada2ea8777eb37e52b8c2d2bd1a7f.jpg",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "\"I use it an hour a day. CastleFlexx is by far the best.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Ronald Acuna Jr",
+            "author_note": "<p>#13 | NL MVP 2023</p>",
+            "product": "castleflexx-sport"
+          }
+        },
+        "testimonial_itTtEG": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/castleflexx-audience-martha.jpg",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“Well designed and very nice colors.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Martha Stewart",
+            "author_note": "<p>Businesswoman & Writer</p>",
+            "product": "castle-flexx"
+          }
+        },
+        "testimonial_LVn4tK": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/img_desk.png",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“My lower back has held up. It's unreal.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Nickeil Alexander-Walker",
+            "author_note": "<p>Atlanta | Shooting Guard #7</p>",
+            "product": "castle-flexx"
+          }
+        },
+        "testimonial_RPnQFR": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/dr_rachel_testimonial.png",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“Gripping a band or a strap is painful. This changes everything.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Dr. Rachel Skolnick D.C",
+            "author_note": "<p>Julliard NYC</p>",
+            "product": "castle-flexx"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_4bHijg",
+        "testimonial_itTtEG",
+        "testimonial_LVn4tK",
+        "testimonial_RPnQFR"
+      ],
+      "custom_css": [
+        ".author-caption-text {font-weight: 500;}",
+        "@media screen and (max-width: 1024px) {h2 {font-size: 28px; }}"
+      ],
+      "name": "t:sections.testimonials-with-card.name",
+      "settings": {
+        "heading": "",
+        "highlight_type": "font_highlight",
+        "subheading": "",
+        "text": "",
+        "heading_alignment": "center",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "auto_play": true,
+        "change_slides_speed": 5,
+        "image_ratio": "round",
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "top_padding": 0,
+        "bottom_padding": 60,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 40,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "item_background_color_light": "#F7F8F6",
+        "item_border_color_light": "#F7F8F6",
+        "heading_and_title_light": "rgba(0,0,0,0)",
+        "item_text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "item_background_color_dark": "rgba(0,0,0,0)",
+        "item_border_color_dark": "rgba(0,0,0,0)",
+        "heading_and_title_dark": "rgba(0,0,0,0)",
+        "item_text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "6c240d5b-c5b1-4370-96f5-adff063eb83e": {
       "type": "image-comparison",
       "settings": {
@@ -831,6 +935,7 @@
     "image_with_chart_DfBHUG",
     "54f7b6ce-e4ba-42b3-9550-cde9eb5ab2b4",
     "testimonials_with_card_XdAWiM",
+    "testimonials_with_card_HXYpxN",
     "6c240d5b-c5b1-4370-96f5-adff063eb83e",
     "logo_list_Ce7jj8"
   ]
