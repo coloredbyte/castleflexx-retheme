@@ -39,7 +39,7 @@
       ],
       "custom_css": [
         ".ltr {background-color: #f7f8f6;}",
-        "@media screen and (min-width: 990px) {.ltr {padding-left: 24px; padding-right: 40px; }}",
+        "@media screen and (min-width: 990px) {.ltr {padding-left: 20px; padding-right: 48px; }}",
         "@media screen and (max-width: 768px) {h2 {font-size: 30px; padding-top: 12px; } .iwt-content {padding-left: 0px; padding-right: 0px; }}"
       ],
       "name": "t:sections.image-with-text.name",
@@ -116,7 +116,7 @@
         "heading_NGDRLP"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.ltr {padding-left: 24px; padding-right: 40px; }}",
+        "@media screen and (min-width: 990px) {.ltr {padding-left: 48px; padding-right: 24px; }}",
         "@media screen and (max-width: 768px) {h2 {font-size: 30px; padding-top: 12px; } .iwt-content {padding-left: 0px; padding-right: 0px; }}"
       ],
       "name": "t:sections.image-with-text.name",
@@ -193,7 +193,7 @@
         "heading_fxYzrY"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.ltr {padding-left: 24px; padding-right: 40px; }}",
+        "@media screen and (min-width: 990px) {.ltr {padding-left: 20px; padding-right: 48px; }}",
         "@media screen and (max-width: 768px) {h2 {font-size: 30px; padding-top: 12px; } .iwt-content {padding-left: 0px; padding-right: 0px; }}"
       ],
       "name": "t:sections.image-with-text.name",
@@ -227,7 +227,7 @@
         "text_color_dark": "rgba(0,0,0,0)",
         "line_border_dark": "rgba(0,0,0,0)",
         "icon_color_dark": "rgba(0,0,0,0)",
-        "image_alignment": "left",
+        "image_alignment": "right",
         "full_width": false,
         "padding_full_width": false,
         "top_padding": 60,
