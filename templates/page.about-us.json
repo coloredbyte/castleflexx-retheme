@@ -235,7 +235,7 @@
         "image_alignment_mobile": "left",
         "full_width_mobile": false,
         "top_padding_mobile": 0,
-        "bottom_padding_mobile": 48,
+        "bottom_padding_mobile": 40,
         "section_scheme": "store",
         "background_color_light": "#FFFFFF",
         "background_color_dark": "rgba(0,0,0,0)"
