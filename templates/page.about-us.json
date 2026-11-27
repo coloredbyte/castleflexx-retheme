@@ -164,6 +164,83 @@
         "background_color_dark": "rgba(0,0,0,0)"
       }
     },
+    "image_with_text_HrXUVH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fxYzrY": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "Our Story",
+            "highlight_type": "underline",
+            "heading_base_size": 110,
+            "heading_tag": "h2",
+            "text": "<p>CastleFlexx began with a simple idea born from a very real problem. After years of living with debilitating back pain and finding that traditional stretching tools never reached the areas he needed most, founder Dan Castle set out to create something better.<br/><br/>The result was CastleFlexx—a patented mobility device designed to help people stretch more effectively, move more freely, and feel better in their bodies. What started as one personal solution has grown into a collection of innovative health and recovery products used by everyday customers, professional athletes, and people of all ages around the world. Through every product we create, our mission remains the same: make better movement easier, more accessible, and part of everyday life.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "block_scheme": "section",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "#3E4044",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fxYzrY"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.ltr {padding-left: 24px; padding-right: 40px; }}",
+        "@media screen and (max-width: 768px) {h2 {font-size: 30px; padding-top: 12px; } .iwt-content {padding-left: 0px; padding-right: 0px; }}"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "show_hero": false,
+        "image": "shopify://shop_images/img_3_00e11b72-825e-4659-a746-a917fe00ec2d.png",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_width": "medium",
+        "image_layout": "normal",
+        "adapt_radius": true,
+        "image_corner_radius": 0,
+        "show_sound_control": false,
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "content_layout": "no-overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "line_border": "dashed",
+        "icon_position": "col",
+        "icon_size": 45,
+        "alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "#3E4044",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 60,
+        "bottom_padding": 60,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 48,
+        "section_scheme": "store",
+        "background_color_light": "#FFFFFF",
+        "background_color_dark": "rgba(0,0,0,0)"
+      }
+    },
     "e32885d8-0a8f-4c4f-8801-377d01cb7656": {
       "type": "featured-collection",
       "blocks": {
@@ -993,6 +1070,7 @@
   "order": [
     "image_with_text_BqTJEV",
     "image_with_text_XVbiRn",
+    "image_with_text_HrXUVH",
     "e32885d8-0a8f-4c4f-8801-377d01cb7656",
     "4352d226-8e70-4b9d-94d5-8f8b0e27084b",
     "54f7b6ce-e4ba-42b3-9550-cde9eb5ab2b4",
