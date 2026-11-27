@@ -407,7 +407,7 @@
       ],
       "custom_css": [
         "h2 {line-height: 120%;}",
-        " @media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 12px; margin-bottom: 12px;}}"
+        "@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 10px; margin-bottom: 10px; } .font-medium {padding-top: 10px; font-size: 13px; letter-spacing: 0.1em;}}"
       ],
       "settings": {
         "show_hero": false,
