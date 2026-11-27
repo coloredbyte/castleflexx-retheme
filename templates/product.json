@@ -358,12 +358,12 @@
         "heading_8nMPQf": {
           "type": "heading",
           "settings": {
-            "subheading": "OUR SUSTAINABILITY PROMISE",
-            "heading": "Your regimen in 4 minutes. Instant hydration.",
+            "subheading": "",
+            "heading": "CastleFit Membership",
             "highlight_type": "underline",
-            "heading_base_size": 100,
+            "heading_base_size": 110,
             "heading_tag": "h2",
-            "text": "<p>As the world’s leading skin health accreditation body, we want everyone to have access to the best help and advice to care for their skin & more.</p>",
+            "text": "<p>CastleFit is an annual subscription with one of the top trainers and therapists in the country, Sydnee Lincoln of Denver Sports Recovery, and we created dozens of follow-along instructional HD videos and relaxing flows for you to choose from based on your age and abilities.</p>",
             "number_of_lines_shown": "none",
             "read_more_label": "Read more",
             "see_less_label": "See less",
