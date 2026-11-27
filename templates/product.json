@@ -24,18 +24,12 @@
             "enable_product_rating": false
           }
         },
-        "badges_fCnAXm": {
-          "type": "badges",
-          "settings": {
-            "position_adapt": true
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
             "adapt_custom_price_format": false,
             "show_tax_and_shipping": false,
-            "text_size_price": 70
+            "text_size_price": 60
           }
         },
         "text_JiX7zw": {
@@ -132,7 +126,6 @@
       "block_order": [
         "rating_AeRdFJ",
         "product_name_xkPbAa",
-        "badges_fCnAXm",
         "price",
         "text_JiX7zw",
         "variant_picker",
