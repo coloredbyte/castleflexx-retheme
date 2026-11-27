@@ -596,7 +596,7 @@
             "title": "“I read the reviews and thats when I knew people were seeing the same success I had for their pain issues”",
             "text": "",
             "author": "- Dan Castle",
-            "author_note": "<p>CastleFlexx Founder</p>",
+            "author_note": "<p>CastleFlexx Founder & Creator</p>",
             "product": ""
           }
         }
@@ -628,7 +628,7 @@
         "bottom_padding": 60,
         "show_section_divider_mobile": false,
         "top_padding_mobile": 20,
-        "bottom_padding_mobile": 48,
+        "bottom_padding_mobile": 20,
         "section_scheme": "store",
         "background_color_light": "rgba(0,0,0,0)",
         "item_background_color_light": "#FFFFFF",
@@ -636,6 +636,61 @@
         "item_text_color_light": "rgba(0,0,0,0)",
         "background_color_dark": "rgba(0,0,0,0)",
         "item_background_color_dark": "rgba(0,0,0,0)",
+        "heading_and_title_dark": "rgba(0,0,0,0)",
+        "item_text_color_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "testimonials_with_card_XdAWiM": {
+      "type": "testimonials-with-card",
+      "blocks": {
+        "testimonial_mk6GEE": {
+          "type": "testimonial",
+          "settings": {
+            "cards_image": "shopify://shop_images/Group_5.png",
+            "icon_star": "5_star",
+            "custom_icon": "",
+            "title": "“CastleFlexx is the perfect gift to get anyone for Christmas. It's been life changing for me. I was a customer first and I purchased it prior to my European tour with Panatta this summer. It literally SAVED ME.”",
+            "text": "",
+            "show_author_image": false,
+            "author": "Phil Heath",
+            "author_note": "<p>Body Building Champion</p>",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_mk6GEE"
+      ],
+      "name": "t:sections.testimonials-with-card.name",
+      "settings": {
+        "heading": "",
+        "highlight_type": "underline",
+        "subheading": "",
+        "text": "",
+        "heading_alignment": "left",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "auto_play": false,
+        "change_slides_speed": 5,
+        "image_ratio": "round",
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "top_padding": 28,
+        "bottom_padding": 28,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 20,
+        "section_scheme": "store",
+        "background_color_light": "rgba(0,0,0,0)",
+        "item_background_color_light": "rgba(0,0,0,0)",
+        "item_border_color_light": "#FFFFFF",
+        "heading_and_title_light": "rgba(0,0,0,0)",
+        "item_text_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "item_background_color_dark": "rgba(0,0,0,0)",
+        "item_border_color_dark": "rgba(0,0,0,0)",
         "heading_and_title_dark": "rgba(0,0,0,0)",
         "item_text_color_dark": "rgba(0,0,0,0)"
       }
@@ -772,6 +827,7 @@
     "slideshow_rc6dDN",
     "image_with_chart_DfBHUG",
     "54f7b6ce-e4ba-42b3-9550-cde9eb5ab2b4",
+    "testimonials_with_card_XdAWiM",
     "6c240d5b-c5b1-4370-96f5-adff063eb83e",
     "logo_list_Ce7jj8"
   ]
