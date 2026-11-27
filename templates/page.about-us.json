@@ -62,6 +62,9 @@
         "heading_mhXJMX",
         "button_XxURFd"
       ],
+      "custom_css": [
+        ".ltr {background-color: #F7F8F6;}"
+      ],
       "name": "t:sections.image-with-text.name",
       "settings": {
         "show_hero": false,
