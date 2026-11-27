@@ -808,7 +808,7 @@
         "collection_TrCGBY": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "shop-all",
             "custom_title": "",
             "show_description": true,
             "description": "",
@@ -911,7 +911,7 @@
         "show_section_divider": false,
         "padding_top": 40,
         "padding_bottom": 80,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
