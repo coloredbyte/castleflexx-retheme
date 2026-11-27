@@ -379,8 +379,8 @@
         "button_fYQUVB": {
           "type": "button",
           "settings": {
-            "button_label": "Order now",
-            "button_link": "",
+            "button_label": "Start Now",
+            "button_link": "shopify://products/castlefit",
             "open_new_window": false,
             "show_button_style": "primary",
             "block_scheme": "section",
