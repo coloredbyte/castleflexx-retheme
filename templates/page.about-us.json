@@ -39,7 +39,7 @@
       ],
       "custom_css": [
         ".ltr {background-color: #f7f8f6;}",
-        " @media (min-width: 768px) {.ltr {padding-left: 40px; padding-right: 40px;}}"
+        "@media (min-width: 768px) {.ltr {padding-left: 20px; padding-right: 40px; }}"
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
