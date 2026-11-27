@@ -593,10 +593,9 @@
           "settings": {
             "icon_star": "5_star",
             "custom_icon": "",
-            "title": "I am thrilled to share my experience with the Puff Skincare Collection, a journey that has been nothing short of transformative for my skin. As someone deeply invested in skincare, I am always on the lookout for products that not only deliver on their promises but also elevate my self-care routine to a moment of true indulgence.",
+            "title": "“I read the reviews and thats when I knew people were seeing the same success I had for their pain issues”",
             "text": "",
-            "author_image": "shopify://shop_images/V2_WITH_MODEL_09e8aa50-e4fe-4a40-aea0-70acda033fbe.png",
-            "author": "Krysie",
+            "author": "- Dan Castle",
             "author_note": "<p>Good!</p>",
             "product": ""
           }
@@ -613,7 +612,7 @@
         "highlight_type": "underline",
         "heading_size": 100,
         "heading_tag": "h2",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "testimonial_items_view": "single",
         "pagination_desktop": "dots",
         "pagination_mobile": "dots",
