@@ -732,14 +732,14 @@
         "testimonial_LVn4tK": {
           "type": "testimonial",
           "settings": {
-            "cards_image": "shopify://shop_images/img_desk.png",
+            "cards_image": "shopify://shop_images/img_13.png",
             "icon_star": "5_star",
             "custom_icon": "",
             "title": "“My lower back has held up. It's unreal.”",
             "text": "",
             "show_author_image": false,
-            "author": "Nickeil Alexander-Walker",
-            "author_note": "<p>Atlanta | Shooting Guard #7</p>",
+            "author": "Mark Stone",
+            "author_note": "<p>Stanley Cup Winner 2023</p>",
             "product": ""
           }
         },
